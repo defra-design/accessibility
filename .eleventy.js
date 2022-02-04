@@ -30,7 +30,6 @@ module.exports = function(eleventyConfig) {
   
   return {
     htmlTemplateEngine: "njk",
-    pathPrefix: "https://defra-design.github.io/accessibility/",
     dir: {
       input: "src",
       output: "docs",
