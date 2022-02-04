@@ -1,0 +1,571 @@
+/* stylelint-disable selector-id-pattern */
+
+/* DEFRA Qualtrics additional CSS */
+
+/* v0.23 */
+
+/* This CSS has been written by the DEFRA Accessibility team in order to bring
+ the Defra Qualtrics theme more inline with the GDS Design System */
+
+/* This CSS can be added to an existing theme and should be included in new themes moving forwards */
+
+/* Contact details: accessibility@defra.gov.uk */
+
+html {
+  /* Creating custom properties for the GDS design system colours used */
+  --gds-color-black-primary-default: #0b0c0c;
+  --gds-color-green-primary-default: #00703c;
+  --gds-color-green-primary-hover: #005a30;
+  --gds-color-yellow-primary-default: #fd0;
+  --gds-color-blue-primary-default: #1d70b8;
+  --gds-color-blue-primary-hover: #003078;
+  --primary-font: arial, sans-serif;
+}
+
+* {
+  /* Forcing animations to be removed */
+  font-family: var(--primary-font) !important;
+  line-height: 1.3;
+  transition: 0s !important;
+}
+
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--gds-color-black-primary-default) !important;
+}
+
+p,
+li,
+small,
+a {
+  font-size: 1.1875rem !important;
+}
+
+p,
+li {
+  margin-bottom: 1.25rem !important;
+}
+
+/* Implementing a font scale */
+h1 {
+  font-size: 3rem !important;
+  line-height: 1.0417 !important;
+  margin-bottom: 3.125rem !important;
+}
+
+h2 {
+  font-size: 2.25rem !important;
+  line-height: 1.1111 !important;
+  margin-bottom: 1.875rem !important;
+}
+
+h3 {
+  font-size: 1.5rem !important;
+  line-height: 1.25 !important;
+  margin-bottom: 1.25rem !important;
+}
+
+h4 {
+  font-size: 1.1875rem !important;
+  line-height: 1.3158 !important;
+  margin-bottom: 1.25rem !important;
+}
+
+h5 {
+  font-size: 1rem !important;
+  line-height: 1.3 !important;
+  margin-bottom: 1.25rem !important;
+}
+
+h6 {
+  font-size: 1rem;
+  margin-bottom: 1.25rem !important;
+}
+
+:is(p, ul) + h2 {
+  padding-top: 1.25rem;
+}
+
+:is(p, ul) + :is(h3, h4, h5, h6) {
+  padding-top: 0.625rem;
+}
+
+/* Using the following rule to account for the mass of br tags that Qualtrics introduces causing lots of whitespace */
+br {
+  display: none !important;
+}
+
+/* Allowing links to wrap as longer links were causing horizontal scrolling at mobile breakpoints */
+a {
+  color: var(--gds-color-blue-primary-default) !important;
+  text-decoration: underline !important;
+  text-decoration-thickness: max(1px, 0.0625rem);
+  text-underline-offset: 0.1em;
+  word-wrap: break-word;
+}
+
+/* Styling links similar to GDS Design System */
+a:hover {
+  color: var(--gds-color-blue-primary-hover) !important;
+  text-decoration-thickness: max(3px, 0.1875rem, 0.12em) !important;
+}
+
+a:focus {
+  background-color: var(--gds-color-yellow-primary-default) !important;
+  box-shadow: 0 -2px var(--gds-color-yellow-primary-default), 0 4px var(--gds-color-black-primary-default) !important;
+  color: var(--gds-color-black-primary-default) !important;
+  text-decoration: none !important;
+  text-decoration-thickness: max(3px, 0.1875rem, 0.12em) !important;
+}
+
+a:active {
+  color: var(--gds-color-black-primary-default) !important;
+}
+
+/* Styling buttons similar to GDS Design System */
+input[type="button"] {
+  background-color: var(--gds-color-green-primary-default) !important;
+  border-radius: 0 !important;
+  box-sizing: border-box;
+  color: #fff !important;
+  display: inline-block;
+  font-size: 1.1875rem;
+  line-height: 1;
+  padding: 0.5rem 0.75rem !important;
+  position: relative !important;
+  transition: none !important;
+}
+
+input[type="button"]:hover {
+  background-color: var(--gds-color-green-primary-hover) !important;
+}
+
+input[type="button"]:active {
+  top: 0.125rem !important;
+}
+
+input[type="button"]:focus {
+  background-color: var(--gds-color-yellow-primary-default) !important;
+  color: #000 !important;
+}
+
+/* Hiding the progress bar */
+.Skin #ProgressBar {
+  display: none !important;
+}
+
+/* Styling back buttons to match GDS Design System */
+.PreviousButton.Button {
+  background-color: transparent !important;
+  color: #0b0c0c !important;
+  text-decoration: underline !important;
+}
+
+.PreviousButton.Button:hover {
+  background-color: transparent !important;
+  text-decoration-thickness: max(3px, 0.1875rem, 0.12em) !important;
+}
+
+/* Trying to create consistent spacing inbetween elements by forcing
+ a question's label to have 1rem of margin only on the top */
+.QuestionText > div > div,
+.QuestionOuter {
+  margin: 1rem 0 0 !important;
+}
+
+.Skin .QuestionBody {
+  margin: 0;
+  margin-top: 1rem !important;
+  padding: 0 !important;
+}
+
+/* The following styling affects radio and checkbox elements to ensure that they resemble GDS Design System elements */
+th[scope="col"] .LabelWrapper,
+th[scope="col"].SubQuestionText,
+.slider-container label {
+  font-size: 1.5rem;
+  line-height: 1.25 !important;
+}
+
+th[scope="col"].AnswerText,
+th[scope="row"] label {
+  font-size: 1.1875rem !important;
+  line-height: 1.3158 !important;
+}
+
+.ChoiceStructure .LabelWrapper label {
+  border: 0.2rem solid rgba(0 0 0 0%) !important;
+}
+
+.Skin label.SingleAnswer > span::before,
+.Skin label.q-radio::before {
+  box-sizing: border-box;
+  height: 40px !important;
+  left: 1px !important;
+  margin-top: auto !important;
+  position: absolute !important;
+  top: -1px !important;
+  width: 40px !important;
+}
+
+.ChoiceStructure .LabelWrapper label.SingleAnswer > span::before,
+.ChoiceStructure .LabelWrapper label.MultipleAnswer > span::before,
+.Skin label.q-radio,
+.Skin label.q-checkbox {
+  border-color: var(--gds-color-black-primary-default) !important;
+  box-sizing: border-box;
+  height: 2.75rem !important;
+  left: 0;
+  margin-right: 1rem !important;
+  margin-top: 0 !important;
+  top: 0;
+  width: 2.75rem !important;
+}
+
+.ChoiceStructure .LabelWrapper label.MultipleAnswer > span::before,
+.Skin label.q-checkbox::before {
+  border-radius: 0 !important;
+}
+
+.ChoiceStructure .LabelWrapper label.MultipleAnswer > span::after,
+.Skin label.q-checkbox::after {
+  background: transparent;
+  border: solid;
+  border-top-color: red;
+  border-top-color: transparent;
+  border-width: 0 0 0.25rem 0.25rem;
+  box-sizing: border-box;
+  content: "";
+  height: 0.75rem;
+  left: 0.75rem;
+  opacity: 0;
+  position: absolute;
+  top: 0.75rem;
+  transform: rotate(-45deg);
+  width: 1.25rem;
+}
+
+.Skin label.SingleAnswer.q-checked > span::after,
+.Skin label.SingleAnswer.q-checked.q-focused > span::after,
+.Skin label.q-radio.q-checked::after,
+.Skin label.q-radio.q-checked.q-focused::after {
+  background: #0b0c0c;
+  border: 0.625rem solid #0b0c0c;
+  border-radius: 50%;
+  content: "";
+  height: 0;
+  left: 13px;
+  position: absolute;
+  top: 0.7rem;
+  width: 0;
+}
+
+.Skin label.SingleAnswer.q-checked > span::before,
+.Skin label.SingleAnswer.q-checked.q-focused > span::before,
+.Skin label.q-radio.q-checked::before,
+.Skin label.q-radio.q-checked.q-focused::before {
+  animation: none !important;
+  background: none !important;
+  border-width: 2px !important;
+  box-shadow: none !important;
+}
+
+.ChoiceStructure .LabelWrapper label.SingleAnswer.q-checked > span::before {
+  background: #fff !important;
+  border-color: var(--gds-color-black-primary-default) !important;
+}
+
+.ChoiceStructure .LabelWrapper label.MultipleAnswer.q-checked > span::before,
+.Skin label.q-checkbox.q-checked::before {
+  background-color: transparent !important;
+  border-color: var(--gds-color-black-primary-default) !important;
+}
+
+.ChoiceStructure .LabelWrapper label.SingleAnswer.q-focused > span::before,
+.ChoiceStructure .LabelWrapper label.MultipleAnswer.q-focused > span::before,
+.ChoiceStructure .LabelWrapper label.SingleAnswer.q-focused.q-checked > span::before,
+.ChoiceStructure .LabelWrapper label.MultipleAnswer.q-focused.q-checked > span::before,
+.Skin label.q-checkbox.q-checked.q-focused::before,
+.Skin label.q-checkbox.q-focused {
+  border-width: 0.25rem;
+  box-shadow: 0 0 0 0.25rem #fd0 !important;
+}
+
+.ChoiceStructure .LabelWrapper label.SingleAnswer > span,
+.ChoiceStructure .LabelWrapper label.MultipleAnswer > span,
+.Skin label.q-radio,
+.Skin label.q-checkbox {
+  font-size: 1.188rem !important;
+}
+
+.ChoiceStructure .LabelWrapper label.SingleAnswer.q-checked.q-focused > span::before {
+  background: #fff !important;
+  border-color: var(--gds-color-black-primary-default) !important;
+}
+
+.ChoiceStructure .LabelWrapper label.SingleAnswer.q-checked > span::after {
+  background: #fff !important;
+  border-color: var(--gds-color-black-primary-default) !important;
+}
+
+fieldset legend label.QuestionText,
+fieldset legend div.QuestionText {
+  color: var(--gds-color-black-primary-default) !important;
+  font-size: 2.25rem !important;
+  font-weight: 700 !Important;
+  line-height: 1.1111 !important;
+}
+
+.QuestionBody .ChoiceStructure input.InputText,
+.Skin input[type="text"] {
+  background-color: transparent !important;
+  background-color: #fff !important;
+  border: 0.15rem solid var(--gds-color-black-primary-default) !important;
+  border-radius: 0;
+  color: #000 !important;
+  height: 2.5rem !important;
+  line-height: 1.25;
+  margin-top: 0;
+  min-height: auto !important;
+  width: 100% !important;
+}
+
+.QuestionBody .ChoiceStructure textarea.InputText {
+  background-color: transparent !important;
+  background-color: #fff !important;
+  border: 0.15rem solid var(--gds-color-black-primary-default) !important;
+  border-radius: 0;
+  color: #000 !important;
+  height: 2.5rem !important;
+  line-height: 1.25;
+  margin-top: 0;
+  min-height: 8em !important;
+  width: 100% !important;
+}
+
+.QuestionBody .ChoiceStructure input.InputText:focus,
+.QuestionBody .ChoiceStructure textarea.InputText:focus {
+  box-shadow: inset 0 0 0 2px !important;
+  outline: 3px solid var(--gds-color-yellow-primary-default) !important;
+  outline-offset: 0 !important;
+}
+
+.ChoiceStructure .LabelWrapper label.MultipleAnswer.q-checked > span::after,
+.Skin label.q-checkbox.q-checked::after {
+  border-top-color: red;
+  opacity: 1;
+}
+
+.Skin label.q-radio.q-checked {
+  background-color: var(--gds-color-black-primary-default) !important;
+}
+
+input[type="radio"]:focus + label.q-radio {
+  outline: 0.2rem solid var(--gds-color-yellow-primary-default) !important;
+}
+
+.Skin .QuestionText {
+  line-height: 1.25 !important;
+  padding-bottom: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.Skin .QuestionText p {
+  line-height: 1.25;
+  margin-bottom: 1rem;
+  margin-top: 0.25rem;
+}
+
+.Skin .QuestionText p:last-child {
+  margin-bottom: 0;
+}
+
+.Skin .QuestionText a {
+  color: #1d70b8;
+}
+
+.Skin .QuestionText a:hover {
+  color: #003078;
+}
+
+.Skin .ChoiceStructure label.SingleAnswer,
+.Skin .ChoiceStructure label.MultipleAnswer,
+.Skin .ChoiceStructure label.MultipleAnswer.q-focused,
+.Skin label.q-radio.q-checked,
+.Skin label.q-checkbox,
+.q-checked {
+  background: none !important;
+  position: relative;
+}
+
+.Skin .ChoiceStructure label.SingleAnswer,
+.Skin .ChoiceStructure label.MultipleAnswer,
+.Skin .ChoiceStructure label.MultipleAnswer.q-focused {
+  padding: 0.5rem 1rem 0.25rem 3.75rem !important;
+}
+
+@media (max-width: 770px) {
+  .Skin label.SingleAnswer > span::before,
+  .Skin label.q-radio > span::before {
+    top: -3px !important;
+  }
+}
+
+.Skin .radio:focus ~ .LabelWrapper label.SingleAnswer > span::before {
+  border-width: 4px !important;
+  box-shadow: 0 0 0 0.25rem var(--gds-color-yellow-primary-default) !important;
+}
+
+@media (max-width: 770px) {
+  .Skin label.SingleAnswer.q-checked > span::after,
+  .Skin label.SingleAnswer.q-checked.q-focused > span::after,
+  .Skin label.q-radio.q-checked::after,
+  .Skin label.q-radio.q-checked.q-focused::after {
+    top: 9px;
+  }
+
+  .Skin div .QuestionBody {
+    padding-bottom: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+
+/* Styling mandatory questions that have not been answered to match the GDS Design System */
+
+.Skin .QuestionOuter {
+  position: relative;
+}
+
+.Skin .QuestionOuter.Highlight {
+  padding-left: 1.25rem;
+}
+
+.Skin .QuestionOuter.Highlight::before {
+  background-color: #d4351c;
+  bottom: 1.5rem;
+  content: " ";
+  left: 0.25rem;
+  position: absolute;
+  top: 0;
+  width: 0.25rem;
+}
+
+.Skin textarea.InputText.FailedValidation,
+.Skin input.InputText.FailedValidation {
+  border-color: #d4351c !important;
+}
+
+.Skin .ValidationError {
+  background: none !important;
+  color: #d4351c !important;
+  font-size: 1.1875rem;
+  font-weight: bold;
+  line-height: 1.3158;
+  margin-bottom: 0 !important;
+  text-indent: 0 !important;
+}
+
+.Skin .SkinInner {
+  padding-top: 1rem !important;
+}
+
+@media (max-width: 48.125rem) {
+  .Skin .SkinInner {
+    padding-left: 0.75rem !important;
+    padding-right: 0.75rem !important;
+    padding-top: 0 !important;
+  }
+}
+
+/* Styling for questions with tables and sliders */
+
+th[scope="col"][class*="header-total"] {
+  font-weight: bold;
+}
+
+.Skin td label.q-radio.q-checked::after {
+  left: 0.625rem !important;
+  top: 0.625rem !important;
+}
+
+.Skin td label.q-checkbox.q-checked,
+.Skin td label.q-checkbox.q-checked.q-focused {
+  background: none !important;
+}
+
+.Skin td label.q-checkbox.q-checked::after {
+  left: 0.65rem !important;
+}
+
+.Skin tr.ChoiceRow:hover {
+  background: transparent !important;
+}
+
+.Skin td input[type="text"] {
+  width: 6rem !important;
+}
+
+.horizontalbar .numbers li {
+  color: var(--gds-color-black-primary-default) !important;
+}
+
+/* Making the spacing on the footer more consistent with the header spacing */
+
+.Skin #BrandingFooter,
+.Skin #Footer {
+  margin-top: 1rem !important;
+}
+
+/* Styling the plug section, the area below the footer */
+
+#Plug {
+  margin: auto !important;
+  max-width: 95% !important;
+  width: 48.125rem !important;
+}
+
+#Plug a {
+  background: none !important;
+  border-radius: 0 !important;
+  float: none !important;
+  height: auto !important;
+  margin-left: 0 !important;
+  padding: 0.25rem 0 !important;
+  text-align: left !important;
+  transition: none !important;
+  width: 11em !important;
+}
+
+#Plug a:hover {
+  color: #000 !important;
+  text-decoration: underline !important;
+}
+
+#Plug a:focus,
+#Plug a:active {
+  background-color: #fd0 !important;
+  border-bottom: 0.125rem solid #0b0c0c;
+  color: #000 !important;
+  outline: 0 !important;
+  text-decoration: none !important;
+}
+
+/* Utility class for hint text */
+
+.govuk-hint {
+  color: #505a5f;
+  display: block;
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.25;
+  margin-top: 1rem !important;
+}
