@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "env NODE_ENV=production npx eleventy --pathprefix '11ty-github-pages-test'"
+    "build": "env NODE_ENV=production npx eleventy --pathprefix 'accessibility'"
   },
   "keywords": [],
   "author": "",
