@@ -1,0 +1,52 @@
+---
+pagination:
+  data: authors
+  size: 1
+  alias: author
+  filter: ['all']
+permalink: '/authors/{{ author.name | slug }}/'
+eleventyExcludeFromCollections: true
+---
+{% extends "_layouts/base.html" %}
+
+{% set title %}
+Pieces written by {{ author.name }}
+{% endset %}
+
+{% set authorNameLink %}
+  /authors/{{ author.name | slug }}/
+{% endset %}
+
+{% block breadcrumbs %}
+  <ol class="c-breadcrumbs">
+    <li class="c-breadcrumbs__list-item">
+      <a href="{{ '/' | url }}" class="c-breadcrumbs__link">Home</a>
+    </li>
+    <li class="c-breadcrumbs__list-item">
+      <a href="{{ '/blog/' | url }}" class="c-breadcrumbs__link">Blog</a>
+    </li>
+    <li class="c-breadcrumbs__list-item">
+      <a href="{{ authorNameLink | url }}" class="c-breadcrumbs__link" aria-current="page">Pieces written by {{ author.name }}</a>
+    </li>
+  </ol>
+{% endblock %}
+
+{% set postListItems = collections["blog"] %}
+
+{% block mainContent %}
+  {% for post in postListItems | reverse %}
+    {% for postAuthor in post.data.author %}
+      {% if (postAuthor == author.name) %}
+        {# Stores data about the post into variables used in the post-summary partial #}
+        {% set postTitle = post.data.title %}
+        {% set postTags = post.data.tags %}
+        {% set postSummary = post.data.summary %}
+        {% set postUrl = post.url %}
+        {% set postAuthors = post.data.author %}
+        {% set postPublished = post.date %}
+        {# Includes the post-summary partial code, putting the post's data into a reusable template #}
+        {% include "_partials/post-summary.njk" %}
+      {% endif %}
+    {% endfor %}
+  {% endfor %}
+{% endblock %}

@@ -1,0 +1,1 @@
+The files in this folder should not be changed, unless you want to update all of the automatically generated tag and author pages. The files in this directory automatically collate tags and authors into pages using 11ty's collections.

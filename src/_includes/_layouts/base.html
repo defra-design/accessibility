@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8">
+    {% if title === site.name %}
+    <title>{{ site.name }}</title>
+    {% else %}
+    <title>{{title}} - {{ site.name }}</title>
+    {% endif %}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      {% include "css/reset/reset.css" %}
+      {% include "css/main.css" %}
+    </style>
+  </head>
+  <body>
+    <a href="#main" class="c-skip_link">Skip to main content</a>
+    <header class="c-header">
+      <div class="[ c-header__wrapper ] [ u-width-wrapper ]">
+        <a class="c-header__site-name" href="{{ '/' | url }}">{{ site.name }}</a>
+        {# <nav>
+          <ul class="c-nav">
+            <li><a class="c-nav__item" href="{{ '/resources/' | url }}">Resources</a></li>
+            <li><a class="c-nav__item" href="{{ '/writing/' | url }}">Writing</a></li>
+          </ul>
+        </nav> #}
+      </div>
+    </header>
+    <main id="main" class="c-main">
+      <div class="[ c-main__wrapper ] [ u-width-wrapper u-flow ]">
+        {% block breadcrumbs %}
+        {% endblock %}
+        <h1>{{ title }}</h1>
+        {% block mainContent %}
+          {{ content | safe }}
+        {% endblock %}
+      </div> 
+    </main>
+    <footer class="c-footer">
+      <div class="[ c-footer__wrapper ] [ u-width-wrapper ]">
+        <h2 class="u-visually-hidden">Useful Links</h2>
+        <nav>
+        <ul>
+          <li><a href="{{ '/accessibility-statement/' | url }}">Accessibility statement</a></li>
+          {# <li><a href="{{ '/sitemap/' | url }}">Sitemap</a></li> #}
+        </ul>
+        </nav>
+      </div> 
+    </footer>
+  </body>
+</html>

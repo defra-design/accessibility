@@ -1,0 +1,51 @@
+{% extends "_layouts/base.html" %}
+
+{% block breadcrumbs %}
+  <ol class="c-breadcrumbs">
+    <li class="c-breadcrumbs__list-item">
+      <a href="{{ '/' | url }}" class="c-breadcrumbs__link">Home</a>
+    </li>
+    <li class="c-breadcrumbs__list-item">
+      <a href="{{ '/blog/' | url }}" class="c-breadcrumbs__link">Blog</a>
+    </li>
+    <li class="c-breadcrumbs__list-item">
+      <a href="{{ url | url }}" class="c-breadcrumbs__link" aria-current="page">{{ title }}</a>
+    </li>
+  </ol>
+{% endblock %}
+
+{% block mainContent %}
+  
+  <p class="c-blog-card__category">This article relates to 
+    {# Create a blank array to hold the tag names #}
+    {% set tagData = [] %}
+    {# Loop through the tags data and store the descriptor in the array #}
+    {% for tag in tags %}
+      {% if tag == "awareness" %}
+        {% set items = (tagData.push({'name': "Ways of working", 'tag': tag}), tagData) %}
+      {% endif %}
+      {% if tag == "knowledgeSharing" %}
+        {% set items = (tagData.push({'name': "Knowledge sharing", 'tag': tag}), tagData) %}
+      {% endif %}
+    {% endfor %}
+    
+    {# Loop through the array and add the descriptor to the DOM #}
+    {% for tagDescriptor in tagData %}
+    {% set tagLink = "/tag/" + tagDescriptor.tag | slug + "/" %}
+    <a href="{{ tagLink | url }}/">{{tagDescriptor.name}}</a>{% if loop.last %}{% else %}{% if loop.index == loop.length-1 %}<span> and </span>{% else %}<span>, </span>{% endif %}{% endif %}
+    {% endfor %}
+  </p>
+
+  <div class="c-blog__content">
+    {{ content | safe }}
+  </div>
+  
+  <p class="c-blog__author">Written by 
+    {% for authors in author %}
+    {% set authorNameLink = "/authors/" + authors | slug + "/" %}
+    <a href="{{ authorNameLink | url }}">{{authors}}</a>{% if loop.last %}.{% else %}{% if loop.index == loop.length-1 %}<span> and </span>{% else %}<span>, </span>{% endif %}{% endif %}
+    {% endfor %}
+    Published {{ page.date | postDate }}.
+  </p>
+
+{% endblock %} 

@@ -1,0 +1,28 @@
+---
+title: Resources
+---
+{% extends "_layouts/base.html" %}
+
+{% block breadcrumbs %}
+  <ol class="c-breadcrumbs">
+    <li class="c-breadcrumbs__list-item">
+      <a href="{{ '/' | url }}" class="c-breadcrumbs__link">Home</a>
+    </li>
+    <li class="c-breadcrumbs__list-item">
+      <a href="{{ '/resources/' | url }}" class="c-breadcrumbs__link" aria-current="page">Resources</a>
+    </li>
+  </ol>
+{% endblock %}
+
+{% block mainContent %}
+  <p>We regularly publish and review our documents. We have categorised our resources based on tasks you may be currently working on.</p>
+  
+  <ul>
+    <li><a href="#creating-an-online-form">Creating an online form</a></li>
+  </ul>
+  
+  <a id="#creating-an-online-form">
+    <h2>Creating an online form</h2>
+  </a>
+
+{% endblock %} 
