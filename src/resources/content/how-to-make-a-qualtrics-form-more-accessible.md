@@ -5,6 +5,7 @@ author: ["Defra accessibility team"]
 version: "1.0"
 tags:
   - writingAccessibleForms
+  - resource
 ---
 
 ## How to use this guidance
@@ -61,7 +62,7 @@ To apply this additional styling:
 1. Go to ‘Look and feel’.
 2. Select the 'Core Defra' Dynamic Theme (not the static theme).
 3. Navigate to the ‘Style’ panel
-4. The contents of the [Defra Qualtrics additional styling CSS](styling/defra-qualtrics-additional-styling.css) file can be pasted into the 'Custom CSS' field.
+4. The following URL: `https://defra-design.github.io/accessibility/documents/qualtrics/defra-qualtrics-additional-styling.css` needs to be entered into the 'External CSS' field.
 5. Once complete, select the 'Apply' button.
 
 ### <span id="setting-up-your-template"></span> Setting up your template
@@ -316,7 +317,7 @@ You can use a single statement for a set of forms if:
 * they all have the same legal body as owner (eg Environment Agency)
 * you are sure that a single statement will be correct for all the forms
 
-Use the [Defra Qualtrics accessibility statement HTML template](accessibility-statement/qualtrics-generic-accessibility-statement.html) to form the basis of your own statement.
+Use the [Defra Qualtrics accessibility statement HTML template](../qualtrics-generic-accessibility-statement/) to form the basis of your own statement.
 
 To do this, create a new project.
 1. On the ‘Create a project’ screen, select ‘Survey’ to create a new survey from scratch.
