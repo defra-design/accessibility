@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8">
+    
+    <title>Defra Qualtrics accessibility statement HTML template - Defra Accessibility Resources</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      /* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+      html {
+  /* For the default link colour */
+  --link-colour: #006726;
+
+  /* For the link hover state */
+  --link-colour-alt: #00521e;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.3;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: auto auto 0.75em;
+}
+
+h1 {
+  font-size: 3.052rem;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 2.441rem;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 1.953rem;
+  font-weight: bold;
+}
+
+h4 {
+  font-size: 1.563rem;
+  font-weight: bold;
+}
+
+p,
+li {
+  font-size: 1.25rem;
+}
+
+a {
+  color: var(--link-colour);
+  max-width: max-content;
+  text-decoration: underline;
+  text-decoration-thickness: 0.15em;
+}
+
+a:hover {
+  color: var(--link-colour-alt);
+  text-decoration-thickness: 0.3em;
+}
+
+a:focus {
+  background-color: #fd0;
+  box-shadow: 0 -0.2em #fd0, 0 0.3em #0b0c0c;
+  color: #0b0c0c !important;
+  outline: 3px solid transparent;
+  text-decoration: none;
+}
+
+body {
+  display: grid;
+  grid-template-areas:
+    "skip-link"
+    "header"
+    "main"
+    "footer";
+  grid-template-rows: auto auto 1fr auto;
+  margin: 0;
+  min-height: 100vh;
+}
+
+main {
+  font-size: 1.25rem;
+  grid-area: main;
+  margin: 0 auto;
+  max-width: 80ch;
+  max-width: 100vw;
+  width: 100%;
+}
+
+nav {
+  height: min-content;
+}
+
+a:link,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+li,
+blockquote {
+  max-width: 65ch;
+}
+
+.c-nav {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.c-nav__item,
+.c-nav__item:hover {
+  color: #fff;
+  display: block;
+  max-width: 100%;
+  padding: 1rem;
+}
+
+.c-nav__item:focus {
+  color: #000;
+}
+
+.c-nav li:first-of-type a {
+  padding-left: 0;
+}
+
+footer {
+  grid-area: footer;
+}
+
+.c-skip_link {
+  grid-area: skip-link;
+  position: absolute;
+  top: -999px;
+}
+
+.c-skip_link:focus {
+  position: relative;
+  top: 0;
+}
+
+.c-header {
+  background-color: #0b0c0c;
+  color: #fff;
+  grid-area: header;
+}
+
+.c-header__site-name {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 1rem 1rem 1rem 0;
+  text-decoration: none;
+}
+
+.c-header__site-name:hover {
+  color: #fff;
+  text-decoration: underline;
+  text-decoration-thickness: 0.2em;
+}
+
+.c-header__wrapper {
+  align-items: center;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.c-main {
+  padding: 1.875rem 0 3.125rem;
+}
+
+.c-footer {
+  background-color: #f3f2f1;
+  color: #0b0c0c;
+}
+
+.c-footer ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin: 0;
+  padding: 1rem 1rem 1rem 0;
+}
+
+.c-footer li {
+  margin: 0.25rem 0;
+  padding: 0.5rem 0;
+}
+
+.u-width-wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 60rem;
+  padding: 0 2rem;
+  width: 100%;
+}
+
+.u-visually-hidden {
+  border: 0 !important;
+  clip: rect(0 0 0 0) !important;
+  clip-path: inset(50%) !important;
+  height: 1px !important;
+  margin: 0 !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  white-space: nowrap !important;
+  width: 1px !important;
+}
+
+.u-flow * + * {
+  margin-top: 1rem;
+}
+
+.u-flow * + h2 {
+  margin-top: 3rem;
+}
+
+.u-flow * + h3,
+.u-flow * + h4,
+.u-flow * + h5 {
+  margin-top: 2rem;
+}
+
+.c-blog-card {
+  border-top: 0.1rem solid #b1b4b6;
+  margin-top: 0;
+  padding: 3rem 0;
+}
+
+:is(.c-blog-card, .c-resource-section):first-of-type {
+  margin-top: 3rem;
+}
+
+:is(.c-blog-card, .c-resource-section):last-of-type {
+  border-bottom: 0.1rem solid #b1b4b6;
+}
+
+.c-blog-card__summary,
+.c-blog-card__link {
+  font-size: 1.563rem;
+  margin: 1.875rem 0;
+}
+
+.c-blog-card__link {
+  display: block;
+}
+
+.c-blog__content {
+  margin: 3rem 0;
+}
+
+.c-resource-card {
+  padding: 0 0 1rem;
+}
+
+.c-resource-section {
+  border-top: 0.1rem solid #b1b4b6;
+  margin-top: 0;
+  padding: 3rem 0;
+}
+
+table {
+  border: 0.1rem solid #000;
+  border-collapse: collapse;
+  margin-bottom: 1.875rem;
+  margin-top: 1.875rem;
+  max-width: 100%;
+  overflow-x: scroll;
+}
+
+th,
+td {
+  border: 0.1rem solid #000;
+  padding: 0.5rem 1rem;
+}
+
+blockquote {
+  border-left: 0.5rem solid #b1b4b6;
+  display: block;
+  padding: 1rem;
+}
+
+pre {
+  border: 0.1rem solid #b1b4b6;
+  max-width: 100%;
+  overflow-x: scroll;
+  padding: 1rem 2rem;
+}
+
+code {
+  font-family: monospace;
+}
+
+.c-breadcrumbs {
+  display: flex;
+  flex-flow: row wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.c-breadcrumbs__list-item {
+  display: flex;
+  flex-direction: row;
+  margin: 0 0 0 1rem;
+  margin-top: 0;
+  padding: 0.5rem 1rem 0.5rem 0;
+}
+
+.c-breadcrumbs__list-item::after {
+  content: ">";
+  display: block;
+  height: 1rem;
+  padding-left: 1rem;
+  width: 1rem;
+}
+
+.c-breadcrumbs__list-item:first-of-type {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.c-breadcrumbs__list-item:last-of-type::after {
+  content: "";
+}
+
+    </style>
+  </head>
+  <body>
+    <a href="#main" class="c-skip_link">Skip to main content</a>
+    <header class="c-header">
+      <div class="[ c-header__wrapper ] [ u-width-wrapper ]">
+        <a class="c-header__site-name" href="/accessibility/">Defra Accessibility Resources</a>
+        <nav>
+          <ul class="c-nav">
+            
+            
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main id="main" class="c-main">
+      <div class="[ c-main__wrapper ] [ u-width-wrapper u-flow ]">
+        
+  <ol class="c-breadcrumbs">
+    <li class="c-breadcrumbs__list-item">
+      <a href="/accessibility/" class="c-breadcrumbs__link">Home</a>
+    </li>
+    <li class="c-breadcrumbs__list-item">
+      <a href="/accessibility/blog/" class="c-breadcrumbs__link">Blog</a>
+    </li>
+    <li class="c-breadcrumbs__list-item">
+      <a href="." class="c-breadcrumbs__link" aria-current="page">Defra Qualtrics accessibility statement HTML template</a>
+    </li>
+  </ol>
+
+        <h1>Defra Qualtrics accessibility statement HTML template</h1>
+        
+  
+  
+  
+  
+  
+    
+      <p>If you need this document in a more accessible format, email the Defra Accessibility Team at <a href="mailto:accessibility@defra.gov.uk">accessibility@defra.gov.uk</a></p>
+      
+        <p>Version 1.0, published February 8, 2022.</p>
+      
+    
+    
+      
+      
+    
+  
+  
+  
+  
+  </p>
+
+  <div class="c-blog__content">
+    <p>Each Qualtrics form needs to link to an accessibility statement to comply with the law.</p>
+<p>You can use a single statement for a set of forms if:</p>
+<ul>
+<li>they all have the same legal body as owner (eg Environment Agency)</li>
+<li>you are sure that a single statement will be correct for all the forms</li>
+</ul>
+<p>The following code should be used to create a new accessibility statement, following the steps in <a href="../how-to-make-a-qualtrics-form-more-accessible/">How to make a Qualtrics form more accessible</a>.</p>
+<pre><code>&lt;main&gt;
+  &lt;h1&gt;Accessibility statement for -NAME OF SERVICE-&lt;/h1&gt;
+  &lt;p&gt;This statement applies to forms and pages published as part of -NAME OF SERVICE- service on the www.defragroup.eu.qualtrics.com domain.&lt;/p&gt;
+  &lt;p&gt;This service is run by -NAME OF DEPARTMENT-. It is designed to be used by as many people as possible. The text should be clear and simple to understand. You should be able to:&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;zoom in up to 400% without problems&lt;/li&gt;
+    &lt;li&gt;navigate most of the website using just a keyboard&lt;/li&gt;
+    &lt;li&gt;navigate most of the website using speech recognition software&lt;/li&gt;
+    &lt;li&gt;use most of the website using a screen reader (including the most recent versions of JAWS, NVDA and VoiceOver)&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;h2&gt;How accessible this website is&lt;/h2&gt;
+  &lt;p&gt;We know some parts of these surveys are not fully accessible:&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;The logotype used for our surveys do not contain alternate text, the text contained in the logo is provided beneath the image instead, but there is no semantic link to define this relationship.&lt;/li&gt;
+    &lt;li&gt;Input fields requesting commonly used information will not allow for the use of autocomplete.&lt;/li&gt;
+    &lt;li&gt;Progressing through the survey does not update the page title.&lt;/li&gt;
+    &lt;li&gt;Error messages do not always provide a suggestion for accurately resolving an error.&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;h2&gt;Feedback and contact information&lt;/h2&gt;
+  &lt;p&gt;Tell us if you need information in a different format.&lt;/p&gt;
+  &lt;ul&gt;
+  &lt;li&gt;email -YOUR EMAIL ADDRESS-&lt;/li&gt;
+  &lt;li&gt;call -PHONE NUMBER-&lt;/li&gt;
+  &lt;li&gt;-ANY OTHER CONTACT DETAILS-&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;p&gt;In your message, include:&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;the web address (URL) of the content&lt;/li&gt;
+    &lt;li&gt;your email address and name&lt;/li&gt;
+    &lt;li&gt;the format you need - for example, plain text, braille, BSL, large print or audio CD&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;p&gt;We'll consider your request and get back to you in 10 days.&lt;/p&gt;
+  &lt;p&gt;You can request a PDF in an accessible format from its page. Click ‘Request an accessible format’ to contact the organisation that published the document.&lt;/p&gt;
+  &lt;p&gt;You can also view the organisation’s accessible document policy to report any problems or request documents in an alternative format.&lt;/p&gt;
+  &lt;h2&gt;Reporting accessibility problems with this website&lt;/h2&gt;
+  &lt;p&gt;If you find any problems that are not listed on this page or you think we’re not meeting the accessibility requirements, contact us.&lt;/p&gt;
+  &lt;h2&gt;Enforcement procedure&lt;/h2&gt;
+  &lt;p&gt;If you contact us with a complaint and you’re not happy with our response contact the Equality Advisory and Support Service (EASS).&lt;/p&gt;
+  &lt;p&gt;The Equality and Human Rights Commission (EHRC) is responsible for enforcing the Public Sector Bodies (Websites and Mobile Applications) (No. 2) Accessibility Regulations 2018 (the ‘accessibility regulations’).&lt;/p&gt;
+  &lt;h2&gt;Technical information about this website’s accessibility&lt;/h2&gt;
+  &lt;p&gt;-NAME OF DEPARTMENT- is committed to making its websites accessible, in accordance with the Public Sector Bodies (Websites and Mobile Applications) (No. 2) Accessibility Regulations 2018.&lt;/p&gt;
+  &lt;h2&gt;Compliance status&lt;/h2&gt;
+  &lt;p&gt;The service that has linked to this accessibility statement is partially compliant with the Web Content Accessibility Guidelines version 2.1 AA standard.&lt;/p&gt;
+  &lt;h2&gt;Non-accessible content&lt;/h2&gt;
+  &lt;p&gt;As a result of using this statement, the authors of the service believe that all content within the service is accessible.&lt;/p&gt;
+  &lt;p&gt;By using Qualtrics, following our testing of the platform, this service will have non-accessible content for the following reasons.&lt;/p&gt;
+  &lt;h3&gt;Non-compliance with the accessibility regulations&lt;/h3&gt;
+  &lt;ol&gt;
+    &lt;li&gt;The logotype used for our surveys do not contain alternate text. This fails WCAG 1.1.1 Non-text Content.&lt;/li&gt;
+    &lt;li&gt;Form inputs will not allow for the use of autocomplete. This may make identifying the input’s purpose and completing the survey more difficult. At the time of writing, Qualtrics does not provide us with the ability to designate autocomplete values against input fields. This fails WCAG 2.1 success criterion 1.3.5 (Identify Input Purpose).&lt;/li&gt;
+    &lt;li&gt;Progressing through the survey does not update the page title. This may make it difficult for users to orient themselves and find the right content. This fails WCAG 2.4.2 (Page Titled).&lt;/li&gt;
+    &lt;li&gt;Error messages do not always provide a suggestion for accurately resolving an error. This may make understanding the issue with your answers and the correct format more difficult. This fails WCAG 3.3.3 (Error Suggestion).&lt;/li&gt;
+  &lt;/ol&gt;
+  &lt;h3&gt;Disproportionate burden&lt;/h3&gt;
+  &lt;p&gt;As of 28th October 2021, we will be raising these issues through support tickets with Qualtrics in order to communicate these issues with the company and seek a resolution. We will update this statement once any fixes are applied. Currently, as these fixes are still outstanding, we will be claiming disproportionate burden for the non-compliant content stated previously as we have no way of resolving these issues in a timely manner, in a way that is possible by authors across all Defra owned Qualtrics surveys without the support of Qualtrics.&lt;/p&gt;
+  &lt;h3&gt;Content that’s not within the scope of the accessibility regulations&lt;/h3&gt;
+  &lt;p&gt;Non-HTML documents published before September 2018 do not need to be accessible - unless users need them to use a service.&lt;/p&gt;
+  &lt;h2&gt;How we tested this website&lt;/h2&gt;
+  &lt;p&gt;The Defra Accessibility Team tested this service using both automated and manual checks. We tested the base Qualtrics question types against the Web Content Accessibility Guidelines (WCAG) V2.1 level A and level AA to test how accessible the Qualtrics product is.&lt;/p&gt;
+  &lt;p&gt;We tested all question types that the product offers in order to understand those that work with different user agents, meeting the WCAG 2.1 AA success criteria.&lt;/p&gt;
+  &lt;p&gt;We have not tested the individual services built with Qualtrics, but as content is templated and produced using the same tools, we believe that our findings should be representative of individual services as long as they have followed guidance provided to them.&lt;/p&gt;
+  &lt;h2&gt;What we’re doing to improve accessibility&lt;/h2&gt;
+  &lt;p&gt;We will update this statement if we discover any content to be inaccessible and will also monitor Qualtrics updates to ensure that this guidance is kept up to date.&lt;/p&gt;
+  &lt;h2&gt;Preparation of this accessibility statement&lt;/h2&gt;
+  &lt;p&gt;This statement was prepared on 25 October 2021. It was last reviewed on 25 October 2021.&lt;/p&gt;
+  &lt;p&gt;Last updated 25 October 2021&lt;/p&gt;
+&lt;/main&gt;
+</code></pre>
+
+  </div>
+  
+  <p class="c-blog__author">Written by 
+    
+    
+    <a href="/accessibility/authors/defra-accessibility-team/">Defra accessibility team</a>.
+    
+    Published February 8, 2022.
+  </p>
+
+
+      </div> 
+    </main>
+    <footer class="c-footer">
+      <div class="[ c-footer__wrapper ] [ u-width-wrapper ]">
+        <h2 class="u-visually-hidden">Useful Links</h2>
+        <nav>
+        <ul>
+          <li><a href="/accessibility/accessibility-statement/">Accessibility statement</a></li>
+          
+        </ul>
+        </nav>
+      </div> 
+    </footer>
+  </body>
+</html>

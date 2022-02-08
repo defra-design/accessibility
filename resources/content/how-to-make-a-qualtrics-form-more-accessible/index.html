@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8">
+    
+    <title>How to make a Qualtrics form more accessible - Defra Accessibility Resources</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      /* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+      html {
+  /* For the default link colour */
+  --link-colour: #006726;
+
+  /* For the link hover state */
+  --link-colour-alt: #00521e;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.3;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: auto auto 0.75em;
+}
+
+h1 {
+  font-size: 3.052rem;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 2.441rem;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 1.953rem;
+  font-weight: bold;
+}
+
+h4 {
+  font-size: 1.563rem;
+  font-weight: bold;
+}
+
+p,
+li {
+  font-size: 1.25rem;
+}
+
+a {
+  color: var(--link-colour);
+  max-width: max-content;
+  text-decoration: underline;
+  text-decoration-thickness: 0.15em;
+}
+
+a:hover {
+  color: var(--link-colour-alt);
+  text-decoration-thickness: 0.3em;
+}
+
+a:focus {
+  background-color: #fd0;
+  box-shadow: 0 -0.2em #fd0, 0 0.3em #0b0c0c;
+  color: #0b0c0c !important;
+  outline: 3px solid transparent;
+  text-decoration: none;
+}
+
+body {
+  display: grid;
+  grid-template-areas:
+    "skip-link"
+    "header"
+    "main"
+    "footer";
+  grid-template-rows: auto auto 1fr auto;
+  margin: 0;
+  min-height: 100vh;
+}
+
+main {
+  font-size: 1.25rem;
+  grid-area: main;
+  margin: 0 auto;
+  max-width: 80ch;
+  max-width: 100vw;
+  width: 100%;
+}
+
+nav {
+  height: min-content;
+}
+
+a:link,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+li,
+blockquote {
+  max-width: 65ch;
+}
+
+.c-nav {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.c-nav__item,
+.c-nav__item:hover {
+  color: #fff;
+  display: block;
+  max-width: 100%;
+  padding: 1rem;
+}
+
+.c-nav__item:focus {
+  color: #000;
+}
+
+.c-nav li:first-of-type a {
+  padding-left: 0;
+}
+
+footer {
+  grid-area: footer;
+}
+
+.c-skip_link {
+  grid-area: skip-link;
+  position: absolute;
+  top: -999px;
+}
+
+.c-skip_link:focus {
+  position: relative;
+  top: 0;
+}
+
+.c-header {
+  background-color: #0b0c0c;
+  color: #fff;
+  grid-area: header;
+}
+
+.c-header__site-name {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 1rem 1rem 1rem 0;
+  text-decoration: none;
+}
+
+.c-header__site-name:hover {
+  color: #fff;
+  text-decoration: underline;
+  text-decoration-thickness: 0.2em;
+}
+
+.c-header__wrapper {
+  align-items: center;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.c-main {
+  padding: 1.875rem 0 3.125rem;
+}
+
+.c-footer {
+  background-color: #f3f2f1;
+  color: #0b0c0c;
+}
+
+.c-footer ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin: 0;
+  padding: 1rem 1rem 1rem 0;
+}
+
+.c-footer li {
+  margin: 0.25rem 0;
+  padding: 0.5rem 0;
+}
+
+.u-width-wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 60rem;
+  padding: 0 2rem;
+  width: 100%;
+}
+
+.u-visually-hidden {
+  border: 0 !important;
+  clip: rect(0 0 0 0) !important;
+  clip-path: inset(50%) !important;
+  height: 1px !important;
+  margin: 0 !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  white-space: nowrap !important;
+  width: 1px !important;
+}
+
+.u-flow * + * {
+  margin-top: 1rem;
+}
+
+.u-flow * + h2 {
+  margin-top: 3rem;
+}
+
+.u-flow * + h3,
+.u-flow * + h4,
+.u-flow * + h5 {
+  margin-top: 2rem;
+}
+
+.c-blog-card {
+  border-top: 0.1rem solid #b1b4b6;
+  margin-top: 0;
+  padding: 3rem 0;
+}
+
+:is(.c-blog-card, .c-resource-section):first-of-type {
+  margin-top: 3rem;
+}
+
+:is(.c-blog-card, .c-resource-section):last-of-type {
+  border-bottom: 0.1rem solid #b1b4b6;
+}
+
+.c-blog-card__summary,
+.c-blog-card__link {
+  font-size: 1.563rem;
+  margin: 1.875rem 0;
+}
+
+.c-blog-card__link {
+  display: block;
+}
+
+.c-blog__content {
+  margin: 3rem 0;
+}
+
+.c-resource-card {
+  padding: 0 0 1rem;
+}
+
+.c-resource-section {
+  border-top: 0.1rem solid #b1b4b6;
+  margin-top: 0;
+  padding: 3rem 0;
+}
+
+table {
+  border: 0.1rem solid #000;
+  border-collapse: collapse;
+  margin-bottom: 1.875rem;
+  margin-top: 1.875rem;
+  max-width: 100%;
+  overflow-x: scroll;
+}
+
+th,
+td {
+  border: 0.1rem solid #000;
+  padding: 0.5rem 1rem;
+}
+
+blockquote {
+  border-left: 0.5rem solid #b1b4b6;
+  display: block;
+  padding: 1rem;
+}
+
+pre {
+  border: 0.1rem solid #b1b4b6;
+  max-width: 100%;
+  overflow-x: scroll;
+  padding: 1rem 2rem;
+}
+
+code {
+  font-family: monospace;
+}
+
+.c-breadcrumbs {
+  display: flex;
+  flex-flow: row wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.c-breadcrumbs__list-item {
+  display: flex;
+  flex-direction: row;
+  margin: 0 0 0 1rem;
+  margin-top: 0;
+  padding: 0.5rem 1rem 0.5rem 0;
+}
+
+.c-breadcrumbs__list-item::after {
+  content: ">";
+  display: block;
+  height: 1rem;
+  padding-left: 1rem;
+  width: 1rem;
+}
+
+.c-breadcrumbs__list-item:first-of-type {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.c-breadcrumbs__list-item:last-of-type::after {
+  content: "";
+}
+
+    </style>
+  </head>
+  <body>
+    <a href="#main" class="c-skip_link">Skip to main content</a>
+    <header class="c-header">
+      <div class="[ c-header__wrapper ] [ u-width-wrapper ]">
+        <a class="c-header__site-name" href="/accessibility/">Defra Accessibility Resources</a>
+        <nav>
+          <ul class="c-nav">
+            
+            
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main id="main" class="c-main">
+      <div class="[ c-main__wrapper ] [ u-width-wrapper u-flow ]">
+        
+  <ol class="c-breadcrumbs">
+    <li class="c-breadcrumbs__list-item">
+      <a href="/accessibility/" class="c-breadcrumbs__link">Home</a>
+    </li>
+    <li class="c-breadcrumbs__list-item">
+      <a href="/accessibility/blog/" class="c-breadcrumbs__link">Blog</a>
+    </li>
+    <li class="c-breadcrumbs__list-item">
+      <a href="." class="c-breadcrumbs__link" aria-current="page">How to make a Qualtrics form more accessible</a>
+    </li>
+  </ol>
+
+        <h1>How to make a Qualtrics form more accessible</h1>
+        
+  
+  
+  
+  
+  
+    
+      <p>If you need this document in a more accessible format, email the Defra Accessibility Team at <a href="mailto:accessibility@defra.gov.uk">accessibility@defra.gov.uk</a></p>
+      
+        <p>Version 1.0, published February 8, 2022.</p>
+      
+    
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+  
+  
+  
+  
+  </p>
+
+  <div class="c-blog__content">
+    <h2>How to use this guidance</h2>
+<p>This guidance will help you to make your Qualtrics form more accessible. You must follow each step of the guidance. This is not a complete guide to making a good digital form.</p>
+<h2>Checklist</h2>
+<ul>
+<li><a href="#check-that-you-are-only-asking-the-questions-you-need">Ask only the questions you need</a></li>
+<li><a href="#structure-your-form-to-help-users">Structure your form to help users</a></li>
+<li><a href="#write-the-questions-and-any-guidance-using-clear-language-(plain-english)">Use clear language (Plain English)</a></li>
+<li><a href="#use-the-defra-forms-dynamic-theme">Use the ‘Defra forms’ theme</a></li>
+<li><a href="#setting-up-your-template">Set up your template correctly</a></li>
+<li><a href="#use-a-meaningful-form-title">Use a meaningful form title</a></li>
+<li><a href="#use-meaningful-headings-on-each-screen">Use meaningful headings on each screen</a></li>
+<li><a href="#question-types-you-can-use">Use the accessible question types</a></li>
+<li><a href="#mandatory-questions">Remove ‘required’ markers and add ‘(optional)’ to non mandatory questions</a></li>
+<li><a href="#explain-if-a-particular-format-is-needed">Add helpful hints and format guidance to questions</a></li>
+<li><a href="#checking-entries-errors-and-validation">Use validation where it will help</a></li>
+<li><a href="#front-load-label-question-text">‘Front load’ question text</a></li>
+<li><a href="#put-guidance-where-it-will-be-used-and-avoid-referring-people-out-of-the-form">Put guidance where it will be used and avoid referring people out of the form</a></li>
+<li><a href="#make-link-text-meaningful-on-its-own">Use links correctly</a></li>
+<li><a href="#declarations-and-electronic-signatures">Use the simplest possible declarations or ‘electronic signatures’</a></li>
+<li><a href="#consider-if-users-can-submit-a-file-instead-of-entering-large-amounts-of-data">Consider if users can submit a file instead of entering large amounts of data</a></li>
+<li><a href="#run-the-qualtrics-accessibility-checker">Run the Qualtrics accessibility checker</a></li>
+<li><a href="#add-an-accessibility-statement">Add an accessibility statement</a></li>
+<li><a href="#test-your-form">Test your form</a></li>
+</ul>
+<h2><span id="check-that-you-are-only-asking-the-questions-you-need"></span> Check that you are only asking the questions you need</h2>
+<p>Don’t just copy an old paper form.</p>
+<p>Follow the advice in the <a href="https://www.gov.uk/service-manual/design/form-structure">GDS Structuring forms guidance</a>.</p>
+<p>Only add a question if you know it is needed. Use a question protocol to help you decide this. This helps make forms better for all users.</p>
+<p>If you remove unnecessary questions you help people with access needs, who will often take longer to complete the form than those without access needs.</p>
+<h2><span id="structure-your-form-to-help-users"></span> Structure your form to help users</h2>
+<p>Organise your questions in a logical order that helps users. Group related questions together.</p>
+<p>Start with <strong>one</strong> thing per page. That doesn’t always mean one question per page. Avoid loading pages with lots of questions.</p>
+<p>Use either a question or a statement as the main page titles. Use questions or statements consistently.</p>
+<h2><span id="write-the-questions-and-any-guidance-using-clear-language-(plain-english)"></span> Write the questions and any guidance using clear language (Plain English)</h2>
+<p>If the language of your form is not simple and clear, the form cannot be considered accessible.</p>
+<p>If you need advice about how to do this read the <a href="https://readabilityguidelines.co.uk/clear-language/">clear language guidance from Content Design London</a> or <a href="https://www.gov.uk/guidance/content-design/writing-for-gov-uk">Content design: planning, writing and managing content on GOV.UK</a>.</p>
+<h2>Building accessible pages</h2>
+<h3><span id="use-the-defra-forms-dynamic-theme"></span> Use the ‘Defra forms’ dynamic theme</h3>
+<p>The existing ‘Defra Core’ theme has some accessibility issues and currently requires additional styling to be applied to resolve these problems.</p>
+<p>To apply this additional styling:</p>
+<ol>
+<li>Go to ‘Look and feel’.</li>
+<li>Select the 'Core Defra' Dynamic Theme (not the static theme).</li>
+<li>Navigate to the ‘Style’ panel</li>
+<li>The following URL: <code>https://defra-design.github.io/accessibility/documents/qualtrics/defra-qualtrics-additional-styling.css</code> needs to be entered into the 'External CSS' field.</li>
+<li>Once complete, select the 'Apply' button.</li>
+</ol>
+<h3><span id="setting-up-your-template"></span> Setting up your template</h3>
+<p>Ensure that the button text used in your form is consistent.</p>
+<ol>
+<li>Go to ‘Look and feel’ and then ‘General’</li>
+<li>For the ‘Next button text’ delete the existing text and enter ‘Continue’.</li>
+<li>For the ‘Back button text’ delete the existing text and enter ‘Back’.</li>
+</ol>
+<h4>If your survey only is a single page</h4>
+<p>You should change the ‘Next button text’ to be 'Submit' rather than 'Continue'.</p>
+<p>The Progress bar will be hidden by default, regardless of the selected option.</p>
+<p>Specify the department’s name within the survey header. For example, if this survey is being conducted for Defra, within the header will be: “Department for Environment Food &amp; Rural Affairs”, or if it were being conducted for Natural England, the header would read “Natural England”. This department name is required as the logo is a decorative image which does not provide users of assistive technology with any information.</p>
+<p>Note: the Progress bar will be hidden by default, regardless of the selected option.</p>
+<h4>Other Settings</h4>
+<p>This is under Survey options &gt; General</p>
+<p><strong>Survey language</strong> - check that is is set to English (UK)</p>
+<p><strong>Display name</strong> - use the format [Form name] - [Organisation] where the form name matches the main form title, for example:</p>
+<p>Give your feedback on the Check for flooding service - Environment Agency</p>
+<p><strong>Survey description</strong> - a short snippet to describe from the users point of view what the form is for.</p>
+<h3>Motion</h3>
+<p>Do not use motion.</p>
+<p>Turn off any page transitions applied as well as autofocus and auto-advance on questions, as these features can lead to accessibility problems with people who may have motion sickness.</p>
+<ol>
+<li>Go to ‘Look and feel’ and then ‘Motion’</li>
+<li>Set ‘Page Transition’ to ‘None’</li>
+</ol>
+<h3><span id="use-a-meaningful-form-title"></span> Use a meaningful form title</h3>
+<p>All forms need a title that reflects the purpose of the survey, for example: “Give your feedback on the Check for flooding service”. This title will be reflected within the user’s browser and available to assistive technologies for people to understand the purpose of the page.</p>
+<h4>How to add a title</h4>
+<p>To add a title to your survey, navigate to the ‘Survey options’ page for your survey. Within the general tab, look for a field labelled: ‘Display name’. Using the text input, add the title for your survey - once complete, Qualtrics will automatically save this change.</p>
+<h3><span id="use-meaningful-headings-on-each-screen"></span> Use meaningful headings on each screen</h3>
+<p>Each screen should have a main H1 heading.</p>
+<p>Consider adding subheadings to any screen that has a few blocks of text. For example: before you start, guidance, cookies, privacy, within the introductory screen.</p>
+<h4>How to add headings</h4>
+<p>Add headings to your Qualtrics survey by inserting a ‘<em>Text/Graphic</em>’ question type. When editing the text, you should see an option to use the ‘<em>Rich Content Editor</em>’. Selecting this option will allow you to format your text without the need to add custom HTML.</p>
+<p>Select all of the text that you wish to convert into a heading and select the drop-down element labelled: ‘<em>Format</em>’. From this list, select the relevant heading level for the text to be set to.</p>
+<p>Headings should always be in order without skipping a level, i.e. a heading level 1 should be followed by heading level 2s, which should then be followed by heading level 3s.</p>
+<ul>
+<li>Heading level 1 (followed by a) heading level 2 (followed by a) heading level 3 - <em>This pattern is correct as the heading level structure is consistent and does not skip a level</em>.</li>
+<li>Heading level 1 (followed by a) heading level 3 (followed by a) heading level 5 - <em>This pattern is incorrect as heading levels are skipped</em>.</li>
+</ul>
+<h2>Building accessible questions</h2>
+<h3><span id="question-types-you-can-use"></span> Question types you can use</h3>
+<h4>Accessible types you can use</h4>
+<p>The following questions and their varying types should be accessible.</p>
+<ul>
+<li>Text/Graphic question</li>
+<li>Multiple choice</li>
+<li>Text entry</li>
+</ul>
+<h4>Avoid these or use with care</h4>
+<p>When using these question types, ensure that there are as few columns as possible. Having a large number of columns (&gt;5) will lead to horizontal scrolling and create accessibility problems.</p>
+<ul>
+<li>Slider
+<ul>
+<li>Sliders</li>
+</ul>
+</li>
+<li>Bars</li>
+<li>Matrix table
+<ul>
+<li>Likert
+<ul>
+<li>Allow one answer</li>
+<li>Allow multiple answers</li>
+</ul>
+</li>
+<li>Constant sum</li>
+<li>Text entry</li>
+</ul>
+</li>
+<li>Side by side</li>
+</ul>
+<h4>Don't use these</h4>
+<p>We believe that the following cannot be made accessible.</p>
+<ul>
+<li>Form field</li>
+<li>Rank order</li>
+<li>Net promoter score</li>
+<li>Timing</li>
+<li>Graphic slider</li>
+<li>Constant sum</li>
+<li>File upload</li>
+<li>Pick, group, and rank</li>
+<li>Drill down</li>
+<li>Signature</li>
+<li>Heat map</li>
+<li>Hot spot</li>
+<li>Meta info</li>
+<li>Captcha verification</li>
+<li>Highlight</li>
+<li>Screen capture</li>
+</ul>
+<h3><span id="mandatory-questions"></span> Mandatory questions</h3>
+<p>Qualtrics use the term “Force a response” for mandatory questions. Follow <a href="https://design-system.service.gov.uk/patterns/question-pages/">the GDS pattern for mandatory questions</a>:</p>
+<ul>
+<li><strong>Do not</strong> add the word ‘required’ or an asterisk to mandatory questions.</li>
+<li>Add ‘(optional)’ to the label of questions which are not mandatory.</li>
+</ul>
+<p>Note: Qualtrics does not offer any automated approach for informing users whether questions require responses or not. This can lead to errors if a person skips a question that requires a response.</p>
+<h3><span id="explain-if-a-particular-format-is-needed"></span> Explain if a particular format is needed</h3>
+<p>When data must be entered in a specific format or in a particular way, you must give clear instructions with the question. For example:</p>
+<blockquote>
+<p><strong>Permit reference number</strong></p>
+<p>Find this on your permit card.</p>
+<p>It’s 2 letters and 6 numbers. For example, AB123456.</p>
+</blockquote>
+<h3><span id="checking-entries-errors-and-validation"></span> Checking entries: errors and validation</h3>
+<p>You can help users to enter the correct information by adding a validation check to your question.</p>
+<p>The options in Qualtrics for validation on a Single line, Text entry field, are to 'Force a response' (make the question mandatory) and then you can add another validation such as:</p>
+<ul>
+<li>Content type
+<ul>
+<li>Email address</li>
+<li>Phone number</li>
+<li>Postal code</li>
+<li>Date format</li>
+<li>Number</li>
+<li>Text only</li>
+</ul>
+</li>
+<li>Minimum length</li>
+<li>Maximum length</li>
+</ul>
+<p>If you use any of these, don’t forget to check it with the data you expect the user to add, as well as any common variations.</p>
+<h3><span id="front-load-label-question-text"></span> ‘Front load’ label (question) text</h3>
+<p>Put the most meaningful text at the start of a form label or heading. People skimming a form, people who need high magnification and some screen reader users may not read/listen to the end of a label.</p>
+<p>For example:</p>
+<blockquote>
+<p>Start date of this report</p>
+<p>End date of this report</p>
+</blockquote>
+<p>Is better than</p>
+<blockquote>
+<p>Period covered by this report - Start Date</p>
+<p>Period covered by this report - End Date</p>
+</blockquote>
+<h3>Help users complete multi-option questions</h3>
+<p>For multi-select checkboxes, it’s helpful to users to add hint text: “Select all that apply” (or similar relevant text).</p>
+<p>For yes/no radio button options, consider reminding users what yes and no mean. For example:</p>
+<p>“Yes I have paid” instead of just “Yes”.</p>
+<h2>Help and guidance text</h2>
+<h3><span id="#put-guidance-where-it-will-be-used-and-avoid-referring-people-out-of-the-form"></span> Put guidance where it will be used and avoid referring people out of the form</h3>
+<p>In general, guidance for the filling in the form should be with the form, not separate to the form.</p>
+<p>Guidance to be read before completing the form should be listed in a before you start section.</p>
+<p>Guidance for each section should be in that section.</p>
+<p>Where you link to the guidance, you should link directly to the accessible version. Do not link to guidance that could be added to the form - for example a couple of sentences within a guide on GOV.UK.</p>
+<p>Do not put guidance text next to a question that is not related to the actual question.</p>
+<h4>Guidance for options</h4>
+<p>If possible, include guidance with the options and not separately. For example:</p>
+<blockquote>
+<p><strong>I only use this licence for:</strong></p>
+<p>(o) unpaid work as a volunteer when I am registered with an organisation or charity - no charge</p>
+<p>(o) research related to the protected species that is carried out by a student or employee of an academic institution or research body - no charge</p>
+</blockquote>
+<h4>Guidance about what happens after the form is submitted is probably better placed at the end</h4>
+<p>For example, “If you do not get a response within 60 days of submitting this form” would be better on the confirmation page.</p>
+<h3><span id="make-link-text-meaningful-on-its-own"></span> Make link text meaningful on its own</h3>
+<h4>Make link text meaningful</h4>
+<blockquote>
+<p><a href="https://www.alerc.org.uk/lerc-finder.html">Find your local Environmental Record Centre</a></p>
+</blockquote>
+<p><strong>Not</strong></p>
+<blockquote>
+<p>Visit the <a href="https://www.alerc.org.uk/lerc-finder.html">Association for Local Environmental Record Centres</a> for contact details.</p>
+</blockquote>
+<h4>Do not use URLs on their own as link text</h4>
+<p><a href="https://www.brc.ac.uk/irecord/">https://www.brc.ac.uk/irecord/</a> is not accessible.</p>
+<p><a href="https://www.brc.ac.uk/irecord/">Record wildlife sightings on the iRecord website</a> is better.</p>
+<h4>State if a link opens a new tab</h4>
+<p>If links really do need to open in a new window/tab, include text within the link to explain that this link will open in a new window/tab.</p>
+<p>For example:</p>
+<blockquote>
+<p><a href="https://www.brc.ac.uk/irecord/">Record wildlife sightings on the iRecord website (opens new tab)</a></p>
+</blockquote>
+<p>You can change how a link opens, so links don’t have to open in a new window. See the <a href="https://www.qualtrics.com/support/survey-platform/survey-module/editing-questions/rich-content-editor/insert-a-hyperlink/">Qualtrics Insert a Hyperlink guide</a>.</p>
+<h4>Link to the correct page not the homepage to make it easier for users to find what you need</h4>
+<p><a href="https://www.alerc.org.uk/lerc-finder.html">Find your local Environmental Record Centre (opens new tab)</a> - could go to the find a centre page not the home page.</p>
+<h2><span id="declarations-and-electronic-signatures"></span> Declarations and ‘electronic signatures’</h2>
+<h3>Use implicit declarations</h3>
+<p>Consider if you really need an explicit declaration. You can often substitute a form checkbox with text such as “By continuing you confirm you have read and understood the privacy notice.”</p>
+<h3>Combine declarations</h3>
+<p>If you have several declarations that all need to be agreed with, combine them in one page, or at least reduce the total number.</p>
+<h3>Avoid ‘signatures’</h3>
+<p>Asking people to upload an image of a signature - an ‘electronic’ or ‘digital signature’ is not accessible to visually impaired people and in most cases not needed. Use a digital declaration instead. For example:</p>
+<blockquote>
+<p><strong>Declaration by the registered person</strong></p>
+<p>I confirm that the details I have given are correct.</p>
+<p>Name of registered person</p>
+<p>[ Submit ]</p>
+</blockquote>
+<h2><span id="consider-if-users-can-submit-a-file-instead-of-entering-large-amounts-of-data"></span> Consider if users can submit a file instead of entering large amounts of data</h2>
+<p>For data submissions (for example the list of surveys), find out:</p>
+<ul>
+<li>The typical number of rows of data.</li>
+<li>Whether users already have this as a document - for example a spreadsheet.</li>
+</ul>
+<p>Where users might have this as data or could easily prepare a data file, and where the number of rows is typically greater than 5 or 10, consider allowing users to submit a file and provide an accessible template file.</p>
+<h3>Spreadsheet accessibility</h3>
+<p>Follow the <a href="https://gss.civilservice.gov.uk/policy-store/releasing-statistics-in-spreadsheets/">Releasing statistics in spreadsheets guidance (Government Statistical Service)</a> to make an accessible spreadsheet.</p>
+<h2><span id="run-the-qualtrics-accessibility-checker"></span> Run the Qualtrics accessibility checker</h2>
+<p>As a further check, you could run the Qualtrics accessibility checker. In our view, this tool is not as useful as Qualtrics would have you believe. We also think that the Qualtrics view about their own system’s accessibility is optimistic. Do not believe the text “The survey is accessible but some options can be improved”.</p>
+<p>To run the checker:</p>
+<ol>
+<li>In the Survey tab, click the ‘Tools’ drop down.</li>
+<li>Select ‘Review’.</li>
+<li>Select ‘Check survey accessibility’.</li>
+</ol>
+<h3>Interpreting the results of the checker</h3>
+<p>Recommendation to ‘Number the survey questions’. If you build your form following this guidance then numbering is not required. If you decide to add numbering, we suggest that you use the ‘sequential numbering’ option with no prefix.</p>
+<h2><span id="add-an-accessibility-statement"></span> Add an accessibility statement</h2>
+<p>Each form needs to link to an accessibility statement to comply with the law.
+You can use a single statement for a set of forms if:</p>
+<ul>
+<li>they all have the same legal body as owner (eg Environment Agency)</li>
+<li>you are sure that a single statement will be correct for all the forms</li>
+</ul>
+<p>Use the <a href="../qualtrics-generic-accessibility-statement/">Defra Qualtrics accessibility statement HTML template</a> to form the basis of your own statement.</p>
+<p>To do this, create a new project.</p>
+<ol>
+<li>On the ‘Create a project’ screen, select ‘Survey’ to create a new survey from scratch.</li>
+<li>Name the survey: ‘NAME OF YOUR SERVICE accessibility statement’, replacing the placeholder text with the name of your service or services.</li>
+<li>Change the default question to be a ‘Text/Graphic’ question type.</li>
+<li>Select the question to write the question text and then navigate to the ‘HTML view’ that will appear just above the box you have selected.</li>
+<li>Copy the Qualtrics generic accessibility statement code and paste it into the HTML view.</li>
+<li>Once pasted, navigate to the ‘Rich Content Editor’ view, again this is situated before the question itself, close to the HTML view.</li>
+<li>From here, go through the statement and add the details that are relevant to your form. If you are aware of any extra defects in your form, add those.</li>
+<li>Go to ‘Look and feel’ and then ‘Style’</li>
+<li>Add the following code to the ‘Custom CSS’ field.</li>
+</ol>
+<ul>
+<li><code>#NextButton{display:none!important}</code></li>
+</ul>
+<ol start="10">
+<li>Select the ‘Apply’ button.</li>
+</ol>
+<p>You are legally responsible for the content of the statement. If you are unsure, ask your legal team to check and sign off.</p>
+<p>Once complete, select the ‘Publish’ button - located back in the ‘Builder’ view. Be sure to copy the link that Qualtrics provides you with.</p>
+<p>Navigate back to the form that you are working on to add your accessibility statement.</p>
+<ol>
+<li>Go to ‘Look and feel’ and then ‘General’</li>
+<li>In the text field labelled ‘Footer’, insert the following code</li>
+</ol>
+<ul>
+<li><code>&lt;a href=&quot;LINK YOU COPIED EARLIER&quot;  target=&quot;_blank&quot;&gt;Accessibility Statement (opens in a new tab)&lt;/a&gt;</code></li>
+</ul>
+<ol start="3">
+<li>Replace the placeholder text with the link that you copied when publishing the accessibility statement.</li>
+<li>Select the ‘Apply’ button.</li>
+</ol>
+<h2><span id="test-your-form"></span> Test your form</h2>
+<p>Ideally, test your form with actual users.</p>
+<p>If that’s not possible, as a minimum, ask someone who has not been involved in the form to test it carefully.</p>
+<p>Ask someone else to check all the questions that use validation or can trigger errors to make sure that they all work.</p>
+
+  </div>
+  
+  <p class="c-blog__author">Written by 
+    
+    
+    <a href="/accessibility/authors/defra-accessibility-team/">Defra accessibility team</a>.
+    
+    Published February 8, 2022.
+  </p>
+
+
+      </div> 
+    </main>
+    <footer class="c-footer">
+      <div class="[ c-footer__wrapper ] [ u-width-wrapper ]">
+        <h2 class="u-visually-hidden">Useful Links</h2>
+        <nav>
+        <ul>
+          <li><a href="/accessibility/accessibility-statement/">Accessibility statement</a></li>
+          
+        </ul>
+        </nav>
+      </div> 
+    </footer>
+  </body>
+</html>
