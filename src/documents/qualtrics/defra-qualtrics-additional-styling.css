@@ -2,7 +2,7 @@
 
 /* DEFRA Qualtrics additional CSS */
 
-/* v0.23 */
+/* v0.3 */
 
 /* This CSS has been written by the DEFRA Accessibility team in order to bring
  the Defra Qualtrics theme more inline with the GDS Design System */
@@ -182,21 +182,17 @@ input[type="button"]:focus {
 .Skin .QuestionBody {
   margin: 0;
   margin-top: 1rem !important;
-  padding: 0 !important;
+  padding: 0 0.25rem !important;
 }
 
 /* The following styling affects radio and checkbox elements to ensure that they resemble GDS Design System elements */
 th[scope="col"] .LabelWrapper,
 th[scope="col"].SubQuestionText,
+th[scope="col"].AnswerText,
+th[scope="row"] label,
 .slider-container label {
   font-size: 1.5rem;
   line-height: 1.25 !important;
-}
-
-th[scope="col"].AnswerText,
-th[scope="row"] label {
-  font-size: 1.1875rem !important;
-  line-height: 1.3158 !important;
 }
 
 .ChoiceStructure .LabelWrapper label {
@@ -317,9 +313,8 @@ th[scope="row"] label {
 fieldset legend label.QuestionText,
 fieldset legend div.QuestionText {
   color: var(--gds-color-black-primary-default) !important;
-  font-size: 2.25rem !important;
-  font-weight: 700 !Important;
-  line-height: 1.1111 !important;
+  font-size: 1.1875rem !important;
+  line-height: 1.3158 !important;
 }
 
 .QuestionBody .ChoiceStructure input.InputText,
@@ -371,10 +366,10 @@ input[type="radio"]:focus + label.q-radio {
 }
 
 .Skin .QuestionText {
-  line-height: 1.25 !important;
+  line-height: 1.3158 !important;
   padding-bottom: 0 !important;
-  padding-left: 0 !important;
-  padding-right: 0 !important;
+  padding-left: 0.25 !important;
+  padding-right: 0.25 !important;
 }
 
 .Skin .QuestionText p {
@@ -393,6 +388,13 @@ input[type="radio"]:focus + label.q-radio {
 
 .Skin .QuestionText a:hover {
   color: #003078;
+}
+
+.Skin div .QuestionText,
+.Skin div .QuestionBody,
+.Skin .MC .QuestionBody {
+  padding: 0 0.25rem !important;
+  overflow: visible !important;
 }
 
 .Skin .ChoiceStructure label.SingleAnswer,
@@ -430,17 +432,13 @@ input[type="radio"]:focus + label.q-radio {
   .Skin label.q-radio.q-checked.q-focused::after {
     top: 9px;
   }
-
-  .Skin div .QuestionBody {
-    padding-bottom: 0 !important;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-  }
 }
 
 /* Styling mandatory questions that have not been answered to match the GDS Design System */
 
 .Skin .QuestionOuter {
+  margin-bottom: 1.875rem !important;
+  padding-bottom: 0 !important;
   position: relative;
 }
 
