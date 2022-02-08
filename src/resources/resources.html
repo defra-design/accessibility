@@ -18,11 +18,22 @@ title: Resources
   <p>We regularly publish and review our documents. We have categorised our resources based on tasks you may be currently working on.</p>
   
   <ul>
-    <li><a href="#creating-an-online-form">Creating an online form</a></li>
+    <li><a href="#writing-accessible-forms">Writing accessible forms</a></li>
   </ul>
   
-  <a id="#creating-an-online-form">
-    <h2>Creating an online form</h2>
-  </a>
+  <div class="c-resource-section">
+    <h2 id="#writing-accessible-forms">Writing accessible forms</h2>
+    {% for post in collections.writingAccessibleForms %}
+      {# Stores data about the post into variables used in the blog-summary partial #}
+      {% set postTitle = post.data.title %}
+      {% set postTags = post.data.tags %}
+      {% set postSummary = post.data.summary %}
+      {% set postUrl = post.url %}
+      {% set postAuthors = post.data.author %}
+      {% set postPublished = post.date %}
+      {# Includes the blog-summary partial code, putting the post's data into a reusable template #}
+      {% include "_partials/resource-summary.njk" %}
+    {% endfor %} 
+  </div>
 
 {% endblock %} 

@@ -37,15 +37,15 @@ Pieces written by {{ author.name }}
   {% for post in postListItems | reverse %}
     {% for postAuthor in post.data.author %}
       {% if (postAuthor == author.name) %}
-        {# Stores data about the post into variables used in the post-summary partial #}
+        {# Stores data about the post into variables used in the blog-summary partial #}
         {% set postTitle = post.data.title %}
         {% set postTags = post.data.tags %}
         {% set postSummary = post.data.summary %}
         {% set postUrl = post.url %}
         {% set postAuthors = post.data.author %}
         {% set postPublished = post.date %}
-        {# Includes the post-summary partial code, putting the post's data into a reusable template #}
-        {% include "_partials/post-summary.njk" %}
+        {# Includes the blog-summary partial code, putting the post's data into a reusable template #}
+        {% include "_partials/blog-summary.njk" %}
       {% endif %}
     {% endfor %}
   {% endfor %}

@@ -16,10 +16,18 @@
 
 {% block mainContent %}
   
-  <p class="c-blog-card__category">This article relates to 
-    {# Create a blank array to hold the tag names #}
-    {% set tagData = [] %}
-    {# Loop through the tags data and store the descriptor in the array #}
+  {# Create a blank array to hold the tag names #}
+  {% set tagData = [] %}
+  {# Loop through the tags data and store the descriptor in the array #}
+  {% if tags|length %}
+    {% if 'resource' in tags %}
+      <p>If you need this document in a more accessible format, email the Defra Accessibility Team at <a href="mailto:accessibility@defra.gov.uk">accessibility@defra.gov.uk</a></p>
+      {% if version %}
+        <p>Version {{ version }}, published {{ page.date | postDate }}.</p>
+      {% endif %}
+    {% else %}
+      <p class="c-blog-card__category">This article relates to 
+    {% endif %}
     {% for tag in tags %}
       {% if tag == "awareness" %}
         {% set items = (tagData.push({'name': "Ways of working", 'tag': tag}), tagData) %}
@@ -28,12 +36,13 @@
         {% set items = (tagData.push({'name': "Knowledge sharing", 'tag': tag}), tagData) %}
       {% endif %}
     {% endfor %}
-    
-    {# Loop through the array and add the descriptor to the DOM #}
-    {% for tagDescriptor in tagData %}
-    {% set tagLink = "/tag/" + tagDescriptor.tag | slug + "/" %}
-    <a href="{{ tagLink | url }}/">{{tagDescriptor.name}}</a>{% if loop.last %}{% else %}{% if loop.index == loop.length-1 %}<span> and </span>{% else %}<span>, </span>{% endif %}{% endif %}
-    {% endfor %}
+  {% endif %}
+  
+  {# Loop through the array and add the descriptor to the DOM #}
+  {% for tagDescriptor in tagData %}
+  {% set tagLink = "/tag/" + tagDescriptor.tag | slug + "/" %}
+  <a href="{{ tagLink | url }}/">{{tagDescriptor.name}}</a>{% if loop.last %}{% else %}{% if loop.index == loop.length-1 %}<span> and </span>{% else %}<span>, </span>{% endif %}{% endif %}
+  {% endfor %}
   </p>
 
   <div class="c-blog__content">
