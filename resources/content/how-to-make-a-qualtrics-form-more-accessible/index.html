@@ -422,7 +422,7 @@ code {
         <a class="c-header__site-name" href="/accessibility/">Defra Accessibility Resources</a>
         <nav>
           <ul class="c-nav">
-            
+            <li><a class="c-nav__item" href="/accessibility/resources/">Resources</a></li>
             
           </ul>
         </nav>
@@ -451,9 +451,8 @@ code {
   
   
     
-      <p>If you need this document in a more accessible format, email the Defra Accessibility Team at <a href="mailto:accessibility@defra.gov.uk">accessibility@defra.gov.uk</a></p>
       
-        <p>Version 1.0, published February 8, 2022.</p>
+        <p>Version 1.0, published February 9, 2022.</p>
       
     
     
@@ -474,7 +473,9 @@ code {
 
   <div class="c-blog__content">
     <h2>How to use this guidance</h2>
-<p>This guidance will help you to make your Qualtrics form more accessible. You must follow each step of the guidance. This is not a complete guide to making a good digital form.</p>
+<p>This guidance will help you to make your Qualtrics form more accessible.</p>
+<p>You must follow each step of the guidance.</p>
+<p>This is not a complete guide to making a good digital form.</p>
 <h2>Checklist</h2>
 <ul>
 <li><a href="#check-that-you-are-only-asking-the-questions-you-need">Ask only the questions you need</a></li>
@@ -500,12 +501,12 @@ code {
 <h2><span id="check-that-you-are-only-asking-the-questions-you-need"></span> Check that you are only asking the questions you need</h2>
 <p>Don’t just copy an old paper form.</p>
 <p>Follow the advice in the <a href="https://www.gov.uk/service-manual/design/form-structure">GDS Structuring forms guidance</a>.</p>
-<p>Only add a question if you know it is needed. Use a question protocol to help you decide this. This helps make forms better for all users.</p>
-<p>If you remove unnecessary questions you help people with access needs, who will often take longer to complete the form than those without access needs.</p>
+<p>Only add a question if you know it is needed. <a href="https://www.gov.uk/service-manual/design/form-structure#know-why-youre-asking-every-question">Use a question protocol</a> to help you decide this. This helps make forms better for all users.</p>
+<p>If you remove unnecessary questions you especially help people with access needs, who will often take longer to complete the form than those without access needs.</p>
 <h2><span id="structure-your-form-to-help-users"></span> Structure your form to help users</h2>
 <p>Organise your questions in a logical order that helps users. Group related questions together.</p>
 <p>Start with <strong>one</strong> thing per page. That doesn’t always mean one question per page. Avoid loading pages with lots of questions.</p>
-<p>Use either a question or a statement as the main page titles. Use questions or statements consistently.</p>
+<p>Use either a question or a statement as the main page titles. Be consistent in your use of questions or statements.</p>
 <h2><span id="write-the-questions-and-any-guidance-using-clear-language-(plain-english)"></span> Write the questions and any guidance using clear language (Plain English)</h2>
 <p>If the language of your form is not simple and clear, the form cannot be considered accessible.</p>
 <p>If you need advice about how to do this read the <a href="https://readabilityguidelines.co.uk/clear-language/">clear language guidance from Content Design London</a> or <a href="https://www.gov.uk/guidance/content-design/writing-for-gov-uk">Content design: planning, writing and managing content on GOV.UK</a>.</p>
@@ -529,8 +530,8 @@ code {
 </ol>
 <h4>If your survey only is a single page</h4>
 <p>You should change the ‘Next button text’ to be 'Submit' rather than 'Continue'.</p>
-<p>The Progress bar will be hidden by default, regardless of the selected option.</p>
-<p>Specify the department’s name within the survey header. For example, if this survey is being conducted for Defra, within the header will be: “Department for Environment Food &amp; Rural Affairs”, or if it were being conducted for Natural England, the header would read “Natural England”. This department name is required as the logo is a decorative image which does not provide users of assistive technology with any information.</p>
+<p>As there is only one page, the Progress bar will be hidden by default, even if you don't select this option.</p>
+<p>Specify the department’s name within the survey header. For example, if this survey is being conducted for Defra, within the header will be: “Department for Environment Food &amp; Rural Affairs”, or if it were being conducted for Natural England, the header would read “Natural England”. This department name is required as the logo is a decorative image which does not provide users of assistive technology with any information. Do not abbreviate the organisation name.</p>
 <p>Note: the Progress bar will be hidden by default, regardless of the selected option.</p>
 <h4>Other Settings</h4>
 <p>This is under Survey options &gt; General</p>
@@ -555,10 +556,42 @@ code {
 <h4>How to add headings</h4>
 <p>Add headings to your Qualtrics survey by inserting a ‘<em>Text/Graphic</em>’ question type. When editing the text, you should see an option to use the ‘<em>Rich Content Editor</em>’. Selecting this option will allow you to format your text without the need to add custom HTML.</p>
 <p>Select all of the text that you wish to convert into a heading and select the drop-down element labelled: ‘<em>Format</em>’. From this list, select the relevant heading level for the text to be set to.</p>
-<p>Headings should always be in order without skipping a level, i.e. a heading level 1 should be followed by heading level 2s, which should then be followed by heading level 3s.</p>
+<p>Headings should always follow a hierarchy without skipping a level, i.e. a heading level 1 should be followed by heading level 2s, which should then be followed by heading level 3s. Do not use headings just to change the style of text, e.g. larger and bolder.</p>
+<p>The following example is good as the heading level structure is consistent and does not skip a level.</p>
 <ul>
-<li>Heading level 1 (followed by a) heading level 2 (followed by a) heading level 3 - <em>This pattern is correct as the heading level structure is consistent and does not skip a level</em>.</li>
-<li>Heading level 1 (followed by a) heading level 3 (followed by a) heading level 5 - <em>This pattern is incorrect as heading levels are skipped</em>.</li>
+<li>Heading level 1
+<ul>
+<li>Heading level 2</li>
+<li>Heading level 2
+<ul>
+<li>Heading level 3</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Heading level 1
+<ul>
+<li>Heading level 2</li>
+</ul>
+</li>
+</ul>
+<p>The following example is not good as heading levels are skipped.</p>
+<ul>
+<li>Heading level 2
+<ul>
+<li>Heading level 1</li>
+<li>Heading level 3
+<ul>
+<li>Heading level 5</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Heading level 1
+<ul>
+<li>Heading level 3</li>
+</ul>
+</li>
 </ul>
 <h2>Building accessible questions</h2>
 <h3><span id="question-types-you-can-use"></span> Question types you can use</h3>
@@ -663,7 +696,7 @@ code {
 <h2>Help and guidance text</h2>
 <h3><span id="#put-guidance-where-it-will-be-used-and-avoid-referring-people-out-of-the-form"></span> Put guidance where it will be used and avoid referring people out of the form</h3>
 <p>In general, guidance for the filling in the form should be with the form, not separate to the form.</p>
-<p>Guidance to be read before completing the form should be listed in a before you start section.</p>
+<p>Guidance to be read before completing the form should be listed in a &quot;before you start&quot; section.</p>
 <p>Guidance for each section should be in that section.</p>
 <p>Where you link to the guidance, you should link directly to the accessible version. Do not link to guidance that could be added to the form - for example a couple of sentences within a guide on GOV.UK.</p>
 <p>Do not put guidance text next to a question that is not related to the actual question.</p>
@@ -695,8 +728,8 @@ code {
 <p><a href="https://www.brc.ac.uk/irecord/">Record wildlife sightings on the iRecord website (opens new tab)</a></p>
 </blockquote>
 <p>You can change how a link opens, so links don’t have to open in a new window. See the <a href="https://www.qualtrics.com/support/survey-platform/survey-module/editing-questions/rich-content-editor/insert-a-hyperlink/">Qualtrics Insert a Hyperlink guide</a>.</p>
-<h4>Link to the correct page not the homepage to make it easier for users to find what you need</h4>
-<p><a href="https://www.alerc.org.uk/lerc-finder.html">Find your local Environmental Record Centre (opens new tab)</a> - could go to the find a centre page not the home page.</p>
+<h4>Link to the correct page (not the homepage) to make it easier for users to find what they need</h4>
+<p><a href="https://www.alerc.org.uk/lerc-finder.html">Find your local Environmental Record Centre (opens new tab)</a> - should go to the find a centre page not the home page.</p>
 <h2><span id="declarations-and-electronic-signatures"></span> Declarations and ‘electronic signatures’</h2>
 <h3>Use implicit declarations</h3>
 <p>Consider if you really need an explicit declaration. You can often substitute a form checkbox with text such as “By continuing you confirm you have read and understood the privacy notice.”</p>
@@ -707,7 +740,7 @@ code {
 <blockquote>
 <p><strong>Declaration by the registered person</strong></p>
 <p>I confirm that the details I have given are correct.</p>
-<p>Name of registered person</p>
+<p>[ Name of registered person ]</p>
 <p>[ Submit ]</p>
 </blockquote>
 <h2><span id="consider-if-users-can-submit-a-file-instead-of-entering-large-amounts-of-data"></span> Consider if users can submit a file instead of entering large amounts of data</h2>
@@ -745,7 +778,7 @@ You can use a single statement for a set of forms if:</p>
 <li>Select the question to write the question text and then navigate to the ‘HTML view’ that will appear just above the box you have selected.</li>
 <li>Copy the Qualtrics generic accessibility statement code and paste it into the HTML view.</li>
 <li>Once pasted, navigate to the ‘Rich Content Editor’ view, again this is situated before the question itself, close to the HTML view.</li>
-<li>From here, go through the statement and add the details that are relevant to your form. If you are aware of any extra defects in your form, add those.</li>
+<li>Go through the statement and add the details that are relevant to your form, remove any that are not, and include contact details. If you are aware of any extra defects in your form, add those.</li>
 <li>Go to ‘Look and feel’ and then ‘Style’</li>
 <li>Add the following code to the ‘Custom CSS’ field.</li>
 </ol>
@@ -781,7 +814,7 @@ You can use a single statement for a set of forms if:</p>
     
     <a href="/accessibility/authors/defra-accessibility-team/">Defra accessibility team</a>.
     
-    Published February 8, 2022.
+    Published February 9, 2022.
   </p>
 
 
