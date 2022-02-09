@@ -21,7 +21,6 @@
   {# Loop through the tags data and store the descriptor in the array #}
   {% if tags|length %}
     {% if 'resource' in tags %}
-      <p>If you need this document in a more accessible format, email the Defra Accessibility Team at <a href="mailto:accessibility@defra.gov.uk">accessibility@defra.gov.uk</a></p>
       {% if version %}
         <p>Version {{ version }}, published {{ page.date | postDate }}.</p>
       {% endif %}

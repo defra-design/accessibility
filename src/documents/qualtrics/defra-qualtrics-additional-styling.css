@@ -155,6 +155,10 @@ input[type="button"]:focus {
   color: #000 !important;
 }
 
+.Skin #Buttons {
+  text-align: left !important;
+}
+
 /* Hiding the progress bar */
 .Skin #ProgressBar {
   display: none !important;
@@ -450,6 +454,7 @@ input[type="radio"]:focus + label.q-radio {
   background-color: #d4351c;
   bottom: 1.5rem;
   content: " ";
+  height: 100%;
   left: 0.25rem;
   position: absolute;
   top: 0;
@@ -468,6 +473,7 @@ input[type="radio"]:focus + label.q-radio {
   font-weight: bold;
   line-height: 1.3158;
   margin-bottom: 0 !important;
+  margin-left: 0 !important;
   text-indent: 0 !important;
 }
 

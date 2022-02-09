@@ -9,7 +9,11 @@ tags:
 ---
 
 ## How to use this guidance
-This guidance will help you to make your Qualtrics form more accessible. You must follow each step of the guidance. This is not a complete guide to making a good digital form.
+This guidance will help you to make your Qualtrics form more accessible.
+
+You must follow each step of the guidance. 
+
+This is not a complete guide to making a good digital form.
 
 ## Checklist
 * [Ask only the questions you need](#check-that-you-are-only-asking-the-questions-you-need)
@@ -37,16 +41,16 @@ Don’t just copy an old paper form.
 
 Follow the advice in the [GDS Structuring forms guidance](https://www.gov.uk/service-manual/design/form-structure).
 
-Only add a question if you know it is needed. Use a question protocol to help you decide this. This helps make forms better for all users.
+Only add a question if you know it is needed. [Use a question protocol](https://www.gov.uk/service-manual/design/form-structure#know-why-youre-asking-every-question) to help you decide this. This helps make forms better for all users.
 
-If you remove unnecessary questions you help people with access needs, who will often take longer to complete the form than those without access needs.
+If you remove unnecessary questions you especially help people with access needs, who will often take longer to complete the form than those without access needs.
 
 ## <span id="structure-your-form-to-help-users"></span> Structure your form to help users
 Organise your questions in a logical order that helps users. Group related questions together.
 
 Start with **one** thing per page. That doesn’t always mean one question per page. Avoid loading pages with lots of questions.
 
-Use either a question or a statement as the main page titles. Use questions or statements consistently.
+Use either a question or a statement as the main page titles. Be consistent in your use of questions or statements.
 
 ## <span id="write-the-questions-and-any-guidance-using-clear-language-(plain-english)"></span> Write the questions and any guidance using clear language (Plain English)
 If the language of your form is not simple and clear, the form cannot be considered accessible.
@@ -75,9 +79,9 @@ Ensure that the button text used in your form is consistent.
 #### If your survey only is a single page
 You should change the ‘Next button text’ to be 'Submit' rather than 'Continue'.
 
-The Progress bar will be hidden by default, regardless of the selected option.
+As there is only one page, the Progress bar will be hidden by default, even if you don't select this option.
 
-Specify the department’s name within the survey header. For example, if this survey is being conducted for Defra, within the header will be: “Department for Environment Food & Rural Affairs”, or if it were being conducted for Natural England, the header would read “Natural England”. This department name is required as the logo is a decorative image which does not provide users of assistive technology with any information.
+Specify the department’s name within the survey header. For example, if this survey is being conducted for Defra, within the header will be: “Department for Environment Food & Rural Affairs”, or if it were being conducted for Natural England, the header would read “Natural England”. This department name is required as the logo is a decorative image which does not provide users of assistive technology with any information. Do not abbreviate the organisation name.
 
 Note: the Progress bar will be hidden by default, regardless of the selected option.
 
@@ -116,10 +120,25 @@ Add headings to your Qualtrics survey by inserting a ‘*Text/Graphic*’ questi
 
 Select all of the text that you wish to convert into a heading and select the drop-down element labelled: ‘*Format*’. From this list, select the relevant heading level for the text to be set to.
 
-Headings should always be in order without skipping a level, i.e. a heading level 1 should be followed by heading level 2s, which should then be followed by heading level 3s.
+Headings should always follow a hierarchy without skipping a level, i.e. a heading level 1 should be followed by heading level 2s, which should then be followed by heading level 3s. Do not use headings just to change the style of text, e.g. larger and bolder.
 
-* Heading level 1 (followed by a) heading level 2 (followed by a) heading level 3 - *This pattern is correct as the heading level structure is consistent and does not skip a level*.
-* Heading level 1 (followed by a) heading level 3 (followed by a) heading level 5 - *This pattern is incorrect as heading levels are skipped*.
+The following example is good as the heading level structure is consistent and does not skip a level.
+
+* Heading level 1
+  * Heading level 2
+  * Heading level 2
+    * Heading level 3
+* Heading level 1
+  * Heading level 2
+
+The following example is not good as heading levels are skipped.
+
+* Heading level 2
+  * Heading level 1
+  * Heading level 3
+    * Heading level 5
+* Heading level 1
+  * Heading level 3
 
 ## Building accessible questions
 ### <span id="question-types-you-can-use"></span> Question types you can use
@@ -222,7 +241,7 @@ For yes/no radio button options, consider reminding users what yes and no mean. 
 ### <span id="#put-guidance-where-it-will-be-used-and-avoid-referring-people-out-of-the-form"></span> Put guidance where it will be used and avoid referring people out of the form
 In general, guidance for the filling in the form should be with the form, not separate to the form.
 
-Guidance to be read before completing the form should be listed in a before you start section.
+Guidance to be read before completing the form should be listed in a "before you start" section.
 
 Guidance for each section should be in that section.
 
@@ -265,8 +284,8 @@ For example:
 
 You can change how a link opens, so links don’t have to open in a new window. See the [Qualtrics Insert a Hyperlink guide](https://www.qualtrics.com/support/survey-platform/survey-module/editing-questions/rich-content-editor/insert-a-hyperlink/).
 
-#### Link to the correct page not the homepage to make it easier for users to find what you need
-[Find your local Environmental Record Centre (opens new tab)](https://www.alerc.org.uk/lerc-finder.html) - could go to the find a centre page not the home page.
+#### Link to the correct page (not the homepage) to make it easier for users to find what they need
+[Find your local Environmental Record Centre (opens new tab)](https://www.alerc.org.uk/lerc-finder.html) - should go to the find a centre page not the home page.
 
 ## <span id="declarations-and-electronic-signatures"></span> Declarations and ‘electronic signatures’
 ### Use implicit declarations
@@ -282,7 +301,7 @@ Asking people to upload an image of a signature - an ‘electronic’ or ‘digi
 > 
 > I confirm that the details I have given are correct.
 > 
-> Name of registered person
+> [ Name of registered person ]
 > 
 > [ Submit ]
 
@@ -326,7 +345,7 @@ To do this, create a new project.
 4. Select the question to write the question text and then navigate to the ‘HTML view’ that will appear just above the box you have selected.
 5. Copy the Qualtrics generic accessibility statement code and paste it into the HTML view.
 6. Once pasted, navigate to the ‘Rich Content Editor’ view, again this is situated before the question itself, close to the HTML view.
-7. From here, go through the statement and add the details that are relevant to your form. If you are aware of any extra defects in your form, add those. 
+7. Go through the statement and add the details that are relevant to your form, remove any that are not, and include contact details. If you are aware of any extra defects in your form, add those. 
 8. Go to ‘Look and feel’ and then ‘Style’
 9. Add the following code to the ‘Custom CSS’ field.
   * `#NextButton{display:none!important}`
