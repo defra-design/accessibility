@@ -67,7 +67,10 @@ To apply this additional styling:
 1. Go to ‘Look and feel’.
 2. Select the 'Core Defra' Dynamic Theme (not the static theme).
 3. Navigate to the ‘Style’ panel
-4. The following URL: `https://defra-design.github.io/accessibility/documents/qualtrics/defra-qualtrics-additional-styling.css` needs to be entered into the 'External CSS' field.
+4. The following URL needs to be entered into the 'External CSS' field.
+
+`https://defra-design.github.io/accessibility/documents/qualtrics/defra-qualtrics-additional-styling.css`
+
 5. Once complete, select the 'Apply' button.
 
 <h3 name="setting-up-your-template" id="setting-up-your-template">Setting up your template</h3>
@@ -77,12 +80,12 @@ Ensure that the button text used in your form is consistent.
 2. For the ‘Next button text’ delete the existing text and enter ‘Continue’.
 3. For the ‘Back button text’ delete the existing text and enter ‘Back’.
 
+Specify the department’s name within the survey header. For example, if this survey is being conducted for Defra, within the header will be: “Department for Environment Food & Rural Affairs”, or if it were being conducted for Natural England, the header would read “Natural England”. This department name is required as the logo is a decorative image which does not provide users of assistive technology with any information. Do not abbreviate the organisation name.
+
 #### If your survey only is a single page
 You should change the ‘Next button text’ to be 'Submit' rather than 'Continue'.
 
 As there is only one page, the Progress bar will be hidden by default, even if you don't select this option.
-
-Specify the department’s name within the survey header. For example, if this survey is being conducted for Defra, within the header will be: “Department for Environment Food & Rural Affairs”, or if it were being conducted for Natural England, the header would read “Natural England”. This department name is required as the logo is a decorative image which does not provide users of assistive technology with any information. Do not abbreviate the organisation name.
 
 Note: the Progress bar will be hidden by default, regardless of the selected option.
 
@@ -91,22 +94,18 @@ This is under Survey options > General
 
 **Survey language** - check that is is set to English (UK)
 
-**Display name** - use the format [Form name] - [Organisation] where the form name matches the main form title, for example:
-
-Give your feedback on the Check for flooding service - Environment Agency
-
-**Survey description** - a short snippet to describe from the users point of view what the form is for.
+**Survey description** - a short snippet to describe from the users' point of view what the form is for.
 
 ### Motion
 Do not use motion.
 
-Turn off any page transitions applied as well as autofocus and auto-advance on questions, as these features can lead to accessibility problems with people who may have motion sickness.
+Turn off any page transitions applied as well as "autofocus" and "auto-advance" on questions, as these features can lead to accessibility problems with people who may have motion sickness.
 
 1. Go to ‘Look and feel’ and then ‘Motion’
 2. Set ‘Page Transition’ to ‘None’
 
 <h3 name="use-a-meaningful-form-title" id="use-a-meaningful-form-title">Use a meaningful form title</h3>
-All forms need a title that reflects the purpose of the survey, for example: “Give your feedback on the Check for flooding service”. This title will be reflected within the user’s browser and available to assistive technologies for people to understand the purpose of the page.
+All forms need a title that reflects the purpose of the survey, using the format: use the format [Form name] - [Organisation]. For example: “Give your feedback on the Check for flooding service - Environment Agency”. This title will be reflected within the user’s browser and available to assistive technologies for people to understand the purpose of the page.
 
 #### How to add a title
 To add a title to your survey, navigate to the ‘Survey options’ page for your survey. Within the general tab, look for a field labelled: ‘Display name’. Using the text input, add the title for your survey - once complete, Qualtrics will automatically save this change.
@@ -152,7 +151,7 @@ The following questions and their varying types should be accessible.
 * Text entry
 
 #### Avoid these or use with care
-When using these question types, ensure that there are as few columns as possible. Having a large number of columns (>5) will lead to horizontal scrolling and create accessibility problems.
+When using these question types, ensure that there are as few columns as possible. Having a large number of columns (more than 5) will lead to horizontal scrolling and create accessibility problems.
 
 * Slider
   * Sliders
@@ -186,7 +185,7 @@ We believe that the following cannot be made accessible.
 * Screen capture
 
 <h3 name="mandatory-questions" id="mandatory-questions">Mandatory questions</h3>
-Qualtrics use the term “Force a response” for mandatory questions. Follow [the GDS pattern for mandatory questions](https://design-system.service.gov.uk/patterns/question-pages/):
+Qualtrics use the term “Force a response” for mandatory questions. Follow <a href="https://design-system.service.gov.uk/patterns/question-pages">the GDS pattern for mandatory questions</a>:
 
 * **Do not** add the word ‘required’ or an asterisk to mandatory questions.
 * Add ‘(optional)’ to the label of questions which are not mandatory.
@@ -195,6 +194,8 @@ Note: Qualtrics does not offer any automated approach for informing users whethe
 
 <h3 name="explain-if-a-particular-format-is-needed" id="explain-if-a-particular-format-is-needed">Explain if a particular format is needed</h3>
 When data must be entered in a specific format or in a particular way, you must give clear instructions with the question. For example:
+
+#### Explain required formats
 
 > **Permit reference number**
 > 
