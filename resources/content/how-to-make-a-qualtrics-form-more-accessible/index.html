@@ -522,7 +522,10 @@ The existing ‘Defra Core’ theme has some accessibility issues and currently 
 <li>Go to ‘Look and feel’.</li>
 <li>Select the 'Core Defra' Dynamic Theme (not the static theme).</li>
 <li>Navigate to the ‘Style’ panel</li>
-<li>The following URL: <code>https://defra-design.github.io/accessibility/documents/qualtrics/defra-qualtrics-additional-styling.css</code> needs to be entered into the 'External CSS' field.</li>
+<li>The following URL needs to be entered into the 'External CSS' field.</li>
+</ol>
+<p><code>https://defra-design.github.io/accessibility/documents/qualtrics/defra-qualtrics-additional-styling.css</code></p>
+<ol start="5">
 <li>Once complete, select the 'Apply' button.</li>
 </ol>
 <h3 name="setting-up-your-template" id="setting-up-your-template">Setting up your template</h3>
@@ -532,26 +535,24 @@ Ensure that the button text used in your form is consistent.
 <li>For the ‘Next button text’ delete the existing text and enter ‘Continue’.</li>
 <li>For the ‘Back button text’ delete the existing text and enter ‘Back’.</li>
 </ol>
+<p>Specify the department’s name within the survey header. For example, if this survey is being conducted for Defra, within the header will be: “Department for Environment Food &amp; Rural Affairs”, or if it were being conducted for Natural England, the header would read “Natural England”. This department name is required as the logo is a decorative image which does not provide users of assistive technology with any information. Do not abbreviate the organisation name.</p>
 <h4>If your survey only is a single page</h4>
 <p>You should change the ‘Next button text’ to be 'Submit' rather than 'Continue'.</p>
 <p>As there is only one page, the Progress bar will be hidden by default, even if you don't select this option.</p>
-<p>Specify the department’s name within the survey header. For example, if this survey is being conducted for Defra, within the header will be: “Department for Environment Food &amp; Rural Affairs”, or if it were being conducted for Natural England, the header would read “Natural England”. This department name is required as the logo is a decorative image which does not provide users of assistive technology with any information. Do not abbreviate the organisation name.</p>
 <p>Note: the Progress bar will be hidden by default, regardless of the selected option.</p>
 <h4>Other Settings</h4>
 <p>This is under Survey options &gt; General</p>
 <p><strong>Survey language</strong> - check that is is set to English (UK)</p>
-<p><strong>Display name</strong> - use the format [Form name] - [Organisation] where the form name matches the main form title, for example:</p>
-<p>Give your feedback on the Check for flooding service - Environment Agency</p>
-<p><strong>Survey description</strong> - a short snippet to describe from the users point of view what the form is for.</p>
+<p><strong>Survey description</strong> - a short snippet to describe from the users' point of view what the form is for.</p>
 <h3>Motion</h3>
 <p>Do not use motion.</p>
-<p>Turn off any page transitions applied as well as autofocus and auto-advance on questions, as these features can lead to accessibility problems with people who may have motion sickness.</p>
+<p>Turn off any page transitions applied as well as &quot;autofocus&quot; and &quot;auto-advance&quot; on questions, as these features can lead to accessibility problems with people who may have motion sickness.</p>
 <ol>
 <li>Go to ‘Look and feel’ and then ‘Motion’</li>
 <li>Set ‘Page Transition’ to ‘None’</li>
 </ol>
 <h3 name="use-a-meaningful-form-title" id="use-a-meaningful-form-title">Use a meaningful form title</h3>
-All forms need a title that reflects the purpose of the survey, for example: “Give your feedback on the Check for flooding service”. This title will be reflected within the user’s browser and available to assistive technologies for people to understand the purpose of the page.
+All forms need a title that reflects the purpose of the survey, using the format: use the format [Form name] - [Organisation]. For example: “Give your feedback on the Check for flooding service - Environment Agency”. This title will be reflected within the user’s browser and available to assistive technologies for people to understand the purpose of the page.
 <h4>How to add a title</h4>
 <p>To add a title to your survey, navigate to the ‘Survey options’ page for your survey. Within the general tab, look for a field labelled: ‘Display name’. Using the text input, add the title for your survey - once complete, Qualtrics will automatically save this change.</p>
 <h3 name="use-meaningful-headings-on-each-screen" id="use-meaningful-headings-on-each-screen">Use meaningful headings on each screen</h3>
@@ -607,7 +608,7 @@ Each screen should have a main H1 heading.
 <li>Text entry</li>
 </ul>
 <h4>Avoid these or use with care</h4>
-<p>When using these question types, ensure that there are as few columns as possible. Having a large number of columns (&gt;5) will lead to horizontal scrolling and create accessibility problems.</p>
+<p>When using these question types, ensure that there are as few columns as possible. Having a large number of columns (more than 5) will lead to horizontal scrolling and create accessibility problems.</p>
 <ul>
 <li>Slider
 <ul>
@@ -650,7 +651,7 @@ Each screen should have a main H1 heading.
 <li>Screen capture</li>
 </ul>
 <h3 name="mandatory-questions" id="mandatory-questions">Mandatory questions</h3>
-Qualtrics use the term “Force a response” for mandatory questions. Follow [the GDS pattern for mandatory questions](https://design-system.service.gov.uk/patterns/question-pages/):
+Qualtrics use the term “Force a response” for mandatory questions. Follow <a href="https://design-system.service.gov.uk/patterns/question-pages">the GDS pattern for mandatory questions</a>:
 <ul>
 <li><strong>Do not</strong> add the word ‘required’ or an asterisk to mandatory questions.</li>
 <li>Add ‘(optional)’ to the label of questions which are not mandatory.</li>
@@ -658,6 +659,7 @@ Qualtrics use the term “Force a response” for mandatory questions. Follow [t
 <p>Note: Qualtrics does not offer any automated approach for informing users whether questions require responses or not. This can lead to errors if a person skips a question that requires a response.</p>
 <h3 name="explain-if-a-particular-format-is-needed" id="explain-if-a-particular-format-is-needed">Explain if a particular format is needed</h3>
 When data must be entered in a specific format or in a particular way, you must give clear instructions with the question. For example:
+<h4>Explain required formats</h4>
 <blockquote>
 <p><strong>Permit reference number</strong></p>
 <p>Find this on your permit card.</p>
