@@ -30,7 +30,7 @@ title: Resources
       {% set postSummary = post.data.summary %}
       {% set postUrl = post.url %}
       {% set postAuthors = post.data.author %}
-      {% set postPublished = post.date %}
+      {% set postPublished = post.data.publishedDate %}
       {# Includes the blog-summary partial code, putting the post's data into a reusable template #}
       {% include "_partials/resource-summary.njk" %}
     {% endfor %} 

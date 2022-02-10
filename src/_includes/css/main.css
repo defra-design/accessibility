@@ -138,7 +138,10 @@ footer {
 }
 
 .c-skip_link:focus {
+  max-width: 100%;
+  padding: 1rem 2rem;
   position: relative;
+  text-decoration: underline;
   top: 0;
 }
 
@@ -294,6 +297,7 @@ pre {
 
 code {
   font-family: monospace;
+  overflow-wrap: anywhere;
 }
 
 .c-breadcrumbs {

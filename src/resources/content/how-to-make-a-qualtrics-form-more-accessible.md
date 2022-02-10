@@ -3,6 +3,7 @@ title: How to make a Qualtrics form more accessible
 summary: This guidance will help you to make your Qualtrics form more accessible. You must follow each step of the guidance. This is not a complete guide to making a good digital form.
 author: ["Defra accessibility team"]
 version: "1.0"
+publishedDate: 2022-02-10
 tags:
   - writingAccessibleForms
   - resource
@@ -36,7 +37,7 @@ This is not a complete guide to making a good digital form.
 * [Add an accessibility statement](#add-an-accessibility-statement)
 * [Test your form](#test-your-form)
 
-## <span id="check-that-you-are-only-asking-the-questions-you-need"></span> Check that you are only asking the questions you need
+<h2 name="check-that-you-are-only-asking-the-questions-you-need" id="check-that-you-are-only-asking-the-questions-you-need">Check that you are only asking the questions you need</h2>
 Don’t just copy an old paper form.
 
 Follow the advice in the [GDS Structuring forms guidance](https://www.gov.uk/service-manual/design/form-structure).
@@ -45,20 +46,20 @@ Only add a question if you know it is needed. [Use a question protocol](https://
 
 If you remove unnecessary questions you especially help people with access needs, who will often take longer to complete the form than those without access needs.
 
-## <span id="structure-your-form-to-help-users"></span> Structure your form to help users
+<h2 name="check-that-you-are-only-asking-the-questions-you-need" id="check-that-you-are-only-asking-the-questions-you-need">Structure your form to help users</h2>
 Organise your questions in a logical order that helps users. Group related questions together.
 
 Start with **one** thing per page. That doesn’t always mean one question per page. Avoid loading pages with lots of questions.
 
 Use either a question or a statement as the main page titles. Be consistent in your use of questions or statements.
 
-## <span id="write-the-questions-and-any-guidance-using-clear-language-(plain-english)"></span> Write the questions and any guidance using clear language (Plain English)
+<h2 name="write-the-questions-and-any-guidance-using-clear-language-(plain-english)" id="write-the-questions-and-any-guidance-using-clear-language-(plain-english)">Write the questions and any guidance using clear language (Plain English)</h2>
 If the language of your form is not simple and clear, the form cannot be considered accessible.
 
 If you need advice about how to do this read the [clear language guidance from Content Design London](https://readabilityguidelines.co.uk/clear-language/) or [Content design: planning, writing and managing content on GOV.UK](https://www.gov.uk/guidance/content-design/writing-for-gov-uk).
 
 ## Building accessible pages
-### <span id="use-the-defra-forms-dynamic-theme"></span> Use the ‘Defra forms’ dynamic theme
+<h3 name="use-the-defra-forms-dynamic-theme" id="use-the-defra-forms-dynamic-theme">Use the ‘Defra forms’ dynamic theme</h3>
 The existing ‘Defra Core’ theme has some accessibility issues and currently requires additional styling to be applied to resolve these problems.
 
 To apply this additional styling:
@@ -69,7 +70,7 @@ To apply this additional styling:
 4. The following URL: `https://defra-design.github.io/accessibility/documents/qualtrics/defra-qualtrics-additional-styling.css` needs to be entered into the 'External CSS' field.
 5. Once complete, select the 'Apply' button.
 
-### <span id="setting-up-your-template"></span> Setting up your template
+<h3 name="setting-up-your-template" id="setting-up-your-template">Setting up your template</h3>
 Ensure that the button text used in your form is consistent.
 
 1. Go to ‘Look and feel’ and then ‘General’
@@ -104,13 +105,13 @@ Turn off any page transitions applied as well as autofocus and auto-advance on q
 1. Go to ‘Look and feel’ and then ‘Motion’
 2. Set ‘Page Transition’ to ‘None’
 
-### <span id="use-a-meaningful-form-title"></span> Use a meaningful form title
+<h3 name="use-a-meaningful-form-title" id="use-a-meaningful-form-title">Use a meaningful form title</h3>
 All forms need a title that reflects the purpose of the survey, for example: “Give your feedback on the Check for flooding service”. This title will be reflected within the user’s browser and available to assistive technologies for people to understand the purpose of the page.
 
 #### How to add a title
 To add a title to your survey, navigate to the ‘Survey options’ page for your survey. Within the general tab, look for a field labelled: ‘Display name’. Using the text input, add the title for your survey - once complete, Qualtrics will automatically save this change.
 
-### <span id="use-meaningful-headings-on-each-screen"></span> Use meaningful headings on each screen
+<h3 name="use-meaningful-headings-on-each-screen" id="use-meaningful-headings-on-each-screen">Use meaningful headings on each screen</h3>
 Each screen should have a main H1 heading.
 
 Consider adding subheadings to any screen that has a few blocks of text. For example: before you start, guidance, cookies, privacy, within the introductory screen.
@@ -141,7 +142,8 @@ The following example is not good as heading levels are skipped.
   * Heading level 3
 
 ## Building accessible questions
-### <span id="question-types-you-can-use"></span> Question types you can use
+<h3 name="question-types-you-can-use" id="question-types-you-can-use">Question types you can use</h3>
+
 #### Accessible types you can use
 The following questions and their varying types should be accessible.
 
@@ -183,7 +185,7 @@ We believe that the following cannot be made accessible.
 * Highlight
 * Screen capture
 
-### <span id="mandatory-questions"></span> Mandatory questions
+<h3 name="mandatory-questions" id="mandatory-questions">Mandatory questions</h3>
 Qualtrics use the term “Force a response” for mandatory questions. Follow [the GDS pattern for mandatory questions](https://design-system.service.gov.uk/patterns/question-pages/):
 
 * **Do not** add the word ‘required’ or an asterisk to mandatory questions.
@@ -191,7 +193,7 @@ Qualtrics use the term “Force a response” for mandatory questions. Follow [t
 
 Note: Qualtrics does not offer any automated approach for informing users whether questions require responses or not. This can lead to errors if a person skips a question that requires a response.
 
-### <span id="explain-if-a-particular-format-is-needed"></span> Explain if a particular format is needed
+<h3 name="explain-if-a-particular-format-is-needed" id="explain-if-a-particular-format-is-needed">Explain if a particular format is needed</h3>
 When data must be entered in a specific format or in a particular way, you must give clear instructions with the question. For example:
 
 > **Permit reference number**
@@ -200,7 +202,7 @@ When data must be entered in a specific format or in a particular way, you must 
 > 
 > It’s 2 letters and 6 numbers. For example, AB123456.
 
-### <span id="checking-entries-errors-and-validation"></span> Checking entries: errors and validation
+<h3 name="checking-entries-errors-and-validation" id="checking-entries-errors-and-validation">Checking entries: errors and validation</h3>
 You can help users to enter the correct information by adding a validation check to your question.
 
 The options in Qualtrics for validation on a Single line, Text entry field, are to 'Force a response' (make the question mandatory) and then you can add another validation such as:
@@ -217,7 +219,7 @@ The options in Qualtrics for validation on a Single line, Text entry field, are 
 
 If you use any of these, don’t forget to check it with the data you expect the user to add, as well as any common variations.
 
-### <span id="front-load-label-question-text"></span> ‘Front load’ label (question) text
+<h3 name="front-load-label-question-text" id="front-load-label-question-text">‘Front load’ label (question) text</h3>
 Put the most meaningful text at the start of a form label or heading. People skimming a form, people who need high magnification and some screen reader users may not read/listen to the end of a label.
 
 For example:
@@ -238,7 +240,7 @@ For yes/no radio button options, consider reminding users what yes and no mean. 
 “Yes I have paid” instead of just “Yes”.
 
 ## Help and guidance text
-### <span id="#put-guidance-where-it-will-be-used-and-avoid-referring-people-out-of-the-form"></span> Put guidance where it will be used and avoid referring people out of the form
+<h3 name="#put-guidance-where-it-will-be-used-and-avoid-referring-people-out-of-the-form" id="#put-guidance-where-it-will-be-used-and-avoid-referring-people-out-of-the-form">Put guidance where it will be used and avoid referring people out of the form</h3>
 In general, guidance for the filling in the form should be with the form, not separate to the form.
 
 Guidance to be read before completing the form should be listed in a "before you start" section.
@@ -262,8 +264,10 @@ If possible, include guidance with the options and not separately. For example:
 
 For example, “If you do not get a response within 60 days of submitting this form” would be better on the confirmation page.
 
-### <span id="make-link-text-meaningful-on-its-own"></span> Make link text meaningful on its own
+<h3 name="make-link-text-meaningful-on-its-own" id="make-link-text-meaningful-on-its-own">Make link text meaningful on its own</h3>
+
 #### Make link text meaningful
+
 > [Find your local Environmental Record Centre](https://www.alerc.org.uk/lerc-finder.html)
 
 **Not**
@@ -287,7 +291,8 @@ You can change how a link opens, so links don’t have to open in a new window. 
 #### Link to the correct page (not the homepage) to make it easier for users to find what they need
 [Find your local Environmental Record Centre (opens new tab)](https://www.alerc.org.uk/lerc-finder.html) - should go to the find a centre page not the home page.
 
-## <span id="declarations-and-electronic-signatures"></span> Declarations and ‘electronic signatures’
+<h2 name="declarations-and-electronic-signatures" id="declarations-and-electronic-signatures">Declarations and ‘electronic signatures’</h2>
+
 ### Use implicit declarations
 Consider if you really need an explicit declaration. You can often substitute a form checkbox with text such as “By continuing you confirm you have read and understood the privacy notice.”
 
@@ -305,7 +310,7 @@ Asking people to upload an image of a signature - an ‘electronic’ or ‘digi
 > 
 > [ Submit ]
 
-## <span id="consider-if-users-can-submit-a-file-instead-of-entering-large-amounts-of-data"></span> Consider if users can submit a file instead of entering large amounts of data
+<h2 name="consider-if-users-can-submit-a-file-instead-of-entering-large-amounts-of-data" id="consider-if-users-can-submit-a-file-instead-of-entering-large-amounts-of-data">Consider if users can submit a file instead of entering large amounts of data</h2>
 For data submissions (for example the list of surveys), find out:
 
 * The typical number of rows of data.
@@ -317,7 +322,7 @@ Where users might have this as data or could easily prepare a data file, and whe
 
 Follow the [Releasing statistics in spreadsheets guidance (Government Statistical Service)](https://gss.civilservice.gov.uk/policy-store/releasing-statistics-in-spreadsheets/) to make an accessible spreadsheet.
 
-## <span id="run-the-qualtrics-accessibility-checker"></span> Run the Qualtrics accessibility checker
+<h2 name="run-the-qualtrics-accessibility-checker" id="run-the-qualtrics-accessibility-checker">Run the Qualtrics accessibility checker</h2>
 As a further check, you could run the Qualtrics accessibility checker. In our view, this tool is not as useful as Qualtrics would have you believe. We also think that the Qualtrics view about their own system’s accessibility is optimistic. Do not believe the text “The survey is accessible but some options can be improved”.
 
 To run the checker:
@@ -329,7 +334,7 @@ To run the checker:
 ### Interpreting the results of the checker
 Recommendation to ‘Number the survey questions’. If you build your form following this guidance then numbering is not required. If you decide to add numbering, we suggest that you use the ‘sequential numbering’ option with no prefix.
 
-## <span id="add-an-accessibility-statement"></span> Add an accessibility statement
+<h2 name="add-an-accessibility-statement" id="add-an-accessibility-statement">Add an accessibility statement</h2>
 Each form needs to link to an accessibility statement to comply with the law.
 You can use a single statement for a set of forms if:
 
@@ -362,7 +367,7 @@ Navigate back to the form that you are working on to add your accessibility stat
 3. Replace the placeholder text with the link that you copied when publishing the accessibility statement.
 4. Select the ‘Apply’ button.
 
-## <span id="test-your-form"></span> Test your form
+<h2 name="test-your-form" id="test-your-form">Test your form</h2>
 Ideally, test your form with actual users.
 
 If that’s not possible, as a minimum, ask someone who has not been involved in the form to test it carefully.

@@ -5,9 +5,21 @@
     <li class="c-breadcrumbs__list-item">
       <a href="{{ '/' | url }}" class="c-breadcrumbs__link">Home</a>
     </li>
-    <li class="c-breadcrumbs__list-item">
-      <a href="{{ '/blog/' | url }}" class="c-breadcrumbs__link">Blog</a>
-    </li>
+    {% if tags|length %}
+      {% if 'resource' in tags %}
+        <li class="c-breadcrumbs__list-item">
+          <a href="{{ '/resources/' | url }}" class="c-breadcrumbs__link">Resources</a>
+        </li>
+      {% else %}
+        <li class="c-breadcrumbs__list-item">
+          <a href="{{ '/writing/' | url }}" class="c-breadcrumbs__link">Writing</a>
+        </li>
+      {% endif %}
+    {% else %}
+      <li class="c-breadcrumbs__list-item">
+        <a href="{{ '/writing/' | url }}" class="c-breadcrumbs__link">Writing</a>
+      </li>
+    {% endif %}
     <li class="c-breadcrumbs__list-item">
       <a href="{{ url | url }}" class="c-breadcrumbs__link" aria-current="page">{{ title }}</a>
     </li>
@@ -22,7 +34,10 @@
   {% if tags|length %}
     {% if 'resource' in tags %}
       {% if version %}
-        <p>Version {{ version }}, published {{ page.date | postDate }}.</p>
+        <p>Version {{ version }} 
+        {%- if publishedDate -%}
+        , published {{ publishedDate | postDate }}.</p>
+        {%- endif -%}
       {% endif %}
     {% else %}
       <p class="c-blog-card__category">This article relates to 
@@ -53,7 +68,12 @@
     {% set authorNameLink = "/authors/" + authors | slug + "/" %}
     <a href="{{ authorNameLink | url }}">{{authors}}</a>{% if loop.last %}.{% else %}{% if loop.index == loop.length-1 %}<span> and </span>{% else %}<span>, </span>{% endif %}{% endif %}
     {% endfor %}
-    Published {{ page.date | postDate }}.
+    {% if tags|length %}
+      {% if 'resource' in tags %}
+      {% else %}
+        Published {{ page.date | postDate }}.
+      {% endif %}
+    {% endif %}
   </p>
 
 {% endblock %} 

@@ -12,7 +12,7 @@ module.exports = function(eleventyConfig) {
   });
 
   eleventyConfig.addFilter("postDate", (dateObj) => {
-    return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_FULL);
+    return DateTime.fromJSDate(dateObj).toFormat('d LLLL yyyy');
   });
 
   // Copy across all images
