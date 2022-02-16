@@ -572,7 +572,7 @@ to help improve it.
 <h2 id="help-or-hint-text-is-linked-to-the-question-label">Help or hint text is linked to the question label</h2>
 <p>Where your question has help or hint text you should help screen reader users to find it by linking it to the <code>&lt;label&gt;</code> using <code>aria-describedby</code>.</p>
 <p>For example:</p>
-<img src="/resources/images/checklist-of-common-accessibility-errors-found-in-new-services/hint-text-example.jpg" alt="A form field with the label: What is the name of the event?. Underneath the label is hint-text that reads: The name you'll use on promotional material. Underneath this text is the input field.">
+<img src="/accessibility/resources/images/checklist-of-common-accessibility-errors-found-in-new-services/hint-text-example.jpg" alt="A form field with the label: What is the name of the event?. Underneath the label is hint-text that reads: The name you'll use on promotional material. Underneath this text is the input field.">
 <p>The relevant HTML is:</p>
 <pre><code>&lt;h1 class=&quot;govuk-label-wrapper&quot;&gt;
     &lt;label class=&quot;govuk-label govuk-label--l&quot;
@@ -593,7 +593,7 @@ to help improve it.
 <p>See <a href="https://design-system.service.gov.uk/patterns/question-pages/#asking-complex-questions-without-using-hint-text">asking complex questions without using hint text</a>.</p>
 <h2 id="check-answers-change-links-are-not-ambiguous">Check answers change links are not ambiguous</h2>
 <p>The <a href="https://design-system.service.gov.uk/patterns/check-answers/">Check answers pattern</a> uses “Change” links to allow the users to change an answer. For example:</p>
-<img src="/resources/images/checklist-of-common-accessibility-errors-found-in-new-services/check-answers-example.jpg" alt="The GOV.UK answers pattern presenting the following information: Name, Sarah Phillips. Following this information is a link labelled: Change.">
+<img src="/accessibility/resources/images/checklist-of-common-accessibility-errors-found-in-new-services/check-answers-example.jpg" alt="The GOV.UK answers pattern presenting the following information: Name, Sarah Phillips. Following this information is a link labelled: Change.">
 <p>Screen reader users need to know what each link does so make sure that visually hidden text is being used to include extra text. This text should match the text at the start of the row so that it is consistent for voice control users.</p>
 <h2 id="visually-hidden-text-does-not-prevent-voice-control-from-working">Visually hidden text does not prevent voice control from working</h2>
 <p>If however, you use a link and include visually hidden text that is hard to guess, voice control users may find it hard to activate the link - for example: <a href="#">Cancel</a> <code>&lt;hidden&gt;</code>and return to GOV.UK<code>&lt;/hidden&gt;</code></p>
@@ -605,7 +605,7 @@ to help improve it.
 <h2 id="issues-with-the-design-system-that-cannot-be-fixed">Issues with the design system that cannot be fixed</h2>
 <h3 id="invalid-aria-expanded-error">Invalid aria-expanded error</h3>
 <p>This applies where you show an input conditionally based on selecting a radio button. For example:</p>
-<img src="/resources/images/checklist-of-common-accessibility-errors-found-in-new-services/conditional-reveal-example.jpg" alt="The GOV.UK radio pattern, with the question: How would you prefer to be contacted? Select one option. The options present are: Email, Phone and Text message. In this example, the Email option is checked, which has revealed a text input labelled: Email address, for the user to enter their contact information.">
+<img src="/accessibility/resources/images/checklist-of-common-accessibility-errors-found-in-new-services/conditional-reveal-example.jpg" alt="The GOV.UK radio pattern, with the question: How would you prefer to be contacted? Select one option. The options present are: Email, Phone and Text message. In this example, the Email option is checked, which has revealed a text input labelled: Email address, for the user to enter their contact information.">
 <p>Accessibility testing will usually report an error - something like “aria-expanded is not a valid aria attribute”.</p>
 <p>This is the current design system code. See <a href="https://design-system.service.gov.uk/components/checkboxes/">Checkboxes in the Design System</a> and the <a href="https://github.com/alphagov/govuk-design-system-backlog/issues/37">GitHub checkboxes note</a>.</p>
 <p>There is no need to list this issue your accessibility statement.</p>
