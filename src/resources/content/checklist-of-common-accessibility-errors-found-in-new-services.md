@@ -131,7 +131,7 @@ Where your question has help or hint text you should help screen reader users to
 
 For example:
 
-<img src="/resources/images/checklist-of-common-accessibility-errors-found-in-new-services/hint-text-example.jpg" alt="A form field with the label: What is the name of the event?. Underneath the label is hint-text that reads: The name you'll use on promotional material. Underneath this text is the input field.">
+<img src="{{ '/resources/images/checklist-of-common-accessibility-errors-found-in-new-services/hint-text-example.jpg' | url }}" alt="A form field with the label: What is the name of the event?. Underneath the label is hint-text that reads: The name you'll use on promotional material. Underneath this text is the input field.">
 
 The relevant HTML is:
 
@@ -164,7 +164,7 @@ See [asking complex questions without using hint text](https://design-system.ser
 
 The [Check answers pattern](https://design-system.service.gov.uk/patterns/check-answers/) uses “Change” links to allow the users to change an answer. For example:
 
-<img src="/resources/images/checklist-of-common-accessibility-errors-found-in-new-services/check-answers-example.jpg" alt="The GOV.UK answers pattern presenting the following information: Name, Sarah Phillips. Following this information is a link labelled: Change.">
+<img src="{{ '/resources/images/checklist-of-common-accessibility-errors-found-in-new-services/check-answers-example.jpg' | url }}" alt="The GOV.UK answers pattern presenting the following information: Name, Sarah Phillips. Following this information is a link labelled: Change.">
 
 Screen reader users need to know what each link does so make sure that visually hidden text is being used to include extra text. This text should match the text at the start of the row so that it is consistent for voice control users.
 
@@ -188,7 +188,7 @@ Add an email address at the top of your form for anyone who cannot use the form.
 
 This applies where you show an input conditionally based on selecting a radio button. For example:
 
-<img src="/resources/images/checklist-of-common-accessibility-errors-found-in-new-services/conditional-reveal-example.jpg" alt="The GOV.UK radio pattern, with the question: How would you prefer to be contacted? Select one option. The options present are: Email, Phone and Text message. In this example, the Email option is checked, which has revealed a text input labelled: Email address, for the user to enter their contact information.">
+<img src="{{ '/resources/images/checklist-of-common-accessibility-errors-found-in-new-services/conditional-reveal-example.jpg' | url }}" alt="The GOV.UK radio pattern, with the question: How would you prefer to be contacted? Select one option. The options present are: Email, Phone and Text message. In this example, the Email option is checked, which has revealed a text input labelled: Email address, for the user to enter their contact information.">
 
 Accessibility testing will usually report an error - something like “aria-expanded is not a valid aria attribute”.
 
