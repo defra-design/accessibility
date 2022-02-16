@@ -10,15 +10,11 @@
         <li class="c-breadcrumbs__list-item">
           <a href="{{ '/resources/' | url }}" class="c-breadcrumbs__link">Resources</a>
         </li>
-      {% else %}
+      {% elseif 'writing' in tags %}
         <li class="c-breadcrumbs__list-item">
           <a href="{{ '/writing/' | url }}" class="c-breadcrumbs__link">Writing</a>
         </li>
       {% endif %}
-    {% else %}
-      <li class="c-breadcrumbs__list-item">
-        <a href="{{ '/writing/' | url }}" class="c-breadcrumbs__link">Writing</a>
-      </li>
     {% endif %}
     <li class="c-breadcrumbs__list-item">
       <a href="{{ url | url }}" class="c-breadcrumbs__link" aria-current="page">{{ title }}</a>

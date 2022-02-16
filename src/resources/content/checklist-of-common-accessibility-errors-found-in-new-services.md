@@ -2,7 +2,7 @@
 title: Checklist of common accessibility errors found in new services
 summary: This guidance applies mainly to new digital services built using the GDS Design System. It’s not an overall accessibility checklist - it just highlights common issues to check for.
 author: ["Martin Glancy"]
-version: "1.0"
+version: "1.1"
 publishedDate: 2022-02-16
 tags:
   - buildingNewServices
@@ -44,15 +44,17 @@ Check that you are using design system code and patterns correctly.
 
 <h2 id="html-should-validate">HTML should validate</h2>
 
-It sounds simple, but this is a simple check that is worth doing. Ideally you’ll have this as part of your automated code lint, but if not use the HTML validator or browser developer tools.
+You should do this simple check before any other checks. Use the [HTML validator](https://validator.w3.org/) or browser developer tools. Consider adding HTML validation to your automated code lint.
 
 <h2 id="page-titles-should-align-with-the-main-page-heading">Page titles should align with the main page heading</h2>
 
-It’s not uncommon for page titles to be different to the main page H1 heading. This is an accessibility issue.
+Check that all page titles are the same as the H1 unless there is a very good reason for them to be different. If they are different, then they should at least be be consistent.
 
-Check that all page titles are the same as the H1 unless there is a very good reason.
+For example, if the `<h1>` is “What is the name of the business?” then the `<title>` should also start with “What is the name of the business?”.
 
-If the `<h1>` is “What is the name of the business?” then the `<title>` should also start with “What is the name of the business?”.
+Check also that the page title is unique on the site or journey.
+
+It's not uncommon to see every page have the same title and that would usually be an accessibility fail.
 
 See also [Page titles should follow the GOV standard](#page-titles-should-follow-the-gov-standard).
 
@@ -78,7 +80,7 @@ See [Help users to recover from validation errors](https://design-system.service
 
 The `for` attribute of the label should be the same as the `id` of the input or textarea. See [Text input on the Design System](https://design-system.service.gov.uk/components/text-input/) for an example.
 
-Check also that you don’t have a duplicate `id` present. This can happen if you copy and paste elements. You can check for this easily by validating the page HTML.
+Check also that you don’t have a duplicate `id` present. This can happen if you copy and paste elements. You can check for this by validating the page HTML.
 
 <h2 id="groups-of-inputs-use-fieldsets-and-legends">Groups of inputs use fieldsets and legends</h2>
 
@@ -94,20 +96,25 @@ Feedback link suggested code:
 
 ```
 <span class="govuk-phase-banner__text">
-This is a new service.  
-<a class="govuk-link" 
-href="FORM-URL" 
-target="_blank" 
-rel="noopener noreferrer">
-Give feedback on the service (opens new tab)
-</a> 
-to help improve it.
+    This is a new service.  
+        <a class="govuk-link"
+        href="FORM-URL"
+        target="_blank"
+        rel="noopener noreferrer">
+            Give feedback on the service (opens new tab)
+        </a>
+    to help improve it.
 </span>
 ```
 
 <h3 id="links-that-open-new-tabs-should-state-that">Links that open new tabs should state that</h3>
 
-This issue is sometimes found throughout the service but we often see this in the phase banner and footer. Links should either not open a new window but if they do they should have “(opens new tab)” at the end of and as part of the link.
+This issue is sometimes found throughout the service but we often see this in the phase banner and footer.
+
+Depending on their behaviour, links should:
+
+* not open a new window
+* have “(opens new tab)” at the end of and as part of the link text
 
 <h2 id="provide-autocomplete-for-commonly-entered-information">Provide autocomplete for commonly-entered information</h2>
 
@@ -160,7 +167,7 @@ If you use a `<details>` element in your help text our testing shows that when u
 
 See [asking complex questions without using hint text](https://design-system.service.gov.uk/patterns/question-pages/#asking-complex-questions-without-using-hint-text).
 
-<h2 id="check-answers-change-links-are-not-ambiguous">Check answers change links are not ambiguous</h2>
+<h2 id="check-answers-change-links-are-not-ambiguous">Check that answer change links are not ambiguous</h2>
 
 The [Check answers pattern](https://design-system.service.gov.uk/patterns/check-answers/) uses “Change” links to allow the users to change an answer. For example:
 
@@ -170,15 +177,43 @@ Screen reader users need to know what each link does so make sure that visually 
 
 <h2 id="visually-hidden-text-does-not-prevent-voice-control-from-working">Visually hidden text does not prevent voice control from working</h2>
 
-If however, you use a link and include visually hidden text that is hard to guess, voice control users may find it hard to activate the link - for example: [Cancel](#) `<hidden>`and return to GOV.UK`</hidden>`
+If you use a link and include visually hidden text that is hard to guess, voice control users may find it hard to activate the link - for example:
 
-It’s better to include all of the text in the link - for example: [Cancel and return to GOV.UK](#)
+```
+<a class="govuk-link" href="URL">
+    Cancel
+    <span class="govuk-visually-hidden">
+        and return to GOV.UK
+    </span>
+</a>
+
+</span>
+```
+
+It’s better to include all of the text in the link - for example: [Cancel and return to GOV.UK](#).
+
+```
+<a class="govuk-link" href="URL">
+    Cancel and return to GOV.UK
+</a>
+```
+
+Do not include hidden text at the start of a link or button - for example do not do:
+
+ ```
+ <a class="govuk-link" href="URL">
+     <span class="govuk-visually-hidden">
+         Return to
+     </span>
+     GOV.UK
+ </a>
+ ```
 
 <h2 id="feedback-form-is-accessible">Feedback form is accessible</h2>
 
 If you use a feedback form, it’s part of your service and should be accessible. If there are issues, they should be listed in your accessibility statement.
 
-If you use Qualtrics, make sure you use the accessibility team template and follow the guidance for building a more accessible qualtrics form.
+If you use Qualtrics, make sure you use the [Defra Accessibility Team Qualtrics template](https://github.com/defra-design/qualtrics-theme) and follow the guidance for building a more accessible Qualtrics form.
 
 Add an email address at the top of your form for anyone who cannot use the form.
 
@@ -206,7 +241,7 @@ You should add the following text to your accessibility statement under ‘How a
 
 <h2 id="accessibility-statement-issues">Accessibility statement issues</h2>
 
-<h3 id="the-statement-matches-the-current-gds-template">The statement matches the current GDS template</h3>
+<h3 id="the-statement-matches-the-current-gds-template">Check that the statement matches the current GDS template</h3>
 
 [Sample accessibility statement](https://www.gov.uk/government/publications/sample-accessibility-statement/sample-accessibility-statement-for-a-fictional-public-sector-website)
 
@@ -214,7 +249,7 @@ Check that you have not removed or changed the text that is required by the law.
 
 <h3 id="the-what-you-can-do-section-is-correct-for-your-site">The ‘what you can do section’ is correct for your site</h3>
 
-The bullet point list under “that means you should be able to” is not a fixed list. You should ensure that it is correct for your website. For example, the 300% claim in ‘zoom in up to 300% without the text spilling off the screen’ should match what you have tested. If you are claiming close to full compliance, then the figure should be at least 400%.
+The bullet point list under “that means you should be able to” is not a fixed list. You should ensure that it is correct for your website. For example, the 300% claim in ‘zoom in up to 300% without the text spilling off the screen’ should match what you have tested. If you are claiming compliance with reflow, then the figure should be at least 400%.
 
 <h3 id="non-conformances-have-a-fix-date">Non-conformances have a fix date</h3>
 
