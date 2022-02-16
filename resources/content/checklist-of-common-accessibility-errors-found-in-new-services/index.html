@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8">
+    
+    <title>Checklist of common accessibility errors found in new services - Defra Accessibility Resources</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      /* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+      html {
+  /* For the default link colour */
+  --link-colour: #006726;
+
+  /* For the link hover state */
+  --link-colour-alt: #00521e;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.3;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: auto auto 0.75em;
+}
+
+h1 {
+  font-size: 3.052rem;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 2.441rem;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 1.953rem;
+  font-weight: bold;
+}
+
+h4 {
+  font-size: 1.563rem;
+  font-weight: bold;
+}
+
+p,
+li {
+  font-size: 1.25rem;
+}
+
+a {
+  color: var(--link-colour);
+  max-width: max-content;
+  text-decoration: underline;
+  text-decoration-thickness: 0.15em;
+}
+
+a:hover {
+  color: var(--link-colour-alt);
+  text-decoration-thickness: 0.3em;
+}
+
+a:focus {
+  background-color: #fd0;
+  box-shadow: 0 -0.2em #fd0, 0 0.3em #0b0c0c;
+  color: #0b0c0c !important;
+  outline: 3px solid transparent;
+  text-decoration: none;
+}
+
+body {
+  display: grid;
+  grid-template-areas:
+    "skip-link"
+    "header"
+    "main"
+    "footer";
+  grid-template-rows: auto auto 1fr auto;
+  margin: 0;
+  min-height: 100vh;
+}
+
+main {
+  font-size: 1.25rem;
+  grid-area: main;
+  margin: 0 auto;
+  max-width: 80ch;
+  max-width: 100vw;
+  width: 100%;
+}
+
+nav {
+  height: min-content;
+}
+
+a:link,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+li,
+blockquote {
+  max-width: 65ch;
+}
+
+img {
+  border: 0.25rem solid black;
+  padding: 2rem;
+}
+
+.c-nav {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.c-nav__item,
+.c-nav__item:hover {
+  color: #fff;
+  display: block;
+  max-width: 100%;
+  padding: 1rem;
+}
+
+.c-nav__item:focus {
+  color: #000;
+}
+
+.c-nav li:first-of-type a {
+  padding-left: 0;
+}
+
+footer {
+  grid-area: footer;
+}
+
+.c-skip_link {
+  grid-area: skip-link;
+  position: absolute;
+  top: -999px;
+}
+
+.c-skip_link:focus {
+  max-width: 100%;
+  padding: 1rem 2rem;
+  position: relative;
+  text-decoration: underline;
+  top: 0;
+}
+
+.c-header {
+  background-color: #0b0c0c;
+  color: #fff;
+  grid-area: header;
+}
+
+.c-header__site-name {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 1rem 1rem 1rem 0;
+  text-decoration: none;
+}
+
+.c-header__site-name:hover {
+  color: #fff;
+  text-decoration: underline;
+  text-decoration-thickness: 0.2em;
+}
+
+.c-header__wrapper {
+  align-items: center;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.c-main {
+  padding: 1.875rem 0 3.125rem;
+}
+
+.c-footer {
+  background-color: #f3f2f1;
+  color: #0b0c0c;
+}
+
+.c-footer ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin: 0;
+  padding: 1rem 1rem 1rem 0;
+}
+
+.c-footer li {
+  margin: 0.25rem 0;
+  padding: 0.5rem 0;
+}
+
+.u-width-wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 60rem;
+  padding: 0 2rem;
+  width: 100%;
+}
+
+.u-visually-hidden {
+  border: 0 !important;
+  clip: rect(0 0 0 0) !important;
+  clip-path: inset(50%) !important;
+  height: 1px !important;
+  margin: 0 !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  white-space: nowrap !important;
+  width: 1px !important;
+}
+
+.u-flow * + * {
+  margin-top: 1rem;
+}
+
+.u-flow * + h2 {
+  margin-top: 3rem;
+}
+
+.u-flow * + h3,
+.u-flow * + h4,
+.u-flow * + h5 {
+  margin-top: 2rem;
+}
+
+.c-blog-card {
+  border-top: 0.1rem solid #b1b4b6;
+  margin-top: 0;
+  padding: 3rem 0;
+}
+
+:is(.c-blog-card, .c-resource-section):first-of-type {
+  margin-top: 3rem;
+}
+
+:is(.c-blog-card, .c-resource-section):last-of-type {
+  border-bottom: 0.1rem solid #b1b4b6;
+}
+
+.c-blog-card__summary,
+.c-blog-card__link {
+  font-size: 1.563rem;
+  margin: 1.875rem 0;
+}
+
+.c-blog-card__link {
+  display: block;
+}
+
+.c-blog__content {
+  margin: 3rem 0;
+}
+
+.c-resource-card {
+  padding: 0 0 1rem;
+}
+
+.c-resource-section {
+  border-top: 0.1rem solid #b1b4b6;
+  margin-top: 0;
+  padding: 3rem 0;
+}
+
+table {
+  border: 0.1rem solid #000;
+  border-collapse: collapse;
+  margin-bottom: 1.875rem;
+  margin-top: 1.875rem;
+  max-width: 100%;
+  overflow-x: scroll;
+}
+
+th,
+td {
+  border: 0.1rem solid #000;
+  padding: 0.5rem 1rem;
+}
+
+blockquote {
+  border-left: 0.5rem solid #b1b4b6;
+  display: block;
+  padding: 1rem;
+}
+
+pre {
+  border: 0.1rem solid #b1b4b6;
+  max-width: 100%;
+  overflow-x: scroll;
+  padding: 1rem 2rem;
+}
+
+code {
+  font-family: monospace;
+  overflow-wrap: anywhere;
+}
+
+.c-breadcrumbs {
+  display: flex;
+  flex-flow: row wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.c-breadcrumbs__list-item {
+  display: flex;
+  flex-direction: row;
+  margin: 0 0 0 1rem;
+  margin-top: 0;
+  padding: 0.5rem 1rem 0.5rem 0;
+}
+
+.c-breadcrumbs__list-item::after {
+  content: ">";
+  display: block;
+  height: 1rem;
+  padding-left: 1rem;
+  width: 1rem;
+}
+
+.c-breadcrumbs__list-item:first-of-type {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.c-breadcrumbs__list-item:last-of-type::after {
+  content: "";
+}
+
+    </style>
+  </head>
+  <body>
+    <a href="#main" class="c-skip_link">Skip to main content</a>
+    <header class="c-header">
+      <div class="[ c-header__wrapper ] [ u-width-wrapper ]">
+        <a class="c-header__site-name" href="/accessibility/">Defra Accessibility Resources</a>
+        <nav>
+          <ul class="c-nav">
+            <li><a class="c-nav__item" href="/accessibility/resources/">Resources</a></li>
+            
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main id="main" class="c-main">
+      <div class="[ c-main__wrapper ] [ u-width-wrapper u-flow ]">
+        
+  <ol class="c-breadcrumbs">
+    <li class="c-breadcrumbs__list-item">
+      <a href="/accessibility/" class="c-breadcrumbs__link">Home</a>
+    </li>
+    
+      
+        <li class="c-breadcrumbs__list-item">
+          <a href="/accessibility/resources/" class="c-breadcrumbs__link">Resources</a>
+        </li>
+      
+    
+    <li class="c-breadcrumbs__list-item">
+      <a href="." class="c-breadcrumbs__link" aria-current="page">Checklist of common accessibility errors found in new services</a>
+    </li>
+  </ol>
+
+        <h1>Checklist of common accessibility errors found in new services</h1>
+        
+  
+  
+  
+  
+  
+    
+      
+        <p>Version 1.0, published 16 February 2022.</p>
+    
+    
+      
+      
+    
+      
+      
+    
+  
+  
+  
+  
+  </p>
+
+  <div class="c-blog__content">
+    <h2>Contents</h2>
+<ul>
+<li><a href="#design-system-code-and-patterns-are-correct">Design system code and patterns are correct</a></li>
+<li><a href="#html-should-validate">HTML should validate</a></li>
+<li><a href="#page-titles-should-align-with-the-main-page-heading">Page titles should align with the main page heading</a></li>
+<li><a href="#page-titles-should-follow-the-gov-standard">Page titles should follow the GOV standard</a></li>
+<li><a href="#error-page-titles-should-start-with-error">Error page titles should start with ‘Error:’</a></li>
+<li><a href="#form-inputs-are-linked-to-their-labels">Form inputs are linked to their labels</a></li>
+<li><a href="#groups-of-inputs-use-fieldsets-and-legends">Groups of inputs use fieldsets and legends</a></li>
+<li><a href="#links-in-phase-banner-and-footer-make-sense">Links in phase banner and footer make sense</a>
+<ul>
+<li><a href="#links-should-make-sense-out-of-context">Links should make sense out of context</a></li>
+<li><a href="#links-that-open-new-tabs-should-state-that">Links that open new tabs should state that</a></li>
+</ul>
+</li>
+<li><a href="#provide-autocomplete-for-commonly-entered-information">Provide autocomplete for commonly-entered information</a></li>
+<li><a href="#conditional-reveals-should-be-simple-questions">Conditional reveals should be simple questions</a></li>
+<li><a href="#help-or-hint-text-is-linked-to-the-question-label">Help or hint text is linked to the question label</a></li>
+<li><a href="#check-answers-change-links-are-not-ambiguous">Check answers change links are not ambiguous</a></li>
+<li><a href="#visually-hidden-text-does-not-prevent-voice-control-from-working">Visually hidden text does not prevent voice control from working</a></li>
+<li><a href="#feedback-form-is-accessible">Feedback form is accessible</a></li>
+<li><a href="#issues-with-the-design-system-that-cannot-be-fixed">Issues with the design system that cannot be fixed</a>
+<ul>
+<li><a href="#invalid-aria-expanded-error">Invalid aria-expanded error</a></li>
+<li><a href="#heading-1-jaws-bug">Heading 1 JAWS bug</a></li>
+</ul>
+</li>
+<li><a href="#accessibility-statement-issues">Accessibility statement issues</a>
+<ul>
+<li><a href="#the-statement-matches-the-current-gds-template">The statement matches the current GDS template</a></li>
+<li><a href="#the-what-you-can-do-section-is-correct-for-your-site">The ‘what you can do section’ is correct for your site</a></li>
+<li><a href="#non-conformances-have-a-fix-date">Non-conformances have a fix date</a></li>
+<li><a href="#you-claim-disproportionate-burden-without-doing-an-assessment">You claim disproportionate burden without doing an assessment</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="design-system-code-and-patterns-are-correct">Design system code and patterns are correct</h2>
+<p>Check that you are using design system code and patterns correctly.</p>
+<p><a href="https://design-system.service.gov.uk/components/">Design System components</a></p>
+<h2 id="html-should-validate">HTML should validate</h2>
+<p>It sounds simple, but this is a simple check that is worth doing. Ideally you’ll have this as part of your automated code lint, but if not use the HTML validator or browser developer tools.</p>
+<h2 id="page-titles-should-align-with-the-main-page-heading">Page titles should align with the main page heading</h2>
+<p>It’s not uncommon for page titles to be different to the main page H1 heading. This is an accessibility issue.</p>
+<p>Check that all page titles are the same as the H1 unless there is a very good reason.</p>
+<p>If the <code>&lt;h1&gt;</code> is “What is the name of the business?” then the <code>&lt;title&gt;</code> should also start with “What is the name of the business?”.</p>
+<p>See also <a href="#page-titles-should-follow-the-gov-standard">Page titles should follow the GOV standard</a>.</p>
+<h2 id="page-titles-should-follow-the-gov-standard">Page titles should follow the GOV standard</h2>
+<p>The format for the page <code>&lt;title&gt;</code> should be:</p>
+<pre><code>{Page h1 heading text} - {Name of service} - GOV.UK
+</code></pre>
+<h2 id="error-page-titles-should-start-with-error">Error page titles should start with ‘Error:’</h2>
+<p>If you are displaying an error on the page, The format for the page <code>&lt;title&gt;</code> should be:</p>
+<pre><code>Error: {Page h1 heading text} - {Name of service} - GOV.UK
+</code></pre>
+<p>See <a href="https://design-system.service.gov.uk/patterns/validation/">Help users to recover from validation errors</a></p>
+<h2 id="form-inputs-are-linked-to-their-labels">Form inputs are linked to their labels</h2>
+<p>The <code>for</code> attribute of the label should be the same as the <code>id</code> of the input or textarea. See <a href="https://design-system.service.gov.uk/components/text-input/">Text input on the Design System</a> for an example.</p>
+<p>Check also that you don’t have a duplicate <code>id</code> present. This can happen if you copy and paste elements. You can check for this easily by validating the page HTML.</p>
+<h2 id="groups-of-inputs-use-fieldsets-and-legends">Groups of inputs use fieldsets and legends</h2>
+<p>Radio buttons, groups of checkboxes, date inputs and groups of related inputs (for example an address) should be surrounded by a <code>&lt;fieldset&gt;</code> and have a <code>&lt;legend&gt;</code>.</p>
+<h2 id="links-in-phase-banner-and-footer-make-sense">Links in phase banner and footer make sense</h2>
+<h3 id="links-should-make-sense-out-of-context">Links should make sense out of context</h3>
+<p>Services quite often just link the text ‘feedback’ in the phase banner. If that link is read out in a list of links, it may not be clear.</p>
+<p>Feedback link suggested code:</p>
+<pre><code>&lt;span class=&quot;govuk-phase-banner__text&quot;&gt;
+This is a new service.  
+&lt;a class=&quot;govuk-link&quot; 
+href=&quot;FORM-URL&quot; 
+target=&quot;_blank&quot; 
+rel=&quot;noopener noreferrer&quot;&gt;
+Give feedback on the service (opens new tab)
+&lt;/a&gt; 
+to help improve it.
+&lt;/span&gt;
+</code></pre>
+<h3 id="links-that-open-new-tabs-should-state-that">Links that open new tabs should state that</h3>
+<p>This issue is sometimes found throughout the service but we often see this in the phase banner and footer. Links should either not open a new window but if they do they should have “(opens new tab)” at the end of and as part of the link.</p>
+<h2 id="provide-autocomplete-for-commonly-entered-information">Provide autocomplete for commonly-entered information</h2>
+<p>Use the autocomplete attribute on text inputs so browsers can autofill the information on a user’s behalf if they’ve entered it previously.</p>
+<p>See <a href="https://design-system.service.gov.uk/components/text-input/#use-the-autocomplete-attribute">Use the autocomplete attribute in the Design System</a>.</p>
+<h2 id="conditional-reveals-should-be-simple-questions">Conditional reveals should be simple questions</h2>
+<p>Conditional reveals do not automatically fail WCAG 2.1 provided that you follow these guidelines:</p>
+<ul>
+<li>Keep it simple. If the related question is complicated or has more than one part, show it on the next page in the process instead.</li>
+<li>Do not conditionally reveal questions to inline radios, such as ‘yes’ and ‘no’ options placed next to each other.</li>
+<li>Conditionally reveal questions only - do not show or hide anything that is not a question.</li>
+</ul>
+<p>See <a href="https://design-system.service.gov.uk/components/radios/#conditionally-revealing-a-related-question">Conditionally revealing a related question</a>.</p>
+<h2 id="help-or-hint-text-is-linked-to-the-question-label">Help or hint text is linked to the question label</h2>
+<p>Where your question has help or hint text you should help screen reader users to find it by linking it to the <code>&lt;label&gt;</code> using <code>aria-describedby</code>.</p>
+<p>For example:</p>
+<img src="/resources/images/checklist-of-common-accessibility-errors-found-in-new-services/hint-text-example.jpg" alt="A form field with the label: What is the name of the event?. Underneath the label is hint-text that reads: The name you'll use on promotional material. Underneath this text is the input field.">
+<p>The relevant HTML is:</p>
+<pre><code>&lt;h1 class=&quot;govuk-label-wrapper&quot;&gt;
+    &lt;label class=&quot;govuk-label govuk-label--l&quot;
+    for=&quot;event-name&quot;&gt;
+        What is the name of the event?
+    &lt;/label&gt;
+&lt;/h1&gt;
+&lt;div id=&quot;event-name-hint&quot; class=&quot;govuk-hint&quot;&gt;
+    The name you’ll use on promotional material.
+&lt;/div&gt;
+&lt;input class=&quot;govuk-input&quot; id=&quot;event-name&quot; name=&quot;event-name&quot; type=&quot;text&quot; aria-describedby=&quot;event-name-hint&quot;&gt;
+</code></pre>
+<p>There are different techniques for other input types - see the <a href="https://design-system.service.gov.uk/components/">Design System components</a> for more information.</p>
+<h3 id="complex-help-text">Complex help text</h3>
+<p>Do not use complex paragraphs, links or expanding <code>&lt;details&gt;</code> in the help text.</p>
+<p>While screen readers will read out the link text when describing the field, they will not tell users the text is a link.</p>
+<p>If you use a <code>&lt;details&gt;</code> element in your help text our testing shows that when used in an <code>aria-describedby</code>, the hidden content in <code>&lt;details&gt;</code> will not be read until it has been expanded.</p>
+<p>See <a href="https://design-system.service.gov.uk/patterns/question-pages/#asking-complex-questions-without-using-hint-text">asking complex questions without using hint text</a>.</p>
+<h2 id="check-answers-change-links-are-not-ambiguous">Check answers change links are not ambiguous</h2>
+<p>The <a href="https://design-system.service.gov.uk/patterns/check-answers/">Check answers pattern</a> uses “Change” links to allow the users to change an answer. For example:</p>
+<img src="/resources/images/checklist-of-common-accessibility-errors-found-in-new-services/check-answers-example.jpg" alt="The GOV.UK answers pattern presenting the following information: Name, Sarah Phillips. Following this information is a link labelled: Change.">
+<p>Screen reader users need to know what each link does so make sure that visually hidden text is being used to include extra text. This text should match the text at the start of the row so that it is consistent for voice control users.</p>
+<h2 id="visually-hidden-text-does-not-prevent-voice-control-from-working">Visually hidden text does not prevent voice control from working</h2>
+<p>If however, you use a link and include visually hidden text that is hard to guess, voice control users may find it hard to activate the link - for example: <a href="#">Cancel</a> <code>&lt;hidden&gt;</code>and return to GOV.UK<code>&lt;/hidden&gt;</code></p>
+<p>It’s better to include all of the text in the link - for example: <a href="#">Cancel and return to GOV.UK</a></p>
+<h2 id="feedback-form-is-accessible">Feedback form is accessible</h2>
+<p>If you use a feedback form, it’s part of your service and should be accessible. If there are issues, they should be listed in your accessibility statement.</p>
+<p>If you use Qualtrics, make sure you use the accessibility team template and follow the guidance for building a more accessible qualtrics form.</p>
+<p>Add an email address at the top of your form for anyone who cannot use the form.</p>
+<h2 id="issues-with-the-design-system-that-cannot-be-fixed">Issues with the design system that cannot be fixed</h2>
+<h3 id="invalid-aria-expanded-error">Invalid aria-expanded error</h3>
+<p>This applies where you show an input conditionally based on selecting a radio button. For example:</p>
+<img src="/resources/images/checklist-of-common-accessibility-errors-found-in-new-services/conditional-reveal-example.jpg" alt="The GOV.UK radio pattern, with the question: How would you prefer to be contacted? Select one option. The options present are: Email, Phone and Text message. In this example, the Email option is checked, which has revealed a text input labelled: Email address, for the user to enter their contact information.">
+<p>Accessibility testing will usually report an error - something like “aria-expanded is not a valid aria attribute”.</p>
+<p>This is the current design system code. See <a href="https://design-system.service.gov.uk/components/checkboxes/">Checkboxes in the Design System</a> and the <a href="https://github.com/alphagov/govuk-design-system-backlog/issues/37">GitHub checkboxes note</a>.</p>
+<p>There is no need to list this issue your accessibility statement.</p>
+<h3 id="heading-1-jaws-bug">Heading 1 JAWS bug</h3>
+<p>If you are using the <code>h1</code> as the <code>legend</code> inside a <code>fieldset</code>, JAWS users will not be able to find the heading. This is a known bug.</p>
+<p>You should add the following text to your accessibility statement under ‘How accessible this website is’. There is no need to list it as a non-compliance under ‘Technical information about this website’s accessibility’:</p>
+<blockquote>
+<p>If you use JAWS screen reader, you will not be able to find some form question headings due to a bug with JAWS. You will still be able to use the service easily but not list the headings on the affected pages.</p>
+</blockquote>
+<h2 id="accessibility-statement-issues">Accessibility statement issues</h2>
+<h3 id="the-statement-matches-the-current-gds-template">The statement matches the current GDS template</h3>
+<p><a href="https://www.gov.uk/government/publications/sample-accessibility-statement/sample-accessibility-statement-for-a-fictional-public-sector-website">Sample accessibility statement</a></p>
+<p>Check that you have not removed or changed the text that is required by the law.</p>
+<h3 id="the-what-you-can-do-section-is-correct-for-your-site">The ‘what you can do section’ is correct for your site</h3>
+<p>The bullet point list under “that means you should be able to” is not a fixed list. You should ensure that it is correct for your website. For example, the 300% claim in ‘zoom in up to 300% without the text spilling off the screen’ should match what you have tested. If you are claiming close to full compliance, then the figure should be at least 400%.</p>
+<h3 id="non-conformances-have-a-fix-date">Non-conformances have a fix date</h3>
+<p>For each non-compliance you should say when you plan to fix it.</p>
+<h3 id="you-claim-disproportionate-burden-without-doing-an-assessment">You claim disproportionate burden without doing an assessment</h3>
+<p>You should not claim a disproportionate burden for a new service.</p>
+<p>If you do, this should be for a limited time and not forever.</p>
+<p>You should have a written assessment.</p>
+<p>You should check this claim with your legal advisors.</p>
+
+  </div>
+  
+  <p class="c-blog__author">Written by 
+    
+    
+    <a href="/accessibility/authors/martin-glancy/">Martin Glancy</a>.
+    
+    
+      
+      
+    
+  </p>
+
+
+      </div> 
+    </main>
+    <footer class="c-footer">
+      <div class="[ c-footer__wrapper ] [ u-width-wrapper ]">
+        <h2 class="u-visually-hidden">Useful Links</h2>
+        <nav>
+        <ul>
+          <li><a href="/accessibility/accessibility-statement/">Accessibility statement</a></li>
+          
+        </ul>
+        </nav>
+      </div> 
+    </footer>
+  </body>
+</html>
