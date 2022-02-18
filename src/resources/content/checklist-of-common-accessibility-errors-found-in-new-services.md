@@ -1,9 +1,9 @@
 ---
 title: Checklist of common accessibility errors found in new services
 summary: This guidance applies mainly to new digital services built using the GDS Design System. It’s not an overall accessibility checklist - it just highlights common issues to check for.
-author: ["Martin Glancy"]
+author: ["Defra accessibility team"]
 version: "1.1"
-publishedDate: 2022-02-16
+publishedDate: 2022-02-18
 tags:
   - buildingNewServices
   - resource

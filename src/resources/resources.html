@@ -18,24 +18,24 @@ title: Resources
   <p>We regularly publish and review our documents. We have categorised our resources based on tasks you may be currently working on.</p>
   
   <ul>
-    {# <li><a href="#building-new-services">Building new services</a></li> #}
+    <li><a href="#building-new-services">Building new services</a></li>
     <li><a href="#writing-accessible-forms">Writing accessible forms</a></li>
   </ul>
   
-  {# <div class="c-resource-section">
+  <div class="c-resource-section">
     <h2 id="building-new-services">Building new services</h2>
-    {% for post in collections.buildingNewServices %} #}
+    {% for post in collections.buildingNewServices %}
       {# Stores data about the post into variables used in the blog-summary partial #}
-      {# {% set postTitle = post.data.title %}
+      {% set postTitle = post.data.title %}
       {% set postTags = post.data.tags %}
       {% set postSummary = post.data.summary %}
       {% set postUrl = post.url %}
       {% set postAuthors = post.data.author %}
-      {% set postPublished = post.data.publishedDate %} #}
+      {% set postPublished = post.data.publishedDate %}
       {# Includes the blog-summary partial code, putting the post's data into a reusable template #}
-      {# {% include "_partials/resource-summary.njk" %}
+      {% include "_partials/resource-summary.njk" %}
     {% endfor %} 
-  </div> #}
+  </div>
   
   <div class="c-resource-section">
     <h2 id="writing-accessible-forms">Writing accessible forms</h2>
