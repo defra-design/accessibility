@@ -11,6 +11,28 @@ module.exports = function(eleventyConfig) {
     return collectionApi.getFilteredByGlob("./src/writing/content/*.md").reverse().slice(0, 3);
   });
 
+  // The following code sorts the resource collections alphabetically
+  // https://github.com/11ty/eleventy/issues/411
+  eleventyConfig.addCollection("buildingNewServicesAlphabetised", (collection) =>
+    collection.getFilteredByTags("buildingNewServices").sort((a, b) => {
+      let nameA = a.data.title.toUpperCase();
+      let nameB = b.data.title.toUpperCase();
+      if (nameA < nameB) return -1;
+      else if (nameA > nameB) return 1;
+      else return 0;
+    })
+  );
+  
+  eleventyConfig.addCollection("writingAccessibleFormsAlphabetised", (collection) =>
+    collection.getFilteredByTags("writingAccessibleForms").sort((a, b) => {
+      let nameA = a.data.title.toUpperCase();
+      let nameB = b.data.title.toUpperCase();
+      if (nameA < nameB) return -1;
+      else if (nameA > nameB) return 1;
+      else return 0;
+    })
+  );
+  
   eleventyConfig.addFilter("postDate", (dateObj) => {
     return DateTime.fromJSDate(dateObj).toFormat('d LLLL yyyy');
   });
