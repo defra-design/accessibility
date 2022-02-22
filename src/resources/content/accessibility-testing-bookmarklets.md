@@ -6,7 +6,7 @@ version: "2.0"
 publishedDate: 2022-02-21
 tags:
   - buildingNewServices
-  - resource
+  # - resource
 ---
 
 This document contains bookmarklets and automated tools that can be used for testing websites on managed devices, where you are unable to install additional tools or browser plug-ins. 

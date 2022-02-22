@@ -6,7 +6,7 @@ version: "1.0"
 publishedDate: 2022-02-22
 tags:
   - buildingNewServices
-  - resource
+  # - resource
 ---
 
 This document is a brief overview of the legislation and requirements for public sector services. This is not legal advice and if you have any queries relating to your service and any of the legislation referenced here, you should contact your departments legal team.

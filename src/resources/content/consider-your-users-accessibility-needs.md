@@ -6,7 +6,7 @@ version: "1.0"
 publishedDate: 2022-02-21
 tags:
   - buildingNewServices
-  - resource
+  # - resource
 ---
 
 During the discovery phase of service delivery, you need to learn about your users' accessibility needs.
