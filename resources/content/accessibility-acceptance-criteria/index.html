@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8">
+    
+    <title>Accessibility acceptance criteria - Defra Accessibility Resources</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      /* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+      html {
+  /* For the default link colour */
+  --link-colour: #006726;
+
+  /* For the link hover state */
+  --link-colour-alt: #00521e;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.3;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: auto auto 0.75em;
+}
+
+h1 {
+  font-size: 3.052rem;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 2.441rem;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 1.953rem;
+  font-weight: bold;
+}
+
+h4 {
+  font-size: 1.563rem;
+  font-weight: bold;
+}
+
+p,
+li {
+  font-size: 1.25rem;
+}
+
+a {
+  color: var(--link-colour);
+  max-width: max-content;
+  text-decoration: underline;
+  text-decoration-thickness: 0.15em;
+}
+
+a:hover {
+  color: var(--link-colour-alt);
+  text-decoration-thickness: 0.3em;
+}
+
+a:focus {
+  background-color: #fd0;
+  box-shadow: 0 -0.2em #fd0, 0 0.3em #0b0c0c;
+  color: #0b0c0c !important;
+  outline: 3px solid transparent;
+  text-decoration: none;
+}
+
+body {
+  display: grid;
+  grid-template-areas:
+    "skip-link"
+    "header"
+    "main"
+    "footer";
+  grid-template-rows: auto auto 1fr auto;
+  margin: 0;
+  min-height: 100vh;
+}
+
+main {
+  font-size: 1.25rem;
+  grid-area: main;
+  margin: 0 auto;
+  max-width: 80ch;
+  max-width: 100vw;
+  width: 100%;
+}
+
+nav {
+  height: min-content;
+}
+
+a:link,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+li,
+blockquote {
+  max-width: 65ch;
+}
+
+img {
+  border: 0.25rem solid black;
+  padding: 2rem;
+}
+
+.c-nav {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.c-nav__item,
+.c-nav__item:hover {
+  color: #fff;
+  display: block;
+  max-width: 100%;
+  padding: 1rem;
+}
+
+.c-nav__item:focus {
+  color: #000;
+}
+
+.c-nav li:first-of-type a {
+  padding-left: 0;
+}
+
+footer {
+  grid-area: footer;
+}
+
+.c-skip_link {
+  grid-area: skip-link;
+  position: absolute;
+  top: -999px;
+}
+
+.c-skip_link:focus {
+  max-width: 100%;
+  padding: 1rem 2rem;
+  position: relative;
+  text-decoration: underline;
+  top: 0;
+}
+
+.c-header {
+  background-color: #0b0c0c;
+  color: #fff;
+  grid-area: header;
+}
+
+.c-header__site-name {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 1rem 1rem 1rem 0;
+  text-decoration: none;
+}
+
+.c-header__site-name:hover {
+  color: #fff;
+  text-decoration: underline;
+  text-decoration-thickness: 0.2em;
+}
+
+.c-header__wrapper {
+  align-items: center;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.c-main {
+  padding: 1.875rem 0 3.125rem;
+}
+
+.c-footer {
+  background-color: #f3f2f1;
+  color: #0b0c0c;
+}
+
+.c-footer ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin: 0;
+  padding: 1rem 1rem 1rem 0;
+}
+
+.c-footer li {
+  margin: 0.25rem 0;
+  padding: 0.5rem 0;
+}
+
+.u-width-wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 60rem;
+  padding: 0 2rem;
+  width: 100%;
+}
+
+.u-visually-hidden {
+  border: 0 !important;
+  clip: rect(0 0 0 0) !important;
+  clip-path: inset(50%) !important;
+  height: 1px !important;
+  margin: 0 !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  white-space: nowrap !important;
+  width: 1px !important;
+}
+
+.u-flow * + * {
+  margin-top: 1rem;
+}
+
+.u-flow * + h2 {
+  margin-top: 3rem;
+}
+
+.u-flow * + h3,
+.u-flow * + h4,
+.u-flow * + h5 {
+  margin-top: 2rem;
+}
+
+.c-blog-card {
+  border-top: 0.1rem solid #b1b4b6;
+  margin-top: 0;
+  padding: 3rem 0;
+}
+
+:is(.c-blog-card, .c-resource-section):first-of-type {
+  margin-top: 3rem;
+}
+
+:is(.c-blog-card, .c-resource-section):last-of-type {
+  border-bottom: 0.1rem solid #b1b4b6;
+}
+
+.c-blog-card__summary,
+.c-blog-card__link {
+  font-size: 1.563rem;
+  margin: 1.875rem 0;
+}
+
+.c-blog-card__link {
+  display: block;
+}
+
+.c-blog__content {
+  margin: 3rem 0;
+}
+
+.c-resource-card {
+  padding: 0 0 1rem;
+}
+
+.c-resource-card + .c-resource-card {
+  padding: 1.5rem 0;
+}
+
+.c-resource-section {
+  border-top: 0.1rem solid #b1b4b6;
+  margin-top: 0;
+  padding: 3rem 0;
+}
+
+table {
+  border: 0.1rem solid #000;
+  border-collapse: collapse;
+  margin-bottom: 1.875rem;
+  margin-top: 1.875rem;
+  max-width: 100%;
+  overflow-x: scroll;
+}
+
+th,
+td {
+  border: 0.1rem solid #000;
+  padding: 0.5rem 1rem;
+}
+
+blockquote {
+  border-left: 0.5rem solid #b1b4b6;
+  display: block;
+  padding: 1rem;
+}
+
+pre {
+  border: 0.1rem solid #b1b4b6;
+  max-width: 100%;
+  overflow-x: scroll;
+  padding: 1rem 2rem;
+}
+
+code {
+  font-family: monospace;
+  overflow-wrap: anywhere;
+}
+
+.c-breadcrumbs {
+  display: flex;
+  flex-flow: row wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.c-breadcrumbs__list-item {
+  display: flex;
+  flex-direction: row;
+  margin: 0 0 0 1rem;
+  margin-top: 0;
+  padding: 0.5rem 1rem 0.5rem 0;
+}
+
+.c-breadcrumbs__list-item::after {
+  content: ">";
+  display: block;
+  height: 1rem;
+  padding-left: 1rem;
+  width: 1rem;
+}
+
+.c-breadcrumbs__list-item:first-of-type {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.c-breadcrumbs__list-item:last-of-type::after {
+  content: "";
+}
+
+    </style>
+  </head>
+  <body>
+    <a href="#main" class="c-skip_link">Skip to main content</a>
+    <header class="c-header">
+      <div class="[ c-header__wrapper ] [ u-width-wrapper ]">
+        <a class="c-header__site-name" href="/accessibility/">Defra Accessibility Resources</a>
+        <nav>
+          <ul class="c-nav">
+            <li><a class="c-nav__item" href="/accessibility/resources/">Resources</a></li>
+            
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main id="main" class="c-main">
+      <div class="[ c-main__wrapper ] [ u-width-wrapper u-flow ]">
+        
+  <ol class="c-breadcrumbs">
+    <li class="c-breadcrumbs__list-item">
+      <a href="/accessibility/" class="c-breadcrumbs__link">Home</a>
+    </li>
+    
+      
+    
+    <li class="c-breadcrumbs__list-item">
+      <a href="." class="c-breadcrumbs__link" aria-current="page">Accessibility acceptance criteria</a>
+    </li>
+  </ol>
+
+        <h1>Accessibility acceptance criteria</h1>
+        
+  
+  
+  
+  
+  
+    
+      <p class="c-blog-card__category">This article relates to 
+    
+    
+      
+      
+    
+  
+  
+  
+  
+  </p>
+
+  <div class="c-blog__content">
+    <p>Ensuring a service can be used by people using assistive technology should be a key consideration for every sprint. Accessibility acceptance criteria ensures that we consider how software should work with assistive technology and that service delivery teams consider accessibility throughout development, not just at the end.</p>
+<p>Using accessibility acceptance criteria should lead to a smoother development period - as you discover and fix problems throughout development, not just at the end. It should also mean that as an organisation we are developing software that is accessible to as many people as possible.</p>
+<p>Using the latest version of the GOV.UK Design System ensures a lot of things are baked in, but sometimes there are different patterns and components especially with internal and case management system.</p>
+<h2>Write clear, specific accessibility acceptance criteria</h2>
+<p>In short, when writing acceptance criteria, it should:</p>
+<ul>
+<li>Be relevant to the way that people with disabilities would use a service</li>
+<li>Be specific to use cases</li>
+<li>Describe the outcome and intended use</li>
+<li>Provide a clear way to be tested, resulting in a pass or fail</li>
+</ul>
+<p>More information can be found within the <a href="https://insidegovuk.blog.gov.uk/2018/01/24/improving-accessibility-with-accessibility-acceptance-criteria/">Improve accessibility with accessibility acceptance criteria - Inside GOV.UK article</a>.</p>
+<h2>General examples</h2>
+<p>The following examples are relevant across all pages of your service.</p>
+<ul>
+<li>Given that I use a narrow screen (1280 pixels wide), when viewing the service at 400% zoom, then the content should still be legible and it should only scroll vertically.</li>
+<li>Given that I only use a keyboard, when navigating through the page, then I should be able to interact with the interactive elements and the order should be logical.</li>
+<li>Given that I use voice control software, when navigating through the site, then I should be able to interact with all interactive elements.</li>
+<li>Given that I use assistive technology, when using the site, then there should be no parsing errors that would cause problems for my assistive technology.</li>
+<li>Given that I am visually impaired, when using the service, then I should be able to easily identify links and they should not rely on colour alone to convey that they are links.</li>
+<li>Given that I use a screen reader, when dynamic content appears, then the content should be announced.</li>
+<li>Given that I use a screen reader, when interacting with something causes a change of context, then I should be aware in advance of the change.</li>
+<li>Given that I use a screen reader, when non-text content (images, graphs) is used, then there should be a text alternative serving the equivalent purpose.</li>
+<li>Given that I am visually impaired, when viewing the service, the text content should meet the colour contrast ratio of 4.5:1 and UI components should meet the colour contrast ratio of 3:1 against adjacent colours.</li>
+<li>Given that I use a Windows high contrast mode, when viewing the service with high contrast mode on, the text content should meet the colour contrast ratio of 4.5:1 and UI components should meet the colour contrast ratio of 3:1 against adjacent colours.</li>
+<li>Given that I change the display of text to make it easier to read, when increasing the line-height, word-spacing and the letter spacing used, then the service should still be legible and its functionality should still be usable.</li>
+<li>Given that I use a screen reader, when the screen reader is announcing content, then any information presented visually should be announced and content should not use visual styles such as italics or justified text to convey information alone.</li>
+<li>Given that I use a screen reader, when interacting with links, then I should be able to understand the context of the link and where I will be redirected to from the link text and it should not be just a URL (e.g. www.gov.uk/guidance/)</li>
+<li>Given that I use a screen reader, when navigating using the headings on the page, then the headings should be used correctly and follow a hierarchy without skipping a level.</li>
+</ul>
+<h2>Specific component examples</h2>
+<p>The following examples may be relevant to some pages across your service, depending on the content present.</p>
+<ul>
+<li>Given that I use a screen reader, when encountering tables, then the tables should not be used as a structure for visually laying out content, they should only be used for providing tabular data.</li>
+<li>Given that I use voice control software, when completing a form using my assistive technology, then all of the input fields should be interactive using only my voice control software and inputs should be correctly associated with their labels.</li>
+<li>Given that I have a cognitive disability, when reading through complex content or layouts containing lots of information, then I need more time to read and comprehend information and will need to extend any timeouts.</li>
+<li>Given that I have a hearing impairment, when viewing a video, then captions, or a transcript should be provided in an easy to access format.</li>
+</ul>
+<h2>Content writing examples</h2>
+<p>The following, concise examples, should be used for all content present within your service.</p>
+<ul>
+<li>Use plain English</li>
+<li>Explain unusual words and jargon</li>
+<li>Present the most important information at the start</li>
+<li>Structure content logically, using headings, bullets and short sentences</li>
+<li>Consistently use formatting (for example H1s, H2s)</li>
+<li>Provide each page with a unique, descriptive h1 that matches the page title</li>
+<li>Write content in a task focused way</li>
+<li>Use a default text size that is easy to read</li>
+<li>Write unique and descriptive headings, links and button text</li>
+<li>Explain to the user as to how to fix errors with error messages</li>
+<li>Inform the user as to the errors present on a page with a summary of errors above the h1 and move focus to it</li>
+</ul>
+<h2>References and further reading</h2>
+<ul>
+<li><a href="https://cerovac.com/a11y/2020/10/acceptance-criteria-and-accessibility/">Acceptance criteria and accessibility by Bogan Cerovac</a></li>
+<li><a href="https://github.com/alphagov/accessible-autocomplete/blob/main/accessibility-criteria.md">Accessibility Acceptance Criteria for the Alpha Gov Accessible Autocomplete component</a></li>
+<li><a href="https://bbc.github.io/accessibility-news-and-you/guides/accessibility-acceptance-criteria.html">How to write accessibility acceptance criteria by BBC</a></li>
+<li><a href="https://insidegovuk.blog.gov.uk/2018/01/24/improving-accessibility-with-accessibility-acceptance-criteria/">Improving accessibility with accessibility acceptance criteria</a></li>
+<li><a href="https://alphagov.github.io/a11y-dev-workshop/criteria">Unsorted collection of accessibility acceptance criteria by the A11Y dev workshop</a></li>
+<li><a href="https://w3c.github.io/using-aria/#ariachecklist">Using ARIA, Custom Control Accessible Development Checklist by the W3C</a></li>
+<li><a href="https://developer.paciellogroup.com/blog/2014/09/web-components-punch-list/">Web Components punch list by The Paciello Group</a></li>
+</ul>
+
+  </div>
+  
+  <p class="c-blog__author">Written by 
+    
+    
+    <a href="/accessibility/authors/defra-accessibility-team/">Defra accessibility team</a>.
+    
+    
+      
+        Published 22 February 2022.
+      
+    
+  </p>
+
+
+      </div> 
+    </main>
+    <footer class="c-footer">
+      <div class="[ c-footer__wrapper ] [ u-width-wrapper ]">
+        <h2 class="u-visually-hidden">Useful Links</h2>
+        <nav>
+        <ul>
+          <li><a href="/accessibility/accessibility-statement/">Accessibility statement</a></li>
+          
+        </ul>
+        </nav>
+      </div> 
+    </footer>
+  </body>
+</html>
