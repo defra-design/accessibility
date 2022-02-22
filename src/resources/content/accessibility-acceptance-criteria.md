@@ -15,7 +15,7 @@ Using accessibility acceptance criteria should lead to a smoother development pe
 
 Using the latest version of the GOV.UK Design System ensures a lot of things are baked in, but sometimes there are different patterns and components especially with internal and case management system.
 
-## Writing accessibility acceptance criteria
+## Write clear, specific accessibility acceptance criteria
 
 In short, when writing acceptance criteria, it should:
 
