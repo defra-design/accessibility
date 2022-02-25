@@ -3,35 +3,35 @@ title: Overview of accessibility legislation and requirements
 summary: "This overview relates to both internal and external services and will inform you of the accessibility legislation and requirements relevant to your service."
 author: ["Defra accessibility team"]
 version: "1.0"
-publishedDate: 2022-02-22
+publishedDate: 2022-02-25
 tags:
   - buildingNewServices
-  # - resource
+  - resource
 ---
 
-This document is a brief overview of the legislation and requirements for public sector services. This is not legal advice and if you have any queries relating to your service and any of the legislation referenced here, you should contact your departments legal team.
+This document is a brief overview of the legislation and requirements for public sector services. This is not legal advice and if you have any queries relating to your service and any of the legislation referenced here, you should contact your department's legal team.
 
 ## Accessibility requirements for a public sector service
 
-As of February 2022, the following legislation and requirements must be adhered to when creating a new service.
+As of the time of writing, the following legislation and requirements must be adhered to when creating a new service.
 
 * [Public Sector Bodies Accessibility Regulations 2018](https://www.gov.uk/guidance/accessibility-requirements-for-public-sector-websites-and-apps)
 * [Equality Act 2010](https://www.gov.uk/guidance/equality-act-2010-guidance)
 * [Service Standard](https://www.gov.uk/service-manual/service-standard)
 
-If your service is currently being maintained or actively developed, it is likely that both pieces of the legislation will apply to your service.
+If your service is currently being maintained or actively developed, it is likely that both pieces of the legislation will apply to your service even if it has been around for a while.
 
 Complying with the legislation and the service manual will help to ensure that your service is accessible to as many people as possible.
 
 ## Meet the Public Sector Bodies Accessibility Regulations 2018
 
-The Public Sector Bodies Accessibility Regulations (PSAR) 2018 came into effect on 23 September 2018 and are the most recent addition to accessibility legislation.
+The Public Sector Bodies Accessibility Regulations (PSAR) 2018 came into effect on 23 September 2018 and are the most recent addition to accessibility legislation in the UK.
 
-All public sector bodies, including central government, local government and some charities, must meet the requirements within the regulations. The regulations cover the contents of websites and mobile applications developer by public sector bodies.
+All public sector bodies, including central government, local government and some charities, must meet the requirements within the regulations. The regulations cover the contents of websites and mobile applications developed by public sector bodies.
 
 In order to meet the accessibility requirements, a service must:
-* Meet the [Web Content Accessibility Guidelines (WCAG) 2.1 AA 50 success criteria](https://www.w3.org/TR/WCAG21/)
-* [Publish an accessibility statement document conformance against the WCAG](https://www.gov.uk/guidance/model-accessibility-statement)
+* Meet the 50 success criteria of the [Web Content Accessibility Guidelines (WCAG) 2.1 AA](https://www.w3.org/TR/WCAG21/)
+* [Publish an Accessibility Statement documenting conformance against the WCAG](https://www.gov.uk/guidance/model-accessibility-statement)
 
 There are some pieces of content that you may not need to fix - the following items, taken from [Understanding accessibility requirements for public sector bodies](https://www.gov.uk/guidance/accessibility-requirements-for-public-sector-websites-and-apps), are exempt:
 
@@ -51,7 +51,7 @@ There are some pieces of content that you may not need to fix - the following it
 > 
 > * archived websites if they’re not needed for services your organisation provides and they are not updated
 
-As per the same guidance, it's important to note that your department is legally responsible for services meeting this legislation, even if the website or application has been outsourced to a supplier.
+The guidance also states that your department is legally responsible for services meeting this legislation, even if the website or application has been outsourced to a supplier.
 
 ## Understand the Equality Act 2010
 
