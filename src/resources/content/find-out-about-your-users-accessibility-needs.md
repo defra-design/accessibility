@@ -9,7 +9,7 @@ tags:
   # - resource
 ---
 
-During the discovery phase of service delivery, you need to learn about your users' accessibility needs.
+During the discovery phase of service delivery or when you are planning a project, you need to learn about your users' accessibility needs.
 
 ## Begin with estimates of need
 
