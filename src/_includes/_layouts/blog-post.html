@@ -35,8 +35,10 @@
         , published {{ publishedDate | postDate }}.</p>
         {%- endif -%}
       {% endif %}
-    {% else %}
+    {% elseif 'writing' in tags %}
       <p class="c-blog-card__category">This article relates to 
+    {% else %}
+      <p><strong>This article is a draft and has not been published yet.</strong></p>
     {% endif %}
     {% for tag in tags %}
       {% if tag == "awareness" %}
