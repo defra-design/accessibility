@@ -2,8 +2,8 @@
 title: How to make a Qualtrics form more accessible
 summary: This guidance will help you to make your Qualtrics form more accessible. You must follow each step of the guidance. This is not a complete guide to making a good digital form.
 author: ["Defra accessibility team"]
-version: "1.0"
-publishedDate: 2022-02-10
+version: "1.01"
+publishedDate: 2022-03-01
 tags:
   - writingAccessibleForms
   - resource
@@ -352,10 +352,11 @@ To do this, create a new project.
 5. Copy the Qualtrics generic accessibility statement code and paste it into the HTML view.
 6. Once pasted, navigate to the ‘Rich Content Editor’ view, again this is situated before the question itself, close to the HTML view.
 7. Go through the statement and add the details that are relevant to your form, remove any that are not, and include contact details. If you are aware of any extra defects in your form, add those. 
-8. Go to ‘Look and feel’ and then ‘Style’
-9. Add the following code to the ‘Custom CSS’ field.
+8. Go to ‘Look and feel’ and then ‘Style’.
+9. You will need to make sure that you also [use the Defra forms dynamic theme](use-the-defra-forms-dynamic-theme) for this statement.
+10. Add the following code to the ‘Custom CSS’ field.
   * `#NextButton{display:none!important}`
-10. Select the ‘Apply’ button.
+11. Select the ‘Apply’ button.
 
 You are legally responsible for the content of the statement. If you are unsure, ask your legal team to check and sign off.
 
