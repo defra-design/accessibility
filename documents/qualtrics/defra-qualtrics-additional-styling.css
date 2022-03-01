@@ -573,3 +573,8 @@ th[scope="col"][class*="header-total"] {
   line-height: 1.25;
   margin-top: 1rem !important;
 }
+
+.govuk-hint > * {
+  font-size: 1rem !important;
+  font-weight: 400 !important;
+}
