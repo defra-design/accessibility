@@ -9,6 +9,15 @@ tags:
   - resource
 ---
 
+## Consider your use of Qualtrics
+
+Qualtrics is predominantly a survey tool, not a service for large, detailed forms.
+
+When thinking about using Qualtrics for public services, you need to check whether this is the right tool and will meet your audience's needs. 
+
+You must follow the [Technology Code of Practice](https://www.gov.uk/guidance/the-technology-code-of-practice) when choosing technology, of a which the first point you must meet is to [define your users' needs](https://www.gov.uk/guidance/define-user-needs).
+
+
 ## How to use this guidance
 This guidance will help you to make your Qualtrics form more accessible.
 
@@ -19,7 +28,7 @@ This is not a complete guide to making a good digital form.
 ## Checklist
 * [Ask only the questions you need](#check-that-you-are-only-asking-the-questions-you-need)
 * [Structure your form to help users](#structure-your-form-to-help-users)
-* [Use clear language (Plain English)](#write-the-questions-and-any-guidance-using-clear-language-(plain-english))
+* [Write the questions and any guidance using plain language](#write-the-questions-and-any-guidance-using-plain-language)
 * [Use the ‘Defra forms’ theme](#use-the-defra-forms-dynamic-theme)
 * [Set up your template correctly](#setting-up-your-template)
 * [Use a meaningful form title](#use-a-meaningful-form-title)
@@ -49,11 +58,11 @@ If you remove unnecessary questions you especially help people with access needs
 <h2 name="check-that-you-are-only-asking-the-questions-you-need" id="check-that-you-are-only-asking-the-questions-you-need">Structure your form to help users</h2>
 Organise your questions in a logical order that helps users. Group related questions together.
 
-Start with **one** thing per page. That doesn’t always mean one question per page. Avoid loading pages with lots of questions.
+Begin prototyping with **one** thing per page. That doesn’t always mean one question per page. Avoid loading pages with lots of questions.
 
 Use either a question or a statement as the main page titles. Be consistent in your use of questions or statements.
 
-<h2 name="write-the-questions-and-any-guidance-using-clear-language-(plain-english)" id="write-the-questions-and-any-guidance-using-clear-language-(plain-english)">Write the questions and any guidance using clear language (Plain English)</h2>
+<h2 name="write-the-questions-and-any-guidance-using-plain-language" id="write-the-questions-and-any-guidance-using-plain-language">Write the questions and any guidance using plain language</h2>
 If the language of your form is not simple and clear, the form cannot be considered accessible.
 
 If you need advice about how to do this read the [clear language guidance from Content Design London](https://readabilityguidelines.co.uk/clear-language/) or [Content design: planning, writing and managing content on GOV.UK](https://www.gov.uk/guidance/content-design/writing-for-gov-uk).
