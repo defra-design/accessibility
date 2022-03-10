@@ -2,8 +2,8 @@
 title: How to make a Qualtrics form more accessible
 summary: This guidance will help you to make your Qualtrics form more accessible. You must follow each step of the guidance. This is not a complete guide to making a good digital form.
 author: ["Defra accessibility team"]
-version: "1.01"
-publishedDate: 2022-03-01
+version: "1.02"
+publishedDate: 2022-03-10
 tags:
   - writingAccessibleForms
   - resource
@@ -22,6 +22,7 @@ This is not a complete guide to making a good digital form.
 * [Use clear language (Plain English)](#write-the-questions-and-any-guidance-using-clear-language-(plain-english))
 * [Use the ‘Defra forms’ theme](#use-the-defra-forms-dynamic-theme)
 * [Set up your template correctly](#setting-up-your-template)
+* [Enable the back button](#enable-the-back-button)
 * [Use a meaningful form title](#use-a-meaningful-form-title)
 * [Use meaningful headings on each screen](#use-meaningful-headings-on-each-screen)
 * [Use the accessible question types](#question-types-you-can-use)
@@ -95,6 +96,9 @@ This is under Survey options > General
 **Survey language** - check that is is set to English (UK)
 
 **Survey description** - a short snippet to describe from the users' point of view what the form is for.
+
+<h4 name="enable-the-back-button" id="enable-the-back-button">Enable the back button</h4>
+Within Survey options, go to "Responses" and switch the back button on. You don’t need to save or apply this, it saves automatically.
 
 ### Motion
 Do not use motion.
