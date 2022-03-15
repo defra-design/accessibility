@@ -4,8 +4,6 @@ This repository contains the code used to build the Defra accessibility resource
 
 **For more information about creating resources and the technology used for this site, please visit the [wiki for the Defra Accessibility Resources site](https://github.com/defra-design/accessibility/wiki).**
 
-```
-
 ## Building the site on a local machine
 
 Clone this repository to a directory on your machine.
