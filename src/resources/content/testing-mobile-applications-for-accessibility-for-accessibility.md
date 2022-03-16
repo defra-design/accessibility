@@ -6,7 +6,7 @@ version: "1.0"
 publishedDate: 2022-03-16
 tags:
   - buildingNewServices
-  # - resource
+  - resource
 ---
 
 This document provides a framework and sequence for auditing mobile app (applications) without the code used to develop the app. The tests are applicable to the following operating systems
