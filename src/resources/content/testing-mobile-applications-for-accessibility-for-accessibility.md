@@ -134,7 +134,7 @@ Ensure that a bluetooth keyboard can be connected and used to operate the applic
 
 #### WCAG checks
 
-<div role="region" aria-label="WCAG testing on a mobile device" tab-index="0">
+<div role="region" aria-label="WCAG testing on a mobile device" tabindex="0">
 
 Success Criterion | How to test | Note
 ------ | ------|----------
