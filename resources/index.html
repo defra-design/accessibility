@@ -426,6 +426,15 @@ code {
   content: "";
 }
 
+[role=region]:is([aria-labelledby], [aria-label])[tabindex] {
+  border: 0.1rem solid #000;
+  overflow: auto;
+}  
+
+[role=region]:is([aria-labelledby], [aria-label])[tabindex]:focus {
+  outline: #00f solid 0.1rem;
+}
+
     </style>
   </head>
   <body>
