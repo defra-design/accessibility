@@ -134,6 +134,8 @@ Ensure that a bluetooth keyboard can be connected and used to operate the applic
 
 #### WCAG checks
 
+<div role="region" aria-label="WCAG testing on a mobile device" tab-index="0">
+
 Success Criterion | How to test | Note
 ------ | ------|----------
 1.1.1: Non-text Content  | Alt text - VoiceOver or TalkBack  | Can be checked using the screen-reader assistive technologies and seeing whether they read out any appropriate alternate text for an image.
@@ -187,6 +189,8 @@ Success Criterion | How to test | Note
 4.1.1: Parsing  | **Out of scope:** Not testable.  |
 4.1.2: Name, Role, Value  | 1. Check accessible names with VoiceControl. 2. VoiceOver or TalkBack.  |
 4.1.3: Status Messages  | Usual methods  |
+  
+</div>
 
 ## Background information
 
