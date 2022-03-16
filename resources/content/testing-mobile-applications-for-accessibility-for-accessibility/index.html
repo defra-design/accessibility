@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8">
+    
+    <title>Testing mobile applications for accessibility - Defra Accessibility Resources</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      /* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+      html {
+  /* For the default link colour */
+  --link-colour: #006726;
+
+  /* For the link hover state */
+  --link-colour-alt: #00521e;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.3;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: auto auto 0.75em;
+}
+
+h1 {
+  font-size: 3.052rem;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 2.441rem;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 1.953rem;
+  font-weight: bold;
+}
+
+h4 {
+  font-size: 1.563rem;
+  font-weight: bold;
+}
+
+p,
+li {
+  font-size: 1.25rem;
+}
+
+a {
+  color: var(--link-colour);
+  max-width: max-content;
+  text-decoration: underline;
+  text-decoration-thickness: 0.15em;
+}
+
+a:hover {
+  color: var(--link-colour-alt);
+  text-decoration-thickness: 0.3em;
+}
+
+a:focus {
+  background-color: #fd0;
+  box-shadow: 0 -0.2em #fd0, 0 0.3em #0b0c0c;
+  color: #0b0c0c !important;
+  outline: 3px solid transparent;
+  text-decoration: none;
+}
+
+body {
+  display: grid;
+  grid-template-areas:
+    "skip-link"
+    "header"
+    "main"
+    "footer";
+  grid-template-rows: auto auto 1fr auto;
+  margin: 0;
+  min-height: 100vh;
+}
+
+main {
+  font-size: 1.25rem;
+  grid-area: main;
+  margin: 0 auto;
+  max-width: 80ch;
+  max-width: 100vw;
+  width: 100%;
+}
+
+nav {
+  height: min-content;
+}
+
+a:link,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+li,
+blockquote {
+  max-width: 65ch;
+}
+
+img {
+  border: 0.25rem solid black;
+  padding: 2rem;
+}
+
+.c-nav {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.c-nav__item,
+.c-nav__item:hover {
+  color: #fff;
+  display: block;
+  max-width: 100%;
+  padding: 1rem;
+}
+
+.c-nav__item:focus {
+  color: #000;
+}
+
+.c-nav li:first-of-type a {
+  padding-left: 0;
+}
+
+footer {
+  grid-area: footer;
+}
+
+.c-skip_link {
+  grid-area: skip-link;
+  position: absolute;
+  top: -999px;
+}
+
+.c-skip_link:focus {
+  max-width: 100%;
+  padding: 1rem 2rem;
+  position: relative;
+  text-decoration: underline;
+  top: 0;
+}
+
+.c-header {
+  background-color: #0b0c0c;
+  color: #fff;
+  grid-area: header;
+}
+
+.c-header__site-name {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 1rem 1rem 1rem 0;
+  text-decoration: none;
+}
+
+.c-header__site-name:hover {
+  color: #fff;
+  text-decoration: underline;
+  text-decoration-thickness: 0.2em;
+}
+
+.c-header__wrapper {
+  align-items: center;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.c-main {
+  padding: 1.875rem 0 3.125rem;
+}
+
+.c-footer {
+  background-color: #f3f2f1;
+  color: #0b0c0c;
+}
+
+.c-footer ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin: 0;
+  padding: 1rem 1rem 1rem 0;
+}
+
+.c-footer li {
+  margin: 0.25rem 0;
+  padding: 0.5rem 0;
+}
+
+.u-width-wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 60rem;
+  padding: 0 2rem;
+  width: 100%;
+}
+
+.u-visually-hidden {
+  border: 0 !important;
+  clip: rect(0 0 0 0) !important;
+  clip-path: inset(50%) !important;
+  height: 1px !important;
+  margin: 0 !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  white-space: nowrap !important;
+  width: 1px !important;
+}
+
+.u-flow * + * {
+  margin-top: 1rem;
+}
+
+.u-flow * + h2 {
+  margin-top: 3rem;
+}
+
+.u-flow * + h3,
+.u-flow * + h4,
+.u-flow * + h5 {
+  margin-top: 2rem;
+}
+
+.c-blog-card {
+  border-top: 0.1rem solid #b1b4b6;
+  margin-top: 0;
+  padding: 3rem 0;
+}
+
+:is(.c-blog-card, .c-resource-section):first-of-type {
+  margin-top: 3rem;
+}
+
+:is(.c-blog-card, .c-resource-section):last-of-type {
+  border-bottom: 0.1rem solid #b1b4b6;
+}
+
+.c-blog-card__summary,
+.c-blog-card__link {
+  font-size: 1.563rem;
+  margin: 1.875rem 0;
+}
+
+.c-blog-card__link {
+  display: block;
+}
+
+.c-blog__content {
+  margin: 3rem 0;
+}
+
+.c-resource-card {
+  padding: 0 0 1rem;
+}
+
+.c-resource-card + .c-resource-card {
+  padding: 1.5rem 0;
+}
+
+.c-resource-section {
+  border-top: 0.1rem solid #b1b4b6;
+  margin-top: 0;
+  padding: 3rem 0;
+}
+
+table {
+  border: 0.1rem solid #000;
+  border-collapse: collapse;
+  margin-bottom: 1.875rem;
+  margin-top: 1.875rem;
+  max-width: 100%;
+  overflow-x: scroll;
+}
+
+th,
+td {
+  border: 0.1rem solid #000;
+  padding: 0.5rem 1rem;
+}
+
+blockquote {
+  border-left: 0.5rem solid #b1b4b6;
+  display: block;
+  padding: 1rem;
+}
+
+pre {
+  border: 0.1rem solid #b1b4b6;
+  max-width: 100%;
+  overflow-x: scroll;
+  padding: 1rem 2rem;
+}
+
+code {
+  font-family: monospace;
+  overflow-wrap: anywhere;
+}
+
+.c-breadcrumbs {
+  display: flex;
+  flex-flow: row wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.c-breadcrumbs__list-item {
+  display: flex;
+  flex-direction: row;
+  margin: 0 0 0 1rem;
+  margin-top: 0;
+  padding: 0.5rem 1rem 0.5rem 0;
+}
+
+.c-breadcrumbs__list-item::after {
+  content: ">";
+  display: block;
+  height: 1rem;
+  padding-left: 1rem;
+  width: 1rem;
+}
+
+.c-breadcrumbs__list-item:first-of-type {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.c-breadcrumbs__list-item:last-of-type::after {
+  content: "";
+}
+
+    </style>
+  </head>
+  <body>
+    <a href="#main" class="c-skip_link">Skip to main content</a>
+    <header class="c-header">
+      <div class="[ c-header__wrapper ] [ u-width-wrapper ]">
+        <a class="c-header__site-name" href="/accessibility/">Defra Accessibility Resources</a>
+        <nav>
+          <ul class="c-nav">
+            <li><a class="c-nav__item" href="/accessibility/resources/">Resources</a></li>
+            
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main id="main" class="c-main">
+      <div class="[ c-main__wrapper ] [ u-width-wrapper u-flow ]">
+        
+  <ol class="c-breadcrumbs">
+    <li class="c-breadcrumbs__list-item">
+      <a href="/accessibility/" class="c-breadcrumbs__link">Home</a>
+    </li>
+    
+      
+    
+    <li class="c-breadcrumbs__list-item">
+      <a href="." class="c-breadcrumbs__link" aria-current="page">Testing mobile applications for accessibility</a>
+    </li>
+  </ol>
+
+        
+          
+            <h1>Draft for: Testing mobile applications for accessibility</h1>
+          
+          
+        
+  
+  
+  
+  
+  
+    
+      <p><strong>This article is a draft and has not been published yet.</strong></p>
+    
+    
+      
+      
+    
+  
+  
+  
+  
+  </p>
+
+  <div class="c-blog__content">
+    <p>This document provides a framework and sequence for auditing mobile app (applications) without the code used to develop the app. The tests are applicable to the following operating systems</p>
+<ul>
+<li>Android (Phones and tablets)</li>
+<li>iOS (iPhones)</li>
+<li>iPadOS (iPads)</li>
+</ul>
+<p>This process may not provide you with all of accessibility issues that are present in your service and as such, you should always test your services with people who are disabled and users of your service.</p>
+<h2>Summary and order for testing</h2>
+<h3>1. Use automated accessibility checks</h3>
+<p>Quickly check for issues using automated testing.</p>
+<h4>Use Android Accessibility Scanner for Android apps</h4>
+<p><a href="https://support.google.com/accessibility/android/answer/6376570">The Android Accessibility Scanner</a> can be used to check every screen in the sample for:</p>
+<ul>
+<li>colour contrast</li>
+<li>target size issues</li>
+</ul>
+<p><a href="https://developer.android.com/guide/topics/ui/accessibility/testing#accessibility-scanner">Google provides further notes on Android accessibility testing and the application.</a></p>
+<h4>Use XCode’s Accessibility Inspector for iOS apps</h4>
+<p>You can use Apple's XCode Accessibility Inspector to check every screen in the sample for:</p>
+<ul>
+<li>Element description</li>
+<li>Contrast</li>
+<li>Hit region</li>
+<li>Element detection</li>
+<li>Clipped text</li>
+<li>Traits</li>
+<li>Large text</li>
+</ul>
+<h3>2. Check accessible names using VoiceControl in iOS</h3>
+<p>Ensure that every element (form label, form control, button, etc.) has a label that makes sense and is representative/matches that of the related control.</p>
+<h4>Use the item names overlay</h4>
+<p>To use the labels that show the name of elements on screen:</p>
+<ul>
+<li>Navigate to Settings &gt; Accessibility &gt; Voice Control.</li>
+<li>Select ‘Overlay’</li>
+<li>Ensure that the option: ‘Item Names’ is selected - once Voice Control is switched on, this option ensures that the labels are displayed on-screen.</li>
+</ul>
+<p><a href="https://htmlpreview.github.io/?https://github.com/dwp/assistive-technology-templates/blob/master/html/os-x-voice-control.html">Use the DWP Voice Control Testing template</a> to facilitate these tests.</p>
+<h3>3. Use a screen reader</h3>
+<p>Ensure that all elements are read out as expected, that labels and names are correct, roles are correct and that no information is missed.</p>
+<h4>Use TalkBack on Android</h4>
+<p>Use the latest version in Chrome (latest version). This test is GDS mandated.</p>
+<h4>Use VoiceOver on iOS</h4>
+<p>Use the latest version in Safari (version 12 or later). This test is GDS mandated.</p>
+<p><a href="https://htmlpreview.github.io/?https://github.com/dwp/assistive-technology-templates/blob/master/html/os-x-voice-control.html">Use the DWP Voice Control Testing template</a> to facilitate these tests.</p>
+<p>By navigating to Settings &gt; Accessibility &gt; VoiceOver, you can turn on ‘Caption Panel’ which will display captions for the spoken content being read out. This feature is particularly useful for understanding the exact content read out as well as for documenting problems and issues with screenshots.</p>
+<h3>4. Check large text zoom in the operating system settings</h3>
+<p>Ensure that content and functionality is not lost following the change in text size, due to elements being pushed off-screen.</p>
+<h4>Set large text on Android 12:</h4>
+<ul>
+<li>Go to Settings &gt; Accessibility &gt; Text and display</li>
+<li>Set Font size to ‘largest’</li>
+<li>Set Display size to ‘larger’</li>
+</ul>
+<h4>Set Large text on iOS</h4>
+<ul>
+<li>Go to Settings &gt; Accessibility &gt; Display &amp; Text Size</li>
+<li>Select ‘Larger Text’</li>
+<li>Increase the scale to a larger text size that is double the original size, use the ‘Larger Accessibility Sizes’ option if needed.</li>
+</ul>
+<h3>5. Check orientation</h3>
+<p>Ensure that content is still displayed regardless of the orientation of the device and that it is not locked to a single orientation.</p>
+<h4>Check orientation lock in Android</h4>
+<ul>
+<li>Swipe down from the top of the Android device’s screen to open the controls and notification view.</li>
+<li>Ensure that the control labelled ‘Auto-rotate’ is enabled.</li>
+</ul>
+<h4>Check orientation lock in iOS</h4>
+<ul>
+<li>Swipe down from the top right of the iOS device’s screen to open the control centre.</li>
+<li>Ensure that the control featuring a padlock with a circular arrow around the outside is <strong>not</strong> switched on.</li>
+</ul>
+<h3>6. Use a screen magnifier</h3>
+<p>Ensure that content is visible when using a screen magnifier to enlarge the display.</p>
+<h4>Enable screen magnifier in Android</h4>
+<ul>
+<li>Go to Settings &gt; Accessibility &gt; Magnification</li>
+<li>From this screen you can choose to turn on magnification by either triple tapping a single finger or using an additional button in your device's control bar at the bottom of the screen.</li>
+</ul>
+<h4>Enable screen magnifier in iOS</h4>
+<ul>
+<li>Go to Settings &gt; Accessibility &gt; Zoom</li>
+<li>Once Zoom is switched on, you can turn on magnification by double tapping three fingers.</li>
+</ul>
+<p>Use the latest version in Safari. This test is GDS mandated.</p>
+<h3>7. Conduct visual display checks</h3>
+<p>Ensure that content is visible and easy to read regardless of the display option that a person may be using and that motion is not overused or mandatory.</p>
+<h4>Tests on Android</h4>
+<ul>
+<li>Colour correction modes</li>
+<li>High contrast</li>
+</ul>
+<h4>Tests on iOS</h4>
+<ul>
+<li>Colour Filters (Greyscale)</li>
+<li>Increase contrast</li>
+<li>Reduce motion</li>
+<li>Reduce transparency</li>
+</ul>
+<h3>8. Conduct keyboard checks</h3>
+<p>Ensure that a bluetooth keyboard can be connected and used to operate the application without any problems.</p>
+<h3>9. Complete remaining WCAG checks</h3>
+<h4>WCAG checks</h4>
+<table>
+<thead>
+<tr>
+<th>Success Criterion</th>
+<th>How to test</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.1.1: Non-text Content</td>
+<td>Alt text - VoiceOver or TalkBack</td>
+<td>Can be checked using the screen-reader assistive technologies and seeing whether they read out any appropriate alternate text for an image.</td>
+</tr>
+<tr>
+<td>1.2.1: Audio-only and Video-only (Prerecorded)</td>
+<td>Usual methods</td>
+<td></td>
+</tr>
+<tr>
+<td>1.2.2: Captions (Prerecorded)</td>
+<td>Usual methods</td>
+<td></td>
+</tr>
+<tr>
+<td>1.2.3: Audio Description or Media Alternative (Prerecorded)</td>
+<td>Usual methods</td>
+<td></td>
+</tr>
+<tr>
+<td>1.2.4: Captions (Live)</td>
+<td>Usual methods</td>
+<td></td>
+</tr>
+<tr>
+<td>1.2.5: Audio Description (Prerecorded)</td>
+<td>Usual methods</td>
+<td></td>
+</tr>
+<tr>
+<td>1.2.1: Audio-only and Video-only (Prerecorded)</td>
+<td>Usual methods</td>
+<td></td>
+</tr>
+<tr>
+<td>1.3.1: Info and Relationships</td>
+<td>1. Check accessible names with voice control. 2. VoiceOver or Talkback</td>
+<td></td>
+</tr>
+<tr>
+<td>1.3.2: Meaningful Sequence</td>
+<td>Usual methods</td>
+<td></td>
+</tr>
+<tr>
+<td>1.3.3: Sensory Characteristics</td>
+<td>Usual methods</td>
+<td></td>
+</tr>
+<tr>
+<td>1.3.4: Orientation</td>
+<td>Swap device from portrait to landscape and back.</td>
+<td></td>
+</tr>
+<tr>
+<td>1.3.5: Identify Input Purpose</td>
+<td>Check that autocomplete works correctly</td>
+<td></td>
+</tr>
+<tr>
+<td>1.4.1: Use of Color</td>
+<td>Check that app does not use colour as the only means of conveying information.</td>
+<td></td>
+</tr>
+<tr>
+<td>1.4.2: Audio Control</td>
+<td>Usual methods</td>
+<td></td>
+</tr>
+<tr>
+<td>1.4.3: Contrast (Minimum)</td>
+<td>Use Anroid accessibility checker</td>
+<td></td>
+</tr>
+<tr>
+<td>1.4.4: Resize text</td>
+<td>Set text and display to largest values</td>
+<td>It won’t be possible to be sure that you reach 200% or 400% exactly.</td>
+</tr>
+<tr>
+<td>1.4.5: Images of Text</td>
+<td>Check for alt text where needed using VoiceOver or TalkBack</td>
+<td></td>
+</tr>
+<tr>
+<td>1.4.10: Reflow</td>
+<td><strong>Out of scope</strong>: Not testable on most devices</td>
+<td></td>
+</tr>
+<tr>
+<td>1.4.11: Non-text Contrast</td>
+<td>Use Android accessibility checker</td>
+<td></td>
+</tr>
+<tr>
+<td>1.4.12: Text Spacing</td>
+<td><strong>Out of scope</strong>: Not testable on most devices</td>
+<td></td>
+</tr>
+<tr>
+<td>1.4.13: Content on Hover or Focus</td>
+<td>Usual methods for focus. Out of scope for hover interactions.</td>
+<td></td>
+</tr>
+<tr>
+<td>2.1.1: Keyboard</td>
+<td>Test with bluetooth keyboard on both android and iOS.</td>
+<td></td>
+</tr>
+<tr>
+<td>2.1.2: No Keyboard Trap</td>
+<td>Test with bluetooth keyboard on both android and iOS.</td>
+<td></td>
+</tr>
+<tr>
+<td>2.1.4: Character Key Shortcuts</td>
+<td>Check for shortcuts using frequently binded keys.</td>
+<td></td>
+</tr>
+<tr>
+<td>2.2.1: Timing Adjustable</td>
+<td>Usual methods</td>
+<td></td>
+</tr>
+<tr>
+<td>2.2.2: Pause, Stop, Hide</td>
+<td>Usual methods</td>
+<td></td>
+</tr>
+<tr>
+<td>2.3.1: Three Flashes or Below Threshold</td>
+<td>Usual methods</td>
+<td></td>
+</tr>
+<tr>
+<td>2.4.1: Bypass Blocks</td>
+<td><strong>Out of scope:</strong> Not applicable to apps unless they display web content</td>
+<td></td>
+</tr>
+<tr>
+<td>2.4.2: Page Titled</td>
+<td><strong>Out of scope:</strong> Not applicable to apps</td>
+<td></td>
+</tr>
+<tr>
+<td>2.4.3: Focus Order</td>
+<td>Usual methods</td>
+<td></td>
+</tr>
+<tr>
+<td>2.4.4: Link Purpose (In Context)</td>
+<td>Usual methods</td>
+<td></td>
+</tr>
+<tr>
+<td>2.4.5: Multiple Ways</td>
+<td><strong>Out of scope:</strong> Often not relevant to a mobile application</td>
+<td></td>
+</tr>
+<tr>
+<td>2.4.6: Headings and Labels</td>
+<td>Check using VoiceOver or TalkBack. Text that looks like it should be a heading should be announced and appear in the rotor.</td>
+<td></td>
+</tr>
+<tr>
+<td>2.4.7: Focus Visible</td>
+<td>Usual methods</td>
+<td></td>
+</tr>
+<tr>
+<td>2.5.1: Pointer Gestures</td>
+<td>Check that a single pointer can operate all functions</td>
+<td></td>
+</tr>
+<tr>
+<td>2.5.2: Pointer Cancellation</td>
+<td>Check that you can navigate the pointer away and successfully cancel an action.</td>
+<td></td>
+</tr>
+<tr>
+<td>2.5.3: Label in Name</td>
+<td>Check accessible names with VoiceControl</td>
+<td></td>
+</tr>
+<tr>
+<td>2.5.4: Motion Actuation</td>
+<td>Check for functions in this app that are operated by device or user motion.</td>
+<td></td>
+</tr>
+<tr>
+<td>3.1.1: Language of Page</td>
+<td><strong>Out of scope:</strong> Not testable on most devices.</td>
+<td></td>
+</tr>
+<tr>
+<td>3.1.2: Language of Parts</td>
+<td>If there are different languages present, test to see whether a user agent reads these out as expected.</td>
+<td></td>
+</tr>
+<tr>
+<td>3.2.1: On Focus</td>
+<td>Usual methods</td>
+<td></td>
+</tr>
+<tr>
+<td>3.2.2: On Input</td>
+<td>Usual methods</td>
+<td></td>
+</tr>
+<tr>
+<td>3.2.3 Consistent navigation (AA)</td>
+<td>Usual methods</td>
+<td></td>
+</tr>
+<tr>
+<td>3.2.4 Consistent identification (AA)</td>
+<td>Usual methods</td>
+<td></td>
+</tr>
+<tr>
+<td>3.3.1: Error Identification</td>
+<td>Usual methods</td>
+<td></td>
+</tr>
+<tr>
+<td>3.3.2: Labels or Instructions</td>
+<td>Usual methods</td>
+<td></td>
+</tr>
+<tr>
+<td>3.3.3: Error Suggestion</td>
+<td>Usual methods</td>
+<td></td>
+</tr>
+<tr>
+<td>3.3.4: Error Prevention (Legal, Financial, Data)</td>
+<td>Usual methods</td>
+<td></td>
+</tr>
+<tr>
+<td>4.1.1: Parsing</td>
+<td><strong>Out of scope:</strong> Not testable.</td>
+<td></td>
+</tr>
+<tr>
+<td>4.1.2: Name, Role, Value</td>
+<td>1. Check accessible names with VoiceControl. 2. VoiceOver or TalkBack.</td>
+<td></td>
+</tr>
+<tr>
+<td>4.1.3: Status Messages</td>
+<td>Usual methods</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>Background information</h2>
+<h3>How to view an iOS device on Mac</h3>
+<p>This is helpful to share for demos and for screenshots etc.</p>
+<ol>
+<li>Connect iOS device to Mac using USB to lightning cable.</li>
+<li>From your iOS device, you must trust the Mac device - this should appear in a dialogue and prompt you for an answer.</li>
+</ol>
+<h3>How to view an Android device on Mac</h3>
+<p>This is helpful to share for demos and for screenshots etc.</p>
+<h4>Using Vysor to view the device</h4>
+<ol>
+<li><a href="https://www.vysor.io/">Download Vysor to the Mac</a></li>
+<li>Install it on the mac</li>
+<li>Connect Android phone to Mac with USB-C cable</li>
+<li>Set Android to Developer mode, and then set USB debugging to on</li>
+<li>Connect Vysor</li>
+</ol>
+<h4>Things that did not work (but may do for you)</h4>
+<ul>
+<li>Reflector app on Mac</li>
+<li>LetsView App</li>
+</ul>
+
+  </div>
+  
+  <p class="c-blog__author">Written by 
+    
+    
+    <a href="/accessibility/authors/defra-accessibility-team/">Defra accessibility team</a>.
+    
+    
+      
+        Published 16 March 2022.
+      
+    
+  </p>
+
+
+      </div> 
+    </main>
+    <footer class="c-footer">
+      <div class="[ c-footer__wrapper ] [ u-width-wrapper ]">
+        <h2 class="u-visually-hidden">Useful Links</h2>
+        <nav>
+        <ul>
+          <li><a href="/accessibility/accessibility-statement/">Accessibility statement</a></li>
+          
+        </ul>
+        </nav>
+      </div> 
+    </footer>
+  </body>
+</html>
