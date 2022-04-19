@@ -52,7 +52,7 @@ We used manual and automated tests to look for issues.
 
 ## What we’re doing to improve accessibility
 
-We plan to review this site again in a year and to fix any issues reported within 12 weeks.
+We plan to review this site again in a year. We will also fix any issues reported within 12 weeks.
 
 ## Preparation of this accessibility statement
 
