@@ -49,6 +49,10 @@ module.exports = function(eleventyConfig) {
 
   // Copy across PDF files
   eleventyConfig.addPassthroughCopy("src/**/*.pdf");
+
+  // Copy across the interview example page
+  eleventyConfig.addPassthroughCopy("src/interview/index.html");
+  eleventyConfig.addPassthroughCopy("src/interview/style.css");
   
   return {
     htmlTemplateEngine: "njk",

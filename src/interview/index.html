@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1, width=device-heigh">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>gov.pizza</h1>
+    </header>
+
+    <main>
+        <span class="sr-only">If you are blind please click on the green button.</span>
+        <table>
+            <tr>
+                <td>
+                    <p class="bigger">Update your pizza preferences</p>
+                    <p>Use this service to:</p>
+                    <p>
+                        🍕 Update your recorded pizza preferences <br/>
+                        🍕 Subscribe to new pizza topping notifications <br/>
+                        🍕 Identify allergen content in pizzas <br/>
+                    </p>
+                    <p class="btw">
+                        There are different services for updating your <a href="#">Pasta Preferences</a>
+                    </p>
+                    <p>What is Pizza? Find out <a href="https://en.wikipedia.org/wiki/Pizza">here</a></p>
+                    <img src="images/pexels-ketut-subiyanto-4670574-smaller.jpg">
+
+                </td>
+                <td >
+                    <h4>Related Content</h4>
+                    <ul>
+                        <li>
+                            <a href="#">Pasta Preferences</a>
+                        </li>
+                        <li>
+                            <a href="#">Is pizza a sandwich?</a>
+                        </li>
+                    </ul>
+                    <!-- <img src="images/pexels-christopher-farrugia-3581878.jpg" alt="pexels-christopher-farrugia-3581878.jpg"> -->
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h2>Tell me about your best pizza!</h2>
+                    <p>Then press the green button</p>
+                <input type="text" id="trap" placeholder="I love pizza">
+                <button style="background-color: #0f0;" aria-label="button"></button>
+                <button type="reset" style="background-color: #f00;" aria-label="button"></button>
+            </td>
+            </tr>
+        </table>
+    </main>
+
+    <div role="contentinfo"><p>Please note - this page has intentional accessibility issues and is intented for use as part of an interview for an Accessibility Consultant.</p></div>
+
+    <script>
+        inputTrap = document.getElementById('trap');
+        inputTrap.onkeydown = function() {
+            inputTrap.focus();
+            console.log("I'm trapping you!");
+            return false;
+        };
+    </script>
+</body>
+</html>

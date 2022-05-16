@@ -1,0 +1,101 @@
+
+html, body {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-family: sans-serif;
+    font-size: 10px;
+    background-color: #222;
+    color: #fff;
+}
+
+body {
+    background-color: #efefef;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: black;
+    color: #fff;
+    padding: 1rem;
+}
+
+header h1 {
+    margin: 0 auto;
+    max-width: 80rem;
+    box-shadow: 0 1rem black, 0 1.75rem 0 green;
+    font-size: 3rem;
+}
+
+main {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 1rem;
+    flex-grow: 1;
+}
+
+h4 {
+    box-shadow: 0 -0.5em #efefef, 0 -.75em 0 green; 
+}
+
+tr > td:first-of-type {
+    width: 75%;
+    padding-right: 2rem;
+}
+
+
+td > img {
+    width: 50%;
+}
+
+a {
+    color: green;
+}
+
+:focus {
+    outline: none;
+}
+
+.bigger {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.h2 {
+    font-size: 1.25em;
+    font-weight: bold;
+    color: red;
+}
+
+.sr-only {
+    position: absolute;
+    left: -1000px;
+    top: -1000px;
+}
+
+.btw {
+    border-left: solid .5rem gray;
+    padding: .5rem;
+}
+
+inoput {
+    height: 2em;
+}
+
+button {
+    width: 2em;
+    height: 2em;
+    border-radius: 1em;
+    border: thin solid black;
+     vertical-align: bottom;
+}
+
+body > div:last-of-type {
+    padding: .5rem 1rem;
+    border-top: solid .5rem green;
+}
