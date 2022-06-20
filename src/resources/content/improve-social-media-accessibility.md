@@ -158,12 +158,12 @@ The RGB hex value **#008938** will give sufficient contrast against both white a
 
 #### Examples
 
-![Green hashtag #WalkToWorkDay on a picture of grey sky above a misty river](/resources/images/improve-social-media-accessibility/walk-to-work-day-hashtag.png)
+![Green hashtag #WalkToWorkDay on a picture of grey sky above a misty river](/accessibility/resources/images/improve-social-media-accessibility/walk-to-work-day-hashtag.png)
 
 Green #007B35 on light blue #D0DBE3 is only 3.8:1. \
 Darkening the text to #216641 will give a 5:1 ratio.
 
-![Black Defra logo on a green background](/resources/images/improve-social-media-accessibility/defra-logo-green.png)
+![Black Defra logo on a green background](/accessibility/resources/images/improve-social-media-accessibility/defra-logo-green.png)
 
 Black #011D07 on green #007F36 is only 3.5:1. \
 Lightening the green to #3D825D will work for both the green and black text.
@@ -186,7 +186,7 @@ Use only the default font. Do not use false (faux) bold or italic or special fon
 
 Example:
 
-![The problematic text says "Please - false bold starts - do not - false bold ends - eat the shrimp scampi in the fridge. It is tasty - start false italic - but will kill you - end false italic.](/resources/images/improve-social-media-accessibility/twitter-faux-bold.png)
+![The problematic text says "Please - false bold starts - do not - false bold ends - eat the shrimp scampi in the fridge. It is tasty - start false italic - but will kill you - end false italic.](/accessibility/resources/images/improve-social-media-accessibility/twitter-faux-bold.png)
 
 A user will hear “Please eat the shrimp scampi in the fridge. It is tasty.”
 
@@ -219,7 +219,7 @@ Some people say that ‘decorative’ images, chosen to complement an article, d
 
 Make sure alt text is interesting. If we write ‘drab or boring’ alt text then we do not replace the image for people who cannot see it. For example, for this image:
 
-![A mosque roof with detailed geometric patterns in the roof structure and decoration](/resources/images/improve-social-media-accessibility/mosque-roof.png)
+![A mosque roof with detailed geometric patterns in the roof structure and decoration](/accessibility/resources/images/improve-social-media-accessibility/mosque-roof.png)
 
 “Mosque roof” is dull and does not add much.
 
@@ -248,13 +248,13 @@ Recommendations:
 
 ### Example images for discussion
 
-![Anum Saleem](/resources/images/improve-social-media-accessibility/anum-saleem-photo.png)
+![Anum Saleem](/accessibility/resources/images/improve-social-media-accessibility/anum-saleem-photo.png)
 
 The alt text for this photo was “Anum Saleem”.
 Would it be more helpful as “Anum Saleem, a young woman wearing a grey Hijab”?
 Is this a reasonable or fair thing to do?
 
-![Cathy Napier](/resources/images/improve-social-media-accessibility/walk-to-work-day-photo.png)
+![Cathy Napier](/accessibility/resources/images/improve-social-media-accessibility/walk-to-work-day-photo.png)
 
 The alt text for this photo was “Image”.
 Would it be more helpful as “Selfie of Cathy Napier, a young white woman in warm winter clothes, on a snowy riverbank”?
