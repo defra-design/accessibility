@@ -2,9 +2,12 @@
   <h3 class="c-blog-card__title"><a href="{{ postUrl | url }}">{{ postTitle }}</a></h3>
   <p class="c-blog-card__summary">
   {{ postSummary }}
+  Published {{ postPublished | postDate }}.
   </p>
-  <a href="{{ postUrl | url }}" class="c-blog-card__link">Read {{ postTitle }}</a>
-  <p class="c-blog-card__author">
-    Published {{ postPublished | postDate }}.
-  </p>
+  <!-- <a href="{{ postUrl | url }}" class="c-blog-card__link">Read {{ postTitle }}</a> -->
+  <!--
+    <p class="c-blog-card__author">
+      Published {{ postPublished | postDate }}.
+    </p>
+  -->
 </div>
