@@ -151,7 +151,7 @@ Reason: poor colour contrast will mean that some people cannot see the image eas
 
 #### Defra green safe colour
 
-![Black and white text against a rectangle of Defra green](/resources/images/improve-social-media-accessibility/defra-safe-colours.png)
+![Black and white text against a rectangle of Defra green](/accessibility/resources/images/improve-social-media-accessibility/defra-safe-colours.png)
 
 The RGB hex value **#008938** will give sufficient contrast against both white and black.
 
