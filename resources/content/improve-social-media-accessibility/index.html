@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8">
+    
+    <title>Improve social media accessibility - Defra Accessibility Resources</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      /* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+      html {
+  /* For the default link colour */
+  --link-colour: #006726;
+
+  /* For the link hover state */
+  --link-colour-alt: #00521e;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.3;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: auto auto 0.75em;
+}
+
+h1 {
+  font-size: 3.052rem;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 2.441rem;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 1.953rem;
+  font-weight: bold;
+}
+
+h4 {
+  font-size: 1.563rem;
+  font-weight: bold;
+}
+
+p,
+li {
+  font-size: 1.25rem;
+}
+
+a {
+  color: var(--link-colour);
+  max-width: max-content;
+  text-decoration: underline;
+  text-decoration-thickness: 0.15em;
+}
+
+a:hover {
+  color: var(--link-colour-alt);
+  text-decoration-thickness: 0.3em;
+}
+
+a:focus {
+  background-color: #fd0;
+  box-shadow: 0 -0.2em #fd0, 0 0.3em #0b0c0c;
+  color: #0b0c0c !important;
+  outline: 3px solid transparent;
+  text-decoration: none;
+}
+
+body {
+  display: grid;
+  grid-template-areas:
+    "skip-link"
+    "header"
+    "main"
+    "footer";
+  grid-template-rows: auto auto 1fr auto;
+  margin: 0;
+  min-height: 100vh;
+}
+
+main {
+  font-size: 1.25rem;
+  grid-area: main;
+  margin: 0 auto;
+  max-width: 80ch;
+  max-width: 100vw;
+  width: 100%;
+}
+
+nav {
+  height: min-content;
+}
+
+a:link,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+li,
+blockquote {
+  max-width: 65ch;
+}
+
+img {
+  border: 0.25rem solid black;
+  padding: 2rem;
+}
+
+.c-nav {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.c-nav__item,
+.c-nav__item:hover {
+  color: #fff;
+  display: block;
+  max-width: 100%;
+  padding: 1rem;
+}
+
+.c-nav__item:focus {
+  color: #000;
+}
+
+.c-nav li:first-of-type a {
+  padding-left: 0;
+}
+
+footer {
+  grid-area: footer;
+}
+
+.c-skip_link {
+  grid-area: skip-link;
+  position: absolute;
+  top: -999px;
+}
+
+.c-skip_link:focus {
+  max-width: 100%;
+  padding: 1rem 2rem;
+  position: relative;
+  text-decoration: underline;
+  top: 0;
+}
+
+.c-header {
+  background-color: #0b0c0c;
+  color: #fff;
+  grid-area: header;
+}
+
+.c-header__site-name {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 1rem 1rem 1rem 0;
+  text-decoration: none;
+}
+
+.c-header__site-name:hover {
+  color: #fff;
+  text-decoration: underline;
+  text-decoration-thickness: 0.2em;
+}
+
+.c-header__wrapper {
+  align-items: center;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.c-main {
+  padding: 1.875rem 0 3.125rem;
+}
+
+.c-footer {
+  background-color: #f3f2f1;
+  color: #0b0c0c;
+}
+
+.c-footer ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin: 0;
+  padding: 1rem 1rem 1rem 0;
+}
+
+.c-footer li {
+  margin: 0.25rem 0;
+  padding: 0.5rem 0;
+}
+
+.u-width-wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 60rem;
+  padding: 0 2rem;
+  width: 100%;
+}
+
+.u-visually-hidden {
+  border: 0 !important;
+  clip: rect(0 0 0 0) !important;
+  clip-path: inset(50%) !important;
+  height: 1px !important;
+  margin: 0 !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  white-space: nowrap !important;
+  width: 1px !important;
+}
+
+.u-flow * + * {
+  margin-top: 1rem;
+}
+
+.u-flow * + h2 {
+  margin-top: 3rem;
+}
+
+.u-flow * + h3,
+.u-flow * + h4,
+.u-flow * + h5 {
+  margin-top: 2rem;
+}
+
+.c-blog-card {
+  border-top: 0.1rem solid #b1b4b6;
+  margin-top: 0;
+  padding: 3rem 0;
+}
+
+:is(.c-blog-card, .c-resource-section):first-of-type {
+  margin-top: 3rem;
+}
+
+:is(.c-blog-card, .c-resource-section):last-of-type {
+  border-bottom: 0.1rem solid #b1b4b6;
+}
+
+.c-blog-card__summary,
+.c-blog-card__link {
+  font-size: 1.25rem; /* font-size: 1.563rem; */
+  margin: 0.5rem 0; /* margin: 1.875rem 0; */
+}
+
+.c-blog-card__link {
+  display: block;
+}
+
+.c-blog__content {
+  margin: 3rem 0;
+}
+
+.c-resource-card {
+  padding: 0 0 1rem;
+}
+
+.c-resource-card + .c-resource-card {
+  padding: 1.5rem 0 0.5rem 0;
+}
+
+.c-resource-section {
+  border-top: 0.1rem solid #b1b4b6;
+  margin-top: 0;
+  padding: 3rem 0;
+}
+
+table {
+  border: 0.1rem solid #000;
+  border-collapse: collapse;
+  max-width: 100%;
+  overflow-x: scroll;
+}
+
+th,
+td {
+  border: 0.1rem solid #000;
+  padding: 0.5rem 1rem;
+}
+
+blockquote {
+  border-left: 0.5rem solid #b1b4b6;
+  display: block;
+  padding: 1rem;
+}
+
+pre {
+  border: 0.1rem solid #b1b4b6;
+  max-width: 100%;
+  overflow-x: scroll;
+  padding: 1rem 2rem;
+}
+
+code {
+  font-family: monospace;
+  overflow-wrap: anywhere;
+}
+
+.c-breadcrumbs {
+  display: flex;
+  flex-flow: row wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.c-breadcrumbs__list-item {
+  display: flex;
+  flex-direction: row;
+  margin: 0 0 0 1rem;
+  margin-top: 0;
+  padding: 0.5rem 1rem 0.5rem 0;
+}
+
+.c-breadcrumbs__list-item::after {
+  content: ">";
+  display: block;
+  height: 1rem;
+  padding-left: 1rem;
+  width: 1rem;
+}
+
+.c-breadcrumbs__list-item:first-of-type {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.c-breadcrumbs__list-item:last-of-type::after {
+  content: "";
+}
+
+[role=region]:is([aria-labelledby], [aria-label])[tabindex] {
+  border: 0.1rem solid #000;
+  overflow: auto;
+}
+
+[role=region]:is([aria-labelledby], [aria-label])[tabindex]:focus {
+  outline: #00f solid 0.1rem;
+}
+
+    </style>
+  </head>
+  <body>
+    <a href="#main" class="c-skip_link">Skip to main content</a>
+    <header class="c-header">
+      <div class="[ c-header__wrapper ] [ u-width-wrapper ]">
+        <a class="c-header__site-name" href="/accessibility/">Defra Accessibility Resources</a>
+        <nav>
+          <ul class="c-nav">
+            <li><a class="c-nav__item" href="/accessibility/resources/">Resources</a></li>
+            
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main id="main" class="c-main">
+      <div class="[ c-main__wrapper ] [ u-width-wrapper u-flow ]">
+        
+  <ol class="c-breadcrumbs">
+    <li class="c-breadcrumbs__list-item">
+      <a href="/accessibility/" class="c-breadcrumbs__link">Home</a>
+    </li>
+    
+      
+        <li class="c-breadcrumbs__list-item">
+          <a href="/accessibility/resources/" class="c-breadcrumbs__link">Resources</a>
+        </li>
+      
+    
+    <li class="c-breadcrumbs__list-item">
+      <a href="." class="c-breadcrumbs__link" aria-current="page">Improve social media accessibility</a>
+    </li>
+  </ol>
+
+        
+          
+            <h1>Improve social media accessibility</h1>
+          
+          
+        
+  
+  
+  
+  
+  
+    
+      
+        <p>Version 1.0, published 16 June 2022.</p>
+    
+    
+      
+      
+    
+      
+      
+    
+  
+  
+  
+  
+  </p>
+
+  <div class="c-blog__content">
+    <p>Adapted and extended from <a href="https://adrianroselli.com/2018/01/improving-your-tweet-accessibility.html">Improving Your tweet Accessibility by Adrian Roselli</a></p>
+<h2>Checklist</h2>
+<ul>
+<li>Do not use social media as the only way to spread key information such as emergency information, jobs, consultations, policy announcements etc.</li>
+<li>Write using clear language and avoid jargon.</li>
+<li>Make sure it is easy to identify the order of tweets in a thread.</li>
+<li>Use real words in hashtags and capitalise the first letter of each word.</li>
+<li>Avoid using emoji altogether or avoid using too many emoji.</li>
+<li>If you use emoji, make sure you know what the default alt text is for each emoji so you know if they make sense if read as text.</li>
+<li>Do not use emoji at the start of a line.</li>
+<li>Only use the default font. Check that there are no false bold or italic or special fonts.</li>
+<li>Check the colour contrast for images with text or drawings..</li>
+<li>Every image you use must have appropriate alternative text. Do not rely on any automated alt text.</li>
+<li>Check that alt text is helpful and genuinely descriptive.</li>
+<li>Only use video if it is necessary and an image will not do.</li>
+<li>Include captions and audio descriptions in video as necessary.</li>
+<li>Make sure your Twitter theme colour has good colour contrast.</li>
+</ul>
+<h2>Other resources</h2>
+<ul>
+<li><a href="https://gcs.civilservice.gov.uk/guidance/digital-communication/planning-creating-and-publishing-accessible-social-media-campaigns/">Planning, creating and publishing accessible social media campaigns</a> - Government Communication Service (GCS)</li>
+<li><a href="https://www.gov.uk/guidance/social-media-playbook">Social media playbook</a> - Government Digital Service</li>
+<li><a href="https://www.accessible-social.com/">Accessible Social</a> - free resource hub by Alexa Heinrich</li>
+</ul>
+<h2>When to use social media</h2>
+<p>Do not use social media as the only way to spread important information.</p>
+<p>Most social media apps and websites such as Twitter, LinkedIn and Facebook are not fully accessible. It would be discriminatory to give advantage to a subset of people who enjoy easy access to these channels. For that reason, avoid using social media alone to release key information such as emergency information, jobs, consultations, policy announcements etc.</p>
+<p>Reason: taking Twitter as an example, in 2020, it had around 16 million users out of an adult population of 53 million - so 70% are NOT on Twitter. In addition, some users will not be able to use it as it is not fully accessible. Recently Twitter has started blocking non-logged-in visitors from reading more than a handful of tweets.</p>
+<h2>Words</h2>
+<h3>Use clear language</h3>
+<p>Just like any other content, avoid jargon and write the tweet using clear language.</p>
+<h3>Content order</h3>
+<p>Tweets and brief social media posts are short, so content order is not as critical as for other content formats. However, we don’t want to waste the user’s time.</p>
+<p>Bear in mind that Defra is a public body and not a company marketing its services and so on balance, aim to place key information in the tweet and do not force the user to hunt for it.</p>
+<p>Consider putting the key information first and avoid using a mysterious ‘hook’ or a story format. However, starting tweets or posts with a question may help with engagement. It is OK to do that if the following sentence explains the answer or the linked content answers the question.</p>
+<p>Reason: for people using assistive technology, scanning social media for key content may not be possible (no headings) and it might be slightly slower for them to decide if they are interested in the content if you leave the important stuff until last.</p>
+<h2>Twitter threads - formatting sequences of tweets</h2>
+<ol>
+<li>Tell users that the first tweet is part of a thread. For example:</li>
+</ol>
+<ul>
+<li>This is a thread about how Defra …</li>
+<li>Defra has over 100 ways to protect our environment (a thread)</li>
+</ul>
+<ol start="2">
+<li>Add a sequence number to each tweet:</li>
+</ol>
+<ul>
+<li>If you know how many tweets are in the thread, use the format “page of total pages” - for example <strong>5 of 8</strong> at the end of the tweet.</li>
+<li>If you are unsure of the total number, use a tweet number and a slash - eg <strong>5/</strong> at the end of the tweet.</li>
+<li>Add a number to the start of each tweet after the first, to make a numbered list - for example: <strong>5. Defra stops pollution by…</strong></li>
+</ul>
+<h2>Hashtags</h2>
+<p>Use real words and capitalise the first letter of each word (often called ‘camelCase').</p>
+<p>Twitter hashtags are <strong>not</strong> case sensitive so it is safe to take an existing hashtag and capitalise the first letter of each word.</p>
+<p>Example: #ClimateChange not #climatechange or #clim8chnge</p>
+<p>Reason - it’s more readable for everyone; more likely to be read out correctly by screen readers; improves correct re-typing.</p>
+<h3>Using existing hashtags that do not follow the real word rule</h3>
+<p>If there are important hashtags <strong>that already exist</strong> that do not use real words, then consider the following:</p>
+<ul>
+<li>Avoid using the hashtag in place of words in a sentence. <br>
+For example write “Defra publishes new accessibility resources. #ally” <br>
+not “Defra publishes new #ally resources.”</li>
+<li>Capitalise any hashtags that are abbreviations. For example write #UCD not #ucd.</li>
+</ul>
+<h2>Emoji</h2>
+<p>Avoid using emoji altogether or avoid using too many emoji.</p>
+<p>Check that the emoji read as text makes sense. You can <a href="https://emojipedia.org/">use Emojipedia to find the text equivalent</a> of the emoji.</p>
+<p>Do not use an emoji at the start of a line.</p>
+<p>Example:</p>
+<p><img
+src="/accessibility/resources/images/improve-social-media-accessibility/emoji-leaf.png"
+alt="Emoji of green leaf fluttering in the wind with wind shown as 3 blue curved stripes"
+height="30" width="30"
+style="border: 0; padding: 0; display:inline;"> Defra announces its new climate change policy.</p>
+<p>May read as “graphic emoji leaf fluttering in wind colon Defra announces its new climate change policy”</p>
+<p>Reason for using with care: they are very verbose in screen readers and the text read out may not make sense; different screen sizes may make them hard to see; different cultural backgrounds can change their meaning.</p>
+<h2>Images</h2>
+<h3>Text size on images</h3>
+<p>If you add text to an image, make sure that the text size is large enough that it is readable on a mobile screen. It is not acceptable to use alt text to compensate for small text size.</p>
+<p>You should aim to make the text size in scaled down images appear as 14pt - preferably larger. This will mean you need to make it much bigger in the original image, so it looks like 14pt when it scales down for mobile.</p>
+<p>If you make an image that is 1600 pixels wide, on a mobile it will display at about 375 pixels. So if you use 14pt in the original image, it will look smaller than 4pt on mobile and be unreadable.</p>
+<p>If the image on mobile appears roughly a quarter of the size of your original, you will need a minimum font size of 56pt or bigger (4 x 14pt) for it to scale down to about 14pt.</p>
+<h3>Colour contrast on images</h3>
+<p>If you create an image, make sure that anything on the image that will be read has sufficient colour contrast. These things will include:</p>
+<ul>
+<li>text</li>
+<li>diagrams</li>
+<li>graphs</li>
+<li>logos</li>
+<li>shapes that have meaning</li>
+<li>drawings</li>
+</ul>
+<p>Reason: poor colour contrast will mean that some people cannot see the image easily.</p>
+<h4>Defra green safe colour</h4>
+<p><img src="/resources/images/improve-social-media-accessibility/defra-safe-colours.png" alt="Black and white text against a rectangle of Defra green"></p>
+<p>The RGB hex value <strong>#008938</strong> will give sufficient contrast against both white and black.</p>
+<h4>Examples</h4>
+<p><img src="/resources/images/improve-social-media-accessibility/walk-to-work-day-hashtag.png" alt="Green hashtag #WalkToWorkDay on a picture of grey sky above a misty river"></p>
+<p>Green #007B35 on light blue #D0DBE3 is only 3.8:1. <br>
+Darkening the text to #216641 will give a 5:1 ratio.</p>
+<p><img src="/resources/images/improve-social-media-accessibility/defra-logo-green.png" alt="Black Defra logo on a green background"></p>
+<p>Black #011D07 on green #007F36 is only 3.5:1. <br>
+Lightening the green to #3D825D will work for both the green and black text.</p>
+<h4>How to check contrast</h4>
+<p>It can be tricky to install a colour contrast checker on Defra laptops.</p>
+<p>If you can install some software, try <a href="https://www.tpgi.com/color-contrast-checker/">Colour Contrast Analyser</a>.</p>
+<p>If you cannot install, you can test text on an image using this <a href="https://www.brandwood.com/a11y/">text on background image a11y check</a>.</p>
+<p>Correct colour contrast ratio depends on the text size. As your image will be displayed at a number of different sizes (for example on mobile) we suggest that you use the ratio for ‘regular’ text which is 4.5:1.</p>
+<h2>False bold or italic or special fonts</h2>
+<p>Use only the default font. Do not use false (faux) bold or italic or special fonts.</p>
+<p>Example:</p>
+<p><img src="/resources/images/improve-social-media-accessibility/twitter-faux-bold.png" alt="The problematic text says &quot;Please - false bold starts - do not - false bold ends - eat the shrimp scampi in the fridge. It is tasty - start false italic - but will kill you - end false italic."></p>
+<p>A user will hear “Please eat the shrimp scampi in the fridge. It is tasty.”</p>
+<p>Reason: it is possible to use ‘unicode’ to add characters you do not find on your keyboard, such as upside-down letters, Old English, or even bold or italic. These are not announced by screen readers and sometimes not rendered as you expect. Often the &quot;italic&quot; and &quot;bold&quot; are maths symbols. They often <strong>are</strong> read out, but as &quot;mathematical symbol b&quot; etc. They may also not appear when your tweet is read by other systems such as blogs.</p>
+<h2>Image alternative text</h2>
+<p>Add appropriate alternative (alt) text to every image you use.</p>
+<p>Write your own alt text. Do not rely on any automated alt text.</p>
+<p>You can use up to 1,000 characters in the alternative text.</p>
+<p>Reason: people who cannot see the image, or where the image is not displayed cannot understand the content.</p>
+<h3>Write helpful alt text</h3>
+<p>If your image repeats some text, do not paste that text into the alt text. Work out what would give the best experience for the users.</p>
+<p>Follow existing web guidelines. Use the <a href="https://www.w3.org/WAI/tutorials/images/improve-social-media-accessibility/decision-tree/">W3C alt text decision tree</a> as a starting point if you are uncertain what text to add. You do not need to say “image of” or “photo of”.</p>
+<h3>Alt text for decorative images</h3>
+<p>All images need alt text, even if they are considered ‘decorative’. If you don’t add alt text, Twitter for example adds “Image” as the alt text.</p>
+<p>Some people say that ‘decorative’ images, chosen to complement an article, don’t need alt text. However, this excludes users who can’t see from accessing them.</p>
+<p>Make sure alt text is interesting. If we write ‘drab or boring’ alt text then we do not replace the image for people who cannot see it. For example, for this image:</p>
+<p><img src="/resources/images/improve-social-media-accessibility/mosque-roof.png" alt="A mosque roof with detailed geometric patterns in the roof structure and decoration"></p>
+<p>“Mosque roof” is dull and does not add much.</p>
+<p>“A Mosque roof looking up from the inside with detailed geometric patterns in the roof structure and decoration” is better.</p>
+<p>But maybe with more thought it can be integrated into the text flow:</p>
+<p>“The beautiful Islamic geometric designs on this Mosque ceiling are believed to be the bridge to the spiritual realm, the instrument to purify the mind and the soul.”</p>
+<p>Read also <a href="https://tink.uk/text-descriptions-emotion-rich-images/">Text descriptions and emotion rich images by Leonie Watson</a>.</p>
+<h3>Alt text for images that include people</h3>
+<p>At the time of writing (May 2022) there isn’t an agreed standard for how to write alt text about images that include people.</p>
+<p>One view is that people who cannot see the image should have a full description of the image and that may include apparent gender, ethnicity/colour and age.</p>
+<p>Another view is that it’s wrong for a tweet author to make assumptions about the person and include their apparent characteristics in the alt text.</p>
+<p>Recommendations:</p>
+<ol>
+<li>If you are able to contact the person pictured, ask them to describe themselves.</li>
+<li>If you cannot contact the person, decide if their personal characteristics are important to the use of the image. If you think they are, then discuss the draft alt text with Defra blog editors.</li>
+</ol>
+<h3>Example images for discussion</h3>
+<p><img src="/resources/images/improve-social-media-accessibility/anum-saleem-photo.png" alt="Anum Saleem"></p>
+<p>The alt text for this photo was “Anum Saleem”.
+Would it be more helpful as “Anum Saleem, a young woman wearing a grey Hijab”?
+Is this a reasonable or fair thing to do?</p>
+<p><img src="/resources/images/improve-social-media-accessibility/walk-to-work-day-photo.png" alt="Cathy Napier"></p>
+<p>The alt text for this photo was “Image”.
+Would it be more helpful as “Selfie of Cathy Napier, a young white woman in warm winter clothes, on a snowy riverbank”?
+Is this a reasonable or fair thing to do?</p>
+<h3>Alt text on Twitter</h3>
+<p>Follow the general guidance for alt text above. These additional points apply to twitter.</p>
+<p>If you leave the alt text empty for an image, Twitter adds “Image” as the alt text, so do not leave it empty.</p>
+<p>Twitter only supports alternative text for static images and animated GIFs. You cannot add alternative text for videos (see video alternative text on Twitter below).</p>
+<h4>To add alt text on Twitter:</h4>
+<ol>
+<li>When you add an image select ‘Add description’.</li>
+<li>Type the alt text text on the following screen.</li>
+<li>Press the ‘Apply’ button.</li>
+</ol>
+<h3>Video alternative text on Twitter</h3>
+<p>Twitter only supports alternative text for static images and animated GIFs. You cannot add alternative text for videos.</p>
+<p>You will need to add alt text by:</p>
+<ul>
+<li>using a text in the tweet</li>
+<li>a reply tweet</li>
+<li>a link to a transcript (see <a href="https://support.google.com/youtube/answer/2734799?hl=en-GB">tips for creating a transcript file on Google YouTube support</a>)</li>
+</ul>
+<h2>Videos</h2>
+<p>If you choose to use video in your tweet, be certain that its use is justified.</p>
+<p>The main concerns are to:</p>
+<ul>
+<li>avoid presenting content in a video that would be <strong>more</strong> accessible as plain tweet text or as static images - for example someone simply reading out a short announcement, or a slideshow of texts that could have been a thread</li>
+<li>avoid using bandwidth unnecessarily</li>
+<li>reduce the work needed to spread the information in the video because making video accessible can be time consuming</li>
+</ul>
+<p>If so, be sure to include captions and audio description as necessary.</p>
+<p>If your video only displays text, for example, audio description is necessary.</p>
+<p>If that text is generally static but you feel the design is integral to the meaning, consider if it would be better represented with static images and appropriate alternative text instead.</p>
+<h2>Audio on Twitter</h2>
+<p>At the time of writing, Twitter’s announcement tweet has no transcript nor captioning so do not use it for Defra tweets.</p>
+<p>If you use audio, use the regular tweet text as the transcript of the audio. Tell your users that the tweet is the transcript.</p>
+<p>Reason: people who cannot hear clearly or choose not to have their sound on need a transcript.</p>
+<h2>Twitter theme colour contrast</h2>
+<p>Twitter’s default themes used to have terrible colour contrast. If you use a custom theme colour for your Twitter profile, check to see if your theme colour has good colour contrast.</p>
+<p>Reason: with poor colour contrast some users will find it tricky to read your content.</p>
+
+  </div>
+  
+  <p class="c-blog__author">Written by 
+    
+    
+    <a href="/accessibility/authors/defra-accessibility-team/">Defra accessibility team</a>.
+    
+    
+      
+      
+    
+  </p>
+
+
+      </div> 
+    </main>
+    <footer class="c-footer">
+      <div class="[ c-footer__wrapper ] [ u-width-wrapper ]">
+        <h2 class="u-visually-hidden">Useful Links</h2>
+        <nav>
+        <ul>
+          <li><a href="/accessibility/accessibility-statement/">Accessibility statement</a></li>
+          
+        </ul>
+        </nav>
+      </div> 
+    </footer>
+  </body>
+</html>
