@@ -6,7 +6,7 @@ version: "3.0"
 publishedDate: 2022-02-21
 tags:
   - buildingNewServices
-  # - resource
+  - resource
 ---
 
 Automated tools that can be used for testing websites on managed devices, where you are unable to install additional tools or browser plug-ins.
@@ -26,17 +26,14 @@ The most common way of installing a bookmarklet is to drag and drop the bookmark
 
 **Lighthouse** is a part of the Chrome web browser's development tools. You can run it as follows:
 
-1. Right-click on the page and select Inspect. You can also click on the three vertical dots in the top right corner of the browser
-1. Navigate to More tools > Developer tools.
-1. This will open the DevTools panel to the right or top of the page.
-1. From the toolbar, click on Lighthouse
+1. Press F12 (fn-F12 on Mac) to open Lighthouse in Chrome DevTools. (You can also right-click and choose inspect to open DevTools and choose the Lighthouse tab.)
 1. If you don't see the Lighthouse option in the toolbar, you may need to click on the two arrows at the end.
-1. Once the Lighthouse tool opens, select the 'Accessibility' category, then choose 'Generate report'.
+1. Once the Lighthouse tool opens, select only the 'Accessibility' category, and mobile or desktop, then choose 'Generate report'.
 
 
 ### They sometimes don't work or display oddly
 
-Occasionally you may find that nothing happens when you run the bookmarklet. This is usually because the Content Security Policy for the site is blocking the script. (You can check this by looking for errors in the dev tools console, if you know how to do that). There's no way to work around this block.
+Occasionally you may find that nothing happens when you run a bookmarklet. This is usually because the Content Security Policy for the site is blocking the script. (You can check this by looking for errors in the dev tools console, if you know how to do that). There's no way to work around this block.
 
 Very occasionally, the display of the bookmarklet will be affected by the styling for the site you are testing. This does not affect the test results but some parts of the display may be missing or too big, for example. Again, there is no way to fix this.
 
@@ -60,7 +57,7 @@ Lighthouse (within Google Chrome's development tools) will identify a range of c
 
 ### Limitations of automated tests
 
-Automated tests are not comprehensive and do not provide you with a complete view of the accessibility of a page, so manual tests should always be completed alongside this.
+Automated tests are not comprehensive and do not provide you with a complete view of the accessibility of a page, so manual tests should always be completed too.
 
 <h2 id="specific-tools">Specific tools for checking details</h2>
 
