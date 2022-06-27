@@ -18,6 +18,17 @@ Automated tools that can be used for testing websites on managed devices, where 
 
 <h2 id="using-tools">Using the tools</h2>
 
+### They sometimes don't work or display oddly
+
+Occasionally you may find that nothing happens when you run the bookmarklet. This is usually because the Content Security Policy for the site is blocking the script. (You can check this by looking for errors in the dev tools console, if you know how to do that). There's no way to work around this block.
+
+Very occasionally, the display of the bookmarklet will be affected by the styling for the site you are testing. This does not affect the test results but some parts of the display may be missing or too big, for example. Again, there is no way to fix this.
+
+Lighthouse should work OK as it works in a different way that does not trigger the Content Security Policy.
+
+
+### How to use the tools
+
 A **bookmarklet** is a link that contains JavaScript. When a bookmarklet link is activated, the browser runs the JavaScript code that it contains.  It doesn't need to be properly installed and so is not restricted by Defra IT policies.
 
 The most common way of installing a bookmarklet is to drag and drop the bookmarklet link into your browser's bookmarks or favourites toolbar. You can also copy the link location of the bookmarklet link and pasting it into the Location field of a bookmark that you create using your browser's Bookmark Manager.
