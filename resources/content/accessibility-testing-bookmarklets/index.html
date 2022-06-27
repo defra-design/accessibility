@@ -496,10 +496,6 @@ code {
 <li><a href="#specific-tools">Specific tools for checking details</a></li>
 </ul>
 <h2 id="using-tools">Using the tools</h2>
-<h3>They sometimes don't work or display oddly</h3>
-<p>Occasionally you may find that nothing happens when you run the bookmarklet. This is usually because the Content Security Policy for the site is blocking the script. (You can check this by looking for errors in the dev tools console, if you know how to do that). There's no way to work around this block.</p>
-<p>Very occasionally, the display of the bookmarklet will be affected by the styling for the site you are testing. This does not affect the test results but some parts of the display may be missing or too big, for example. Again, there is no way to fix this.</p>
-<p>Lighthouse should work OK as it works in a different way that does not trigger the Content Security Policy.</p>
 <h3>How to use the tools</h3>
 <p>A <strong>bookmarklet</strong> is a link that contains JavaScript. When a bookmarklet link is activated, the browser runs the JavaScript code that it contains.  It doesn't need to be properly installed and so is not restricted by Defra IT policies.</p>
 <p>The most common way of installing a bookmarklet is to drag and drop the bookmarklet link into your browser's bookmarks or favourites toolbar. You can also copy the link location of the bookmarklet link and pasting it into the Location field of a bookmark that you create using your browser's Bookmark Manager.</p>
@@ -512,6 +508,10 @@ code {
 <li>If you don't see the Lighthouse option in the toolbar, you may need to click on the two arrows at the end.</li>
 <li>Once the Lighthouse tool opens, select the 'Accessibility' category, then choose 'Generate report'.</li>
 </ol>
+<h3>They sometimes don't work or display oddly</h3>
+<p>Occasionally you may find that nothing happens when you run the bookmarklet. This is usually because the Content Security Policy for the site is blocking the script. (You can check this by looking for errors in the dev tools console, if you know how to do that). There's no way to work around this block.</p>
+<p>Very occasionally, the display of the bookmarklet will be affected by the styling for the site you are testing. This does not affect the test results but some parts of the display may be missing or too big, for example. Again, there is no way to fix this.</p>
+<p>Lighthouse should work OK as it works in a different way that does not trigger the Content Security Policy.</p>
 <h2 id="general-tools">General tools that will spot a range of issues</h2>
 <p><a href="http://squizlabs.github.io/HTML_CodeSniffer/">HTML CodeSniffer Accessibility Auditor Bookmarklet</a> checks against several Web Content Accessibility Guidelines (WCAG) 2.1</p>
 <p><a href="https://wave.webaim.org/help#bookmarklet">WAVE browser bookmarklet</a> is a bookmarklet version of their plugin. It sends the page to the WAVE servers so don't use this with sensitive content or data.</p>
