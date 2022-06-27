@@ -489,6 +489,18 @@ code {
 
   <div class="c-blog__content">
     <p>Automated tools that can be used for testing websites on managed devices, where you are unable to install additional tools or browser plug-ins.</p>
+<h2>Using the tools</h2>
+<p>A <strong>bookmarklet</strong> is a link that contains JavaScript. When a bookmarklet link is activated, the browser runs the JavaScript code that it contains.  It doesn't need to be properly installed and so is not restricted by Defra IT policies.</p>
+<p>The most common way of installing a bookmarklet is to drag and drop the bookmarklet link into your browser's bookmarks or favourites toolbar. You can also copy the link location of the bookmarklet link and pasting it into the Location field of a bookmark that you create using your browser's Bookmark Manager.</p>
+<p><strong>Lighthouse</strong> is a part of the Chrome web browser's development tools. You can run it as follows:</p>
+<ol>
+<li>Right-click on the page and select Inspect. You can also click on the three vertical dots in the top right corner of the browser</li>
+<li>Navigate to More tools &gt; Developer tools.</li>
+<li>This will open the DevTools panel to the right or top of the page.</li>
+<li>From the toolbar, click on Lighthouse</li>
+<li>If you don't see the Lighthouse option in the toolbar, you may need to click on the two arrows at the end.</li>
+<li>Once the Lighthouse tool opens, select the 'Accessibility' category, then choose 'Generate report'.</li>
+</ol>
 <h2>General tools that will spot a range of issues</h2>
 <p><a href="http://squizlabs.github.io/HTML_CodeSniffer/">HTML CodeSniffer Accessibility Auditor Bookmarklet</a> checks against several Web Content Accessibility Guidelines (WCAG) 2.1</p>
 <p><a href="https://wave.webaim.org/help#bookmarklet">WAVE browser bookmarklet</a> is a bookmarklet version of their plugin. It sends the page to the WAVE servers so don't use this with sensitive content or data.</p>
@@ -507,41 +519,41 @@ code {
 <p><a href="https://pauljadam.com/bookmarklets/images.html">Paul J Adam images bookmarklet</a></p>
 <p>Lighthouse (within Google Chrome's development tools) can identify whether images have alternative text.</p>
 <p>The tools provided will just check for content within the alt attribute, but non-text content still requires manual checking to ensure that the alternative text serves an equivalent purpose.</p>
-<p>Relevant WCAG SC 1.1.1: Non-text Content</p>
+<p><a href="https://www.w3.org/WAI/WCAG21/Understanding/non-text-content.html">WCAG Success Criterion 1.1.1: Non-text Content</a></p>
 <p>It may also be possible that images pass this success criterion without using an <code>alt</code> attribute if the content is one of the <a href="https://www.w3.org/WAI/WCAG21/Understanding/non-text-content.html">exemptions described in the 1.1.1 Non-text Content success criterion</a>, or if one of the <a href="https://www.w3.org/WAI/WCAG21/Understanding/non-text-content.html#sufficient">sufficient techniques for 1.1.1 Non-text Content are met</a>.</p>
 <h3>Form markup</h3>
 <p><a href="https://accessibility-bookmarklets.org/install.html">Forms bookmarklet</a> can be used to identify the way that form fields are marked up and the roles used.</p>
-<p>Relevant WCAG SC 1.3.1: Info and Relationships</p>
+<p><a href="https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html">WCAG Success Criterion 1.3.1: Info and Relationships</a></p>
 <h3>Landmarks</h3>
 <p><a href="https://accessibility-bookmarklets.org/install.html">Landmarks bookmarklet</a> can be used to identify the semantic roles of each landmark used within the page.</p>
-<p>Relevant WCAG SC 1.3.1: Info and Relationships</p>
+<p><a href="https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html">WCAG Success Criterion 1.3.1: Info and Relationships</a></p>
 <h3>Reading order</h3>
 <p><a href="https://adrianroselli.com/2019/04/reading-order-bookmarklet.html">Reading order bookmarklet</a> can be used to determine the reading order of content on a page in order to understand if the sequence affects the meaning of content.</p>
-<p>Relevant WCAG SC 1.3.2: Meaningful Sequence</p>
+<p><a href="https://www.w3.org/WAI/WCAG21/Understanding/meaningful-sequence.html">WCAG Success Criterion 1.3.2: Meaningful Sequence</a></p>
 <h3>Device Orientation</h3>
 <p>Browser developer tools can be used to enable the responsive design mode, which you can use to switch the orientation.</p>
-<p>Relevant WCAG SC 1.3.4: Orientation</p>
+<p><a href="https://www.w3.org/WAI/WCAG21/Understanding/orientation.html">WCAG Success Criterion 1.3.4: Orientation</a></p>
 <h3>Colour contrast</h3>
 <p><a href="https://ada.is/contrast-widget/">Contrast analysis widget</a> can be used to identify elements on the page with low colour contrast.</p>
-<p>Relevant WCAG SC 1.4.3: Contrast (Minimum)</p>
+<p><a href="https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html">WCAG Success Criterion 1.4.3: Contrast (Minimum)</a></p>
 <h3>Text spacing</h3>
 <p><a href="https://cdpn.io/stevef/debug/YLMqbo">Text spacing bookmarklet</a> implements the line spacing, word spacing and letter spacing styling required for testing for this success criteria.</p>
-<p>Relevant WCAG SC 1.4.12: Text spacing</p>
+<p><a href="https://www.w3.org/WAI/WCAG21/Understanding/text-spacing.html">WCAG Success Criterion 1.4.12: Text spacing</a></p>
 <h3>Focus order</h3>
 <p><a href="https://adrianroselli.com/2015/01/css-bookmarklets-for-testing-and-fixing.html#FocusInteractives">Focus interactive controls bookmarklet</a> will navigate through the page, replicating hitting the tab/shift key to move through the content.</p>
-<p>Relevant WCAG SC 2.4.3: Focus Order</p>
+<p><a href="https://www.w3.org/WAI/WCAG21/Understanding/focus-order.html">WCAG Success Criterion 2.4.3: Focus Order</a></p>
 <h3>2.4.6: Headings and labels bookmarklets</h3>
 <p><a href="https://hinderlingvolkart.github.io/h123/">Accessibility HTML5 Outliner</a> can be used to quickly provide you with the headings and the hierarchy used on a page.</p>
 <h3>Language of the page</h3>
 <p>Lighthouse (within Google Chrome's development tools) can identify whether the language of the page has been set.</p>
 <p>The <a href="https://validator.w3.org/">W3C Validator</a> can identify whether the language of the page has been set.</p>
-<p>Relevant WCAG SC 3.1.1: Language of the page</p>
+<p><a href="https://www.w3.org/WAI/WCAG21/Understanding/language-of-page.html">WCAG Success Criterion 3.1.1: Language of the page</a></p>
 <h3>Code Parsing</h3>
 <p>The <a href="https://validator.w3.org/">W3C Validator</a> should be used to check for parsing errors, focussing on those that are relevant to the Web Content Accessibility Guidelines' success criteria, as these errors may lead to parsing errors or assistive technology to crash.</p>
-<p>Relevant WCAG SC 4.1.1: Parsing</p>
+<p><a href="https://www.w3.org/WAI/WCAG21/Understanding/parsing.html">WCAG Success Criterion 4.1.1: Parsing</a></p>
 <h3>Check interactive elements for names</h3>
 <p>Lighthouse (within Google Chrome's development tools) can identify whether native HTML5 interactive elements, such as links, have a name.</p>
-<p>Relevant WCAG SC 4.1.2: Name, role, value</p>
+<p><a href="https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html">WCAG Success Criterion 4.1.2: Name, role, value</a></p>
 <h2>Other bookmarklets</h2>
 <p><a href="https://www.pauljadam.com/bookmarklets.html">JavaScript Bookmarklets for Accessibility Testing</a></p>
 <p><a href="https://accessibility-bookmarklets.org">Accessibility Bookmarklets - Highlight accessibility features of web pages</a></p>
@@ -555,7 +567,7 @@ code {
     
     
       
-        Published 22 June 2022.
+        Published 27 June 2022.
       
     
   </p>
