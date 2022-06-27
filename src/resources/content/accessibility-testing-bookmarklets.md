@@ -11,7 +11,12 @@ tags:
 
 Automated tools that can be used for testing websites on managed devices, where you are unable to install additional tools or browser plug-ins.
 
-## Using the tools
+**On this page**
+* [Using the tools](#using-tools)
+* [General tools that will spot a range of issues](#general-tools)
+* [Specific tools for checking details](#specific-tools)
+
+## Using the tools {#using-tools}
 
 A **bookmarklet** is a link that contains JavaScript. When a bookmarklet link is activated, the browser runs the JavaScript code that it contains.  It doesn't need to be properly installed and so is not restricted by Defra IT policies.
 
@@ -27,7 +32,7 @@ The most common way of installing a bookmarklet is to drag and drop the bookmark
 1. Once the Lighthouse tool opens, select the 'Accessibility' category, then choose 'Generate report'.
 
 
-## General tools that will spot a range of issues
+## General tools that will spot a range of issues {#general-tools}
 
 [HTML CodeSniffer Accessibility Auditor Bookmarklet](http://squizlabs.github.io/HTML_CodeSniffer/) checks against several Web Content Accessibility Guidelines (WCAG) 2.1
 
@@ -46,7 +51,7 @@ Lighthouse (within Google Chrome's development tools) will identify a range of c
 
 Automated tests are not comprehensive and do not provide you with a complete view of the accessibility of a page, so manual tests should always be completed alongside this.
 
-## Specific tools for checking details
+## Specific tools for checking details {#specific-tools}
 
 ### Image alternative text
 
