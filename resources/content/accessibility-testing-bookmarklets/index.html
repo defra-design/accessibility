@@ -457,6 +457,10 @@ code {
     </li>
     
       
+        <li class="c-breadcrumbs__list-item">
+          <a href="/accessibility/resources/" class="c-breadcrumbs__link">Resources</a>
+        </li>
+      
     
     <li class="c-breadcrumbs__list-item">
       <a href="." class="c-breadcrumbs__link" aria-current="page">Accessibility testing tools for managed laptops</a>
@@ -465,7 +469,7 @@ code {
 
         
           
-            <h1>Draft for: Accessibility testing tools for managed laptops</h1>
+            <h1>Accessibility testing tools for managed laptops</h1>
           
           
         
@@ -475,8 +479,12 @@ code {
   
   
     
-      <p><strong>This article is a draft and has not been published yet.</strong></p>
+      
+        <p>Version 3.0, published 21 February 2022.</p>
     
+    
+      
+      
     
       
       
@@ -501,15 +509,12 @@ code {
 <p>The most common way of installing a bookmarklet is to drag and drop the bookmarklet link into your browser's bookmarks or favourites toolbar. You can also copy the link location of the bookmarklet link and pasting it into the Location field of a bookmark that you create using your browser's Bookmark Manager.</p>
 <p><strong>Lighthouse</strong> is a part of the Chrome web browser's development tools. You can run it as follows:</p>
 <ol>
-<li>Right-click on the page and select Inspect. You can also click on the three vertical dots in the top right corner of the browser</li>
-<li>Navigate to More tools &gt; Developer tools.</li>
-<li>This will open the DevTools panel to the right or top of the page.</li>
-<li>From the toolbar, click on Lighthouse</li>
+<li>Press F12 (fn-F12 on Mac) to open Lighthouse in Chrome DevTools. (You can also right-click and choose inspect to open DevTools and choose the Lighthouse tab.)</li>
 <li>If you don't see the Lighthouse option in the toolbar, you may need to click on the two arrows at the end.</li>
-<li>Once the Lighthouse tool opens, select the 'Accessibility' category, then choose 'Generate report'.</li>
+<li>Once the Lighthouse tool opens, select only the 'Accessibility' category, and mobile or desktop, then choose 'Generate report'.</li>
 </ol>
 <h3>They sometimes don't work or display oddly</h3>
-<p>Occasionally you may find that nothing happens when you run the bookmarklet. This is usually because the Content Security Policy for the site is blocking the script. (You can check this by looking for errors in the dev tools console, if you know how to do that). There's no way to work around this block.</p>
+<p>Occasionally you may find that nothing happens when you run a bookmarklet. This is usually because the Content Security Policy for the site is blocking the script. (You can check this by looking for errors in the dev tools console, if you know how to do that). There's no way to work around this block.</p>
 <p>Very occasionally, the display of the bookmarklet will be affected by the styling for the site you are testing. This does not affect the test results but some parts of the display may be missing or too big, for example. Again, there is no way to fix this.</p>
 <p>Lighthouse should work OK as it works in a different way that does not trigger the Content Security Policy.</p>
 <h2 id="general-tools">General tools that will spot a range of issues</h2>
@@ -524,7 +529,7 @@ code {
 </ul>
 <p><a href="https://validator.w3.org/">W3C Validator</a> can be used to validate pages and may find a number of issues. Beware - not all invalid code will cause accessibility problems.</p>
 <h3>Limitations of automated tests</h3>
-<p>Automated tests are not comprehensive and do not provide you with a complete view of the accessibility of a page, so manual tests should always be completed alongside this.</p>
+<p>Automated tests are not comprehensive and do not provide you with a complete view of the accessibility of a page, so manual tests should always be completed too.</p>
 <h2 id="specific-tools">Specific tools for checking details</h2>
 <h3>Image alternative text</h3>
 <p><a href="https://pauljadam.com/bookmarklets/images.html">Paul J Adam images bookmarklet</a></p>
@@ -578,7 +583,6 @@ code {
     
     
       
-        Published 27 June 2022.
       
     
   </p>
