@@ -489,7 +489,13 @@ code {
 
   <div class="c-blog__content">
     <p>Automated tools that can be used for testing websites on managed devices, where you are unable to install additional tools or browser plug-ins.</p>
-<h2>Using the tools</h2>
+<p><strong>On this page</strong></p>
+<ul>
+<li><a href="#using-tools">Using the tools</a></li>
+<li><a href="#general-tools">General tools that will spot a range of issues</a></li>
+<li><a href="#specific-tools">Specific tools for checking details</a></li>
+</ul>
+<h2>Using the tools {#using-tools}</h2>
 <p>A <strong>bookmarklet</strong> is a link that contains JavaScript. When a bookmarklet link is activated, the browser runs the JavaScript code that it contains.  It doesn't need to be properly installed and so is not restricted by Defra IT policies.</p>
 <p>The most common way of installing a bookmarklet is to drag and drop the bookmarklet link into your browser's bookmarks or favourites toolbar. You can also copy the link location of the bookmarklet link and pasting it into the Location field of a bookmark that you create using your browser's Bookmark Manager.</p>
 <p><strong>Lighthouse</strong> is a part of the Chrome web browser's development tools. You can run it as follows:</p>
@@ -501,7 +507,7 @@ code {
 <li>If you don't see the Lighthouse option in the toolbar, you may need to click on the two arrows at the end.</li>
 <li>Once the Lighthouse tool opens, select the 'Accessibility' category, then choose 'Generate report'.</li>
 </ol>
-<h2>General tools that will spot a range of issues</h2>
+<h2>General tools that will spot a range of issues {#general-tools}</h2>
 <p><a href="http://squizlabs.github.io/HTML_CodeSniffer/">HTML CodeSniffer Accessibility Auditor Bookmarklet</a> checks against several Web Content Accessibility Guidelines (WCAG) 2.1</p>
 <p><a href="https://wave.webaim.org/help#bookmarklet">WAVE browser bookmarklet</a> is a bookmarklet version of their plugin. It sends the page to the WAVE servers so don't use this with sensitive content or data.</p>
 <p>Lighthouse (within Google Chrome's development tools) will identify a range of common problems including:</p>
@@ -514,7 +520,7 @@ code {
 <p><a href="https://validator.w3.org/">W3C Validator</a> can be used to validate pages and may find a number of issues. Beware - not all invalid code will cause accessibility problems.</p>
 <h3>Limitations of automated tests</h3>
 <p>Automated tests are not comprehensive and do not provide you with a complete view of the accessibility of a page, so manual tests should always be completed alongside this.</p>
-<h2>Specific tools for checking details</h2>
+<h2>Specific tools for checking details {#specific-tools}</h2>
 <h3>Image alternative text</h3>
 <p><a href="https://pauljadam.com/bookmarklets/images.html">Paul J Adam images bookmarklet</a></p>
 <p>Lighthouse (within Google Chrome's development tools) can identify whether images have alternative text.</p>
