@@ -6,7 +6,7 @@ version: "1.0"
 publishedDate: 2022-02-28
 tags:
   - buildingNewServices
-#  - resource
+  - resource
 ---
 These are offered for use in Defra when writing requirements for a tender. They have been used as part of a tender but have not yet been used more widely.
 
