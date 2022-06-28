@@ -283,6 +283,10 @@ table {
   overflow-x: scroll;
 }
 
+tr {
+  vertical-align:top;
+}
+
 th,
 td {
   border: 0.1rem solid #000;
