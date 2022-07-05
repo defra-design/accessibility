@@ -12,9 +12,9 @@ tags:
 
 ## Summary of steps to write a statement
 
-* Get an accessibility audit done on your site or service (this guide doesn’t cover that). An accessibility audit is an expert test and report that tells you how accessible their website is and what you need to fix.
+* Get an accessibility audit done on your site or service (this guide doesn’t cover that). An accessibility audit is an expert test and report that tells you how accessible the website is and what you need to fix.
 * Convert the audit report to a list of issues in the correct format for a statement.
-* Categorise the issues into ‘not in scope’, ‘non-compliances’ and (if used) ‘disproportionate burden’ with fix dates for the ‘non-compliances’.
+* Categorise the issues into ‘not in scope’, ‘non-compliances’ (with fix dates) and (if used) ‘disproportionate burden’.
 * Add the issues to the template.
 * Add a short plain language summary of the impact of the issues.
 * Add contact and feedback details for users to report issues and get help.
@@ -32,21 +32,21 @@ tags:
 
 ### 2. Gather the documents you will need
 
-* Audit report for your site or service (this guide doesn’t cover getting an audit done). See [Getting an accessibility audit in the GDS Service Manual](https://www.gov.uk/service-manual/helping-people-to-use-your-service/getting-an-accessibility-audit).
+* Audit report for your site or service (this guide doesn’t cover getting an audit). See [Getting an accessibility audit in the GDS Service Manual](https://www.gov.uk/service-manual/helping-people-to-use-your-service/getting-an-accessibility-audit).
 * Defra Sample accessibility statement template<br>
-[Defra Sample accessibility statement template (Word)](/accessibility/documents/accessibility-statements/accessibility-statement-template-markdown-20220629.docx)<br>
-[Defra Sample accessibility statement template (Open Doc)](/accessibility/documents/accessibility-statements/accessibility-statement-template-markdown-20220629.odt)<br>
-[Defra Sample accessibility statement template (Markdown text)](/accessibility/documents/accessibility-statements/accessibility-statement-template-markdown-20220629.md)
+[Defra Sample accessibility statement template in Word (docx)](/accessibility/documents/accessibility-statements/accessibility-statement-template-markdown-20220629.docx) |
+[Open Document (odt)](/accessibility/documents/accessibility-statements/accessibility-statement-template-markdown-20220629.odt) |
+[Text file (txt)](/accessibility/documents/accessibility-statements/accessibility-statement-template-markdown-20220629.md)
 * Defra list of WCAG wordings<br>
-[Defra list of WCAG wordings (Excel)](/accessibility/documents/accessibility-statements/wcag-2-1-list-for-statement-writing.xlsx)<br>
-[Defra list of WCAG wordings (CSV)](/accessibility/documents/accessibility-statements/wcag-2-1-list-for-statement-writing.csv)
+[Defra list of WCAG wordings in Excel (xlsx)](/accessibility/documents/accessibility-statements/wcag-2-1-list-for-statement-writing.xlsx) |
+[CSV file (csv)](/accessibility/documents/accessibility-statements/wcag-2-1-list-for-statement-writing.csv)
 
 
 ### 3. Use the sample template to start your draft statement
 
-Check that this is still in line with the [GDS sample template](https://www.gov.uk/government/publications/sample-accessibility-statement).
+Before you start you should check that this is still in line with the [GDS sample template](https://www.gov.uk/government/publications/sample-accessibility-statement).
 
-Our version uses Markdown code to mark heading, bullets and links and you will be able to convert this easily to HTML when you are finished (instructions below).
+Our version uses Markdown code as a simple way to mark heading, bullets and links and you will be able to convert this easily to HTML when you are finished (instructions below).
 
 Find the template document in step 2 above. Use the Word version if you are unsure which to use.
 
@@ -62,9 +62,12 @@ If you have a reasonably large number of issues (for example more than 10) it’
 
 ### 5. Add a plain language explanation to each issue
 
-You can use text from our Defra list of WCAG wordings. Download link is in step 2. Use the Excel version if you are unsure which to use. You may need to modify this for your situation.
+Each issue should have a plain language explanation of the accessibility problem. If you need help to write this you could:
 
-Add this to the spreadsheet, if you are using it, or directly into the template under SECTION 10 of the template.
+* look at how the audit report describes the issue
+* use or modify the sample text from our Defra list of WCAG wordings (linked above under step 2)
+
+Add the explanation to your issues spreadsheet, (if you are using it) or directly into SECTION 10 of the template.
 
 
 ### 6. Decide how you will address each issue
@@ -82,7 +85,7 @@ For each issue, the options are:
 
 You do not need to fix these types of content because they’re exempt from the regulations:
 
-* PDFs or other documents published before 23 September 2018 - **unless users need them to use a service**, for example a form to apply for the service
+* PDFs or other documents published before 23 September 2018 - **unless users need them to use a service**, for example a form to apply for the service would not be exempt
 * maps - **but you’ll need to provide essential information in an accessible format**
 * third party content on the website that’s under someone else’s control if you did not pay for it or develop it yourself - for example, social media ‘like’ buttons - **this does not apply if your entire websites was provided by a third parties or was outsourced**
 * pre-recorded audio and video published before 23 September 2020
@@ -117,7 +120,7 @@ Defra advises that you should avoid claiming disproportionate burden and certain
 If you are considering claiming disproportionate burden:
 
 * Read the GDS advice [Understanding accessibility requirements for public sector bodies](https://www.gov.uk/guidance/accessibility-requirements-for-public-sector-websites-and-apps#things-you-might-not-need-to-fix).
-* You must carry out a detailed assessment to decide claiming disproportionate burden is reasonable. We have a template you can use. [Disproportionate burden assessment template](/accessibility/documents/accessibility-statements/disproportionate-burden-assessment template-v1-1.docx).
+* You must carry out a detailed assessment to decide claiming disproportionate burden is reasonable. We have a template you can use. [Disproportionate burden assessment template](/accessibility/documents/accessibility-statements/disproportionate-burden-assessment-template-v1-1.docx).
 * You will need to get quotes for the costs involved and an estimate of the likely number of users that will be affected.
 * You must write down your assessment and keep a copy of the assessment and any quotes as you might be asked to show them to justify your decision.
 * You should get sign off on the decision from your legal advisors and the senior responsible officer.
@@ -135,7 +138,7 @@ These go in SECTION 4 of the template.
 
 #### How to approach writing your simple version:
 
-1. Tell users what they can do, not what they cannot do. If most common tasks can be completed, say that, but explain any things they may experience.
+1. Tell users what they can do, not what they cannot do. If most common tasks can be completed, say that, but explain any problems they may experience.
 2. Consider if any particular group of users will not be able to complete common tasks. If so, say what that is and explain what they should do instead.
 3. Aim to explain how the accessibility issues will affect them as they use the site, not just what the technical issue is. Imagine that you are explaining to users what they might find from their point of view.
 4. It’s OK to leave out some issues, if you know that they are unlikely to be encountered.
@@ -212,6 +215,8 @@ This is not the supplier. It will be the legal arms length body or Defra itself.
 
 Statement is easy to find (for example a prominent link on the home page and/or on every web page in a header or footer).
 
+The statement can be accessed without logging in.
+
 Format is accessible (for example, HTML not a PDF).
 
 Uses the current GDS sample template (not required but best practice).
@@ -263,7 +268,7 @@ If you are claiming disproportionate burden, then we advise that you get sign of
 
 ### 18. Make sure that the statement is in HTML and is itself accessible
 
-Our template is written in Markdown and you can convert it to HTML using online services such as [Free Markdown to HTML Converter](https://markdowntohtml.com/).
+Our template is written in Markdown and you can convert it to HTML using online services such as [Free Markdown to HTML Converter](https://markdowntohtml.com/). Your developers might know what to do with the Markdown.
 
 
 ### 19. Make sure that the link to the statement is easy to find
