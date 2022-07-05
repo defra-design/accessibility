@@ -6,7 +6,7 @@ version: "1.0"
 publishedDate: 2022-02-29
 tags:
   - buildingNewServices
-#  - resource
+  - resource
 ---
 
 
@@ -32,14 +32,18 @@ tags:
 
 ### 2. Gather the documents you will need
 
-* Audit report for your site or service (this guide doesn’t cover getting an audit). See [Getting an accessibility audit in the GDS Service Manual](https://www.gov.uk/service-manual/helping-people-to-use-your-service/getting-an-accessibility-audit).
-* Defra Sample accessibility statement template<br>
-[Defra Sample accessibility statement template in Word (docx)](/accessibility/documents/accessibility-statements/accessibility-statement-template-markdown-20220629.docx) |
-[Open Document (odt)](/accessibility/documents/accessibility-statements/accessibility-statement-template-markdown-20220629.odt) |
-[Text file (txt)](/accessibility/documents/accessibility-statements/accessibility-statement-template-markdown-20220629.md)
-* Defra list of WCAG wordings<br>
-[Defra list of WCAG wordings in Excel (xlsx)](/accessibility/documents/accessibility-statements/wcag-2-1-list-for-statement-writing.xlsx) |
-[CSV file (csv)](/accessibility/documents/accessibility-statements/wcag-2-1-list-for-statement-writing.csv)
+Audit report for your site or service (this guide doesn’t cover getting an audit). <br>See [Getting an accessibility audit in the GDS Service Manual](https://www.gov.uk/service-manual/helping-people-to-use-your-service/getting-an-accessibility-audit).
+
+Defra Sample accessibility statement template
+
+* [Defra Sample accessibility statement template in Word (docx)](/accessibility/documents/accessibility-statements/accessibility-statement-template-markdown-20220629.docx)
+* [Open Document (odt)](/accessibility/documents/accessibility-statements/accessibility-statement-template-markdown-20220629.odt)
+* [Text file (txt)](/accessibility/documents/accessibility-statements/accessibility-statement-template-markdown-20220629.md)
+
+Defra list of WCAG wordings
+
+* [Defra list of WCAG wordings in Excel (xlsx)](/accessibility/documents/accessibility-statements/wcag-2-1-list-for-statement-writing.xlsx)
+* [CSV file (csv)](/accessibility/documents/accessibility-statements/wcag-2-1-list-for-statement-writing.csv)
 
 
 ### 3. Use the sample template to start your draft statement
