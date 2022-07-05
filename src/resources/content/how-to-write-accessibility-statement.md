@@ -3,7 +3,7 @@ title: How to write an accessibility statement
 summary: "A step by step guide to writing an accessibility statement."
 author: ["Defra accessibility team"]
 version: "1.0"
-publishedDate: 2022-02-29
+publishedDate: 2022-07-04
 tags:
   - buildingNewServices
   - resource
