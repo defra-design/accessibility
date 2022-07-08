@@ -15,6 +15,9 @@
   // make the first "change"
   toggleDarkMode();
 
+  // activate the toggle button
+  document.querySelector("#toggleTheme").removeAttribute('hidden');
+
   // listen for a change to the preference, i.e. user changes system settings.
   window
     .matchMedia("(prefers-color-scheme: dark)")
