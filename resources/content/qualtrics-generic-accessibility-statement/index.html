@@ -82,12 +82,51 @@ select {
   }
 }
 
-      html {
+      /* automatic/manual light mode */
+:root, :root.light {
   /* For the default link colour */
   --link-colour: #006726;
-
   /* For the link hover state */
   --link-colour-alt: #00521e;
+  --link-focus: #fd0;
+  --link-focus-colour: var(--nearly-black);
+  --nearly-black: #0b0c0c;
+  --nearly-white: #f3f2f1;
+  --white: #fff; 
+  --black: #000;
+  --grey: #b1b4b6;
+}
+/* automatic dark mode */
+/* ❗️ keep the rules in sync with the manual dark mode below! */
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* For the default link colour */
+    --link-colour: #00a33b;
+    /* For the link hover state */
+    --link-colour-alt: #00ff5e;
+    /* we need to be cleaver with the dark theme contrast */
+    --link-focus: #fd0;
+    --link-focus-colour: var(--nearly-white);
+    --nearly-black: #f3f2f1;
+    --nearly-white: #0b0c0c;
+    --white: #000; 
+    --black: #fff;
+    --grey: #4d4e4f;
+  }
+}
+:root.dark {
+  /* For the default link colour */
+  --link-colour: #00a33b;
+  /* For the link hover state */
+  --link-colour-alt: #00ff5e;
+  /* we need to be cleaver with the dark theme contrast */
+  --link-focus: #fd0;
+  --link-focus-colour: var(--nearly-white);
+  --nearly-black: #f3f2f1;
+  --nearly-white: #0b0c0c;
+  --white: #000; 
+  --black: #fff;
+  --grey: #4d4e4f;
 }
 
 * {
@@ -143,11 +182,14 @@ a:hover {
 }
 
 a:focus {
-  background-color: #fd0;
-  box-shadow: 0 -0.2em #fd0, 0 0.3em #0b0c0c;
-  color: #0b0c0c !important;
+  background-color: var(--link-focus);
+  box-shadow: 0 -0.2em var(--link-focus), 0 0.3em var(--link-colour-alt);
+  color: var(--link-focus-colour) !important;
   outline: 3px solid transparent;
   text-decoration: none;
+}
+a:active {
+  color: var(--link-focus-colour) !important;
 }
 
 body {
@@ -160,6 +202,8 @@ body {
   grid-template-rows: auto auto 1fr auto;
   margin: 0;
   min-height: 100vh;
+  background-color: var(--nearly-white);
+  color: var(--nearly-black);
 }
 
 main {
@@ -188,7 +232,7 @@ blockquote {
 }
 
 img {
-  border: 0.25rem solid black;
+  border: 0.25rem solid var(--nearly-black);
   padding: 2rem;
 }
 
@@ -202,14 +246,14 @@ img {
 
 .c-nav__item,
 .c-nav__item:hover {
-  color: #fff;
+  color: var(--white);
   display: block;
   max-width: 100%;
   padding: 1rem;
 }
 
 .c-nav__item:focus {
-  color: #000;
+  color: var(--black);
 }
 
 .c-nav li:first-of-type a {
@@ -235,13 +279,13 @@ footer {
 }
 
 .c-header {
-  background-color: #0b0c0c;
-  color: #fff;
+  background-color: var(--nearly-black);
+  color: var(--white);
   grid-area: header;
 }
 
 .c-header__site-name {
-  color: #fff;
+  color: var(--white);
   font-size: 1.5rem;
   font-weight: bold;
   padding: 1rem 1rem 1rem 0;
@@ -249,7 +293,7 @@ footer {
 }
 
 .c-header__site-name:hover {
-  color: #fff;
+  color: var(--white);
   text-decoration: underline;
   text-decoration-thickness: 0.2em;
 }
@@ -261,13 +305,45 @@ footer {
   justify-content: space-between;
 }
 
+/* the theme toggle button */
+/* :root.dark .c-header #toggleTheme::before {
+  content: "☀";
+}
+:root.light .c-header #toggleTheme::before {
+  content: "☾";
+} */
+
+.c-header button {
+  position: relative;
+  margin: 1rem 0;
+  box-sizing: border-box;
+  line-height: 1;
+  border: thin solid var(--link-colour);
+  background: var(--link-colour-alt);
+  color: var(--white);
+}
+.c-header button:focus {
+  background-color: var(--link-focus);
+  box-shadow: 0 -0.2em var(--link-focus), 0 0.3em var(--link-colour-alt);
+  color: var(--link-focus-colour) !important;
+  outline: 3px solid transparent;
+  text-decoration: none;
+}
+.c-header button:active {
+  color: var(--link-focus-colour) !important;
+}
+
 .c-main {
   padding: 1.875rem 0 3.125rem;
 }
 
 .c-footer {
-  background-color: #f3f2f1;
-  color: #0b0c0c;
+  background-color: var(--nearly-black);
+  color: var(--nearly-white);
+}
+
+.c-footer a {
+  color: var(--white);
 }
 
 .c-footer ul {
@@ -319,7 +395,7 @@ footer {
 }
 
 .c-blog-card {
-  border-top: 0.1rem solid #b1b4b6;
+  border-top: 0.1rem solid var(--grey);
   margin-top: 0;
   padding: 3rem 0;
 }
@@ -329,7 +405,7 @@ footer {
 }
 
 :is(.c-blog-card, .c-resource-section):last-of-type {
-  border-bottom: 0.1rem solid #b1b4b6;
+  border-bottom: 0.1rem solid var(--grey);
 }
 
 .c-blog-card__summary,
@@ -355,13 +431,13 @@ footer {
 }
 
 .c-resource-section {
-  border-top: 0.1rem solid #b1b4b6;
+  border-top: 0.1rem solid var(--grey);
   margin-top: 0;
   padding: 3rem 0;
 }
 
 table {
-  border: 0.1rem solid #000;
+  border: 0.1rem solid var(--black);
   border-collapse: collapse;
   max-width: 100%;
   overflow-x: scroll;
@@ -373,18 +449,18 @@ tr {
 
 th,
 td {
-  border: 0.1rem solid #000;
+  border: 0.1rem solid var(--black);
   padding: 0.5rem 1rem;
 }
 
 blockquote {
-  border-left: 0.5rem solid #b1b4b6;
+  border-left: 0.5rem solid var(--grey);
   display: block;
   padding: 1rem;
 }
 
 pre {
-  border: 0.1rem solid #b1b4b6;
+  border: 0.1rem solid var(--grey);
   max-width: 100%;
   overflow-x: scroll;
   padding: 1rem 2rem;
@@ -428,13 +504,14 @@ code {
   content: "";
 }
 
+/* For the keyboard operable table: https://github.com/defra-design/accessibility/commit/0d3be06fad53f449ccd6cbf1fb1ec4a0b0f4a9a4 */
 [role=region]:is([aria-labelledby], [aria-label])[tabindex] {
-  border: 0.1rem solid #000;
+  border: 0.1rem solid var(--black);
   overflow: auto;
 }
 
 [role=region]:is([aria-labelledby], [aria-label])[tabindex]:focus {
-  outline: #00f solid 0.1rem;
+  outline: var(--link-colour) solid 0.1rem;
 }
 
     </style>
@@ -448,6 +525,7 @@ code {
           <ul class="c-nav">
             <li><a class="c-nav__item" href="/accessibility/resources/">Resources</a></li>
             
+            <li><button id="toggleTheme" aria-live="assertive" aria-atomic="true">Toggle Dark</button></li>
           </ul>
         </nav>
       </div>
@@ -580,5 +658,61 @@ code {
         </nav>
       </div> 
     </footer>
+    <script>
+  // if the user prefers dark mode
+  // based on https://stackoverflow.com/a/68824350
+  // does the user have a saved preference?
+  const savedDark = window.localStorage.getItem('darkTheme')
+  // if no saved preferece, we get a falsy-null
+  // but the boolean is stored as a string
+  if (savedDark === "true") {
+      // force it to light so we can toggle it to dark
+      document.documentElement.classList.add("light");
+  } else if (savedDark === "false") {
+    // force it to dark so we can toggle it to light
+    document.documentElement.classList.add("dark");
+  }
+  // make the first "change"
+  toggleDarkMode();
+
+  // listen for a change to the preference, i.e. user changes system settings.
+  window
+    .matchMedia("(prefers-color-scheme: dark)")
+    .addEventListener("change", (e) => toggleDarkMode());
+
+// listen for clicks on the toggle button
+document.querySelector("#toggleTheme").addEventListener('click', (e) => toggleDarkMode());
+
+  // toggle to switch classes between .light and .dark
+  // if no class is present (initial state), then assume current state based on system color scheme
+  // if system color scheme is not supported, then assume current state is light
+  function toggleDarkMode() {
+    let isDark = false;
+    if (document.documentElement.classList.contains("light")) {
+      document.documentElement.classList.remove("light");
+      document.documentElement.classList.add("dark");
+      isDark = true;
+    } else if (document.documentElement.classList.contains("dark")) {
+      document.documentElement.classList.remove("dark");
+      document.documentElement.classList.add("light");
+    } else {
+      if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+        document.documentElement.classList.add("dark");
+        isDark = true;
+      } else {
+        document.documentElement.classList.add("light");
+      }
+    }
+    // change the button to report the current state
+    if (isDark) {
+        document.querySelector("#toggleTheme").innerHTML = "<span class='u-visually-hidden'>Using Dark Theme</span>Make it Light"
+    } else {
+        document.querySelector("#toggleTheme").innerHTML = "<span class='u-visually-hidden'>Using Light Theme</span>Make it Dark"
+    }
+    // save the preference
+    window.localStorage.setItem('darkTheme', isDark)
+  }
+</script>
+
   </body>
 </html>
