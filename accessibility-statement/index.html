@@ -525,7 +525,7 @@ code {
           <ul class="c-nav">
             <li><a class="c-nav__item" href="/accessibility/resources/">Resources</a></li>
             
-            <li><button id="toggleTheme" aria-live="assertive" aria-atomic="true">Toggle Dark</button></li>
+            <li><button id="toggleTheme" aria-live="assertive" aria-atomic="true" hidden>Toggle Dark</button></li>
           </ul>
         </nav>
       </div>
@@ -601,6 +601,9 @@ code {
   }
   // make the first "change"
   toggleDarkMode();
+
+  // activate the toggle button
+  document.querySelector("#toggleTheme").removeAttribute('hidden');
 
   // listen for a change to the preference, i.e. user changes system settings.
   window
