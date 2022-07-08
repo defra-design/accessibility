@@ -1,6 +1,18 @@
 <script>
   // if the user prefers dark mode
   // based on https://stackoverflow.com/a/68824350
+  // does the user have a saved preference?
+  const savedDark = window.localStorage.getItem('darkTheme')
+  // if no saved preferece, we get a falsy-null
+  // but the boolean is stored as a string
+  if (savedDark === "true") {
+      // force it to light so we can toggle it to dark
+      document.documentElement.classList.add("light");
+  } else if (savedDark === "false") {
+    // force it to dark so we can toggle it to light
+    document.documentElement.classList.add("dark");
+  }
+  // make the first "change"
   toggleDarkMode();
 
   // listen for a change to the preference, i.e. user changes system settings.
@@ -37,5 +49,7 @@ document.querySelector("#toggleTheme").addEventListener('click', (e) => toggleDa
     } else {
         document.querySelector("#toggleTheme").innerHTML = "<span class='u-visually-hidden'>Using Light Theme</span>Make it Dark"
     }
+    // save the preference
+    window.localStorage.setItem('darkTheme', isDark)
   }
 </script>
