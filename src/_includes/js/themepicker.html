@@ -1,0 +1,41 @@
+<script>
+  // if the user prefers dark mode
+  // based on https://stackoverflow.com/a/68824350
+  toggleDarkMode();
+
+  // listen for a change to the preference, i.e. user changes system settings.
+  window
+    .matchMedia("(prefers-color-scheme: dark)")
+    .addEventListener("change", (e) => toggleDarkMode());
+
+// listen for clicks on the toggle button
+document.querySelector("#toggleTheme").addEventListener('click', (e) => toggleDarkMode());
+
+  // toggle to switch classes between .light and .dark
+  // if no class is present (initial state), then assume current state based on system color scheme
+  // if system color scheme is not supported, then assume current state is light
+  function toggleDarkMode() {
+    let isDark = false;
+    if (document.documentElement.classList.contains("light")) {
+      document.documentElement.classList.remove("light");
+      document.documentElement.classList.add("dark");
+      isDark = true;
+    } else if (document.documentElement.classList.contains("dark")) {
+      document.documentElement.classList.remove("dark");
+      document.documentElement.classList.add("light");
+    } else {
+      if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+        document.documentElement.classList.add("dark");
+        isDark = true;
+      } else {
+        document.documentElement.classList.add("light");
+      }
+    }
+    // change the button to report the current state
+    if (isDark) {
+        document.querySelector("#toggleTheme").innerHTML = "<span class='u-visually-hidden'>Using Dark Theme</span>Make it Light"
+    } else {
+        document.querySelector("#toggleTheme").innerHTML = "<span class='u-visually-hidden'>Using Light Theme</span>Make it Dark"
+    }
+  }
+</script>

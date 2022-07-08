@@ -22,6 +22,7 @@
           <ul class="c-nav">
             <li><a class="c-nav__item" href="{{ '/resources/' | url }}">Resources</a></li>
             {# <li><a class="c-nav__item" href="{{ '/writing/' | url }}">Writing</a></li> #}
+            <li><button id="toggleTheme" aria-live="assertive" aria-atomic="true">Toggle Dark</button></li>
           </ul>
         </nav>
       </div>
@@ -55,5 +56,6 @@
         </nav>
       </div> 
     </footer>
+    {% include "js/themepicker.html" %}
   </body>
 </html>

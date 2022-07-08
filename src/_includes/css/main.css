@@ -1,10 +1,9 @@
-html {
+/* automatic/manual light mode */
+:root, :root.light {
   /* For the default link colour */
   --link-colour: #006726;
-
   /* For the link hover state */
   --link-colour-alt: #00521e;
-
   --link-focus: #fd0;
   --link-focus-colour: var(--nearly-black);
   --nearly-black: #0b0c0c;
@@ -13,12 +12,12 @@ html {
   --black: #000;
   --grey: #b1b4b6;
 }
-
+/* automatic dark mode */
+/* ❗️ keep the rules in sync with the manual dark mode below! */
 @media (prefers-color-scheme: dark) {
-  html {
+  :root {
     /* For the default link colour */
     --link-colour: #00a33b;
-  
     /* For the link hover state */
     --link-colour-alt: #00ff5e;
     /* we need to be cleaver with the dark theme contrast */
@@ -30,6 +29,20 @@ html {
     --black: #fff;
     --grey: #4d4e4f;
   }
+}
+:root.dark {
+  /* For the default link colour */
+  --link-colour: #00a33b;
+  /* For the link hover state */
+  --link-colour-alt: #00ff5e;
+  /* we need to be cleaver with the dark theme contrast */
+  --link-focus: #fd0;
+  --link-focus-colour: var(--nearly-white);
+  --nearly-black: #f3f2f1;
+  --nearly-white: #0b0c0c;
+  --white: #000; 
+  --black: #fff;
+  --grey: #4d4e4f;
 }
 
 * {
@@ -206,6 +219,34 @@ footer {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
+}
+
+/* the theme toggle button */
+/* :root.dark .c-header #toggleTheme::before {
+  content: "☀";
+}
+:root.light .c-header #toggleTheme::before {
+  content: "☾";
+} */
+
+.c-header button {
+  position: relative;
+  margin: 1rem 0;
+  box-sizing: border-box;
+  line-height: 1;
+  border: thin solid var(--link-colour);
+  background: var(--link-colour-alt);
+  color: var(--white);
+}
+.c-header button:focus {
+  background-color: var(--link-focus);
+  box-shadow: 0 -0.2em var(--link-focus), 0 0.3em var(--link-colour-alt);
+  color: var(--link-focus-colour) !important;
+  outline: 3px solid transparent;
+  text-decoration: none;
+}
+.c-header button:active {
+  color: var(--link-focus-colour) !important;
 }
 
 .c-main {
