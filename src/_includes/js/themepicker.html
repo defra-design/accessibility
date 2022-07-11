@@ -48,9 +48,9 @@ document.querySelector("#toggleTheme").addEventListener('click', (e) => toggleDa
     }
     // change the button to report the current state
     if (isDark) {
-        document.querySelector("#toggleTheme").innerHTML = "<span class='u-visually-hidden'>Using Dark Theme</span>Make it Light"
+        document.querySelector("#toggleTheme").innerHTML = "<span class='u-visually-hidden'>Using dark theme </span>Use light theme"
     } else {
-        document.querySelector("#toggleTheme").innerHTML = "<span class='u-visually-hidden'>Using Light Theme</span>Make it Dark"
+        document.querySelector("#toggleTheme").innerHTML = "<span class='u-visually-hidden'>Using light theme </span>Use dark theme"
     }
     // save the preference
     window.localStorage.setItem('darkTheme', isDark)
