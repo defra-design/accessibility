@@ -101,7 +101,7 @@ select {
 @media (prefers-color-scheme: dark) {
   :root {
     /* For the default link colour */
-    --link-colour: #00a33b;
+    --link-colour: #0D0;
     /* For the link hover state */
     --link-colour-alt: #00ff5e;
     /* we need to be cleaver with the dark theme contrast */
@@ -116,7 +116,7 @@ select {
 }
 :root.dark {
   /* For the default link colour */
-  --link-colour: #00a33b;
+  --link-colour: #0D0;
   /* For the link hover state */
   --link-colour-alt: #00ff5e;
   /* we need to be cleaver with the dark theme contrast */
@@ -306,21 +306,15 @@ footer {
 }
 
 /* the theme toggle button */
-/* :root.dark .c-header #toggleTheme::before {
-  content: "☀";
-}
-:root.light .c-header #toggleTheme::before {
-  content: "☾";
-} */
-
 .c-header button {
   position: relative;
   margin: 1rem 0;
+  padding: .3em;
   box-sizing: border-box;
-  line-height: 1;
-  border: thin solid var(--link-colour);
-  background: var(--link-colour-alt);
-  color: var(--white);
+  border: none;
+  background: var(--white);
+  color: var(--black);
+  cursor: pointer;
 }
 .c-header button:focus {
   background-color: var(--link-focus);
@@ -525,9 +519,9 @@ code {
           <ul class="c-nav">
             <li><a class="c-nav__item" href="/accessibility/resources/">Resources</a></li>
             
-            <li><button id="toggleTheme" aria-live="assertive" aria-atomic="true" hidden>Toggle Dark</button></li>
           </ul>
         </nav>
+        <button id="toggleTheme" aria-live="polite" aria-atomic="true" hidden>Toggle Dark</button>
       </div>
     </header>
     <main id="main" class="c-main">
@@ -626,9 +620,9 @@ document.querySelector("#toggleTheme").addEventListener('click', (e) => toggleDa
     }
     // change the button to report the current state
     if (isDark) {
-        document.querySelector("#toggleTheme").innerHTML = "<span class='u-visually-hidden'>Using Dark Theme</span>Make it Light"
+        document.querySelector("#toggleTheme").innerHTML = "<span class='u-visually-hidden'>Using dark theme </span>Use light theme"
     } else {
-        document.querySelector("#toggleTheme").innerHTML = "<span class='u-visually-hidden'>Using Light Theme</span>Make it Dark"
+        document.querySelector("#toggleTheme").innerHTML = "<span class='u-visually-hidden'>Using light theme </span>Use dark theme"
     }
     // save the preference
     window.localStorage.setItem('darkTheme', isDark)
