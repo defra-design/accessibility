@@ -22,7 +22,7 @@ module.exports = function(eleventyConfig) {
       else return 0;
     })
   );
-  
+
   eleventyConfig.addCollection("writingAccessibleFormsAlphabetised", (collection) =>
     collection.getFilteredByTags("writingAccessibleForms").sort((a, b) => {
       let nameA = a.data.title.toUpperCase();
@@ -32,7 +32,7 @@ module.exports = function(eleventyConfig) {
       else return 0;
     })
   );
-  
+
   eleventyConfig.addFilter("postDate", (dateObj) => {
     return DateTime.fromJSDate(dateObj).toFormat('d LLLL yyyy');
   });
@@ -47,13 +47,16 @@ module.exports = function(eleventyConfig) {
   // Copy across docx files
   eleventyConfig.addPassthroughCopy("src/**/*.docx");
 
+  // Copy across xlsx files
+  eleventyConfig.addPassthroughCopy("src/**/*.xlsx");
+
   // Copy across PDF files
   eleventyConfig.addPassthroughCopy("src/**/*.pdf");
 
   // Copy across the interview example page
   eleventyConfig.addPassthroughCopy("src/interview/index.html");
   eleventyConfig.addPassthroughCopy("src/interview/style.css");
-  
+
   return {
     htmlTemplateEngine: "njk",
     dir: {
