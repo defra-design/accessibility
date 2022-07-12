@@ -1,0 +1,58 @@
+<script>
+  // if the user prefers dark mode
+  // based on https://stackoverflow.com/a/68824350
+  // does the user have a saved preference?
+  const savedDark = window.localStorage.getItem('darkTheme')
+  // if no saved preferece, we get a falsy-null
+  // but the boolean is stored as a string
+  if (savedDark === "true") {
+      // force it to light so we can toggle it to dark
+      document.documentElement.classList.add("light");
+  } else if (savedDark === "false") {
+    // force it to dark so we can toggle it to light
+    document.documentElement.classList.add("dark");
+  }
+  // make the first "change"
+  toggleDarkMode();
+
+  // activate the toggle button
+  document.querySelector("#toggleTheme").removeAttribute('hidden');
+
+  // listen for a change to the preference, i.e. user changes system settings.
+  window
+    .matchMedia("(prefers-color-scheme: dark)")
+    .addEventListener("change", (e) => toggleDarkMode());
+
+// listen for clicks on the toggle button
+document.querySelector("#toggleTheme").addEventListener('click', (e) => toggleDarkMode());
+
+  // toggle to switch classes between .light and .dark
+  // if no class is present (initial state), then assume current state based on system color scheme
+  // if system color scheme is not supported, then assume current state is light
+  function toggleDarkMode() {
+    let isDark = false;
+    if (document.documentElement.classList.contains("light")) {
+      document.documentElement.classList.remove("light");
+      document.documentElement.classList.add("dark");
+      isDark = true;
+    } else if (document.documentElement.classList.contains("dark")) {
+      document.documentElement.classList.remove("dark");
+      document.documentElement.classList.add("light");
+    } else {
+      if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+        document.documentElement.classList.add("dark");
+        isDark = true;
+      } else {
+        document.documentElement.classList.add("light");
+      }
+    }
+    // change the button to report the current state
+    if (isDark) {
+        document.querySelector("#toggleTheme").innerHTML = "<span class='u-visually-hidden'>Using dark theme </span>Use light theme"
+    } else {
+        document.querySelector("#toggleTheme").innerHTML = "<span class='u-visually-hidden'>Using light theme </span>Use dark theme"
+    }
+    // save the preference
+    window.localStorage.setItem('darkTheme', isDark)
+  }
+</script>
