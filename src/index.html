@@ -2,45 +2,78 @@
 title: Home
 ---
 
-{% extends "_layouts/base.html" %}
-
 {% set title = site.name %}
 
+{% extends "_layouts/base.html" %}
+
+{% block breadcrumbs %}
+  <ol class="c-breadcrumbs">
+    <li class="c-breadcrumbs__list-item">
+      <a href="{{ '/' | url }}" class="c-breadcrumbs__link">Home</a>
+    </li>
+  </ol>
+{% endblock %}
+
 {% block mainContent %}
-<p>These resources are a collection of tools, guidance and methods that we, the accessibility team, have published in order to improve accessibility across our services.</p>
+  <p>Categories:</p>
 
-<h2>The role of the accessibility team</h2>
-<p>The Defra accessibility team provides guidance and assurance around making interactive services, both internal and public facing, as accessible to as many people as possible by meeting the Web Content Accessibility Guidelines 2.1 to level AA. The guidelines are designed to make web content perceivable, operable, understandable and robust – regardless of the method of use.</p>
-<p>Typically, you may think of screen reader software being used to allow disabled people to use online services. However, following the guidelines should enable people using a variety of different assistive technology (such as using only a keyboard or using voice recognition software) to use our services.</p>
-<p>There is also a legal requirement to make our services compliant with the accessibility guidelines. The <a href="https://www.gov.uk/guidance/accessibility-requirements-for-public-sector-websites-and-apps">Public Sector Bodies Accessibility Regulations 2018</a> require that services meet the WCAG 2.1 AA standard and publish an accessibility statement documenting their conformance against the standard.</p>
+  <ul>
+    <li><a href="#writing-content">Writing content</a></li>
+    <li><a href="#building-new-services">Building new services</a></li>
+    <li><a href="#writing-accessible-forms">Writing accessible forms</a></li>
+  </ul>
 
-<h2>Consider accessibility throughout delivery</h2>
-<p>Accessibility is relevant throughout the entirety of your project’s delivery.
-<ul>
-  <li><strong>During the discovery phase</strong>, you need to learn about your users’ accessibility needs. One in five people in the UK have a permanent disability and you must also consider the situational needs of your users.</li>
-  <li><strong>During the alpha phase</strong>, you should understand the Web Content Accessibility Guidelines principles and identify and test any specific accessibility challenges likely to impact your service. You should also plan time and effort for accessibility audits that you will need to complete during the beta phase.</li>
-  <li><strong>During the beta phase</strong>, you will need to conduct accessibility testing, have had an accessibility audit, receive feedback and resolve any issues present in service. Before moving into public beta you will need to create and publish an accessibility statement documenting your conformance against the Web Content Accessibility Guidelines.</li>
-  <li><strong>When moving to the live phase</strong>, you must ensure the service meets the Web Content Accessibility Guidelines and has a valid accessibility statement.</li>
-</ul>
-<p>Once live, you should check the accessibility statement at least once every 12 months to ensure that it is relevant and up-to-date.</p>
-<p>Any new features or content in live will still need to meet the guidelines, and the accessibility statement may need updating when you make changes.</p>
+  <div class="c-resource-section">
+    <h2 id="writing-content">Writing content</h2>
+    {% for post in collections.content %}
+      {% set postTags = post.data.tags %}
+      {% for tag in postTags %}
+        {% if "resource" in tag %}
+          {# Stores data about the post into variables used in the blog-summary partial #}
+          {% set postTitle = post.data.title %}
+          {% set postSummary = post.data.summary %}
+          {% set postUrl = post.url %}
+          {% set postAuthors = post.data.author %}
+          {% set postPublished = post.data.publishedDate %}
+          {# Includes the blog-summary partial code, putting the post's data into a reusable template #}
+          {% include "_partials/resource-summary.njk" %}
+        {% endif %}
+      {% endfor %}
+    {% endfor %}
+  </div>
 
-{# <h2>Recent writing</h2>
+  <div class="c-resource-section">
+    <h2 id="building-new-services">Building new services</h2>
+    {% for post in collections.buildingNewServicesAlphabetised %}
+      {% set postTags = post.data.tags %}
+      {% for tag in postTags %}
+        {% if "resource" in tag %}
+          {# Stores data about the post into variables used in the blog-summary partial #}
+          {% set postTitle = post.data.title %}
+          {% set postSummary = post.data.summary %}
+          {% set postUrl = post.url %}
+          {% set postAuthors = post.data.author %}
+          {% set postPublished = post.data.publishedDate %}
+          {# Includes the blog-summary partial code, putting the post's data into a reusable template #}
+          {% include "_partials/resource-summary.njk" %}
+        {% endif %}
+      {% endfor %}
+    {% endfor %}
+  </div>
 
-<p>Below are some of our recent posts, <a href="{{ '/blog/' | url }}">more content can be found on the blog</a>.</p>
-
-<div>
-  {% for post in collections.recentPosts %} #}
-    {# Stores data about the post into variables used in the blog-summary partial #}
-    {# {% set postTitle = post.data.title %}
-    {% set postTags = post.data.tags %}
-    {% set postSummary = post.data.summary %}
-    {% set postUrl = post.url %}
-    {% set postAuthors = post.data.author %}
-    {% set postPublished = post.date %} #}
-    {# Includes the blog-summary partial code, putting the post's data into a reusable template #}
-    {# {% include "_partials/blog-summary.njk" %}
-  {% endfor %} 
-</div> #}
+  <div class="c-resource-section">
+    <h2 id="writing-accessible-forms">Writing accessible forms</h2>
+    {% for post in collections.writingAccessibleFormsAlphabetised %}
+      {# Stores data about the post into variables used in the blog-summary partial #}
+      {% set postTitle = post.data.title %}
+      {% set postTags = post.data.tags %}
+      {% set postSummary = post.data.summary %}
+      {% set postUrl = post.url %}
+      {% set postAuthors = post.data.author %}
+      {% set postPublished = post.data.publishedDate %}
+      {# Includes the blog-summary partial code, putting the post's data into a reusable template #}
+      {% include "_partials/resource-summary.njk" %}
+    {% endfor %}
+  </div>
 
 {% endblock %}

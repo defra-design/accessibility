@@ -44,11 +44,14 @@ module.exports = function(eleventyConfig) {
   // Copy across CSS in the documents folder
   eleventyConfig.addPassthroughCopy("src/documents/**/*.css");
 
-  // Copy across docx files
+  // Copy across document files
   eleventyConfig.addPassthroughCopy("src/**/*.docx");
+  eleventyConfig.addPassthroughCopy("src/**/*.odt");
 
-  // Copy across xlsx files
+  // Copy across spreadsheet files
   eleventyConfig.addPassthroughCopy("src/**/*.xlsx");
+  eleventyConfig.addPassthroughCopy("src/**/*.ods");
+  eleventyConfig.addPassthroughCopy("src/**/*.csv");
 
   // Copy across PDF files
   eleventyConfig.addPassthroughCopy("src/**/*.pdf");

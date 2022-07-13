@@ -7,9 +7,11 @@
     </li>
     {% if tags|length %}
       {% if 'resource' in tags %}
-        <li class="c-breadcrumbs__list-item">
-          <a href="{{ '/resources/' | url }}" class="c-breadcrumbs__link">Resources</a>
-        </li>
+        {#
+          <li class="c-breadcrumbs__list-item">
+            <a href="{{ '/resources/' | url }}" class="c-breadcrumbs__link">Resources</a>
+          </li>
+        #}
       {% elseif 'writing' in tags %}
         <li class="c-breadcrumbs__list-item">
           <a href="{{ '/writing/' | url }}" class="c-breadcrumbs__link">Writing</a>
@@ -23,20 +25,20 @@
 {% endblock %}
 
 {% block mainContent %}
-  
+
   {# Create a blank array to hold the tag names #}
   {% set tagData = [] %}
   {# Loop through the tags data and store the descriptor in the array #}
   {% if tags|length %}
     {% if 'resource' in tags %}
       {% if version %}
-        <p>Version {{ version }} 
+        <p>Version {{ version }}
         {%- if publishedDate -%}
         , published {{ publishedDate | postDate }}.</p>
         {%- endif -%}
       {% endif %}
     {% elseif 'writing' in tags %}
-      <p class="c-blog-card__category">This article relates to 
+      <p class="c-blog-card__category">This article relates to
     {% else %}
       <p><strong>This article is a draft and has not been published yet.</strong></p>
     {% endif %}
@@ -49,7 +51,7 @@
       {% endif %}
     {% endfor %}
   {% endif %}
-  
+
   {# Loop through the array and add the descriptor to the DOM #}
   {% for tagDescriptor in tagData %}
   {% set tagLink = "/tag/" + tagDescriptor.tag | slug + "/" %}
@@ -60,8 +62,8 @@
   <div class="c-blog__content">
     {{ content | safe }}
   </div>
-  
-  <p class="c-blog__author">Written by 
+
+  <p class="c-blog__author">Written by
     {% for authors in author %}
     {% set authorNameLink = "/authors/" + authors | slug + "/" %}
     <a href="{{ authorNameLink | url }}">{{authors}}</a>{% if loop.last %}.{% else %}{% if loop.index == loop.length-1 %}<span> and </span>{% else %}<span>, </span>{% endif %}{% endif %}
@@ -74,4 +76,4 @@
     {% endif %}
   </p>
 
-{% endblock %} 
+{% endblock %}

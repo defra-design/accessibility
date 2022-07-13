@@ -20,7 +20,7 @@
         <a class="c-header__site-name" href="{{ '/' | url }}">{{ site.name }}</a>
         <nav>
           <ul class="c-nav">
-            <li><a class="c-nav__item" href="{{ '/resources/' | url }}">Resources</a></li>
+            {# <li><a class="c-nav__item" href="{{ '/' | url }}">Resources</a></li> #}
             {# <li><a class="c-nav__item" href="{{ '/writing/' | url }}">Writing</a></li> #}
           </ul>
         </nav>
@@ -37,13 +37,13 @@
           {% else %}
             <h1>Draft for: {{ title }}</h1>
           {% endif %}
-          {% else %}  
+          {% else %}
           <h1>{{ title }}</h1>
         {% endif %}
         {% block mainContent %}
           {{ content | safe }}
         {% endblock %}
-      </div> 
+      </div>
     </main>
     <footer class="c-footer">
       <div class="[ c-footer__wrapper ] [ u-width-wrapper ]">
@@ -54,7 +54,7 @@
           {# <li><a href="{{ '/sitemap/' | url }}">Sitemap</a></li> #}
         </ul>
         </nav>
-      </div> 
+      </div>
     </footer>
     {% include "js/themepicker.html" %}
   </body>
