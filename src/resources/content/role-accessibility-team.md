@@ -1,5 +1,5 @@
 ---
-title: The role of the accessibility team
+title: The role of the Accessibility Team
 summary: "What the Defra accessibility team can do to help you."
 author: ["Defra accessibility team"]
 version: "1.0"
@@ -9,13 +9,19 @@ tags:
   - resource
 ---
 
-## The role of the accessibility team
+## What the team does
 
-The Defra accessibility team provides guidance and assurance around making interactive services, both internal and public facing, as accessible to as many people as possible by meeting the Web Content Accessibility Guidelines 2.1 to level AA. The guidelines are designed to make web content perceivable, operable, understandable and robust – regardless of the method of use.
+The Defra accessibility team provides guidance and assurance around making interactive services, both internal and public facing, as accessible to as many people as possible by meeting the Web Content Accessibility Guidelines (WCAG) 2.1 to level AA.
+
+
+## The legal requirements
+
+The WCAG guidelines are designed to make web content perceivable, operable, understandable and robust – regardless of the method of use.
 
 Typically, you may think of screen reader software being used to allow disabled people to use online services. However, following the guidelines should enable people using a variety of different assistive technology (such as using only a keyboard or using voice recognition software) to use our services.
 
-There is also a legal requirement to make our services compliant with the accessibility guidelines. The [Public Sector Bodies Accessibility Regulations 2018](https://www.gov.uk/guidance/accessibility-requirements-for-public-sector-websites-and-apps) require that services meet the WCAG 2.1 AA standard and publish an accessibility statement documenting their conformance against the standard.
+There is also a legal requirement to make Defra services compliant with the accessibility guidelines. The [Public Sector Bodies Accessibility Regulations 2018](https://www.gov.uk/guidance/accessibility-requirements-for-public-sector-websites-and-apps) require that services meet the WCAG 2.1 AA standard and publish an accessibility statement documenting their conformance against the standard.
+
 
 ## Consider accessibility throughout delivery
 
