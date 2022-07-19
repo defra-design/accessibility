@@ -5,7 +5,7 @@ author: ["Defra accessibility team"]
 version: "1.1"
 publishedDate: 2022-02-18
 tags:
-  - buildingNewServices
+  - checkingAccessibility
   - resource
 ---
 

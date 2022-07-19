@@ -5,7 +5,7 @@ author: ["Defra accessibility team"]
 version: "1.0"
 publishedDate: 2022-03-16
 tags:
-  - buildingNewServices
+  - checkingAccessibility
   - resource
 ---
 
@@ -15,7 +15,7 @@ This document provides a framework and sequence for auditing mobile app (applica
 * iOS (iPhones)
 * iPadOS (iPads)
 
-This process may not provide you with all of accessibility issues that are present in your service and as such, you should always test your services with people who are disabled and users of your service. 
+This process may not provide you with all of accessibility issues that are present in your service and as such, you should always test your services with people who are disabled and users of your service.
 
 ## Summary and order for testing
 
@@ -189,7 +189,7 @@ Success Criterion | How to test | Note
 4.1.1: Parsing  | **Out of scope:** Not testable.  |
 4.1.2: Name, Role, Value  | 1. Check accessible names with VoiceControl. 2. VoiceOver or TalkBack.  |
 4.1.3: Status Messages  | Usual methods  |
-  
+
 </div>
 
 ## Background information
@@ -207,10 +207,10 @@ This is helpful to share for demos and for screenshots etc.
 
 #### Using Vysor to view the device
 
-1. [Download Vysor to the Mac](https://www.vysor.io/) 
+1. [Download Vysor to the Mac](https://www.vysor.io/)
 2. Install it on the mac
 3. Connect Android phone to Mac with USB-C cable
-4. Set Android to Developer mode, and then set USB debugging to on 
+4. Set Android to Developer mode, and then set USB debugging to on
 5. Connect Vysor
 
 #### Things that did not work (but may do for you)

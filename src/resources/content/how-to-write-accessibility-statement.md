@@ -5,7 +5,7 @@ author: ["Defra accessibility team"]
 version: "1.0"
 publishedDate: 2022-07-04
 tags:
-  - buildingNewServices
+  - requirementsRules
   - resource
 ---
 

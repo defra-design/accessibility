@@ -18,14 +18,15 @@ title: Home
   <p>Categories:</p>
 
   <ul>
-    <li><a href="#writing-content">Writing content</a></li>
-    <li><a href="#building-new-services">Building new services</a></li>
-    <li><a href="#writing-accessible-forms">Writing accessible forms</a></li>
+    <li><a href="#research">Research</a></li>
+    <li><a href="#contentForms">Content and forms</a></li>
+    <li><a href="#checkingAccessibility">Checking accessibility</a></li>
+    <li><a href="#requirementsRules">Requirements and rules</a></li>
   </ul>
 
   <div class="c-resource-section">
-    <h2 id="writing-content">Writing content</h2>
-    {% for post in collections.content %}
+    <h2 id="research">Research</h2>
+    {% for post in collections.research %}
       {% set postTags = post.data.tags %}
       {% for tag in postTags %}
         {% if "resource" in tag %}
@@ -43,8 +44,8 @@ title: Home
   </div>
 
   <div class="c-resource-section">
-    <h2 id="building-new-services">Building new services</h2>
-    {% for post in collections.buildingNewServicesAlphabetised %}
+    <h2 id="contentForms">Content and forms</h2>
+    {% for post in collections.contentForms %}
       {% set postTags = post.data.tags %}
       {% for tag in postTags %}
         {% if "resource" in tag %}
@@ -62,8 +63,23 @@ title: Home
   </div>
 
   <div class="c-resource-section">
-    <h2 id="writing-accessible-forms">Writing accessible forms</h2>
-    {% for post in collections.writingAccessibleFormsAlphabetised %}
+    <h2 id="checkingAccessibility">Checking accessibility</h2>
+    {% for post in collections.checkingAccessibility %}
+      {# Stores data about the post into variables used in the blog-summary partial #}
+      {% set postTitle = post.data.title %}
+      {% set postTags = post.data.tags %}
+      {% set postSummary = post.data.summary %}
+      {% set postUrl = post.url %}
+      {% set postAuthors = post.data.author %}
+      {% set postPublished = post.data.publishedDate %}
+      {# Includes the blog-summary partial code, putting the post's data into a reusable template #}
+      {% include "_partials/resource-summary.njk" %}
+    {% endfor %}
+  </div>
+
+  <div class="c-resource-section">
+    <h2 id="requirementsRules">Requirements and rules</h2>
+    {% for post in collections.requirementsRules %}
       {# Stores data about the post into variables used in the blog-summary partial #}
       {% set postTitle = post.data.title %}
       {% set postTags = post.data.tags %}

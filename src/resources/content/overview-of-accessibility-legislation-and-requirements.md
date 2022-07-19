@@ -5,7 +5,7 @@ author: ["Defra accessibility team"]
 version: "1.0"
 publishedDate: 2022-02-25
 tags:
-  - buildingNewServices
+  - requirementsRules
   - resource
 ---
 
@@ -36,19 +36,19 @@ In order to meet the accessibility requirements, a service must:
 There are some pieces of content that you may not need to fix - the following items, taken from [Understanding accessibility requirements for public sector bodies](https://www.gov.uk/guidance/accessibility-requirements-for-public-sector-websites-and-apps), are exempt:
 
 > * pre-recorded audio and video published before 23 September 2020
-> 
+>
 > * live audio and video
-> 
+>
 > * heritage collections like scanned manuscripts
-> 
+>
 > * PDFs or other documents published before 23 September 2018 - unless users need them to use a service, for example a form that lets you request school meal preferences
-> 
+>
 > * maps - but you’ll need to provide essential information in an accessible format like an address
-> 
+>
 > * third party content that’s under someone else’s control if you did not pay for it or develop it yourself - for example, social media ‘like’ buttons
-> 
+>
 > * content on intranets or extranets published before 23 September 2019 (unless you make a major revision after that date)
-> 
+>
 > * archived websites if they’re not needed for services your organisation provides and they are not updated
 
 The guidance also states that your department is legally responsible for services meeting this legislation, even if the website or application has been outsourced to a supplier.
@@ -59,7 +59,7 @@ The Equality Act is legislation that legally protects people from discrimination
 
 Under the Equality Act 2010, organisations must remove barriers that prevent disabled people from accessing services. To ensure that everyone receives the same service, the Equality Act requires us to make reasonable adjustments to ensure that disabled people can access everything they need to.
 
-An example of a reasonable adjustment may be to: provide content in an accessible format, such as large print 
+An example of a reasonable adjustment may be to: provide content in an accessible format, such as large print
 
 It is important to [consider your users' accessibility needs](../consider-your-users-accessibility-needs/) as [under the Equality Act your duty to make reasonable adjustments is an "anticipatory duty"](https://www.legislation.gov.uk/ukpga/2010/15/notes/division/3/16/19). The legislation contextualises this by stating:
 
@@ -75,7 +75,7 @@ Point 5 of the service standard is: [Make sure everyone can use the service](htt
 
 The Service Standard outlines this requirement by stating that you must:
 
-> Provide a service that everyone can use, including disabled people and people with other legally protected characteristics. And people who do not have access to the internet or lack the skills or confidence to use it. 
+> Provide a service that everyone can use, including disabled people and people with other legally protected characteristics. And people who do not have access to the internet or lack the skills or confidence to use it.
 
 In meeting this point, your service must be accessible to everyone who needs it. This is a requirement for both internal and external services, as disabled public servants also need to be able to use services.
 

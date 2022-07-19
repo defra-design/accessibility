@@ -5,14 +5,14 @@ author: ["Defra accessibility team"]
 version: "1.02"
 publishedDate: 2022-03-10
 tags:
-  - writingAccessibleForms
+  - contentForms
   - resource
 ---
 
 ## How to use this guidance
 This guidance will help you to make your Qualtrics form more accessible.
 
-You must follow each step of the guidance. 
+You must follow each step of the guidance.
 
 This is not a complete guide to making a good digital form.
 
@@ -202,9 +202,9 @@ When data must be entered in a specific format or in a particular way, you must 
 #### Explain required formats
 
 > **Permit reference number**
-> 
-> Find this on your permit card. 
-> 
+>
+> Find this on your permit card.
+>
 > It’s 2 letters and 6 numbers. For example, AB123456.
 
 <h3 name="checking-entries-errors-and-validation" id="checking-entries-errors-and-validation">Checking entries: errors and validation</h3>
@@ -229,12 +229,12 @@ Put the most meaningful text at the start of a form label or heading. People ski
 
 For example:
 > Start date of this report
-> 
+>
 > End date of this report
 
 Is better than
 > Period covered by this report - Start Date
-> 
+>
 > Period covered by this report - End Date
 
 ### Help users complete multi-option questions
@@ -260,9 +260,9 @@ Do not put guidance text next to a question that is not related to the actual qu
 If possible, include guidance with the options and not separately. For example:
 
 > **I only use this licence for:**
-> 
+>
 > (o) unpaid work as a volunteer when I am registered with an organisation or charity - no charge
-> 
+>
 > (o) research related to the protected species that is carried out by a student or employee of an academic institution or research body - no charge
 
 #### Guidance about what happens after the form is submitted is probably better placed at the end
@@ -308,11 +308,11 @@ If you have several declarations that all need to be agreed with, combine them i
 Asking people to upload an image of a signature - an ‘electronic’ or ‘digital signature’ is not accessible to visually impaired people and in most cases not needed. Use a digital declaration instead. For example:
 
 > **Declaration by the registered person**
-> 
+>
 > I confirm that the details I have given are correct.
-> 
+>
 > [ Name of registered person ]
-> 
+>
 > [ Submit ]
 
 <h2 name="consider-if-users-can-submit-a-file-instead-of-entering-large-amounts-of-data" id="consider-if-users-can-submit-a-file-instead-of-entering-large-amounts-of-data">Consider if users can submit a file instead of entering large amounts of data</h2>
@@ -355,7 +355,7 @@ To do this, create a new project.
 4. Select the question to write the question text and then navigate to the ‘HTML view’ that will appear just above the box you have selected.
 5. Copy the Qualtrics generic accessibility statement code and paste it into the HTML view.
 6. Once pasted, navigate to the ‘Rich Content Editor’ view, again this is situated before the question itself, close to the HTML view.
-7. Go through the statement and add the details that are relevant to your form, remove any that are not, and include contact details. If you are aware of any extra defects in your form, add those. 
+7. Go through the statement and add the details that are relevant to your form, remove any that are not, and include contact details. If you are aware of any extra defects in your form, add those.
 8. Go to ‘Look and feel’ and then ‘Style’.
 9. You will need to make sure that you also [use the Defra forms dynamic theme](use-the-defra-forms-dynamic-theme) for this statement.
 10. Add the following code to the ‘Custom CSS’ field.
