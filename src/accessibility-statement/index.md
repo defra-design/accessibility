@@ -54,8 +54,10 @@ We used manual and automated tests to look for issues.
 
 We plan to review this site again in a year. We will also fix any issues reported within 12 weeks.
 
+In July 2022 we removed unused navigation landmarks to reduce confusion, removed the breadcrumbs as they didn't provide any value, and introduced a selectable dark theme.
+
 ## Preparation of this accessibility statement
 
-This statement was prepared on 21 December 2021. It was last reviewed on 20 June 2021.
+This statement was prepared on 21 December 2021. It was last reviewed on 22 July 2022.
 
-This website was last tested in December 2021.  We did a quick further check in June 2022. The test was carried out by the Accessibility Team in Defra. We tested all of the website's pages.
+This website was last tested in December 2021.  We did a quick further check in July 2022. The test was carried out by the Accessibility Team in Defra. We tested all of the website's pages.
