@@ -60,6 +60,9 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/interview/index.html");
   eleventyConfig.addPassthroughCopy("src/interview/style.css");
 
+  // Copy across the fonts
+  eleventyConfig.addPassthroughCopy("src/_includes/css/AtkinsonHyperlegible/*.*");
+
   return {
     htmlTemplateEngine: "njk",
     dir: {
