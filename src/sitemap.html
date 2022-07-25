@@ -1,5 +1,5 @@
 ---
-title: Sitemap
+title: Site map
 eleventyExcludeFromCollections: true
 ---
 {# <?xml version="1.0" encoding="utf-8"?>
@@ -16,6 +16,10 @@ eleventyExcludeFromCollections: true
 
 {% block mainContent %}
   <ul>
+    <li>
+      <a href="/accessibility/">Defra Accessibility Resources</a>
+    </li>
+
   {% for page in collections.resource %}
     <li>
       <a href="{{ page.url | url }}">{{page.data.title}}</a>

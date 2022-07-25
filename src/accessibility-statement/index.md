@@ -54,7 +54,12 @@ We used manual and automated tests to look for issues.
 
 We plan to review this site again in a year. We will also fix any issues reported within 12 weeks.
 
-In July 2022 we removed unused navigation landmarks to reduce confusion, removed the breadcrumbs as they didn't provide any value, and introduced a selectable dark theme.
+In July 2022 we:
+- changed the font on the site to Atkinson Hyperlegible to improve legibility
+- removed unused navigation landmarks to reduce confusion
+- removed the breadcrumbs as they didn't provide any value
+- introduced a selectable dark theme
+- added a site map page to provide another way to find content
 
 ## Preparation of this accessibility statement
 
