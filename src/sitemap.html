@@ -16,7 +16,7 @@ eleventyExcludeFromCollections: true
 
 {% block mainContent %}
   <ul>
-  {% for page in collections.all %}
+  {% for page in collections.resource %}
     <li>
       <a href="{{ page.url | url }}">{{page.data.title}}</a>
     </li>
