@@ -13,8 +13,8 @@ module.exports = function(eleventyConfig) {
 
   // The following code sorts the resource collections alphabetically
   // https://github.com/11ty/eleventy/issues/411
-  eleventyConfig.addCollection("buildingNewServicesAlphabetised", (collection) =>
-    collection.getFilteredByTags("buildingNewServices").sort((a, b) => {
+  eleventyConfig.addCollection("checkingAccessibilityAlphabetised", (collection) =>
+    collection.getFilteredByTags("checkingAccessibility").sort((a, b) => {
       let nameA = a.data.title.toUpperCase();
       let nameB = b.data.title.toUpperCase();
       if (nameA < nameB) return -1;
@@ -23,8 +23,28 @@ module.exports = function(eleventyConfig) {
     })
   );
 
-  eleventyConfig.addCollection("writingAccessibleFormsAlphabetised", (collection) =>
-    collection.getFilteredByTags("writingAccessibleForms").sort((a, b) => {
+  eleventyConfig.addCollection("contentFormsAlphabetised", (collection) =>
+    collection.getFilteredByTags("contentForms").sort((a, b) => {
+      let nameA = a.data.title.toUpperCase();
+      let nameB = b.data.title.toUpperCase();
+      if (nameA < nameB) return -1;
+      else if (nameA > nameB) return 1;
+      else return 0;
+    })
+  );
+
+  eleventyConfig.addCollection("requirementsRulesAlphabetised", (collection) =>
+    collection.getFilteredByTags("requirementsRules").sort((a, b) => {
+      let nameA = a.data.title.toUpperCase();
+      let nameB = b.data.title.toUpperCase();
+      if (nameA < nameB) return -1;
+      else if (nameA > nameB) return 1;
+      else return 0;
+    })
+  );
+
+  eleventyConfig.addCollection("researchAlphabetised", (collection) =>
+    collection.getFilteredByTags("research").sort((a, b) => {
       let nameA = a.data.title.toUpperCase();
       let nameB = b.data.title.toUpperCase();
       if (nameA < nameB) return -1;

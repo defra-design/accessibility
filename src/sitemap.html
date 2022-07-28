@@ -15,15 +15,56 @@ eleventyExcludeFromCollections: true
 {% extends "_layouts/base.html" %}
 
 {% block mainContent %}
-  <ul>
-    <li>
-      <a href="/accessibility/">Defra Accessibility Resources</a>
-    </li>
 
-  {% for page in collections.resource %}
-    <li>
-      <a href="{{ page.url | url }}">{{page.data.title}}</a>
-    </li>
-  {% endfor %}
-  </ul>
+<ul>
+  <li><a href="/accessibility/">Defra Accessibility Resources</a>
+
+    <ul>
+
+      <li>Checking accessibility
+        <ul>
+        {% for page in collections.checkingAccessibilityAlphabetised %}
+          <li>
+            <a href="{{ page.url | url }}">{{page.data.title}}</a>
+          </li>
+        {% endfor %}
+        </ul>
+      </li>
+
+      <li>Content and forms
+        <ul>
+        {% for page in collections.contentFormsAlphabetised %}
+          <li>
+            <a href="{{ page.url | url }}">{{page.data.title}}</a>
+          </li>
+        {% endfor %}
+        </ul>
+      </li>
+
+      <li>Requirements and rules
+        <ul>
+        {% for page in collections.requirementsRulesAlphabetised %}
+          <li>
+            <a href="{{ page.url | url }}">{{page.data.title}}</a>
+          </li>
+        {% endfor %}
+        </ul>
+      </li>
+
+      <li>Research
+        <ul>
+        {% for page in collections.researchAlphabetised %}
+          <li>
+            <a href="{{ page.url | url }}">{{page.data.title}}</a>
+          </li>
+        {% endfor %}
+        </ul>
+      </li>
+
+    </ul>
+  </li>
+
+</ul>
+
+
 {% endblock %}
