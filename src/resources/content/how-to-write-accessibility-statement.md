@@ -84,7 +84,7 @@ You do not need to fix these types of content because they’re exempt from the 
 
 * PDFs or other documents published before 23 September 2018 - **unless users need them to use a service**, for example a form to apply for the service would not be exempt
 * maps - **but you’ll need to provide essential information in an accessible format**
-* third party content on the website that’s under someone else’s control if you did not pay for it or develop it yourself - for example, social media ‘like’ buttons - **this does not apply if your entire websites was provided by a third parties or was outsourced**
+* third party content on the website that’s under someone else’s control if you did not pay for it or develop it yourself - for example, social media ‘like’ buttons
 * pre-recorded audio and video published before 23 September 2020
 * live audio and video
 * heritage collections like scanned manuscripts
