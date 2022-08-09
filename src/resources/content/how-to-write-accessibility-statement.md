@@ -4,6 +4,7 @@ summary: "A step by step guide to writing an accessibility statement."
 author: ["Defra accessibility team"]
 version: "1.0"
 publishedDate: 2022-07-04
+status: live
 tags:
   - requirementsRules
   - resource

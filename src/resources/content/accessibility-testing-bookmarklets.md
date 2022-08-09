@@ -4,6 +4,7 @@ summary: "When testing software on a managed device, you may be unable to downlo
 author: ["Defra accessibility team"]
 version: "3.0"
 publishedDate: 2022-02-21
+status: live
 tags:
   - checkingAccessibility
   - resource

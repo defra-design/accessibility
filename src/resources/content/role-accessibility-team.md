@@ -4,6 +4,7 @@ summary: "What the Defra accessibility team can do to help you."
 author: ["Defra accessibility team"]
 version: "1.0"
 publishedDate: 2022-01-02
+status: live
 tags:
   - checkingAccessibility
   - resource

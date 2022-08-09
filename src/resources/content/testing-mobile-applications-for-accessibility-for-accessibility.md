@@ -4,6 +4,7 @@ summary: This document outlines how the Defra accessibility team tests mobile ap
 author: ["Defra accessibility team"]
 version: "1.0"
 publishedDate: 2022-03-16
+status: live
 tags:
   - checkingAccessibility
   - resource

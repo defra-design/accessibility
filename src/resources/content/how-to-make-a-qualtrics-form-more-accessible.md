@@ -4,6 +4,7 @@ summary: This guidance will help you to make your Qualtrics form more accessible
 author: ["Defra accessibility team"]
 version: "1.02"
 publishedDate: 2022-03-10
+status: live
 tags:
   - contentForms
   - resource

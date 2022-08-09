@@ -4,6 +4,7 @@ summary: This service estimates the number of people with disabilities who use a
 author: ["Defra accessibility team"]
 version: "1.0"
 publishedDate: 2022-06-20
+status: live
 tags:
   - research
   - resource

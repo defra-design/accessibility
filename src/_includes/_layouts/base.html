@@ -32,13 +32,9 @@
       <div class="[ c-main__wrapper ] [ u-width-wrapper u-flow ]">
         <!-- {% block breadcrumbs %}
         {% endblock %} -->
-        {% if tags|length %}
-          {% if ('resource' in tags) or ('writing' in tags) %}
-            <h1>{{ title }}</h1>
-          {% else %}
-            <h1>Draft for: {{ title }}</h1>
-          {% endif %}
-          {% else %}
+        {% if status == "draft" %}
+          <h1>Draft for: {{ title }}</h1>
+        {% else %}
           <h1>{{ title }}</h1>
         {% endif %}
         {% block mainContent %}

@@ -4,6 +4,7 @@ summary: This guidance applies mainly to new digital services built using the GD
 author: ["Defra accessibility team"]
 version: "1.1"
 publishedDate: 2022-02-18
+status: live
 tags:
   - checkingAccessibility
   - resource

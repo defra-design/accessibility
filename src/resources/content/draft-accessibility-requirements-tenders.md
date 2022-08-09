@@ -4,6 +4,7 @@ summary: "Formal requirements to use in Defra when writing requirements for tend
 author: ["Defra accessibility team"]
 version: "1.0"
 publishedDate: 2022-02-28
+status: live
 tags:
   - requirementsRules
   - resource

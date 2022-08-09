@@ -27,69 +27,75 @@ title: Home
   <div class="c-resource-section">
     <h2 id="research">Research</h2>
     {% for post in collections.research %}
-      {% set postTags = post.data.tags %}
-      {% for tag in postTags %}
-        {% if "resource" in tag %}
-          {# Stores data about the post into variables used in the blog-summary partial #}
-          {% set postTitle = post.data.title %}
-          {% set postSummary = post.data.summary %}
-          {% set postUrl = post.url %}
-          {% set postAuthors = post.data.author %}
-          {% set postPublished = post.data.publishedDate %}
-          {# Includes the blog-summary partial code, putting the post's data into a reusable template #}
-          {% include "_partials/resource-summary.njk" %}
-        {% endif %}
-      {% endfor %}
+
+      {% if post.data.status != "draft" %}
+        {# Stores data about the post into variables used in the blog-summary partial #}
+        {% set postTitle = post.data.title %}
+        {% set postSummary = post.data.summary %}
+        {% set postUrl = post.url %}
+        {% set postAuthors = post.data.author %}
+        {% set postPublished = post.data.publishedDate %}
+        {# Includes the blog-summary partial code, putting the post's data into a reusable template #}
+        {% include "_partials/resource-summary.njk" %}
+      {% endif %}
+
     {% endfor %}
   </div>
 
   <div class="c-resource-section">
     <h2 id="contentForms">Content and forms</h2>
     {% for post in collections.contentForms %}
-      {% set postTags = post.data.tags %}
-      {% for tag in postTags %}
-        {% if "resource" in tag %}
-          {# Stores data about the post into variables used in the blog-summary partial #}
-          {% set postTitle = post.data.title %}
-          {% set postSummary = post.data.summary %}
-          {% set postUrl = post.url %}
-          {% set postAuthors = post.data.author %}
-          {% set postPublished = post.data.publishedDate %}
-          {# Includes the blog-summary partial code, putting the post's data into a reusable template #}
-          {% include "_partials/resource-summary.njk" %}
-        {% endif %}
-      {% endfor %}
+
+      {% if post.data.status != "draft" %}
+        {# Stores data about the post into variables used in the blog-summary partial #}
+        {% set postTitle = post.data.title %}
+        {% set postSummary = post.data.summary %}
+        {% set postUrl = post.url %}
+        {% set postAuthors = post.data.author %}
+        {% set postPublished = post.data.publishedDate %}
+        {# Includes the blog-summary partial code, putting the post's data into a reusable template #}
+        {% include "_partials/resource-summary.njk" %}
+      {% endif %}
+
     {% endfor %}
   </div>
 
   <div class="c-resource-section">
     <h2 id="checkingAccessibility">Checking accessibility</h2>
     {% for post in collections.checkingAccessibility %}
-      {# Stores data about the post into variables used in the blog-summary partial #}
-      {% set postTitle = post.data.title %}
-      {% set postTags = post.data.tags %}
-      {% set postSummary = post.data.summary %}
-      {% set postUrl = post.url %}
-      {% set postAuthors = post.data.author %}
-      {% set postPublished = post.data.publishedDate %}
-      {# Includes the blog-summary partial code, putting the post's data into a reusable template #}
-      {% include "_partials/resource-summary.njk" %}
+
+      {% if post.data.status != "draft" %}
+        {# Stores data about the post into variables used in the blog-summary partial #}
+        {% set postTitle = post.data.title %}
+        {% set postTags = post.data.tags %}
+        {% set postSummary = post.data.summary %}
+        {% set postUrl = post.url %}
+        {% set postAuthors = post.data.author %}
+        {% set postPublished = post.data.publishedDate %}
+        {# Includes the blog-summary partial code, putting the post's data into a reusable template #}
+        {% include "_partials/resource-summary.njk" %}
+      {% endif %}
+
     {% endfor %}
   </div>
 
   <div class="c-resource-section">
     <h2 id="requirementsRules">Requirements and rules</h2>
     {% for post in collections.requirementsRules %}
-      {# Stores data about the post into variables used in the blog-summary partial #}
-      {% set postTitle = post.data.title %}
-      {% set postTags = post.data.tags %}
-      {% set postSummary = post.data.summary %}
-      {% set postUrl = post.url %}
-      {% set postAuthors = post.data.author %}
-      {% set postPublished = post.data.publishedDate %}
-      {# Includes the blog-summary partial code, putting the post's data into a reusable template #}
-      {% include "_partials/resource-summary.njk" %}
-    {% endfor %}
+
+      {% if post.data.status != "draft" %}
+        {# Stores data about the post into variables used in the blog-summary partial #}
+        {% set postTitle = post.data.title %}
+        {% set postTags = post.data.tags %}
+        {% set postSummary = post.data.summary %}
+        {% set postUrl = post.url %}
+        {% set postAuthors = post.data.author %}
+        {% set postPublished = post.data.publishedDate %}
+        {# Includes the blog-summary partial code, putting the post's data into a reusable template #}
+        {% include "_partials/resource-summary.njk" %}
+      {% endif %}
+
+  {% endfor %}
   </div>
 
 {% endblock %}

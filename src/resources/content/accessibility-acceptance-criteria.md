@@ -4,9 +4,10 @@ summary: Using acceptance criteria can help us to consider the conditions that o
 author: ["Defra accessibility team"]
 version: "1.0"
 publishedDate: 2022-02-21
+status: draft
 tags:
   - checkingAccessibility
-  # - resource
+  - resource
 ---
 
 Ensuring a service can be used by people using assistive technology should be a key consideration for every sprint. Accessibility acceptance criteria ensures that we consider how software should work with assistive technology and that service delivery teams consider accessibility throughout development, not just at the end.

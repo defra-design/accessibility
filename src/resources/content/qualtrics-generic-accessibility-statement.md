@@ -4,6 +4,7 @@ summary: A template for creating your Qualtrics accessibility statement, specifi
 author: ["Defra accessibility team"]
 version: "1.0"
 publishedDate: 2022-02-10
+status: live
 ---
 
 Each Qualtrics form needs to link to an accessibility statement to comply with the law.

@@ -23,41 +23,50 @@ eleventyExcludeFromCollections: true
 
       <li>Checking accessibility
         <ul>
-        {% for page in collections.checkingAccessibilityAlphabetised %}
-          <li>
-            <a href="{{ page.url | url }}">{{page.data.title}}</a>
-          </li>
-        {% endfor %}
+          {% for page in collections.checkingAccessibilityAlphabetised %}
+            {% if page.data.status != "draft" %}
+              <li>
+                <a href="{{ page.url | url }}">{{page.data.title}}</a>
+              </li>
+            {% endif %}
+          {% endfor %}
         </ul>
       </li>
 
       <li>Content and forms
         <ul>
-        {% for page in collections.contentFormsAlphabetised %}
-          <li>
-            <a href="{{ page.url | url }}">{{page.data.title}}</a>
-          </li>
-        {% endfor %}
+          {% for page in collections.contentFormsAlphabetised %}
+            {% if page.data.status != "draft" %}
+              <li>
+                <a href="{{ page.url | url }}">{{page.data.title}}</a>
+              </li>
+            {% endif %}
+
+          {% endfor %}
         </ul>
       </li>
 
       <li>Requirements and rules
         <ul>
-        {% for page in collections.requirementsRulesAlphabetised %}
-          <li>
-            <a href="{{ page.url | url }}">{{page.data.title}}</a>
-          </li>
-        {% endfor %}
+          {% for page in collections.requirementsRulesAlphabetised %}
+            {% if page.data.status != "draft" %}
+              <li>
+                <a href="{{ page.url | url }}">{{page.data.title}}</a>
+              </li>
+            {% endif %}
+          {% endfor %}
         </ul>
       </li>
 
       <li>Research
         <ul>
-        {% for page in collections.researchAlphabetised %}
-          <li>
-            <a href="{{ page.url | url }}">{{page.data.title}}</a>
-          </li>
-        {% endfor %}
+          {% for page in collections.researchAlphabetised %}
+            {% if page.data.status != "draft" %}
+              <li>
+                <a href="{{ page.url | url }}">{{page.data.title}}</a>
+              </li>
+            {% endif %}
+          {% endfor %}
         </ul>
       </li>
 
