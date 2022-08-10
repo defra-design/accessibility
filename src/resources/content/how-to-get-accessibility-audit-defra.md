@@ -45,8 +45,14 @@ You should contact us by email at [accessiblity@defra.gov.uk](mailto:accessiblit
 
 We strongly recommend that you choose an audit company that use disabled testers or who test with disabled people as part of the audit.
 
+**TO DO - to write rest**
+
 
 ## Defra Intranet procurement guidance
+
+**TO DO - to write rest**
+
+[Finance procurement page (Defra Intranet)](https://intranet.defra.gov.uk/how-to/finance-procurement/)
 
 
 ### Budget for an external audits
