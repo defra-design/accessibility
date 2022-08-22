@@ -35,7 +35,7 @@ tags:
 
 * Audit report for your site or service (this guide doesn’t cover getting an audit). See [Getting an accessibility audit in the GDS Service Manual](https://www.gov.uk/service-manual/helping-people-to-use-your-service/getting-an-accessibility-audit).
 
-* [Defra Sample accessibility statement template (docx)](/accessibility/documents/accessibility-statements/accessibility-statement-template-markdown-20220629.docx)
+* [Defra Sample accessibility statement template (docx)](/accessibility/documents/accessibility-statements/accessibility-statement-template-markdown-202200822.docx)
 
 * [Defra list of WCAG wordings (xlsx)](/accessibility/documents/accessibility-statements/wcag-2-1-list-for-statement-writing.xlsx)
 
@@ -46,7 +46,7 @@ Before you start you should check that this is still in line with the [GDS sampl
 
 Our version uses Markdown code as a simple way to mark heading, bullets and links and you will be able to convert this easily to HTML when you are finished (instructions below).
 
-Find the template document in step 2 above. Use the Word version if you are unsure which to use.
+Find the template document in step 2 above. Our template has all the guidance and section references in Word comments.
 
 
 ### 4. Make a full list of all the accessibility issues
