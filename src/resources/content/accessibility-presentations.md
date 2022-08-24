@@ -3,7 +3,7 @@ title: Accessibility presentations
 summary: Accessibility presentations that you can use or adapt for an introduction to accessibility, how to write statements, or about maps.
 author: ["Defra accessibility team"]
 version: "1.0"
-publishedDate: 2022-08-17
+publishedDate: 2022-08-24
 status: draft
 tags:
   - research
@@ -13,6 +13,12 @@ tags:
 ## Overview
 
 This page contains downloadable presentations that you can use or adapt for an introduction to accessibility, how to write statements, or about map accessibility.
+
+
+### Status of the presentations
+
+Most of these presentations have been used at least once by the Defra Accessibility Team, but they are not really fully tested. You should regard them all as 'experimental'. You can use or adapt them for your own use, or even just use one slide.
+
 
 ## Presentation downloads
 
@@ -47,9 +53,6 @@ Presentation length: 90 minutes<br>
 Audience: any digital roles needing a first introduction to accessibility<br>
 Status: beta
 
-### Status of the downloads
-
-Most of these presentations have been used at least once by the Defra Accessibility Team, but they are not really fully tested. You should regard them all as 'experimental'. You can use or adapt them for your own use, or even just use one slide.
 
 ### Accessibility of the presentations
 
