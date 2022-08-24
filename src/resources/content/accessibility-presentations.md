@@ -24,8 +24,45 @@ We've taken care to provide alternative text, used a good colour contrast and tr
 
 ## Presentation downloads
 
-TO DO
+[Accessibility introduction - long (pptx)](/accessibility/documents/presentations/defra-accessibility-introduction-long-v-1.pptx) |
+[ODT version](/accessibility/documents/presentations/defra-accessibility-introduction-long-v-1.odt)<br>
+Presentation length: 60 minutes<br>
+Audience: any digital roles needing a first introduction to accessibility<br>
+Status: alpha - used twice in Defra
 
-## Other information
+[Accessibility introduction - short (pptx)](/accessibility/documents/presentations/defra-introduction-to-accessibility-short.pptx) |
+[ODT version](/accessibility/documents/presentations/defra-introduction-to-accessibility-short.odt)<br>
+Presentation length: 20 minutes<br>
+Audience: any digital roles needing a first introduction to accessibility<br>
+Status: experimental - used once in Defra
 
-TO DO
+[Accessibility statement training (pptx)](/accessibility/documents/presentations/defra-accessibility-statement-training-presentation.pptx) |
+[ODT version](/accessibility/documents/presentations/defra-accessibility-statement-training-presentation.odt)<br>
+Additional documents needed: see [How to write an accessibility statement guidance ](https://defra-design.github.io/accessibility/resources/content/how-to-write-accessibility-statement/)<br>
+Presentation length: 90 minutes including other explanations and demonstrations<br>
+Audience: content designers or roles who may write a statement<br>
+Status: experimental - used once in Defra
+
+[Maps accessibility (pptx)](/accessibility/documents/presentations/defra-accessibility-website-maps-v1-1.pptx) |
+[ODT version](/accessibility/documents/presentations/defra-accessibility-website-maps-v1-1.odt)<br>
+Presentation length: 20 minutes<br>
+Audience: geographical information roles, general<br>
+Status: experimental - used once in Defra
+
+[GDS introduction to accessibility September 2021 (pptx)](/accessibility/documents/presentations/GDS-Introduction-to-Accessibility-90m-interactive-Sep-2021.pptx) |
+[ODT version](/accessibility/documents/presentations/GDS-Introduction-to-Accessibility-90m-interactive-Sep-2021.odt)<br>
+Presentation length: 90 minutes<br>
+Audience: any digital roles needing a first introduction to accessibility<br>
+Status: beta
+
+
+
+## Useful notes for presentations
+
+### Useful links with background information
+
+* [Estimate how many people using your website might be disabled](https://how-many.herokuapp.com/)
+* [Making online public services accessible (campaign page)](https://accessibility.campaign.gov.uk/)
+* [GOV Accessibility Personas](https://alphagov.github.io/accessibility-personas/)
+* [DWP Accessibility Manual](https://accessibility-manual.dwp.gov.uk/)
+* [Microsoft Inclusive Design](https://www.microsoft.com/design/inclusive/)
