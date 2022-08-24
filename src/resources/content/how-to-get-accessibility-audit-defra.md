@@ -46,7 +46,7 @@ You should contact us by email at [accessiblity@defra.gov.uk](mailto:accessiblit
 
 ## How to write a brief and choose an audit company
 
-We strongly recommend that you choose an audit company that employs disabled testers or who test with disabled people as part of the audit.
+**We strongly recommend that you choose an audit company that employs disabled testers or who test with disabled people as part of the audit.**
 
 [Write an accessibility audit brief - GDS guidance](https://www.gov.uk/service-manual/helping-people-to-use-your-service/getting-an-accessibility-audit#write-an-accessibility-audit-brief)
 
@@ -55,7 +55,15 @@ We strongly recommend that you choose an audit company that employs disabled tes
 
 ## How to procure an audit
 
-You should follow the current guidance on the [Defra finance procurement page (Defra Intranet)](https://intranet.defra.gov.uk/how-to/finance-procurement/).
+1. Read the current guidance on the [Defra finance procurement page (Defra Intranet)](https://intranet.defra.gov.uk/how-to/finance-procurement/).
+
+2. Contact Defra Commercial to check what the current procurement method is. Depending on advice from commercial you will either:
+
+* send your brief to a single supplier chosen from the Digital Marketplace
+* supplier management will provide a shortlist for you
+* send the brief to 3 suppliers chosen from the Digital Marketplace
+
+3. Shortlist suppliers using the Digital Marketplace. We suggest that you [search Digital Marketplace for "accessibility audit WCAG 2.1 AA GDS"](https://www.digitalmarketplace.service.gov.uk/g-cloud/search?q=accessibility%20audit%20WCAG%202.1%20AA%20GDS&lot=cloud-support).
 
 
 ### Budget for an external audit
@@ -65,3 +73,8 @@ You should budget:
 * £5,000 to £10,000 for a small, simple site
 * £10,000 to £20,000 for a more complex website
 * the same amount for any additional URLs such as administration backends, or if your website has separate parts
+
+You should also budget for:
+
+* developer (or supplier time) to fix issues found - you may not have to pay for this if your supplier contracted to build an accessible site (which you should have previously included in the contract or requirements)
+* team or project management time to manage the audit, fixes and re-testing
