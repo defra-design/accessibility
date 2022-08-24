@@ -23,32 +23,32 @@ Most of these presentations have been used at least once by the Defra Accessibil
 ## Presentation downloads
 
 [Accessibility introduction - long (pptx)](/accessibility/documents/presentations/defra-accessibility-introduction-long-v-1.pptx) |
-[ODT version](/accessibility/documents/presentations/defra-accessibility-introduction-long-v-1.odt)<br>
+[ODP version](/accessibility/documents/presentations/defra-accessibility-introduction-long-v-1.odp)<br>
 Presentation length: 60 minutes<br>
 Audience: any digital roles needing a first introduction to accessibility<br>
 Status: alpha - used twice in Defra
 
 [Accessibility introduction - short (pptx)](/accessibility/documents/presentations/defra-introduction-to-accessibility-short.pptx) |
-[ODT version](/accessibility/documents/presentations/defra-introduction-to-accessibility-short.odt)<br>
+[ODP version](/accessibility/documents/presentations/defra-introduction-to-accessibility-short.odp)<br>
 Presentation length: 20 minutes<br>
 Audience: any digital roles needing a first introduction to accessibility<br>
 Status: experimental - used once in Defra
 
 [Accessibility statement training (pptx)](/accessibility/documents/presentations/defra-accessibility-statement-training-presentation.pptx) |
-[ODT version](/accessibility/documents/presentations/defra-accessibility-statement-training-presentation.odt)<br>
+[ODP version](/accessibility/documents/presentations/defra-accessibility-statement-training-presentation.odp)<br>
 Additional documents needed: see [How to write an accessibility statement guidance ](https://defra-design.github.io/accessibility/resources/content/how-to-write-accessibility-statement/)<br>
 Presentation length: 90 minutes including other explanations and demonstrations<br>
 Audience: content designers or roles who may write a statement<br>
 Status: experimental - used once in Defra
 
 [Maps accessibility (pptx)](/accessibility/documents/presentations/defra-accessibility-website-maps-v1-1.pptx) |
-[ODT version](/accessibility/documents/presentations/defra-accessibility-website-maps-v1-1.odt)<br>
+[ODP version](/accessibility/documents/presentations/defra-accessibility-website-maps-v1-1.odp)<br>
 Presentation length: 20 minutes<br>
 Audience: geographical information roles, general<br>
 Status: experimental - used once in Defra
 
 [GDS introduction to accessibility September 2021 (pptx)](/accessibility/documents/presentations/GDS-Introduction-to-Accessibility-90m-interactive-Sep-2021.pptx) |
-[ODT version](/accessibility/documents/presentations/GDS-Introduction-to-Accessibility-90m-interactive-Sep-2021.odt)<br>
+[ODP version](/accessibility/documents/presentations/GDS-Introduction-to-Accessibility-90m-interactive-Sep-2021.odp)<br>
 Presentation length: 90 minutes<br>
 Audience: any digital roles needing a first introduction to accessibility<br>
 Status: beta
