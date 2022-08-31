@@ -87,7 +87,7 @@ You should contact us by email at [accessiblity@defra.gov.uk](mailto:accessiblit
 
 **Could** offer help and support to the development team to fix the issues found.
 
-**Could** include testing with assistive technologies.
+**Could** include testing with other assistive technologies as used by Defra staff.
 
 #### Other information to give in the tender document
 
