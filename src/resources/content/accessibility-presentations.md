@@ -4,7 +4,7 @@ summary: Accessibility presentations that you can use or adapt for an introducti
 author: ["Defra accessibility team"]
 version: "1.0"
 publishedDate: 2022-08-24
-status: draft
+status: live
 tags:
   - research
   - resource
