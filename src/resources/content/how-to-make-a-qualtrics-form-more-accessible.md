@@ -358,7 +358,7 @@ To do this, create a new project.
 6. Once pasted, navigate to the ‘Rich Content Editor’ view, again this is situated before the question itself, close to the HTML view.
 7. Go through the statement and add the details that are relevant to your form, remove any that are not, and include contact details. If you are aware of any extra defects in your form, add those.
 8. Go to ‘Look and feel’ and then ‘Style’.
-9. You will need to make sure that you also [use the Defra forms dynamic theme](use-the-defra-forms-dynamic-theme) for this statement.
+9. You will need to make sure that you also [use the Defra forms dynamic theme](#use-the-defra-forms-dynamic-theme) for this statement.
 10. Add the following code to the ‘Custom CSS’ field.
   * `#NextButton{display:none!important}`
 11. Select the ‘Apply’ button.

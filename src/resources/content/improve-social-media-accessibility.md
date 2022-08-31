@@ -209,7 +209,7 @@ Reason: people who cannot see the image, or where the image is not displayed can
 
 If your image repeats some text, do not paste that text into the alt text. Work out what would give the best experience for the users.
 
-Follow existing web guidelines. Use the [W3C alt text decision tree](https://www.w3.org/WAI/tutorials/images/improve-social-media-accessibility/decision-tree/) as a starting point if you are uncertain what text to add. You do not need to say “image of” or “photo of”.
+Follow existing web guidelines. Use the [W3C alt text decision tree](https://www.w3.org/WAI/tutorials/images/decision-tree/) as a starting point if you are uncertain what text to add. You do not need to say “image of” or “photo of”.
 
 
 ### Alt text for decorative images

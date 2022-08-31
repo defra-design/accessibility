@@ -62,7 +62,7 @@ Under the Equality Act 2010, organisations must remove barriers that prevent dis
 
 An example of a reasonable adjustment may be to: provide content in an accessible format, such as large print
 
-It is important to [consider your users' accessibility needs](../consider-your-users-accessibility-needs/) as [under the Equality Act your duty to make reasonable adjustments is an "anticipatory duty"](https://www.legislation.gov.uk/ukpga/2010/15/notes/division/3/16/19). The legislation contextualises this by stating:
+It is important to [find out about your users' accessibility needs](find-out-about-your-users-accessibility-needs) as [under the Equality Act your duty to make reasonable adjustments is an "anticipatory duty"](https://www.legislation.gov.uk/ukpga/2010/15/notes/division/3/16/19). The legislation contextualises this by stating:
 
 > As the duty is owed to disabled persons generally, it is an anticipatory duty which means service providers and people exercising public functions must anticipate the needs of disabled people and make appropriate reasonable adjustments.
 
