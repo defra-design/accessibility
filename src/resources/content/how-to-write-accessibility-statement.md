@@ -25,6 +25,8 @@ tags:
 
 ## Steps you should follow
 
+There's a short [accessibility statement training presentation (pptx)](/accessibility/documents/presentations/defra-accessibility-statement-training-presentation.pptx) that you can read in addition to this guidance. 
+
 
 ### 1. Read the GDS guidance for background information
 
