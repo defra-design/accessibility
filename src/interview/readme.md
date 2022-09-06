@@ -12,6 +12,11 @@ How to use
 >
 > We do not expect a full audit or detailed review, but your responses should show an understanding of WCAG 2.1 compliance and how you approach such a task.
 
+Accessibility
+-------------
+
+A text description of the page is available (in `description.txt`) for candidates who cannot see the page. The intent is to explain visual aspects without prejudicing other candidates by providing extra information. 
+
 The issues
 ----------
 
@@ -26,7 +31,7 @@ Candidates - please don't cheat!
 * Unlabelled input (1.1.1, 1.3.1, 2.4.6, 3.3.2)
 * Abuse of ARIA
 * Lack of focus highlighting
-* keyboard trap
+* ~keyboard trap~ removed and replaced with input overwriting user input
 * Emoji bullet list
 * table layout (1.3.1, 1.3.2)
 * Green/Red

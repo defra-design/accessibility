@@ -83,6 +83,7 @@ module.exports = function(eleventyConfig) {
   // Copy across the interview example page
   eleventyConfig.addPassthroughCopy("src/interview/index.html");
   eleventyConfig.addPassthroughCopy("src/interview/style.css");
+  eleventyConfig.addPassthroughCopy("src/interview/description.txt");
 
   // Copy across the fonts
   eleventyConfig.addPassthroughCopy("src/_includes/css/AtkinsonHyperlegible/*.*");
