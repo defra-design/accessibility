@@ -6,11 +6,23 @@ This page is intended to be used for job interviews, it has some accessibiulity 
 How to use
 ----------
 
-> To help us understand your technical understanding of accessibility requirements and assistive technologies, at the interview we’ll ask you about accessibility issues on an example page. You should explain how you would go about identifying accessibility issues and pick out at least three issues that you think are important to fix, and explain why.
->
-> Please have a look at [this sample web page] and think about your approach and issues before the interview. You will be expected to feedback your responses at the start of the interview.
->
+7 days before the interview, when sending the other information, include something like this:
+
+> To help us understand your technical understanding of accessibility requirements and assistive technologies, at the interview we’ll ask you about accessibility issues on an example page.
+> 
+> You will be expected to feedback your responses at the start of the interview.
+> 
 > We do not expect a full audit or detailed review, but your responses should show an understanding of WCAG 2.1 compliance and how you approach such a task.
+>
+> Have a look at the [sample web page](https://defra-design.github.io/accessibility/interview) **before the interview.**
+>
+> At the start of the interview we will ask you to spend 5 minutes to:
+> * explain your approach to how you would identify accessibility issues on this page
+> * pick out four issues that you think are a priority to fix, and explain why they are important
+
+If required, also include
+
+> As a Reasonable Adjustment you can view a [textual description of the sample page](https://defra-design.github.io/accessibility/interview/description.txt).
 
 Accessibility
 -------------
