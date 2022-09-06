@@ -1,0 +1,26 @@
+A "gov.uk" style page with black header bar at the top and a light grey main section.
+
+The header bar contains "gov.pizza" in large white letters.
+There is a green strip the width of the main content below the black header bar.
+
+In the main section there is large and bold text (but smaller than the "gov.pizza" text) reading "Update your pizza preferences"
+
+The body text is 10px and reads "Use this service to:" and is followed by a list which uses pizza emoji as bullet points.
+This list contains:
+* Update your recorded pizza preferences
+* Subscribe to new pizza topping notifications
+* Identify allergen content in pizzas
+
+This is followed by an indented line with what appears to be a link (green text with underline) to update your "pasta preferences"
+
+This if followed by "what is pizza? find out here" where "here" is a link.
+
+An image of two men, one feeding the other pizza.
+
+Some more larger bold text reads "Tell me about your best pizza!" followed by body text reading "then press the green button".
+
+A text input has the placeholder text "I love pizza" and is followed by two circles, one bright green and one red.
+
+To the right of the page some bold text reads "Related content" and there is a bullet list of two links to "pasta preferences" and "is pizza a sandwich?"
+
+At the very bottom of the page is a footer reading "Please note - this page has intentional accessibility issues and is intented for use as part of an interview for an Accessibility Consultant."
