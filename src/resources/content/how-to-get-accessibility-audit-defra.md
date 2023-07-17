@@ -44,9 +44,9 @@ Most Defra services will need an external audit. In a few rare cases some of the
 You should contact us by email at [accessiblity@defra.gov.uk](mailto:accessiblity@defra.gov.uk) if you think any of these apply and we can advise if your approach is reasonable.
 
 
-## Requesting a 3rd party audit
+## Requesting a external audit
 
-We have a call-off contract with a 3rd party audit company so there is no need to run a tender.
+We have a call-off contract with an external audit company so there is no need to run a tender.
 
 You should contact us by email at [accessiblity@defra.gov.uk](mailto:accessiblity@defra.gov.uk) with the following details:
 
