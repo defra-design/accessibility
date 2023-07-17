@@ -2,8 +2,8 @@
 title: How to get an accessibility audit in Defra
 summary: Outlines the steps to procure an accessibility audit and how to decide what type to have.
 author: ["Defra accessibility team"]
-version: "1.1"
-publishedDate: 2022-08-22
+version: "1.2"
+publishedDate: 2023-07-17
 status: live
 tags:
   - checkingAccessibility
@@ -19,7 +19,7 @@ See also [Getting an accessibility audit - GDS guidance](https://www.gov.uk/serv
 
 ## What the Defra Accessibility Team can do
 
-The Defra Accessibility Team no longer performs audits. This is because we do not have the time (we are only 2 staff covering over 200 public websites) and because we think specialist external auditors will provide the independent assurance that you need.
+The Defra Accessibility Team no longer performs audits. This is because we do not have the time (we are only 3 staff covering over 200 public websites) and because we think specialist external auditors will provide the independent assurance that you need.
 
 We can do a quick accessibility review of your site to give you an overview of the likely issues that a full audit may find. This can help you get started on fixing issues before the audit.
 
@@ -44,76 +44,25 @@ Most Defra services will need an external audit. In a few rare cases some of the
 You should contact us by email at [accessiblity@defra.gov.uk](mailto:accessiblity@defra.gov.uk) if you think any of these apply and we can advise if your approach is reasonable.
 
 
-## How to write a brief and choose an audit company
+## Requesting a 3rd party audit
 
-**We strongly recommend that you choose an audit company that employs disabled testers or who test with disabled people as part of the audit.**
+We have a call-off contract with a 3rd party audit company so there is no need to run a tender.
 
-[Write an accessibility audit brief - GDS guidance](https://www.gov.uk/service-manual/helping-people-to-use-your-service/getting-an-accessibility-audit#write-an-accessibility-audit-brief)
+You should contact us by email at [accessiblity@defra.gov.uk](mailto:accessiblity@defra.gov.uk) with the following details:
 
-[Pick an audit supplier - GDS guidance](https://www.gov.uk/service-manual/helping-people-to-use-your-service/getting-an-accessibility-audit#pick-a-supplier)
+* URL of the service
+* Any access required (passwords, VPN, etc.)
+* Any test data required to proceed through
+* Any journeys/test scripts that will help guide the testing
+* Cost and Task Code (or project code) to recharge to
+* Lead contact for this work
+* Your “Finance Business Partner” contact
+* Any relevant timescales (e.g., after July, before last week)
 
+We’ll then pass it onto the auditor who will scope the work and provide a quote for you.
+If you’re happy with the quote the work will be scheduled in.
 
-### Requirements for an accessibility audit tender
-
-#### Based on
-
-* [GDS: Getting an accessibility audit](https://www.gov.uk/service-manual/helping-people-to-use-your-service/getting-an-accessibility-audit)
-* [GDS: Testing with assistive technologies](https://www.gov.uk/service-manual/technology/testing-with-assistive-technologies)
-
-
-#### Draft requirements
-
-**Must** carry out an accessibility audit against the Web Content Accessibility Guidelines (WCAG) version 2.1 to AA level.
-
-**Must**  test assistive technologies as listed on the GDS page [Testing with assistive technologies](https://www.gov.uk/service-manual/technology/testing-with-assistive-technologies#which-assistive-technologies-to-test-with )
-
-**Must**  produce a clear and actionable written report that includes both a non-technical summary and a technical section with details of the issues.
-
-**Must**  include in the report an indication of the priority of the fix for the impact and an opinion about the likely impact on disabled users.
-
-**Must**  have extensive and recent experience of doing audits, preferably of government services.
-
-**Should** be familiar with the service standard and GOV.UK design patterns.
-
-**Should** include a list of issues in the report in a format suitable for including in an accessibility statement.
-
-**Should** include testers who are disabled.
-
-**Should** test using a defined methodology at least equivalent to the WCAG-EM Website Accessibility Conformance Evaluation Methodology.
-
-**Could** observe some of the test sessions with disabled users.
-
-**Could** include a meeting to explain the findings from the audit report.
-
-**Could** offer help and support to the development team to fix the issues found.
-
-**Could** include testing with other assistive technologies as used by Defra staff.
-
-#### Other information to give in the tender document
-
-Read guidance in [GDS: Getting an accessibility audit](https://www.gov.uk/service-manual/helping-people-to-use-your-service/getting-an-accessibility-audit) - in particular focus on “Write an accessibility audit brief”.
-
-List the URLs of a representative sample of your page templates and content types that you want them to test. You could also ask the supplier for help with identifying this.
-
-Identify and list your most common or important user journeys.
-
-If you have created new components or adapted any GOV.UK Design System components they should be included specifically in the list for testing.
-
-The timescale for testing.
-
-
-## How to procure an audit
-
-1. Read the current guidance on the [Defra finance procurement page (Defra Intranet)](https://intranet.defra.gov.uk/how-to/finance-procurement/).
-
-2. Contact Defra Commercial to check what the current procurement method is. Depending on advice from commercial you will either:
-
-* send your brief to a single supplier chosen from the Digital Marketplace
-* supplier management will provide a shortlist for you
-* send the brief to 3 suppliers chosen from the Digital Marketplace
-
-3. Shortlist suppliers using the Digital Marketplace. We suggest that you [search Digital Marketplace for "accessibility audit WCAG 2.1 AA GDS"](https://www.digitalmarketplace.service.gov.uk/g-cloud/search?q=accessibility%20audit%20WCAG%202.1%20AA%20GDS&lot=cloud-support).
-
+Once complete you’ll get a copy of the audit report, a chance to speak with the auditor (if required) and an option to have a confirmation check of any changes you make to fix any issues.
 
 ### Budget for an external audit
 
