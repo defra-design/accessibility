@@ -2,7 +2,7 @@
 title: How to get an accessibility audit in Defra
 summary: Outlines the steps to procure an accessibility audit and how to decide what type to have.
 author: ["Defra accessibility team"]
-version: "1.2"
+version: "1.3"
 publishedDate: 2023-07-17
 status: live
 tags:
@@ -54,7 +54,8 @@ You should contact us by email at [accessiblity@defra.gov.uk](mailto:accessiblit
 * Any access required (passwords, VPN, etc.)
 * Any test data required to proceed through
 * Any journeys/test scripts that will help guide the testing
-* Cost and Task Code (or project code) to recharge to
+* Cost and Task Code (or project code) to recharge to if you're in Core Defra or the Environment Agency
+* OR a Purchase Order (PO) we can invoice (for up to £20k) if you're in RPA, etc.
 * Lead contact for this work
 * Your “Finance Business Partner” contact
 * Any relevant timescales (e.g., after July, before last week)

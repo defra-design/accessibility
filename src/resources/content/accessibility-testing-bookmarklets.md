@@ -2,7 +2,7 @@
 title: Accessibility testing tools for managed laptops
 summary: "When testing software on a managed device, you may be unable to download automated tools or browser extensions. In this case, you can use bookmarklets to help you test for accessibility conformance."
 author: ["Defra accessibility team"]
-version: "3.0"
+version: "3.1"
 publishedDate: 2022-02-21
 status: live
 tags:
@@ -140,6 +140,20 @@ The [W3C Validator](https://validator.w3.org/) should be used to check for parsi
 Lighthouse (within Google Chrome's development tools) can identify whether native HTML5 interactive elements, such as links, have a name.
 
 [WCAG Success Criterion 4.1.2: Name, role, value](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html)
+
+### Simulate colour vision deficiencies
+
+Google Chrome's development tools can simulate colour vision deficiencies:
+
+1. Open developer tools `ctrl + shift + I`
+2. Click the three dots in the top right
+3. Select "More tools"
+4. Select "Rendering"
+5. A new tab will open at the bottom of the developer tools
+6. Scroll to the bottom of this "Rendering" tab
+7. Select an option from the "Emulate vision deficiencies" menu
+
+You can also check the page will respect the user's preferred colour scheme (dark or light mode), reduced motion, and other CSS detectable features.
 
 ## Other bookmarklets
 
