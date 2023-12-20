@@ -41,14 +41,14 @@ Most Defra services will need an external audit. In a few rare cases some of the
 * the website will be closing soon and has relatively few users
 * you are carrying out a major rebuild of the site and it does not make sense to audit the old site
 
-You should contact us by email at [accessiblity@defra.gov.uk](mailto:accessiblity@defra.gov.uk) if you think any of these apply and we can advise if your approach is reasonable.
+You should contact us by email at [accessibility@defra.gov.uk](mailto:accessibility@defra.gov.uk) if you think any of these apply and we can advise if your approach is reasonable.
 
 
 ## Requesting a external audit
 
 We have a call-off contract with an external audit company so there is no need to run a tender.
 
-You should contact us by email at [accessiblity@defra.gov.uk](mailto:accessiblity@defra.gov.uk) with the following details:
+You should contact us by email at [accessibility@defra.gov.uk](mailto:accessibility@defra.gov.uk) with the following details:
 
 * URL of the service
 * Any access required (passwords, VPN, etc.)
