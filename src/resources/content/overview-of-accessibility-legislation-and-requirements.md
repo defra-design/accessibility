@@ -2,8 +2,8 @@
 title: Overview of accessibility legislation and requirements
 summary: "This overview relates to both internal and external services and will inform you of the accessibility legislation and requirements relevant to your service."
 author: ["Defra accessibility team"]
-version: "1.0"
-publishedDate: 2022-02-25
+version: "1.1"
+publishedDate: 2024-04-15
 status: live
 tags:
   - requirementsRules
@@ -31,7 +31,7 @@ The Public Sector Bodies Accessibility Regulations (PSAR) 2018 came into effect 
 All public sector bodies, including central government, local government and some charities, must meet the requirements within the regulations. The regulations cover the contents of websites and mobile applications developed by public sector bodies.
 
 In order to meet the accessibility requirements, a service must:
-* Meet the 50 success criteria of the [Web Content Accessibility Guidelines (WCAG) 2.1 AA](https://www.w3.org/TR/WCAG21/)
+* Meet the 50 success criteria of the [Web Content Accessibility Guidelines (WCAG) 2.2 AA](https://www.w3.org/TR/WCAG22/)
 * [Publish an Accessibility Statement documenting conformance against the WCAG](https://www.gov.uk/guidance/model-accessibility-statement)
 
 There are some pieces of content that you may not need to fix - the following items, taken from [Understanding accessibility requirements for public sector bodies](https://www.gov.uk/guidance/accessibility-requirements-for-public-sector-websites-and-apps), are exempt:
@@ -82,7 +82,7 @@ In meeting this point, your service must be accessible to everyone who needs it.
 
 To meet this requirement, the Service Standard states that you must:
 
-> * meet level AA of the [Web Content Accessibility Guidelines (WCAG 2.1)](https://www.gov.uk/service-manual/helping-people-to-use-your-service/understanding-wcag) as a minimum
+> * meet level AA of the [Web Content Accessibility Guidelines (WCAG 2.2)](https://www.gov.uk/service-manual/helping-people-to-use-your-service/understanding-wcag) as a minimum
 > * work on the most commonly used [assistive technologies](https://www.gov.uk/service-manual/technology/testing-with-assistive-technologies) - including screen magnifiers, screen readers and speech recognition tools
 > * include disabled people in [user research](https://www.gov.uk/service-manual/user-research)
 > * have an [accessibility statement](https://www.gov.uk/guidance/make-your-website-or-app-accessible-and-publish-an-accessibility-statement) that explains how accessible the service is - you need to publish this when the service moves into public beta
