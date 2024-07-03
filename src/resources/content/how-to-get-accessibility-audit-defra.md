@@ -1,9 +1,9 @@
 ---
-title: How to get an accessibility audit in Defra
+title: How to get an accessibility audit in Defra Group
 summary: Outlines the steps to procure an accessibility audit and how to decide what type to have.
 author: ["Defra accessibility team"]
-version: "1.3"
-publishedDate: 2023-07-17
+version: "1.4"
+publishedDate: 2024-07-03
 status: live
 tags:
   - checkingAccessibility
@@ -21,7 +21,7 @@ See also [Getting an accessibility audit - GDS guidance](https://www.gov.uk/serv
 
 The Defra Accessibility Team no longer performs audits. This is because we do not have the time (we are only 3 staff covering over 200 public websites) and because we think specialist external auditors will provide the independent assurance that you need.
 
-We can do a quick accessibility review of your site to give you an overview of the likely issues that a full audit may find. This can help you get started on fixing issues before the audit.
+We can do a quick accessibility review of your site to give you an overview of the likely issues that a full audit may find. This can help you get started on fixing issues before the audit. [Request a Quick Check](https://defra.sharepoint.com/:l:/t/Team4443/FJ8dSlviy4RHnfiV_eXwNtMBw9RYRfQ0OOy-xh53FXKMrg?nav=MDg1MjAzNTctZjVhMC00ZTIwLWJlODYtNzk2MjdiZWUyNWQy).
 
 We can give help and advice about accessibility testing and help your team or QA staff do some of their own testing. We can also help you build testing into your ongoing QA as part of continuous development.
 
@@ -48,7 +48,9 @@ You should contact us by email at [accessibility@defra.gov.uk](mailto:accessibil
 
 We have a call-off contract with an external audit company so there is no need to run a tender.
 
-You should contact us by email at [accessibility@defra.gov.uk](mailto:accessibility@defra.gov.uk) with the following details:
+You should fill in this form to [request an external audit](https://defra.sharepoint.com/:l:/t/Team4443/FKGtLOBGS1BMoSUUylgTiS4B_pM6rl5PWmF4Zm7h82Rghg?nav=YWU2OWM2M2YtMjVmNi00NDlkLTkxNzktNGExMjQ1ZGU2YTE4).
+
+You will need the following details:
 
 * URL of the service
 * Any access required (passwords, VPN, etc.)
