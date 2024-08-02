@@ -2,8 +2,8 @@
 title: How to write an accessibility statement
 summary: "A step by step guide to writing an accessibility statement."
 author: ["Defra accessibility team"]
-version: "1.0"
-publishedDate: 2022-07-04
+version: "1.1"
+publishedDate: 2024-08-02
 status: live
 tags:
   - requirementsRules
@@ -99,7 +99,7 @@ Explain in your accessibility statement that you’ve not made things like this 
 These go in SECTION 12 of the template.
 
 
-### 8. Add the correct WCAG 2.1 reference to each non-compliance
+### 8. Add the correct WCAG 2.2 reference to each non-compliance
 
 A ‘non-compliance’ is an accessibility problem that does not conform to one of the WCAG guidelines (called a ‘success criterion’ in WCAG). For example, the text colour contrast may be too low which fails (does not conform to) WCAG success criterion 1.4.3 Contrast (Minimum).
 
@@ -236,7 +236,7 @@ Has a heading ”Non-accessible content” (no need if status is ‘fully compli
 The list of non-accessible content should include:
 
 * a non-technical description of how the content is not accessible
-* which of the WCAG 2.1 AA success criteria the problem fails on
+* which of the WCAG 2.2 AA success criteria the problem fails on
 * when you plan to fix the problem
 
 The simple public list of issues and the technical list are consistent (although we’d expect the simple list to group and summarise the technical list).

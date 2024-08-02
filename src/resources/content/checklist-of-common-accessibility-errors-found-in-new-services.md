@@ -2,8 +2,8 @@
 title: Checklist of common accessibility errors found in new services
 summary: This guidance applies mainly to new digital services built using the GDS Design System. It’s not an overall accessibility checklist - it just highlights common issues to check for.
 author: ["Defra accessibility team"]
-version: "1.1"
-publishedDate: 2022-02-18
+version: "1."
+publishedDate: 2024-08-02
 status: live
 tags:
   - checkingAccessibility
@@ -125,7 +125,7 @@ See [Use the autocomplete attribute in the Design System](https://design-system.
 
 <h2 id="conditional-reveals-should-be-simple-questions">Conditional reveals should be simple questions</h2>
 
-Conditional reveals do not automatically fail WCAG 2.1 provided that you follow these guidelines:
+Conditional reveals do not automatically fail WCAG 2.2 provided that you follow these guidelines:
 
 * Keep it simple. If the related question is complicated or has more than one part, show it on the next page in the process instead.
 * Do not conditionally reveal questions to inline radios, such as ‘yes’ and ‘no’ options placed next to each other.

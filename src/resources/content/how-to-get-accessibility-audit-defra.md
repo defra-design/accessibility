@@ -2,8 +2,8 @@
 title: How to get an accessibility audit in Defra Group
 summary: Outlines the steps to procure an accessibility audit and how to decide what type to have.
 author: ["Defra accessibility team"]
-version: "1.4"
-publishedDate: 2024-07-03
+version: "1.5"
+publishedDate: 2024-08-02
 status: live
 tags:
   - checkingAccessibility
@@ -28,7 +28,7 @@ We can give help and advice about accessibility testing and help your team or QA
 
 ## Why you usually need an external audit
 
-There is a legal requirement to make Defra websites accessible. The Public Sector Bodies Accessibility Regulations 2018 require that services meet the Web Content Accessibility Guidelines (WCAG) 2.1 AA accessibility standard and publish an accessibility statement documenting their conformance against the standard.
+There is a legal requirement to make Defra websites accessible. The Public Sector Bodies Accessibility Regulations 2018 require that services meet the Web Content Accessibility Guidelines (WCAG) 2.2 AA accessibility standard and publish an accessibility statement documenting their conformance against the standard.
 
 You need an audit to find the issues so you can fix them and also to include in your statement while you are fixing them.
 
