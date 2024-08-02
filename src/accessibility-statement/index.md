@@ -42,11 +42,11 @@ Defra is committed to making its website accessible, in accordance with the Publ
 
 ## Compliance status
 
-This website is fully compliant with the Web Content Accessibility Guidelines version 2.1 AA standard.
+This website is fully compliant with the Web Content Accessibility Guidelines version 2.2 AA standard.
 
 ## How we tested this website
 
-We last tested this website for accessibility issues in December 2021. We did a quick further check in June 2022.
+We last tested this website for accessibility issues in December 2021. We did further Quick Checks in June 2022, and July 2024.
 
 We used manual and automated tests to look for issues.
 
@@ -63,6 +63,6 @@ In July 2022 we:
 
 ## Preparation of this accessibility statement
 
-This statement was prepared on 21 December 2021. It was last reviewed on 22 July 2022.
+This statement was prepared on 21 December 2021. It was last reviewed on 2 August 2024.
 
-This website was last tested in December 2021.  We did a quick further check in July 2022. The test was carried out by the Accessibility Team in Defra. We tested all of the website's pages.
+This website was last tested in December 2021. We did further Quick Checks in June 2022, and July 2024. The test was carried out by the Accessibility Team in Defra. We tested all of the website's pages.
