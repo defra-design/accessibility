@@ -65,6 +65,8 @@ You will need the following details:
 We’ll then pass it onto the auditor who will scope the work and provide a quote for you.
 If you’re happy with the quote the work will be scheduled in.
 
+Depending on the complexity of your service the audit can take a day or more than a week, the quote will tell you. Once the audit is completed it will also take a few days to put together a report. Generally it will be around two working weeks from the start of the audit to the report being available.
+
 Once complete you’ll get a copy of the audit report, a chance to speak with the auditor (if required) and an option to have a confirmation check of any changes you make to fix any issues.
 
 ### Budget for an external audit
