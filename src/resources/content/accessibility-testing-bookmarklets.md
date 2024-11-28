@@ -3,7 +3,7 @@ title: Accessibility testing tools for managed laptops
 summary: "When testing software on a managed device, you may be unable to download automated tools or browser extensions. In this case, you can use bookmarklets to help you test for accessibility conformance."
 author: ["Defra accessibility team"]
 version: "3.1"
-publishedDate: 2022-02-21
+publishedDate: 2024-11-28
 status: live
 tags:
   - checkingAccessibility
