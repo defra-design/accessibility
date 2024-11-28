@@ -13,9 +13,18 @@ tags:
 Automated tools that can be used for testing websites on managed devices, where you are unable to install additional tools or browser plug-ins.
 
 **On this page**
+* [Browser Extensions available in Defra Group](#defra-extensions)
 * [Using the tools](#using-tools)
 * [General tools that will spot a range of issues](#general-tools)
 * [Specific tools for checking details](#specific-tools)
+
+<h2 id="defra-extensions">Browser Extensions available in Defra Group</h2>
+
+You can install and use "WAVE" and "Accessibility Insights for Web" on your Defra Group laptop - but only with the Edge browser.
+
+* [Accessibility Insights for Web](https://microsoftedge.microsoft.com/addons/detail/accessibility-insights-fo/ghbhpcookfemncgoinjblecnilppimih) can perform simple automated checks and walk you through manual testing. It's good for more in depth testing on complex pages, but isn't as "immediate" as WAVE.
+* [WAVE](https://microsoftedge.microsoft.com/addons/detail/wave-evaluation-tool/khapceneeednkiopkkbgkibbdoajpkoj) can perform simple automated checks and show the results within the page. It's good for checking relatively simple pages.
+
 
 <h2 id="using-tools">Using the tools</h2>
 
