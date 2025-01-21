@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     
-    <title>Site map - Defra Accessibility Resources</title>
+    <title>Microsoft Power Apps accessibility - Defra Accessibility Resources</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
@@ -578,134 +578,117 @@ code {
     <main id="main" class="c-main">
       <div class="[ c-main__wrapper ] [ u-width-wrapper u-flow ]">
         <!-- 
-         -->
+  <ol class="c-breadcrumbs">
+    <li class="c-breadcrumbs__list-item">
+      <a href="/accessibility/" class="c-breadcrumbs__link">Home</a>
+    </li>
+    
+      
         
-          <h1>Site map</h1>
+      
+    
+    <li class="c-breadcrumbs__list-item">
+      <a href="." class="c-breadcrumbs__link" aria-current="page">Microsoft Power Apps accessibility</a>
+    </li>
+  </ol>
+ -->
+        
+          <h1>Microsoft Power Apps accessibility</h1>
         
         
 
+  
+  
+  
+  
+    
+      
+        <p>Version 1.0, published 20 January 2025.</p>
+    
+    
+      
+      
+    
+      
+      
+    
+  
+
+  
+  
+  </p>
+
+  <div class="c-blog__content">
+    <h2>Microsoft Power Apps</h2>
+<p>Microsoft Power Apps offers a low code solution to developing sites and applications and has been approved for use across Defra. In 2024 we became aware of serious accessibility concerns and initiated a testing and assurance project to discern which components (called <strong>controls</strong>) are not compliant with WCAG 2.2 to level AA.</p>
+<h2>Current overall status</h2>
+<p>Last updated: 20/01/2025</p>
 <ul>
-  <li><a href="/accessibility/">Defra Accessibility Resources</a>
-
-    <ul>
-
-      <li>Checking accessibility
-        <ul>
-          
-            
-          
-            
-              <li>
-                <a href="/accessibility/resources/content/accessibility-testing-bookmarklets/">Accessibility testing tools for managed laptops</a>
-              </li>
-            
-          
-            
-              <li>
-                <a href="/accessibility/resources/content/checklist-of-common-accessibility-errors-found-in-new-services/">Checklist of common accessibility errors found in new services</a>
-              </li>
-            
-          
-            
-              <li>
-                <a href="/accessibility/resources/content/how-to-get-accessibility-audit-defra/">How to get an accessibility audit in Defra Group</a>
-              </li>
-            
-          
-            
-              <li>
-                <a href="/accessibility/resources/content/microsoft-power-apps-accessibility/">Microsoft Power Apps accessibility</a>
-              </li>
-            
-          
-            
-              <li>
-                <a href="/accessibility/resources/content/testing-mobile-applications-for-accessibility-for-accessibility/">Testing mobile applications for accessibility</a>
-              </li>
-            
-          
-            
-              <li>
-                <a href="/accessibility/resources/content/role-accessibility-team/">The role of the Accessibility Team</a>
-              </li>
-            
-          
-        </ul>
-      </li>
-
-      <li>Content and forms
-        <ul>
-          
-            
-              <li>
-                <a href="/accessibility/resources/content/how-to-make-a-qualtrics-form-more-accessible/">How to make a Qualtrics form more accessible</a>
-              </li>
-            
-
-          
-            
-              <li>
-                <a href="/accessibility/resources/content/improve-social-media-accessibility/">Improve social media accessibility</a>
-              </li>
-            
-
-          
-        </ul>
-      </li>
-
-      <li>Requirements and rules
-        <ul>
-          
-            
-              <li>
-                <a href="/accessibility/resources/content/draft-accessibility-requirements-tenders/">Draft accessibility requirements for tenders</a>
-              </li>
-            
-          
-            
-              <li>
-                <a href="/accessibility/resources/content/how-to-write-accessibility-statement/">How to write an accessibility statement</a>
-              </li>
-            
-          
-            
-              <li>
-                <a href="/accessibility/resources/content/overview-of-accessibility-legislation-and-requirements/">Overview of accessibility legislation and requirements</a>
-              </li>
-            
-          
-        </ul>
-      </li>
-
-      <li>Research
-        <ul>
-          
-            
-              <li>
-                <a href="/accessibility/resources/content/accessibility-presentations/">Accessibility presentations</a>
-              </li>
-            
-          
-            
-              <li>
-                <a href="/accessibility/resources/content/estimate-how-many-people-using-your-website-might-be-disabled/">Estimate how many people using your website might be disabled</a>
-              </li>
-            
-          
-            
-              <li>
-                <a href="/accessibility/resources/content/find-out-about-your-users-accessibility-needs/">Find out about your users&#39; accessibility needs</a>
-              </li>
-            
-          
-        </ul>
-      </li>
-
-    </ul>
-  </li>
-
+<li><strong>Global issues -</strong> There are currently <strong>2</strong> issues affecting all or the majority of controls.</li>
+<li><strong>Control specific issues -</strong> There are currently <strong>13</strong> issues affecting specific controls</li>
 </ul>
+<p>All current issues have been reported to Microsoft. We are working directly with the Microsoft eDAD (enterprise Disability Answer Desk) team to replicate and prioritise these issues.</p>
+<p>Timescales for fixes will be available here when known.</p>
+<h2>Global issues</h2>
+<h3>Focus indication on last control on a page</h3>
+<p>2.4.7 – Focus Visible</p>
+<p>Focus indicator completely disappears intermittently on reverse keyboard navigation (shift+tab) on final control on any page. This is an issue currently present across almost every control tested, in both live environments and our test application.</p>
+<h3>Focus indication within navigable controls</h3>
+<p>2.4.7 – Focus Visible</p>
+<p>Focus indication inconsistent/less effective when inside control. The control itself has a thick, black border for focus indication. When inside the control this becomes a thinner, light blue indicator. This issue is present on many controls where the user can navigate inside the control after navigating to the control.</p>
+<h2>Control specific issues</h2>
+<h3>Camera</h3>
+<p>2.1.1 – Keyboard</p>
+<p>Picture-in-Picture mode button within control not accessible without mouse.</p>
+<h3>Column chart</h3>
+<p>2.1.1 – Keyboard</p>
+<p>Keyboard/AT navigation of this control broken or completely counter intuitive.</p>
+<h3>Combo box</h3>
+<p>2.1.1 – Keyboard</p>
+<p>Control loses focus if a keyboard or AT user reaches the end of the search suggestions and inputs down one more time. This is incredibly easy to do accidentally and as the suggestion list is dynamic the user cannot rely on memory to know when to stop navigating and the burden is upon them to move through the list very slowly and carefully.</p>
+<h3>Data table</h3>
+<p>1.4.10 – Reflow</p>
+<p>Reflow behaviour particularly at high zoom levels not sufficiently robust. This can lead to situations where the navigation scroll bars are not visible or interactable at a user’s chosen zoom level.</p>
+<h3>Form - (Modern preview)</h3>
+<p>1.4.10 – Reflow</p>
+<p>Does not reflow properly at all zoom levels.</p>
+<h3>Gallery</h3>
+<p>2.4.7 – Focus Visible</p>
+<p>Focus and keyboard navigation incredibly poor out of the box. Documentation has suggestions on how to modify this element to improve accessibility, but this would require a high level of expertise and the results are still likely to be sub optimal.</p>
+<h3>Rating</h3>
+<p>3.2.2 – On Input</p>
+<p>Keyboard behaviour unexpected, Up arrow decreases rating, Down arrow increases rating.</p>
+<h3>Rich text editor</h3>
+<p>1.4.10 – Reflow</p>
+<p>Does not reflow properly at all zoom levels.</p>
+<h3>Spinner (Modern control)</h3>
+<p>1.3.3 – Sensory Characteristics</p>
+<p>Often fails to convey any meaningful information to VI users due to poor ARIA usage.</p>
+<h3>Table (Modern control)</h3>
+<p>3.2.3 – Consistent Navigation</p>
+<p>Applying filters breaks continuity of navigation for keyboard and AT users, resets focus.</p>
+<h3>Timer</h3>
+<p>2.4.7 – Focus Visible</p>
+<p>Poor default focus indication.</p>
+<h3>Toolbar (Modern control preview)</h3>
+<p>1.3.3 – Sensory Characteristics</p>
+<p>Inactive controls navigable but fail to meet minimum contrast requirements. Inactive controls are only visually identifiable by colour.</p>
+<h3>Video</h3>
+<p>2.1.1 – Keyboard</p>
+<p>Cyclical navigation via keyboard breaks when video control is in full screen mode. This inconsistency in controls is a cause of confusion and frustration for non-mouse users.</p>
 
+  </div>
+
+  <p class="c-blog__author">Written by
+    
+    
+    <a href="/accessibility/authors/defra-accessibility-team/">Defra accessibility team</a>.
+    
+    
+      
+      
+    
+  </p>
 
 
       </div>
