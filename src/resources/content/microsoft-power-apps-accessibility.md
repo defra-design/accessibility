@@ -39,8 +39,7 @@ Focus indicator completely disappears intermittently on reverse keyboard navigat
 
 2.4.7 – Focus Visible
 
-Focus indication inconsistent/less effective when inside control. Control itself has a thick, black border for focus indication. When inside the control this becomes a thinner, light blue indicator. This issue is present on many controls where the user can navigate inside the control after navigating to the control.
-
+Focus indication inconsistent/less effective when inside control. The control itself has a thick, black border for focus indication. When inside the control this becomes a thinner, light blue indicator. This issue is present on many controls where the user can navigate inside the control after navigating to the control.
 
 ## Control specific issues
 
@@ -96,11 +95,7 @@ Does not reflow properly at all zoom levels.
 
 1.3.3 – Sensory Characteristics
 
-Often fails to convey any meaningful information to VI users. Home Office recommendations for proper spinner usage:
-
-aria-live=”polite”
-role=”status”
-the div is called “loading
+Often fails to convey any meaningful information to VI users due to poor ARIA usage.
 
 ### Table (Modern control)
 
