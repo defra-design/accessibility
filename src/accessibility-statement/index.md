@@ -2,6 +2,7 @@
 title: Accessibility statement for Defra Accessibility Resources
 layout: "base.html"
 permalink: '/accessibility-statement/index.html'
+summary: "An Accessibility Statement for the Accessibility Resources site"
 ---
 
 This accessibility statement applies to this website, covered by the Defra Accessibility Resources.
