@@ -41,7 +41,6 @@ Focus indicator completely disappears intermittently on reverse keyboard navigat
 
 Focus indication inconsistent/less effective when inside control. The control itself has a thick, black border for focus indication. When inside the control this becomes a thinner, light blue indicator. This issue is present on many controls where the user can navigate inside the control after navigating to the control.
 
-
 ## Control specific issues
 
 ### Camera
