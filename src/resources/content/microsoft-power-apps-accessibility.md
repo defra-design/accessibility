@@ -4,6 +4,7 @@ summary: "Guidance on accessible use of Microsoft Power Apps ."
 author: ["Defra accessibility team"]
 version: "1.1"
 publishedDate: 2025-06-03
+
 status: live
 tags:
   - checkingAccessibility
