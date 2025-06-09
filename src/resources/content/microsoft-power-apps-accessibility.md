@@ -138,11 +138,9 @@ The Rating control fails the [WCAG 3.2.2: On Input](https://www.w3.org/WAI/WCAG2
 
 ### Table control (Modern control)
 
-[Table control in Power Apps - Power Apps | Microsoft Learn](https://learn.microsoft.com/en-us/power-apps/maker/canvas-apps/controls/modern-controls/modern-control-table)
+Applying filters to the [Table control in Power Apps - Power Apps | Microsoft Learn](https://learn.microsoft.com/en-us/power-apps/maker/canvas-apps/controls/modern-controls/modern-control-table) can cause loss of focus and break the continuity of the journey for the end user. This issue is especially problematic for users of assistive technology or rely on a keyboard for navigation, as resuming the journey can be much more difficult without the ability to simply click on the table header again.
 
-WCAG criteria: [3.2.3 – Consistent Navigation](https://www.w3.org/WAI/WCAG22/Understanding/consistent-navigation.html)
-
-Applying filters breaks the continuity
+The Table control fails the [WCAG 3.2.3 – Consistent Navigation](https://www.w3.org/WAI/WCAG22/Understanding/consistent-navigation.html) criteria, that outlines the importance of a consistent and unbroken user experience, regardless of user preferences and usage of assistive technology.
 
 ### Video control
 
