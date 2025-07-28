@@ -21,7 +21,7 @@ See also [Getting an accessibility audit - GDS guidance](https://www.gov.uk/serv
 
 The Defra Accessibility Team no longer performs audits. This is because we do not have the time (we are only 3 staff covering over 200 public websites) and because we think specialist external auditors will provide the independent assurance that you need.
 
-We can do a quick accessibility review of your site to give you an overview of the likely issues that a full audit may find. This can help you get started on fixing issues before the audit. [Request a Quick Check](https://defra.sharepoint.com/:l:/t/Team4443/FJ8dSlviy4RHnfiV_eXwNtMBw9RYRfQ0OOy-xh53FXKMrg?nav=MDg1MjAzNTctZjVhMC00ZTIwLWJlODYtNzk2MjdiZWUyNWQy).
+We can do an accessibility review of your site to give you an overview of the likely issues that a full audit may find. This can help you get started on fixing issues before the audit. [Request an Expert Accessibility Review](https://defra.sharepoint.com/:l:/t/Team4443/FJ8dSlviy4RHnfiV_eXwNtMBw9RYRfQ0OOy-xh53FXKMrg?nav=MDg1MjAzNTctZjVhMC00ZTIwLWJlODYtNzk2MjdiZWUyNWQy).
 
 We can give help and advice about accessibility testing and help your team or QA staff do some of their own testing. We can also help you build testing into your ongoing QA as part of continuous development.
 
