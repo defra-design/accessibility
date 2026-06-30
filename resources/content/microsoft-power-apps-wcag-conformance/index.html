@@ -3,17 +3,13 @@
   <head>
     <meta charset="utf-8">
     
-    <title>
-Content relating to 
- - Defra Accessibility Resources</title>
-    <meta property="og:title" content="
-Content relating to 
- - Defra Accessibility Resources" />
-    <meta property="og:description" content="" />
+    <title>Microsoft Power Apps WCAG Conformance - Defra Accessibility Resources</title>
+    <meta property="og:title" content="Microsoft Power Apps WCAG Conformance - Defra Accessibility Resources" />
+    <meta property="og:description" content="Guidance on WCAG conformance of Microsoft Power Apps ." />
     
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://defra-design.github.io/accessibility/tag/checkingaccessibility/" />
+    <meta property="og:url" content="https://defra-design.github.io/accessibility/resources/content/microsoft-power-apps-wcag-conformance/" />
     <meta property="og:locale" content="en_GB" />
     <meta property="og:image" content="https://defra-design.github.io/accessibility/_includes/_openGraph/darOG.png">
     <style>
@@ -592,34 +588,28 @@ code {
     <li class="c-breadcrumbs__list-item">
       <a href="/accessibility/" class="c-breadcrumbs__link">Home</a>
     </li>
+    
+      
+        
+      
+    
     <li class="c-breadcrumbs__list-item">
-      <a href="/accessibility/blog/" class="c-breadcrumbs__link">Blog</a>
-    </li>
-    <li class="c-breadcrumbs__list-item">
-      <a href="/accessibility/tag/checkingaccessibility/" class="c-breadcrumbs__link" aria-current="page">Content relating to </a>
+      <a href="." class="c-breadcrumbs__link" aria-current="page">Microsoft Power Apps WCAG Conformance</a>
     </li>
   </ol>
  -->
         
-          <h1>
-Content relating to 
-</h1>
+          <h1>Microsoft Power Apps WCAG Conformance</h1>
         
         
+
+  
+  
+  
   
     
-    
-    
-    
-    
-    
-    
-    
-    <div class="c-blog-card">
-  <h2 class="c-blog-card__title"><a href="/accessibility/resources/content/testing-mobile-applications-for-accessibility-for-accessibility/">Testing mobile applications for accessibility</a></h2>
-  <p class="c-blog-card__category">This article relates to 
-    
-    
+      
+        <p>Version 1.2, published 30 June 2026.</p>
     
     
       
@@ -628,297 +618,93 @@ Content relating to
       
       
     
-    
-    
-    
+  
+
+  
+  
   </p>
-  <p class="c-blog-card__summary">
-  This document outlines how the Defra accessibility team tests mobile applications on iOS and Android devices for accessibility issues.
-  </p>
-  <a href="/accessibility/resources/content/testing-mobile-applications-for-accessibility-for-accessibility/" class="c-blog-card__link">Read Testing mobile applications for accessibility</a>
-  <p class="c-blog-card__author">Written by 
-    
+
+  <div class="c-blog__content">
+    <h2>Power Apps WCAG Conformance</h2>
+<p>The accessibility team identified 2 types of accessibility issues:</p>
+<ol>
+<li>Global issues: these issues that affect all or most Power Apps controls. There are currently 2 global issues.</li>
+<li>Control-specific issues: these issues affect specific controls rather than the platform as a whole.</li>
+</ol>
+<h2>Global Accessibility Issues</h2>
+<h3>Focus indication on the last control on a page</h3>
+<p>The <a href="https://learn.microsoft.com/en-us/powerapps/maker/canvas-apps/controls/control-focus">focus indicator</a> is what shows you where you are on the screen. Sometimes, when using the keyboard to move backwards through the app (by pressing Shift +Tab to go to the previous control), the focus indicator disappears.</p>
+<p>For example, if someone moves backwards through the controls, they may get stuck between the second-to-last control and the final one. Without focus being shown, they cannot tell which control is selected or where to go next.</p>
+<p>A visible focus indicator is crucial for users who rely on a keyboard or assistive technology instead of a mouse. Without it, these users may be unable to use the app or complete their tasks.</p>
+<p>This means the last control on a page would fail the <a href="https://www.w3.org/WAI/WCAG21/quickref/?showtechniques=143#focus-visible">WCAG 2.4.7: Focus Visible</a> criteria. This criterion says there must be visible styling to indicate which element the user is currently focused on.</p>
+<h3>Focus indication within navigable controls</h3>
+<p>The focus indicator becomes harder to see in navigable controls, this issue is present on many controls where the user can navigate inside the control after navigating to the control.</p>
+<p>When focus first lands on the control, it is clearly shown with a thick black border. But once the user starts moving between elements inside the control, the focus indicator changes to a thin light blue outline that is much harder to notice.</p>
+<p>This creates barriers for people who rely on a keyboard or assistive technology, such as screen readers. Without a clear focus indicator, users may lose their place, skip important options, or interact with the wrong element without realising.</p>
+<p>This means these controls would fail the <a href="https://www.w3.org/WAI/WCAG21/quickref/?showtechniques=143#focus-visible">WCAG 2.4.7: Focus Visible</a> criteria. This criterion says there must be visible styling to indicate which element the user is currently focused on.</p>
+<h2>Control Specific Issues</h2>
+<h3>Camera control</h3>
+<p>The Picture-in-Picture mode button in the <a href="https://learn.microsoft.com/en-us/power-apps/maker/canvas-apps/controls/control-camera">Camera control</a> cannot be accessed using a keyboard or assistive technology and only works with a mouse. This button lets users pop out the camera view while continuing to interact with other parts of the app. However, users who do not use a mouse cannot activate it.</p>
+<p>The Camera control fails the <a href="https://www.w3.org/WAI/WCAG21/Understanding/keyboard.html">WCAG 2.1.1: Keyboard</a> criteria. This criterion says all functionality in an app must be available using only a keyboard. Anything a user can do with a mouse, touch, or gesture must also be possible with the keyboard.</p>
+<h3>Column chart control</h3>
+<p>When using the <a href="https://learn.microsoft.com/en-us/power-apps/maker/canvas-apps/controls/control-column-line-chart">Column chart control</a>, users cannot reliably navigate or interact with the chart using a keyboard or assistive technologies such as screen readers.</p>
+<p>The Column chart control fails the <a href="https://www.w3.org/WAI/WCAG21/Understanding/keyboard.html">WCAG 2.1.1: Keyboard</a> criteria. This criterion says that all interactive elements can be used with a keyboard alone, without needing a mouse.</p>
+<h3>Spinner control (modern control)</h3>
+<p>The <a href="https://learn.microsoft.com/en-us/power-apps/maker/canvas-apps/controls/modern-controls/modern-control-spinner">Spinner control</a> (modern control) fails to convey any meaningful information to visually impaired users due to poor use of <a href="https://www.w3.org/WAI/ARIA/apg/">Accessible Rich Internet Applications (ARIA)</a> tags. ARIA tags are used to provide extra information to assistive technologies, about what is happening on the screen. However, in this case, the Spinner is not announced properly, leaving users unaware that content is still loading.</p>
+<p>The Spinner control fails the <a href="https://www.w3.org/WAI/WCAG21/quickref/?showtechniques=143#sensory-characteristics">WCAG 1.3.3: Sensory Characteristics</a> criteria. This criterion says that content should not depend on sensory characteristics, like colour, shape, or size, to convey meaning.</p>
+<h3>Toolbar control (modern preview)</h3>
+<p>When the <a href="https://learn.microsoft.com/en-us/powerapps/maker/canvas-apps/controls/control-toolbar">Toolbar control (modern preview)</a>, is inactive, controls are navigable but fail to meet minimum contrast requirements. This is because when this control is inactive, it is only identifiable by colour, which makes it difficult for users to distinguish it from active controls.</p>
+<p>This creates problems for users with low vision or colour blindness, who rely on clear visual cues to identify different states. If there is not enough contrast, users may struggle to tell which controls are active or inactive. This can lead to confusion, errors, or difficulty completing tasks.</p>
+<p>The Toolbar control fails the <a href="https://www.w3.org/WAI/WCAG21/quickref/?showtechniques=143#sensory-characteristics">WCAG 1.3.3: Sensory Characteristics</a> criteria. This criterion says that content should not rely on sensory characteristics, such as colour, shape, or size, to convey meaning or information.</p>
+<h3>Combobox control</h3>
+<p>The <a href="https://learn.microsoft.com/en-us/power-apps/maker/canvas-apps/controls/modern-controls/modern-control-combobox">Combobox control</a> loses focus when a keyboard or assistive technology user presses the �Down� arrow after reaching the end of the search suggestions. The user drops out of control with no message to confirm they have reached the end, and there is no option to return to the start of the list.</p>
+<p>This means users must move through the list slowly and carefully to avoid losing focus. If they do, they must find their way back manually, which can be confusing and frustrating.</p>
+<p>In some cases, users may lose data they have already entered. This is easy to do by accident, especially because the list updates automatically while the user is typing.</p>
+<p>The Combobox control fails the <a href="https://www.w3.org/WAI/WCAG21/Understanding/keyboard.html">WCAG 2.1.1: Keyboard</a> criteria. This criterion says that all controls must be usable with a keyboard without needing a mouse.</p>
+<h3>Data table control</h3>
+<p>The <a href="https://learn.microsoft.com/en-us/power-apps/maker/canvas-apps/controls/control-data-table">Data table control</a> does not reflow correctly at higher zoom levels. In some cases, scrollbars do not appear or cannot be used, which prevents users from accessing parts of the table.</p>
+<p>For people who need to zoom in to read content, poor reflow creates serious barriers. If parts of the table are hidden or inaccessible, users may not be able to complete their tasks.</p>
+<p>The Data table control fails the <a href="https://www.w3.org/WAI/WCAG21/Understanding/reflow.html">WCAG 1.4.10: Reflow</a> criteria. This criterion says that all the content must adapt to different screen sizes and zoom levels without needing to scroll both ways.</p>
+<h3>Form control (modern preview)</h3>
+<p>The <a href="https://learn.microsoft.com/en-us/power-apps/maker/canvas-apps/working-with-forms">Form control (modern preview)</a> does not reflow properly at higher zoom levels. Form fields can run off the side of the screen, and horizontal scrolling may be needed to view or complete the form.</p>
+<p>This could create a problem for users who need to zoom in to make text or fields easier to read. If they cannot see all the fields, labels, or buttons without scrolling sideways, they may miss important information, enter incorrect data, or be unable to submit the form.</p>
+<p>The Form control (modern preview) fails the <a href="https://www.w3.org/WAI/WCAG21/Understanding/reflow.html">WCAG 1.4.10: Reflow</a> criteria. This criterion says that content must remain readable and usable at different zoom levels without requiring horizontal scrolling.</p>
+<h3>Gallery control</h3>
+<p>The <a href="https://learn.microsoft.com/en-us/power-apps/maker/canvas-apps/controls/control-gallery#description">Gallery control</a> does not include visible focus styling by default, and keyboard navigation is difficult to use. When users tab through a gallery, which item is currently selected or in focus is often unclear.</p>
+<p>For users who rely on a keyboard or assistive technology to move through content, this creates a barrier to using the app. Without a visible focus indicator, users can lose track of their position in the gallery. They may be unable to interact with or select items.</p>
+<p>The Gallery control fails the <a href="https://www.w3.org/WAI/WCAG21/Understanding/focus-visible.html">WCAG 2.4.7: Focus Visible</a> criteria. This criterion says that when a control receives focus, it must be clearly visible.</p>
+<h3>Rich text editor control</h3>
+<p>The <a href="https://learn.microsoft.com/en-us/power-apps/maker/canvas-apps/controls/control-richtexteditor">Rich text editor control</a> does not reflow properly at higher zoom levels. When zoomed in, parts of the toolbar or text area can disappear off-screen. Users may need to scroll both vertically and horizontally to access formatting options or complete the required tasks.</p>
+<p>This could create a problem for users who need to zoom in to make text or fields easier to read. If key parts of the editor are hidden, users may miss important features. They might not be able to format or submit their content.</p>
+<p>The Rich text editor control fails the <a href="https://www.w3.org/WAI/WCAG21/Understanding/reflow.html">WCAG 1.4.10: Reflow</a> criteria. This criterion says that content must remain readable and usable at different zoom levels without requiring horizontal scrolling.</p>
+<h3>Timer control</h3>
+<p>The <a href="https://learn.microsoft.com/en-us/power-apps/maker/canvas-apps/controls/control-timer">Timer control</a> does not show a visible focus indicator when a user navigates to it using a keyboard. Other controls show a solid black outline that is 2 to 3 pixels wide, but this is missing entirely.</p>
+<p>Users who rely on a keyboard to navigate the app cannot tell which control they are on if there is no visible focus indicator. This makes it harder to complete tasks, increases confusion, and can lead to mistakes.</p>
+<p>The Timer control fails the <a href="https://www.w3.org/WAI/WCAG21/Understanding/focus-visible.html">WCAG 2.4.7: Focus Visible</a> criteria. This criterion says there must be visible styling to indicate which element the user is currently focused on.</p>
+<h3>Rating control</h3>
+<p>When using the <a href="https://learn.microsoft.com/en-us/power-apps/maker/canvas-apps/controls/control-rating">Rating control</a> with a keyboard, the arrow keys do not behave as expected. Pressing the 'Up' arrow decreases the rating, while pressing the 'Down' arrow increases it.</p>
+<p>This can be confusing, particularly for those who rely on a keyboard instead of a mouse. When a control does not respond as anticipated, users may find it difficult to complete tasks or may lose confidence in how the app works.</p>
+<p>The Rating control fails the <a href="https://www.w3.org/WAI/WCAG21/Understanding/on-input.html">WCAG 3.2.2: On Input</a> criteria. This criterion says that interacting with a control must not cause unexpected changes. Controls should behave in ways users can predict and understand.</p>
+<h3>Table control (Modern control)</h3>
+<p>Applying filters to the <a href="https://learn.microsoft.com/en-us/power-apps/maker/canvas-apps/controls/modern-controls/modern-control-table">Table control in Power Apps - Power Apps | Microsoft Learn</a> can cause loss of focus and break the continuity of the journey for the end user. This issue is especially problematic for users of assistive technology or rely on a keyboard for navigation, as resuming the journey can be much more difficult without the ability to simply click on the table header again.</p>
+<p>The Table control fails the <a href="https://www.w3.org/WAI/WCAG22/Understanding/consistent-navigation.html">WCAG 3.2.3 � Consistent Navigation</a> criteria, that outlines the importance of a consistent and unbroken user experience, regardless of user preferences and usage of assistive technology.</p>
+<h3>Video control</h3>
+<p>When the Video control enters full-screen mode, cyclical navigation does not work for keyboard and assistive technology users. Normally, users can press the Tab key to move through all available controls, such as play, pause, and exit full screen. Focus should move through each control in order and then return to the start, but this behaviour breaks in full-screen mode.</p>
+<p>The Video control fails the <a href="https://www.w3.org/WAI/WCAG21/Understanding/keyboard.html">WCAG 2.1.1: Keyboard</a> criteria. This criterion says that all the control functions should be usable with only a keyboard and not need a mouse.</p>
+
+  </div>
+
+  <p class="c-blog__author">Written by
     
     
     <a href="/accessibility/authors/defra-accessibility-team/">Defra accessibility team</a>.
     
-    Published 30 June 2026.
-  </p>
-</div>
-  
-    
-    
-    
-    
-    
-    
-    
-    
-    <div class="c-blog-card">
-  <h2 class="c-blog-card__title"><a href="/accessibility/resources/content/role-accessibility-team/">The role of the Accessibility Team</a></h2>
-  <p class="c-blog-card__category">This article relates to 
-    
-    
-    
     
       
       
-    
-      
-      
-    
-    
-    
     
   </p>
-  <p class="c-blog-card__summary">
-  What the Defra accessibility team can do to help you.
-  </p>
-  <a href="/accessibility/resources/content/role-accessibility-team/" class="c-blog-card__link">Read The role of the Accessibility Team</a>
-  <p class="c-blog-card__author">Written by 
-    
-    
-    
-    <a href="/accessibility/authors/defra-accessibility-team/">Defra accessibility team</a>.
-    
-    Published 30 June 2026.
-  </p>
-</div>
-  
-    
-    
-    
-    
-    
-    
-    
-    
-    <div class="c-blog-card">
-  <h2 class="c-blog-card__title"><a href="/accessibility/resources/content/microsoft-power-apps-wcag-conformance/">Microsoft Power Apps WCAG Conformance</a></h2>
-  <p class="c-blog-card__category">This article relates to 
-    
-    
-    
-    
-      
-      
-    
-      
-      
-    
-    
-    
-    
-  </p>
-  <p class="c-blog-card__summary">
-  Guidance on WCAG conformance of Microsoft Power Apps .
-  </p>
-  <a href="/accessibility/resources/content/microsoft-power-apps-wcag-conformance/" class="c-blog-card__link">Read Microsoft Power Apps WCAG Conformance</a>
-  <p class="c-blog-card__author">Written by 
-    
-    
-    
-    <a href="/accessibility/authors/defra-accessibility-team/">Defra accessibility team</a>.
-    
-    Published 30 June 2026.
-  </p>
-</div>
-  
-    
-    
-    
-    
-    
-    
-    
-    
-    <div class="c-blog-card">
-  <h2 class="c-blog-card__title"><a href="/accessibility/resources/content/microsoft-power-apps-accessibility/">Microsoft Power Apps accessibility</a></h2>
-  <p class="c-blog-card__category">This article relates to 
-    
-    
-    
-    
-      
-      
-    
-      
-      
-    
-    
-    
-    
-  </p>
-  <p class="c-blog-card__summary">
-  Guidance on accessible use of Microsoft Power Apps .
-  </p>
-  <a href="/accessibility/resources/content/microsoft-power-apps-accessibility/" class="c-blog-card__link">Read Microsoft Power Apps accessibility</a>
-  <p class="c-blog-card__author">Written by 
-    
-    
-    
-    <a href="/accessibility/authors/defra-accessibility-team/">Defra accessibility team</a>.
-    
-    Published 30 June 2026.
-  </p>
-</div>
-  
-    
-    
-    
-    
-    
-    
-    
-    
-    <div class="c-blog-card">
-  <h2 class="c-blog-card__title"><a href="/accessibility/resources/content/how-to-get-accessibility-audit-defra/">How to get an accessibility audit in Defra Group</a></h2>
-  <p class="c-blog-card__category">This article relates to 
-    
-    
-    
-    
-      
-      
-    
-      
-      
-    
-    
-    
-    
-  </p>
-  <p class="c-blog-card__summary">
-  Outlines the steps to procure an accessibility audit and how to decide what type to have.
-  </p>
-  <a href="/accessibility/resources/content/how-to-get-accessibility-audit-defra/" class="c-blog-card__link">Read How to get an accessibility audit in Defra Group</a>
-  <p class="c-blog-card__author">Written by 
-    
-    
-    
-    <a href="/accessibility/authors/defra-accessibility-team/">Defra accessibility team</a>.
-    
-    Published 30 June 2026.
-  </p>
-</div>
-  
-    
-    
-    
-    
-    
-    
-    
-    
-    <div class="c-blog-card">
-  <h2 class="c-blog-card__title"><a href="/accessibility/resources/content/checklist-of-common-accessibility-errors-found-in-new-services/">Checklist of common accessibility errors found in new services</a></h2>
-  <p class="c-blog-card__category">This article relates to 
-    
-    
-    
-    
-      
-      
-    
-      
-      
-    
-    
-    
-    
-  </p>
-  <p class="c-blog-card__summary">
-  This guidance applies mainly to new digital services built using the GDS Design System. It’s not an overall accessibility checklist - it just highlights common issues to check for.
-  </p>
-  <a href="/accessibility/resources/content/checklist-of-common-accessibility-errors-found-in-new-services/" class="c-blog-card__link">Read Checklist of common accessibility errors found in new services</a>
-  <p class="c-blog-card__author">Written by 
-    
-    
-    
-    <a href="/accessibility/authors/defra-accessibility-team/">Defra accessibility team</a>.
-    
-    Published 30 June 2026.
-  </p>
-</div>
-  
-    
-    
-    
-    
-    
-    
-    
-    
-    <div class="c-blog-card">
-  <h2 class="c-blog-card__title"><a href="/accessibility/resources/content/accessibility-testing-bookmarklets/">Accessibility testing tools for managed laptops</a></h2>
-  <p class="c-blog-card__category">This article relates to 
-    
-    
-    
-    
-      
-      
-    
-      
-      
-    
-    
-    
-    
-  </p>
-  <p class="c-blog-card__summary">
-  When testing software on a managed device, you may be unable to download automated tools or browser extensions. In this case, you can use bookmarklets to help you test for accessibility conformance.
-  </p>
-  <a href="/accessibility/resources/content/accessibility-testing-bookmarklets/" class="c-blog-card__link">Read Accessibility testing tools for managed laptops</a>
-  <p class="c-blog-card__author">Written by 
-    
-    
-    
-    <a href="/accessibility/authors/defra-accessibility-team/">Defra accessibility team</a>.
-    
-    Published 30 June 2026.
-  </p>
-</div>
-  
-    
-    
-    
-    
-    
-    
-    
-    
-    <div class="c-blog-card">
-  <h2 class="c-blog-card__title"><a href="/accessibility/resources/content/accessibility-acceptance-criteria/">Accessibility acceptance criteria</a></h2>
-  <p class="c-blog-card__category">This article relates to 
-    
-    
-    
-    
-      
-      
-    
-      
-      
-    
-    
-    
-    
-  </p>
-  <p class="c-blog-card__summary">
-  Using acceptance criteria can help us to consider the conditions that our new services must meet in order to be usable with assistive technologies.
-  </p>
-  <a href="/accessibility/resources/content/accessibility-acceptance-criteria/" class="c-blog-card__link">Read Accessibility acceptance criteria</a>
-  <p class="c-blog-card__author">Written by 
-    
-    
-    
-    <a href="/accessibility/authors/defra-accessibility-team/">Defra accessibility team</a>.
-    
-    Published 30 June 2026.
-  </p>
-</div>
-  
+
 
       </div>
     </main>
