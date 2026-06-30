@@ -20,7 +20,7 @@ This practical guidance has been developed to help you identify which controls (
 
 If a control is marked as "Do not use" and your application requires it, you must contact the accessibility team for guidance and so that we can log and manage the risk.
 
-If you are writing an accessibility statement for a Power Apps project, or require technical details of specific WCAG violations, further information can be found at [Power Apps WCAG Conformance](../content/microsoft-power-apps-wcag-conformance.md/). 
+If you are writing an accessibility statement for a Power Apps project, or require technical details of specific WCAG violations, further information can be found at [Power Apps WCAG Conformance](/accessibility/resources/content/microsoft-power-apps-wcag-conformance/). 
 
 If you need help understanding how these issues affect your project or what your options are, email the accessibility team at accessibility@defra.gov.uk.
 
