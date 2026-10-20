@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8">
+    
+    <title>What to do when - Defra Accessibility Resources</title>
+    <meta property="og:title" content="What to do when - Defra Accessibility Resources" />
+    <meta property="og:description" content="What you need to do when to ensure your project, service, whatever meets the required accessibility standards." />
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://defra-design.github.io/accessibility/resources/content/what-to-do-when/" />
+    <meta property="og:locale" content="en_GB" />
+    <meta property="og:image" content="https://defra-design.github.io/accessibility/_includes/_openGraph/darOG.png">
+    <style>
+      /* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+      @font-face {
+    font-family: 'Atkinson Hyperlegible';
+    src: url('/accessibility/_includes/css/AtkinsonHyperlegible/AtkinsonHyperlegible-Regular.eot');
+    src: local('Atkinson Hyperlegible Regular'), local('AtkinsonHyperlegible-Regular'),
+        url('/accessibility/_includes/css/AtkinsonHyperlegible/AtkinsonHyperlegible-Regular.eot?#iefix') format('embedded-opentype'),
+        url('/accessibility/_includes/css/AtkinsonHyperlegible/AtkinsonHyperlegible-Regular.woff2') format('woff2'),
+        url('/accessibility/_includes/css/AtkinsonHyperlegible/AtkinsonHyperlegible-Regular.woff') format('woff'),
+        url('/accessibility/_includes/css/AtkinsonHyperlegible/AtkinsonHyperlegible-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Atkinson Hyperlegible';
+    src: url('/accessibility/_includes/css/AtkinsonHyperlegible/AtkinsonHyperlegible-Italic.eot');
+    src: local('Atkinson Hyperlegible Italic'), local('AtkinsonHyperlegible-Italic'),
+        url('/accessibility/_includes/css/AtkinsonHyperlegible/AtkinsonHyperlegible-Italic.eot?#iefix') format('embedded-opentype'),
+        url('/accessibility/_includes/css/AtkinsonHyperlegible/AtkinsonHyperlegible-Italic.woff2') format('woff2'),
+        url('/accessibility/_includes/css/AtkinsonHyperlegible/AtkinsonHyperlegible-Italic.woff') format('woff'),
+        url('/accessibility/_includes/css/AtkinsonHyperlegible/AtkinsonHyperlegible-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Atkinson Hyperlegible';
+    src: url('/accessibility/_includes/css/AtkinsonHyperlegible/AtkinsonHyperlegible-BoldItalic.eot');
+    src: local('Atkinson Hyperlegible Bold Italic'), local('AtkinsonHyperlegible-BoldItalic'),
+        url('/accessibility/_includes/css/AtkinsonHyperlegible/AtkinsonHyperlegible-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('/accessibility/_includes/css/AtkinsonHyperlegible/AtkinsonHyperlegible-BoldItalic.woff2') format('woff2'),
+        url('/accessibility/_includes/css/AtkinsonHyperlegible/AtkinsonHyperlegible-BoldItalic.woff') format('woff'),
+        url('/accessibility/_includes/css/AtkinsonHyperlegible/AtkinsonHyperlegible-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Atkinson Hyperlegible';
+    src: url('/accessibility/_includes/css/AtkinsonHyperlegible/AtkinsonHyperlegible-Bold.eot');
+    src: local('Atkinson Hyperlegible Bold'), local('AtkinsonHyperlegible-Bold'),
+        url('/accessibility/_includes/css/AtkinsonHyperlegible/AtkinsonHyperlegible-Bold.eot?#iefix') format('embedded-opentype'),
+        url('/accessibility/_includes/css/AtkinsonHyperlegible/AtkinsonHyperlegible-Bold.woff2') format('woff2'),
+        url('/accessibility/_includes/css/AtkinsonHyperlegible/AtkinsonHyperlegible-Bold.woff') format('woff'),
+        url('/accessibility/_includes/css/AtkinsonHyperlegible/AtkinsonHyperlegible-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+      /* automatic/manual light mode */
+:root, :root.light {
+  /* For the default link colour */
+  --link-colour: #006726;
+  /* For the link hover state */
+  --link-colour-alt: #00521e;
+  --link-focus: #fd0;
+  --link-focus-colour: var(--nearly-black);
+  --nearly-black: #0b0c0c;
+  --nearly-white: #f3f2f1;
+  --white: #fff; 
+  --black: #000;
+  --grey: #b1b4b6;
+}
+/* automatic dark mode */
+/* ❗️ keep the rules in sync with the manual dark mode below! */
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* For the default link colour */
+    --link-colour: #0D0;
+    /* For the link hover state */
+    --link-colour-alt: #00ff5e;
+    /* we need to be cleaver with the dark theme contrast */
+    --link-focus: #fd0;
+    --link-focus-colour: var(--nearly-white);
+    --nearly-black: #f3f2f1;
+    --nearly-white: #0b0c0c;
+    --white: #000; 
+    --black: #fff;
+    --grey: #4d4e4f;
+  }
+}
+:root.dark {
+  /* For the default link colour */
+  --link-colour: #0D0;
+  /* For the link hover state */
+  --link-colour-alt: #00ff5e;
+  /* we need to be cleaver with the dark theme contrast */
+  --link-focus: #fd0;
+  --link-focus-colour: var(--nearly-white);
+  --nearly-black: #f3f2f1;
+  --nearly-white: #0b0c0c;
+  --white: #000; 
+  --black: #fff;
+  --grey: #4d4e4f;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Atkinson Hyperlegible', Arial, Helvetica, sans-serif;
+  line-height: 1.3;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: auto auto 0.75em;
+}
+
+h1 {
+  font-size: 3.052rem;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 2.441rem;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 1.953rem;
+  font-weight: bold;
+}
+
+h4 {
+  font-size: 1.563rem;
+  font-weight: bold;
+}
+
+p,
+li {
+  font-size: 1.25rem;
+}
+
+a {
+  color: var(--link-colour);
+  max-width: max-content;
+  text-decoration: underline;
+  text-decoration-thickness: 0.15em;
+}
+
+a:hover {
+  color: var(--link-colour-alt);
+  text-decoration-thickness: 0.3em;
+}
+
+a:focus {
+  background-color: var(--link-focus);
+  box-shadow: 0 -0.2em var(--link-focus), 0 0.3em var(--link-colour-alt);
+  color: var(--link-focus-colour) !important;
+  outline: 3px solid transparent;
+  text-decoration: none;
+}
+a:active {
+  color: var(--link-focus-colour) !important;
+}
+
+body {
+  display: grid;
+  grid-template-areas:
+    "skip-link"
+    "header"
+    "main"
+    "footer";
+  grid-template-rows: auto auto 1fr auto;
+  margin: 0;
+  min-height: 100vh;
+  background-color: var(--nearly-white);
+  color: var(--nearly-black);
+}
+
+main {
+  font-size: 1.25rem;
+  grid-area: main;
+  margin: 0 auto;
+  max-width: 80ch;
+  max-width: 100vw;
+  width: 100%;
+}
+
+nav {
+  height: min-content;
+}
+
+a:link,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+li,
+blockquote {
+  max-width: 65ch;
+}
+
+img {
+  border: 0.25rem solid var(--nearly-black);
+  padding: 2rem;
+}
+
+.c-nav {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.c-nav__item,
+.c-nav__item:hover {
+  color: var(--white);
+  display: block;
+  max-width: 100%;
+  padding: 1rem;
+}
+
+.c-nav__item:focus {
+  color: var(--black);
+}
+
+.c-nav li:first-of-type a {
+  padding-left: 0;
+}
+
+footer {
+  grid-area: footer;
+}
+
+.c-skip_link {
+  grid-area: skip-link;
+  position: absolute;
+  top: -999px;
+}
+
+.c-skip_link:focus {
+  max-width: 100%;
+  padding: 1rem 2rem;
+  position: relative;
+  text-decoration: underline;
+  top: 0;
+}
+
+.c-header {
+  background-color: var(--nearly-black);
+  color: var(--white);
+  grid-area: header;
+}
+
+.c-header__site-name {
+  color: var(--white);
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 1rem 1rem 1rem 0;
+  text-decoration: none;
+}
+
+.c-header__site-name:hover {
+  color: var(--white);
+  text-decoration: underline;
+  text-decoration-thickness: 0.2em;
+}
+
+.c-header__wrapper {
+  align-items: center;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+/* the theme toggle button */
+.c-header button {
+  position: relative;
+  margin: 1rem 0;
+  padding: .3em;
+  box-sizing: border-box;
+  border: none;
+  background: var(--white);
+  color: var(--black);
+  cursor: pointer;
+}
+.c-header button:focus {
+  background-color: var(--link-focus);
+  box-shadow: 0 -0.2em var(--link-focus), 0 0.3em var(--link-colour-alt);
+  color: var(--link-focus-colour) !important;
+  outline: 3px solid transparent;
+  text-decoration: none;
+}
+.c-header button:active {
+  color: var(--link-focus-colour) !important;
+}
+
+.c-main {
+  padding: 1.875rem 0 3.125rem;
+}
+
+.c-footer {
+  background-color: var(--nearly-black);
+  color: var(--nearly-white);
+}
+
+.c-footer a {
+  color: var(--white);
+}
+
+.c-footer ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin: 0;
+  padding: 1rem 1rem 1rem 0;
+}
+
+.c-footer li {
+  margin: 0.25rem 0;
+  padding: 0.5rem 0;
+}
+
+.u-width-wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 60rem;
+  padding: 0 2rem;
+  width: 100%;
+}
+
+.u-visually-hidden {
+  border: 0 !important;
+  clip: rect(0 0 0 0) !important;
+  clip-path: inset(50%) !important;
+  height: 1px !important;
+  margin: 0 !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  white-space: nowrap !important;
+  width: 1px !important;
+}
+
+.u-flow * + * {
+  margin-top: 1rem;
+}
+
+.u-flow * + h2 {
+  margin-top: 3rem;
+}
+
+.u-flow * + h3,
+.u-flow * + h4,
+.u-flow * + h5 {
+  margin-top: 2rem;
+}
+
+.c-blog-card {
+  border-top: 0.1rem solid var(--grey);
+  margin-top: 0;
+  padding: 3rem 0;
+}
+
+:is(.c-blog-card, .c-resource-section):first-of-type {
+  margin-top: 3rem;
+}
+
+:is(.c-blog-card, .c-resource-section):last-of-type {
+  border-bottom: 0.1rem solid var(--grey);
+}
+
+.c-blog-card__summary,
+.c-blog-card__link {
+  font-size: 1.25rem; /* font-size: 1.563rem; */
+  margin: 0.5rem 0; /* margin: 1.875rem 0; */
+}
+
+.c-blog-card__link {
+  display: block;
+}
+
+.c-blog__content {
+  margin: 3rem 0;
+}
+
+.c-resource-card {
+  padding: 0 0 1rem;
+}
+
+.c-resource-card + .c-resource-card {
+  padding: 1.5rem 0 0.5rem 0;
+}
+
+.c-resource-section {
+  border-top: 0.1rem solid var(--grey);
+  margin-top: 0;
+  padding: 3rem 0;
+}
+
+table {
+  border: 0.1rem solid var(--black);
+  border-collapse: collapse;
+  max-width: 100%;
+  overflow-x: scroll;
+}
+
+tr {
+  vertical-align:top;
+}
+
+th,
+td {
+  border: 0.1rem solid var(--black);
+  padding: 0.5rem 1rem;
+}
+
+blockquote {
+  border-left: 0.5rem solid var(--grey);
+  display: block;
+  padding: 1rem;
+}
+
+pre {
+  border: 0.1rem solid var(--grey);
+  max-width: 100%;
+  overflow-x: scroll;
+  padding: 1rem 2rem;
+}
+
+code {
+  font-family: monospace;
+  overflow-wrap: anywhere;
+}
+
+.c-breadcrumbs {
+  display: flex;
+  flex-flow: row wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.c-breadcrumbs__list-item {
+  display: flex;
+  flex-direction: row;
+  margin: 0 0 0 1rem;
+  margin-top: 0;
+  padding: 0.5rem 1rem 0.5rem 0;
+}
+
+.c-breadcrumbs__list-item::after {
+  content: ">";
+  display: block;
+  height: 1rem;
+  padding-left: 1rem;
+  width: 1rem;
+}
+
+.c-breadcrumbs__list-item:first-of-type {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.c-breadcrumbs__list-item:last-of-type::after {
+  content: "";
+}
+
+/* For the keyboard operable table: https://github.com/defra-design/accessibility/commit/0d3be06fad53f449ccd6cbf1fb1ec4a0b0f4a9a4 */
+[role=region]:is([aria-labelledby], [aria-label])[tabindex] {
+  border: 0.1rem solid var(--black);
+  overflow: auto;
+}
+
+[role=region]:is([aria-labelledby], [aria-label])[tabindex]:focus {
+  outline: var(--link-colour) solid 0.1rem;
+}
+
+    </style>
+  </head>
+  <body>
+    <a href="#main" class="c-skip_link">Skip to main content</a>
+    <header class="c-header">
+      <div class="[ c-header__wrapper ] [ u-width-wrapper ]">
+        <a class="c-header__site-name" href="/accessibility/">Defra Accessibility Resources</a>
+        <!-- <nav>
+          <ul class="c-nav">
+            
+            
+          </ul>
+        </nav> -->
+        <button id="toggleTheme" aria-live="assertive" aria-atomic="true" hidden>Toggle Dark</button>
+      </div>
+    </header>
+    <main id="main" class="c-main">
+      <div class="[ c-main__wrapper ] [ u-width-wrapper u-flow ]">
+        <!-- 
+  <ol class="c-breadcrumbs">
+    <li class="c-breadcrumbs__list-item">
+      <a href="/accessibility/" class="c-breadcrumbs__link">Home</a>
+    </li>
+    
+      
+        
+      
+    
+    <li class="c-breadcrumbs__list-item">
+      <a href="." class="c-breadcrumbs__link" aria-current="page">What to do when</a>
+    </li>
+  </ol>
+ -->
+        
+          <h1>Draft for: What to do when</h1>
+        
+        
+
+  
+  
+  
+  
+    
+      
+        <p>Version 1.0, published 20 October 2026.</p>
+    
+    
+      
+      
+    
+      
+      
+    
+  
+
+  
+  
+  </p>
+
+  <div class="c-blog__content">
+    <h2>Overview</h2>
+<p>Everything Defra Group builds or buys must meet Accessibility Standards, here are the steps you need to take at different points to ensure your project, service, whatever meets the required Accessibility Standards when following the <a href="#GDS-lifecycle">GDS Lifcycle</a>, <a href="#defra-stage-gates">Defra Stage Gates</a>, or <a href="#something-different">something different</a>.</p>
+<h2 id="GDS-lifecycle">GDS Lifecycle</h2>
+<h3>Discovery</h3>
+<p>Here you're exploring the problem space and setting up for success.</p>
+<p>This must be accessible – it's the law, and the right thing to do.</p>
+<p>Read these</p>
+<ul>
+<li><a href="https://www.gov.uk/guidance/accessibility-requirements-for-public-sector-websites-and-apps">Understanding accessibility requirements for public sector bodies</a></li>
+<li><a href="https://www.gov.uk/service-manual/service-standard/point-5-make-sure-everyone-can-use-the-service">Service Standard point 5: Make sure everyone can use the service</a></li>
+<li><a href="https://how-many.herokuapp.com/">Estimate how many people using your website might be disabled</a></li>
+</ul>
+<h4>Discovery Assessment</h4>
+<p>At Assessment you're likely to be asked like these, so prepare to answer them</p>
+<ul>
+<li>Who are your users?</li>
+<li>What are their needs?</li>
+<li>How did you involve users with access needs?</li>
+<li>How will you recruit and involve them throughout the development?</li>
+<li>Is there an Equality Impact Assessment (EqIA) in place?</li>
+<li>How will non-digital parts of the service be inclusive?</li>
+<li>Have you allocated time and budget for Accessibility testing, audits, and fixes?</li>
+</ul>
+<p>Recruiting users with access needs can be hard – especially if the old thing was bad, rather than seeking out disabled participants you could ask everyone what changes or adjustments they make so their computer is more usable for them. They may tell you they have to make the font bigger (low vision), or use a dark or contrast theme (different kind of low vision), or they use a different keyboard to make it easier to type (motor control). Anyone who does use Assistive Technology is likely to tell you!</p>
+<p>If you still can't find anyone, you may need to use Proxy users.</p>
+<p>We can't give a fixed value for budget, it depends on scope and complexity of your work.</p>
+<p>Ensure time for Accessibility is included at every stage, including testing as you work, plus external checks + Audits. The rest of this page should give you a better idea of what is required.</p>
+<h3>Alpha</h3>
+<p>At alpha you're testing options with hypotheses.</p>
+<p>Make sure you communicate accessibly - Messages you send about the work to your new/old/potential users/stakeholders must be accessible too.</p>
+<p>Make sure your designs and prototypes are accessible.</p>
+<p>It's possible to perform technical testing at this stage, but there isn't much value in worrying about specific technical implementations - your Alpha code should be thrown away.</p>
+<p>This is a great time to get feedback on the general usability of your designs - especially from people who are neurodiverse.</p>
+<h4>Alpha Assessment</h4>
+<p>You're likely to be asked questions like these</p>
+<ul>
+<li>
+<p>How did you involve people with access needs?</p>
+</li>
+<li>
+<p>How will you involve people with access needs?</p>
+</li>
+<li>
+<p>What accessibility testing did you do?</p>
+</li>
+<li>
+<p>Is your content accessible? - is the stuff going into the thing accessible, inclusive, easy to read, etc.</p>
+</li>
+<li>
+<p>Are you commuinicating in an accessible way? - are your emails to people accessible? Are the documents you submit to service assessment accessible?</p>
+</li>
+<li>
+<p>What is the plan for accessibility testing in Beta?</p>
+</li>
+<li>
+<p>Content – is the stuff going into the thing accessible, inclusive, easy to read, etc.</p>
+</li>
+<li>
+<p>Communicating – are your emails to people accessible? Are the documents you submit to service assessment accessible?</p>
+</li>
+</ul>
+<h3>Private Beta</h3>
+<p>In Beta you're Building and refining options</p>
+<ul>
+<li>You should have a limited number of users who know they are testing something
+<ul>
+<li>They know how to contact you with issues</li>
+<li>You know how to tell them about issues</li>
+</ul>
+</li>
+</ul>
+<p>You must be performing your own testing, automated testing has limitations but is still important (especially for identifying regressions) and you should be fixing issues as you find them.</p>
+<p>The Accessibility Team's <a href="/accessibility/resources/content/how-to-get-accessibility-audit-defra/">Expert Accessibility Review</a> is good at this stage, as is involving QA+Test.</p>
+<p>You can write the 1st version of your <a href="/accessibility/resources/content/how-to-write-accessibility-statement/">Accessibility Statement</a> now, based on these tests.</p>
+<h3>Public Beta</h3>
+<p>Keep testing!</p>
+<p>At this stage you will potentially have many users who won't consider themselves as testers and will expect things to work.</p>
+<p>You should be confident everything is accessible before you go public and you MUST have the Statement in place – this is how people will find out about known issues and how to tell you about new ones they encounter.</p>
+<p>Don't perform a UAT (User Acceptence Testing) unless you're sure it's going to work – pointless asking if the new cycle paths goes where they need it to if it's not wide enough for their bike.</p>
+<p>Now is a good time for a full Audit - The Accessibility Team can <a href="/accessibility/resources/content/how-to-get-accessibility-audit-defra/">arrange a full 3rd party audit</a>.</p>
+<p>The Accessibility Statement is a living document, ensure it's up to date with your latest testing and fixes.</p>
+<h4>Beta Assessment</h4>
+<p>You're likely to be asked questions like these at Beta Assessment</p>
+<ul>
+<li>How did you recruit users with access needs?</li>
+<li>How did you test?</li>
+<li>Show us the Audit</li>
+<li>Did you fix all the issues?</li>
+<li>What have you changed to improve accessibility?</li>
+<li>Show us the Accessibility Statement</li>
+</ul>
+<h3>Live</h3>
+<p>In Live you're continuously improving, usually there isn't much to do at this stage - unless stuff changes!</p>
+<ul>
+<li>Maintain the Accessibility Statement</li>
+<li>Keep up with standards (WCAG 3.0)</li>
+<li>Do it all again for any new features</li>
+<li>Keep improving, keep it Accessible</li>
+</ul>
+<h3>Decommissioning</h3>
+<p>It's important that the end of a service is accessible too!</p>
+<ul>
+<li>Ensure you commiunicate what is happening to everyone in an Accessible way</li>
+<li>Ensure the need your service served is still served - especially for your edge cases</li>
+<li>Share your &quot;accessibility learnings&quot; with any new team replacing your service so they can provide continunity to your users</li>
+</ul>
+<h2 id="defra-stage-gates">Defra Stage Gates</h2>
+<p>It's basically the same as the GDS Lifecycle, but sliced differently - this list is just the key points from <a href="https://defra.sharepoint.com/:u:/r/sites/def-ddts-portfoliohub/SitePages/Accessibility.aspx?d=w0c97ff20139c48d691a6ad8d14d91700&amp;csf=1&amp;web=1&amp;e=7BSRIE">Defra's accessibility standards when building or buying software (Defra Sharepoint)</a></p>
+<ul>
+<li>Gate 0 - Strategic Assessment
+<ul>
+<li>Read the guidance</li>
+<li>Log a risk</li>
+</ul>
+</li>
+<li>Gate 1 - Business Justification
+<ul>
+<li>Read the guidance</li>
+<li>Log a risk</li>
+<li>Contact accessibility@defra.gov.uk</li>
+<li>Ensure everyone knows Accessibility is essential</li>
+<li>Investigate accessibility as part of user research</li>
+</ul>
+</li>
+<li>Gate 2 - Delivery Strategy
+<ul>
+<li>Accessibility requirements are included in the tender requirements or project user needs (Accessibility team can help you with requirements and reviewing what suppliers say)</li>
+<li>Budget for Accessibility, both time and money</li>
+</ul>
+</li>
+<li>Gate 3
+<ul>
+<li>include accessibility in all aspects of the design</li>
+<li>confirm the chosen supplier, platform and chosen build method will meet the accessibility requirements</li>
+<li>Include accessibility in any contract</li>
+<li>A written plan exists about how you will test and provide evidence of accessibility</li>
+</ul>
+</li>
+<li>Gate 4
+<ul>
+<li>Have a written audit or test report to confirm that the service conforms to WCAG 2.2 AA including working with the appropriate assistive technology</li>
+<li>Have a URL for a compliant accessibility statement</li>
+</ul>
+</li>
+<li>Gate 5
+<ul>
+<li>Confirm there are no outstanding defects</li>
+<li>Have a URL for a compliant accessibility statement</li>
+</ul>
+</li>
+</ul>
+<h2 id="something-different">Something Different?</h2>
+<p>If you're using a different lifecycle (maybe waterfall or you're an &quot;incubator&quot;) whatever you're building or buying still needs to be accessible.</p>
+<p>Talk to the Accessibility Team – we're here to help.</p>
+<p>Maybe you've only just found out about this &quot;accessibility&quot; thing? &quot;too late&quot; is better than never, talk to us!</p>
+<p>A delay now is better than having to fix something in live, a judicial review, MPs asking questions, ECHR getting involved, etc.</p>
+
+  </div>
+
+  <p class="c-blog__author">Written by
+    
+    
+    <a href="/accessibility/authors/defra-accessibility-team/">Defra accessibility team</a>.
+    
+    
+      
+      
+    
+  </p>
+
+
+      </div>
+    </main>
+    <footer class="c-footer">
+      <div class="[ c-footer__wrapper ] [ u-width-wrapper ]">
+        <h2 class="u-visually-hidden">Useful links and licence information</h2>
+        <!-- <nav> -->
+        <ul>
+          <li><a href="/accessibility/accessibility-statement/">Accessibility statement</a></li>
+          <li><a href="/accessibility/sitemap/">Site map</a></li>
+          <li>Use this information freely under the
+          <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="license">Open Government Licence v3.0</a></li>
+        </ul>
+        <!-- </nav> -->
+      </div>
+    </footer>
+    <script>
+  // if the user prefers dark mode
+  // based on https://stackoverflow.com/a/68824350
+  // does the user have a saved preference?
+  const savedDark = window.localStorage.getItem('darkTheme')
+  // if no saved preferece, we get a falsy-null
+  // but the boolean is stored as a string
+  if (savedDark === "true") {
+      // force it to light so we can toggle it to dark
+      document.documentElement.classList.add("light");
+  } else if (savedDark === "false") {
+    // force it to dark so we can toggle it to light
+    document.documentElement.classList.add("dark");
+  }
+  // make the first "change"
+  toggleDarkMode();
+
+  // activate the toggle button
+  document.querySelector("#toggleTheme").removeAttribute('hidden');
+
+  // listen for a change to the preference, i.e. user changes system settings.
+  window
+    .matchMedia("(prefers-color-scheme: dark)")
+    .addEventListener("change", (e) => toggleDarkMode());
+
+// listen for clicks on the toggle button
+document.querySelector("#toggleTheme").addEventListener('click', (e) => toggleDarkMode());
+
+  // toggle to switch classes between .light and .dark
+  // if no class is present (initial state), then assume current state based on system color scheme
+  // if system color scheme is not supported, then assume current state is light
+  function toggleDarkMode() {
+    let isDark = false;
+    if (document.documentElement.classList.contains("light")) {
+      document.documentElement.classList.remove("light");
+      document.documentElement.classList.add("dark");
+      isDark = true;
+    } else if (document.documentElement.classList.contains("dark")) {
+      document.documentElement.classList.remove("dark");
+      document.documentElement.classList.add("light");
+    } else {
+      if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+        document.documentElement.classList.add("dark");
+        isDark = true;
+      } else {
+        document.documentElement.classList.add("light");
+      }
+    }
+    // change the button to report the current state
+    if (isDark) {
+        document.querySelector("#toggleTheme").innerHTML = "<span class='u-visually-hidden'>Using dark theme </span>Use light theme"
+    } else {
+        document.querySelector("#toggleTheme").innerHTML = "<span class='u-visually-hidden'>Using light theme </span>Use dark theme"
+    }
+    // save the preference
+    window.localStorage.setItem('darkTheme', isDark)
+  }
+</script>
+
+  </body>
+</html>
