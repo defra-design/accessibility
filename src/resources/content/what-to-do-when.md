@@ -4,7 +4,7 @@ summary: What you need to do when to ensure your project, service, whatever meet
 author: ["Defra accessibility team"]
 version: "1.0"
 publishedDate: 2026-10-20
-status: draft
+status: live
 tags:
   - checkingAccessibility
   - resource
@@ -30,7 +30,7 @@ Read these
 
 #### Discovery Assessment
 
-At Assessment you're likely to be asked like these, so prepare to answer them
+At Assessment you're likely to be asked like these questions, so prepare to answer them
 
 * Who are your users?
 * What are their needs?
@@ -67,20 +67,15 @@ You're likely to be asked questions like these
 * How did you involve people with access needs?
 * How will you involve people with access needs?
 * What accessibility testing did you do?
-* Is your content accessible? - is the stuff going into the thing accessible, inclusive, easy to read, etc.
-* Are you commuinicating in an accessible way? - are your emails to people accessible? Are the documents you submit to service assessment accessible?
+* Is your content accessible? - Is the stuff going into the thing accessible, inclusive, easy to read, etc.
+* Are you commuinicating in an accessible way? - Are your emails to people accessible? Are the documents you submit to service assessment accessible?
 * What is the plan for accessibility testing in Beta?
-
-* Content – is the stuff going into the thing accessible, inclusive, easy to read, etc.
-* Communicating – are your emails to people accessible? Are the documents you submit to service assessment accessible?
 
 ### Private Beta
 
 In Beta you're Building and refining options
 
-* You should have a limited number of users who know they are testing something
-  * They know how to contact you with issues
-  * You know how to tell them about issues
+You should have a limited number of users who know they are testing something. They know how to contact you with issues and you know how to tell them about issues
 
 You must be performing your own testing, automated testing has limitations but is still important (especially for identifying regressions) and you should be fixing issues as you find them.
 
@@ -95,11 +90,11 @@ Keep testing!
 
 At this stage you will potentially have many users who won't consider themselves as testers and will expect things to work.
 
-You should be confident everything is accessible before you go public and you MUST have the Statement in place – this is how people will find out about known issues and how to tell you about new ones they encounter.
+You should be confident everything is accessible before you go public and you MUST have the Accessibility Statement in place – this is how people will find out about known issues and how to tell you about new ones they encounter.
 
-Don't perform a UAT (User Acceptence Testing) unless you're sure it's going to work – pointless asking if the new cycle paths goes where they need it to if it's not wide enough for their bike.
+Don't perform a UAT (User Acceptence Testing) unless you're sure it's going to work – it's pointless asking if the new cycle paths go somewhere useful if the path is not wide enough for an adapted bike.
 
-Now is a good time for a full Audit - The Accessibility Team can [arrange a full 3rd party audit](/accessibility/resources/content/how-to-get-accessibility-audit-defra/).
+Early in Public Beta (or even just before) is a good time for a full Audit - The Accessibility Team can [arrange a full 3rd party Audit](/accessibility/resources/content/how-to-get-accessibility-audit-defra/).
 
 The Accessibility Statement is a living document, ensure it's up to date with your latest testing and fixes.
 
@@ -118,17 +113,17 @@ You're likely to be asked questions like these at Beta Assessment
 
 In Live you're continuously improving, usually there isn't much to do at this stage - unless stuff changes!
 
-* Maintain the Accessibility Statement
-* Keep up with standards (WCAG 3.0)
-* Do it all again for any new features
-* Keep improving, keep it Accessible
+* Maintain the Accessibility Statement - this could be as simple as changing the date every 12 months if nothing has changed.
+* Keep up with standards (for example WCAG 3.0)
+* Do it all again for any new features - anything new requires the same level of Accessibility and Assurance.
+* Keep improving and keep it Accessible
 
 ### Decommissioning
 
 It's important that the end of a service is accessible too!
 
 * Ensure you commiunicate what is happening to everyone in an Accessible way
-* Ensure the need your service served is still served - especially for your edge cases
+* Ensure the need is still met - especially for your edge cases
 * Share your "accessibility learnings" with any new team replacing your service so they can provide continunity to your users
 
 <h2 id="defra-stage-gates">Defra Stage Gates</h2>
@@ -149,12 +144,12 @@ It's basically the same as the GDS Lifecycle, but sliced differently - this list
   * Accessibility requirements are included in the tender requirements or project user needs (Accessibility team can help you with requirements and reviewing what suppliers say)
   * Budget for Accessibility, both time and money
 * Gate 3
-  * include accessibility in all aspects of the design
-  * confirm the chosen supplier, platform and chosen build method will meet the accessibility requirements
+  * Include accessibility in all aspects of the design
+  * Confirm the chosen supplier, platform and chosen build method will meet the accessibility requirements
   * Include accessibility in any contract
   * A written plan exists about how you will test and provide evidence of accessibility
 * Gate 4
-  * Have a written audit or test report to confirm that the service conforms to WCAG 2.2 AA including working with the appropriate assistive technology
+  * Have a written Audit or test report to confirm that the service conforms to WCAG 2.2 AA including working with the appropriate assistive technology
   * Have a URL for a compliant accessibility statement
 * Gate 5
   * Confirm there are no outstanding defects
@@ -166,6 +161,6 @@ If you're using a different lifecycle (maybe waterfall or you're an "incubator")
 
 Talk to the Accessibility Team – we're here to help.
 
-Maybe you've only just found out about this "accessibility" thing? "too late" is better than never, talk to us!
+Maybe you've only just found out about this "accessibility" thing and you think it's "too late"? Late is better than never, talk to us!
 
-A delay now is better than having to fix something in live, a judicial review, MPs asking questions, ECHR getting involved, etc.
+A delay now is better than having to fix something in live, people not being able to what they need to do, a judicial review, MPs asking questions, ECHR getting involved, etc.
